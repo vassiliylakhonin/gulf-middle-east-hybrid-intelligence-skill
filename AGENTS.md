@@ -237,7 +237,7 @@ The criteria below close the weaknesses that Bar 1 alone cannot close. Each crit
 
 Current honest status (2026-05-12):
 
-- **Bar 1 — partially cleared.** B1.1, B1.2 (all four modes now demonstrated), B1.3 (partial — three of six preferred examples, three deferred with reason), B1.4, B1.6 met. B1.5 deferred (no validation script).
-- **Bar 2 — not cleared.** B2.1 borderline (2 of 4 examples source-anchored); B2.6 partial (first live-source-backed example has retrieval date; re-verification horizons not yet in source-guide.md). B2.2, B2.3, B2.4, B2.5 positive, B2.7 not met. Single-author state; no external review, no validated cases, no real-use evidence.
+- **Bar 1 — partially cleared.** B1.1, B1.2, B1.4, B1.6 met. B1.3 partial (4 of 6 preferred examples; sovereign wealth and dark-fleet deferred with reason). B1.5 deferred (no validation script).
+- **Bar 2 — partially cleared.** B2.1 met (3 of 5 examples source-anchored, 60%). B2.6 met (re-verification horizons in source-guide.md; live-source-backed examples carry retrieval dates). B2.5 honest (no real-use evidence disclosed). B2.2, B2.3, B2.7 not met — require external humans. B2.4 partial (single platform skill file). Single-author state; no external review, no validated cases.
 
 Future contributors must update this status truthfully as criteria are met, and must not advance the status without verifiable evidence.
