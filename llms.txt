@@ -1,0 +1,74 @@
+# Gulf + Middle East Hybrid Intelligence Skill
+
+Purpose: a vertical specialist skill for AI agents working on Iran sanctions, GCC financial and energy hubs, maritime chokepoint risk (Hormuz, Bab-el-Mandeb, Red Sea), sovereign wealth deployment, and regional geopolitical exposure.
+
+Use this repository when an AI agent needs:
+- to reason about Iran sanctions adjacency, OFAC SDN exposure, or US/EU/UK secondary sanctions in a Gulf context;
+- to map GCC correspondent banking, trade finance, or sovereign wealth deployment risk;
+- to analyse maritime chokepoint disruption (Hormuz, Bab-el-Mandeb, Red Sea) for shipping, energy, or insurance decisions;
+- to distinguish Iran-state, IRGC-affiliated, and Iran-private commercial actors with operational precision;
+- to produce mechanism-first, role-based, trigger-specific regional risk memos;
+- examples, signals, review checklists, and failure-mode guides for Gulf + Middle East risk analysis.
+
+What this repository is not:
+- not a factuality verifier, source retriever, or RAG pipeline;
+- not legal, compliance, sanctions screening, AML monitoring, vessel screening, or investment advice;
+- not an MCP server, CLI tool, validator, schema layer, or eval framework;
+- not a replacement for primary OFAC/EU/UK list checks, qualified legal review, or maritime intelligence vendors.
+
+Relationship to the portfolio (three layers, separately maintained):
+- Vertical specialist — Gulf + Middle East (this repo): specialist Iran, GCC, maritime-chokepoint risk reasoning.
+- Horizontal domain skill: https://github.com/vassiliylakhonin/global-think-tank-analyst — broad strategic-risk memo workflow, memo modes, general policy-risk analysis.
+- Vertical specialist — Central Asia Caspian: https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill — reference when a flow crosses both regions.
+- Infrastructure / validation: https://github.com/vassiliylakhonin/Agenda-Intelligence-md — schemas, validation, scoring, evidence audit, CLI / MCP / CI tooling.
+
+Key distinctions this skill enforces:
+
+Iran actor categories (always distinguish where relevant):
+- Iran-state: NIOC, CBI of Iran, Iranian government ministries — directly blocked under OFAC comprehensive sanctions.
+- IRGC-affiliated: entities operating under or controlled by the IRGC-Quds Force or affiliated networks — SDN-designated; basis for affiliation must be stated (designation, public reporting, network inference).
+- Iran-private commercial: Iranian private commercial firms — not categorically blocked; designation status varies; requires entity-level SDN screen.
+
+GCC actor categories (name the specific actor, do not aggregate):
+- State actors: government ministries, state-owned enterprises.
+- Sovereign wealth: PIF (Saudi), ADIA (Abu Dhabi), Mubadala (Abu Dhabi), QIA (Qatar), KIA (Kuwait).
+- Royal-family commercial: entities linked to royal families operating in commercial domains.
+- Private commercial: private Gulf firms — risk profile varies; UBO disclosure is the binding variable.
+
+Evidence modes (declare for every output):
+- live-source-backed: primary sources retrieved and cited with retrieval date.
+- user-provided sources: analysis works from documents the user supplies.
+- illustrative source packet: source organizations real, specific values illustrative.
+- reasoning-only: no live sources; structural reasoning only; lower confidence.
+
+Core files:
+- AGENTS.md — project identity, scope, evidence and safety rules, Definition of Done.
+- skills/claude/SKILL.md — canonical skill behavior (YAML frontmatter, full workflow).
+- README.md — public documentation.
+- docs/source-guide.md — primary sources by domain with re-verification horizons.
+- docs/regional-logic.md — scope extension rules, Iran actor distinction, GCC actor distinction.
+- docs/risk-archetypes.md — seven recurring risk archetypes.
+- examples/ — worked memo examples in all four evidence modes.
+- evals/ — checklist, failure-modes (13 patterns), starter rubric.
+- signals/ — bounded, dated signal examples (not official intelligence).
+
+Agent guidance:
+- Always state evidence mode and retrieval date (if live-source-backed) before analysis.
+- Distinguish Iran-state, IRGC-affiliated, and Iran-private commercial actors for any Iran-related claim.
+- Name specific GCC actors (fund, entity) — do not write "Gulf money" or "Saudi investment" without specificity.
+- Do not fabricate: citations, sanctions designations, vessel names, IMO numbers, OFAC actions, AIS data.
+- Do not give legal, compliance, AML, sanctions screening, vessel screening, or investment advice.
+- Every output must include a limitation note.
+- Mechanism before implication: explain how risk transmits (through what channel) before stating what it means.
+
+Forbidden patterns (will be called out in evals):
+- "tensions remain elevated" without mechanism.
+- "Iran" as an undifferentiated category.
+- Specific vessel names, IMO numbers, or OFAC designations without primary-source citation.
+- "Monitor closely" without named source and named trigger.
+- Any language implying operational compliance clearance or legal advice.
+
+Live signal endpoints:
+- Latest signal: https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/signals/latest.md
+- Signal index: https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/signals/index.json
+- JSON Feed: https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/signals/feed.json

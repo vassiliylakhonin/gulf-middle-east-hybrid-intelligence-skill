@@ -3,12 +3,34 @@
   "description": "Public examples of the Gulf + Middle East Hybrid Intelligence Skill style: bounded, decision-aware notes on Iran sanctions, GCC financial and energy hubs, maritime chokepoint risk, and regional geopolitical exposure.",
   "latest": {
     "date": "2026-05-12",
-    "slug": "2026-05-12-red-sea-houthi-shipping",
-    "title": "Red Sea disruption: the rerouting is structural, not episodic — price in a sustained Bab-el-Mandeb transit premium",
-    "path": "signals/2026/2026-05-12-red-sea-houthi-shipping.md",
-    "url": "https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/signals/2026/2026-05-12-red-sea-houthi-shipping.md"
+    "slug": "2026-05-12-us-iran-nuclear-diplomatic",
+    "title": "US-Iran nuclear file: structure the exposure around scenarios, not a negotiation outcome — the uncertainty is the planning input",
+    "path": "signals/2026/2026-05-12-us-iran-nuclear-diplomatic.md",
+    "url": "https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/signals/2026/2026-05-12-us-iran-nuclear-diplomatic.md"
   },
   "signals": [
+    {
+      "date": "2026-05-12",
+      "slug": "2026-05-12-us-iran-nuclear-diplomatic",
+      "domain": "geopolitical / sanctions",
+      "region": "Iran / US / GCC / global",
+      "evidence_mode": "reasoning-only",
+      "confidence": "Low",
+      "title": "US-Iran nuclear file: structure the exposure around scenarios, not a negotiation outcome — the uncertainty is the planning input",
+      "path": "signals/2026/2026-05-12-us-iran-nuclear-diplomatic.md",
+      "url": "https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/signals/2026/2026-05-12-us-iran-nuclear-diplomatic.md"
+    },
+    {
+      "date": "2026-05-12",
+      "slug": "2026-05-12-opec-plus-production-posture",
+      "domain": "energy",
+      "region": "GCC / Iraq / Russia / global oil market",
+      "evidence_mode": "reasoning-only",
+      "confidence": "Moderate",
+      "title": "OPEC+: the stated-quota / actual-production gap is the real variable — plan scenarios, not a price point",
+      "path": "signals/2026/2026-05-12-opec-plus-production-posture.md",
+      "url": "https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/signals/2026/2026-05-12-opec-plus-production-posture.md"
+    },
     {
       "date": "2026-05-12",
       "slug": "2026-05-12-red-sea-houthi-shipping",

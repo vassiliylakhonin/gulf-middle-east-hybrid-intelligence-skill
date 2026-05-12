@@ -2,7 +2,7 @@
 
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
-**Last updated:** 2026-05-12. Sovereign wealth deployment risk example added. B1.3 at 5/6 preferred examples.
+**Last updated:** 2026-05-12. Validation script added and passing (0 errors). llms.txt added. Three signals added. B1.5 cleared.
 
 ## Bar 1 — Early but credible
 
@@ -12,10 +12,10 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 | B1.2 All four evidence modes demonstrated | ✅ met | All four modes now have at least one example: `reasoning-only` (Iran sanctions routing), `illustrative source packet` (Hormuz disruption), `user-provided sources` (Iraq banking), `live-source-backed` (OFAC Iran shipping sanctions). |
 | B1.3 All preferred examples exist or are deferred with reason | ⚠ partial | Five of six preferred examples now exist: Iran sanctions adjacency, Hormuz disruption, Iraq banking, GCC correspondent banking, sovereign wealth deployment risk. Deferred with reason: dark-fleet / sanctioned-oil flow (requires live AIS primary sources). |
 | B1.4 `evals/` has checklist + starter rubric + failure-modes with honest labels | ✅ met | No benchmark claim made. |
-| B1.5 Validation script | ❌ not met / deferred | No validation script in initial release. Skill file structure follows the Central Asia + Caspian sibling skill's frontmatter and section conventions; a structural validator is on the roadmap. |
+| B1.5 Validation script | ✅ met | `scripts/validate.py` runs with 0 errors. Checks: root files, SKILL.md frontmatter and required sections, Iran actor distinction, evidence modes, example evidence-mode declarations, live-source-backed retrieval dates, limitation notes, forbidden patterns, signals structure, evals files, docs re-verification horizons. |
 | B1.6 Honesty constraints observed everywhere | ✅ met | No fabricated citations, no fabricated vessel names or IMO numbers, no fabricated sanctions designations, no legal/compliance/AML/investment advice posture, no production-grade or screening claims. |
 
-**Bar 1 — partially cleared.** B1.1, B1.2, B1.4, B1.6 are clean; B1.3 is partial (5 of 6 preferred examples; dark-fleet deferred with reason); B1.5 is deferred with reason.
+**Bar 1 — cleared.** B1.1 ✅ B1.2 ✅ B1.3 ⚠ (5/6 preferred; dark-fleet deferred with reason) B1.4 ✅ B1.5 ✅ B1.6 ✅. All criteria met or deferred with documented reason.
 
 ## Bar 2 — Externally validated specialist resource
 
