@@ -1,0 +1,16 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Gulf + Middle East Hybrid Intelligence Signals",
+  "description": "Public examples of the Gulf + Middle East Hybrid Intelligence Skill style.",
+  "home_page_url": "https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill",
+  "feed_url": "https://raw.githubusercontent.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/main/signals/feed.json",
+  "items": [
+    {
+      "id": "2026-05-12-red-sea-houthi-shipping",
+      "title": "Red Sea disruption: the rerouting is structural, not episodic — price in a sustained Bab-el-Mandeb transit premium",
+      "date_published": "2026-05-12T00:00:00Z",
+      "tags": ["maritime", "energy", "sanctions", "Red Sea", "Bab-el-Mandeb", "Houthi", "IRGC"],
+      "url": "https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/signals/2026/2026-05-12-red-sea-houthi-shipping.md"
+    }
+  ]
+}
