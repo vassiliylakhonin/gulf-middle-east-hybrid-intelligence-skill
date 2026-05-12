@@ -2,7 +2,7 @@
 
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
-**Last updated:** 2026-05-12. Second `live-source-backed` example added (GCC correspondent banking). B2.1 cleared. B2.6 confirmed met.
+**Last updated:** 2026-05-12. Sovereign wealth deployment risk example added. B1.3 at 5/6 preferred examples.
 
 ## Bar 1 — Early but credible
 
@@ -10,12 +10,12 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 |---|---|---|
 | B1.1 README follows the 14-section structure | ✅ met | See `README.md`. |
 | B1.2 All four evidence modes demonstrated | ✅ met | All four modes now have at least one example: `reasoning-only` (Iran sanctions routing), `illustrative source packet` (Hormuz disruption), `user-provided sources` (Iraq banking), `live-source-backed` (OFAC Iran shipping sanctions). |
-| B1.3 All preferred examples exist or are deferred with reason | ⚠ partial | Four of six preferred examples now exist: Iran sanctions adjacency (refiner), Hormuz disruption (insurer), Iraq banking (correspondent), GCC correspondent banking (Western respondent bank). Deferred with reason: sovereign wealth deployment risk, dark-fleet / sanctioned-oil flow. |
+| B1.3 All preferred examples exist or are deferred with reason | ⚠ partial | Five of six preferred examples now exist: Iran sanctions adjacency, Hormuz disruption, Iraq banking, GCC correspondent banking, sovereign wealth deployment risk. Deferred with reason: dark-fleet / sanctioned-oil flow (requires live AIS primary sources). |
 | B1.4 `evals/` has checklist + starter rubric + failure-modes with honest labels | ✅ met | No benchmark claim made. |
 | B1.5 Validation script | ❌ not met / deferred | No validation script in initial release. Skill file structure follows the Central Asia + Caspian sibling skill's frontmatter and section conventions; a structural validator is on the roadmap. |
 | B1.6 Honesty constraints observed everywhere | ✅ met | No fabricated citations, no fabricated vessel names or IMO numbers, no fabricated sanctions designations, no legal/compliance/AML/investment advice posture, no production-grade or screening claims. |
 
-**Bar 1 — partially cleared.** B1.1, B1.2, B1.4, B1.6 are clean; B1.3 is partial (4 of 6 preferred examples, 2 deferred with reason); B1.5 is deferred with reason.
+**Bar 1 — partially cleared.** B1.1, B1.2, B1.4, B1.6 are clean; B1.3 is partial (5 of 6 preferred examples; dark-fleet deferred with reason); B1.5 is deferred with reason.
 
 ## Bar 2 — Externally validated specialist resource
 
@@ -39,7 +39,7 @@ What would need to happen, in honest order:
 2. ✅ Second `live-source-backed` example added (GCC correspondent banking). FATF UAE grey-listing record, BIS CBS, MENAFATF, CBUAE/SAMA AML frameworks cited.
 3. Add at least one `live-source-backed` Hormuz / Red Sea / Bab-el-Mandeb example with IMO and IEA primary sources.
 3. Add documented re-verification horizons to `docs/source-guide.md` (closes B2.6 once source-backed examples exist).
-4. Add deferred examples (GCC correspondent banking, sovereign wealth, dark-fleet) — at least two as `user-provided sources` to push source-anchored ratio above 50% (closes B2.1).
+4. ✅ GCC correspondent banking and sovereign wealth deployment risk examples added. Dark-fleet remains deferred (requires live AIS primary sources). B2.1 was already closed by previous step.
 5. Recruit at least one external reviewer for one example and one rubric application; record their attribution (closes B2.2 and B2.7).
 6. Run the skill against ≥3 real practitioner workflows; store outcomes in `validated-cases/` with attribution (closes B2.3).
 7. If real use happens, record it publicly with permission (closes B2.5 positively).

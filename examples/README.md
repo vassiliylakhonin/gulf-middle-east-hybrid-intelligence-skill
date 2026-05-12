@@ -12,6 +12,7 @@ Every example declares its evidence mode and includes a limitation note. None of
 | [live-source-backed-gcc-correspondent-banking.md](live-source-backed-gcc-correspondent-banking.md) | `live-source-backed` | GCC correspondent banking exposure for a Western respondent bank. Primary sources: FATF UAE grey-listing/de-listing record, BIS CBS, MENAFATF assessments, CBUAE and SAMA AML frameworks. Retrieved 2026-05-12. |
 | [iran-sanctions-routing-exposure.md](iran-sanctions-routing-exposure.md) | `reasoning-only` | Iran sanctions adjacency for a European refiner sourcing Gulf crude |
 | [hormuz-shipping-disruption.md](hormuz-shipping-disruption.md) | `illustrative source packet` | Hormuz disruption exposure framing for a shipping insurer |
+| [user-provided-sources-sovereign-wealth-deployment.md](user-provided-sources-sovereign-wealth-deployment.md) | `user-provided sources` | Sovereign wealth deployment risk for a target company or co-investor receiving GCC SWF capital. Template with PIF / ADIA / Mubadala / QIA / KIA public mandate URLs. |
 | [user-provided-sources-iraq-banking.md](user-provided-sources-iraq-banking.md) | `user-provided sources` | Iraq banking-sector exposure for a Western correspondent bank (template form) |
 
 ## Deferred from initial release
@@ -19,7 +20,7 @@ Every example declares its evidence mode and includes a limitation note. None of
 The following preferred examples (per `AGENTS.md` "Examples") are not in the initial release. They are deferred with explicit reasons:
 
 - **GCC correspondent banking exposure for a Western respondent bank** — ✅ added. See [live-source-backed-gcc-correspondent-banking.md](live-source-backed-gcc-correspondent-banking.md).
-- **Sovereign wealth deployment risk for a target company or co-investor** — deferred. Will land as a `user-provided sources` example with anonymized investment terms and current PIF / ADIA / Mubadala / QIA / KIA mandate publications.
+- **Sovereign wealth deployment risk for a target company or co-investor** — ✅ added. See [user-provided-sources-sovereign-wealth-deployment.md](user-provided-sources-sovereign-wealth-deployment.md).
 - **Dark-fleet / sanctioned-oil flow exposure for a refiner or trader** — deferred. Requires `live-source-backed` mode with current OFAC vessel designations, AIS-derived patterns from primary maritime intelligence sources, and current G7 price-cap enforcement guidance. Not produced in `reasoning-only` mode because the value of this archetype depends on source-anchored vessel and flow data.
 
 ## `live-source-backed` mode
