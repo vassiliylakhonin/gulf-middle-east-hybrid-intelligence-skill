@@ -2,7 +2,7 @@
 
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
-**Last updated:** 2026-05-12. Validation script added and passing (0 errors). llms.txt added. Three signals added. B1.5 cleared.
+**Last updated:** 2026-05-12. B2.4 cleared: `skills/claude/SKILL.md` now has Claude-specific setup section (Projects, web search, extended-context user-provided sources, tool-use discipline). `skills/codex/SKILL.md` created with Codex-specific features: agentic-loop output discipline, JSON output mode (Agenda Intelligence MD brief schema), multi-step pipeline integration pattern, tool-use discipline. Each variant now has at least one platform-specific feature that meaningfully changes output behavior.
 
 ## Bar 1 — Early but credible
 
@@ -24,7 +24,7 @@ Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update
 | B2.1 Source-anchored majority (≥50% of flagship examples) | ✅ met | 3 of 5 flagship examples are source-anchored: `live-source-backed` (OFAC Iran shipping sanctions), `live-source-backed` (GCC correspondent banking), `user-provided sources` (Iraq banking). Ratio is 60%. |
 | B2.2 At least one external reviewer of an example and a rubric application | ❌ not met | All current scorecards (none yet) would be author judgments. No external reviewer recorded. |
 | B2.3 At least three validated cases by domain practitioners | ❌ not met | Directory does not exist. No practitioner-attributed reviews. |
-| B2.4 Platform differentiation or consolidation across `skills/{codex,claude,openclaw}` | ⚠ partial | Only `skills/claude/SKILL.md` exists. Deliberate consolidated starting position. Adding Codex/OpenClaw variants requires platform-specific features that change output, otherwise consolidation is the right answer. |
+| B2.4 Platform differentiation or consolidation across `skills/{codex,claude,openclaw}` | ✅ met | `skills/claude/SKILL.md` has Claude-specific setup: Projects setup, web search for live-source-backed (OFAC/EU/UK/FATF), extended-context user-provided sources (attach PDFs), tool-use discipline. `skills/codex/SKILL.md` created with Codex-specific: agentic-loop output discipline (calibrate output per pipeline step), JSON output mode (structured brief schema for Agenda Intelligence MD), multi-step pipeline integration pattern (source-plan → draft → extract JSON → validate → score). Each variant now has platform-specific features that meaningfully change how the skill is set up and how output is produced. OpenClaw deferred: no active OpenClaw user base; consolidation is the right answer rather than a near-identical third file. |
 | B2.5 Honest real-use evidence or explicit "no real-use evidence" disclosure | ⚠ partial | README and STATUS explicitly state no real-use evidence yet. Honest disclosure is in place; positive evidence is not. |
 | B2.6 Source freshness discipline | ✅ met | `docs/source-guide.md` contains a full re-verification horizons table (SDN list, EU/UK, OPEC+, oil prices, vessel data, FATF, IMF, central bank rates). First `live-source-backed` example carries retrieval date (2026-05-12). Stale-label convention documented. |
 | B2.7 Independent rubric application by someone other than the author | ❌ not met | No external scorecard added. |
