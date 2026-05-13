@@ -312,6 +312,48 @@ def check_root():
         if "bar 2" in text and "not cleared" not in text and "partially cleared" not in text:
             warn("AGENTS.md mentions Bar 2 without 'not cleared' or 'partially cleared' language — verify honesty")
 
+    readme = ROOT / "README.md"
+    status = ROOT / "STATUS.md"
+
+    if readme.exists():
+        text = readme.read_text(encoding="utf-8").lower()
+        forbidden_claims = [
+            "production-grade",
+            "guarantees compliance",
+            "guarantees accuracy",
+            "detects sanctions evasion",
+            "detects dark-fleet activity",
+            "fully autonomous",
+            "trusted by",
+            "used by",
+        ]
+        for claim in forbidden_claims:
+            if claim in text:
+                err(f"README.md contains unsupported claim: {claim}")
+
+        if "no production usage record exists yet" in text or "no real-use evidence" in text:
+            ok("README.md discloses lack of real-use evidence")
+        else:
+            err("README.md must disclose that no real-use evidence exists yet")
+
+        required_links = [
+            "github.com/vassiliylakhonin/agenda-intelligence-md",
+            "github.com/vassiliylakhonin/global-think-tank-analyst",
+            "github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill",
+        ]
+        for link in required_links:
+            if link.lower() in text:
+                ok(f"README.md links companion repo: {link}")
+            else:
+                err(f"README.md missing companion repo link: {link}")
+
+    if status.exists():
+        text = status.read_text(encoding="utf-8").lower()
+        if "**bar 2 — not cleared.**" in text:
+            ok("STATUS.md states Bar 2 is not cleared")
+        else:
+            err("STATUS.md must explicitly state: **Bar 2 — not cleared.**")
+
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
