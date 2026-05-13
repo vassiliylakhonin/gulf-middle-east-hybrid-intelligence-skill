@@ -289,13 +289,21 @@ def check_docs():
 
 def check_root():
     print("\n[6] Root files")
-    required = ["AGENTS.md", "README.md", "STATUS.md", "llms.txt"]
+    required = ["AGENTS.md", "CLAUDE.md", "README.md", "STATUS.md", "llms.txt"]
     for name in required:
         path = ROOT / name
         if path.exists():
             ok(f"{name} present")
         else:
             err(f"{name} missing")
+
+    claude = ROOT / "CLAUDE.md"
+    if claude.exists():
+        first_line = claude.read_text(encoding="utf-8").splitlines()[0].strip()
+        if first_line == "@AGENTS.md":
+            ok("CLAUDE.md imports AGENTS.md")
+        else:
+            err("CLAUDE.md must import AGENTS.md on the first line")
 
     # AGENTS.md must not claim Bar 2 cleared if STATUS.md says otherwise
     agents = ROOT / "AGENTS.md"

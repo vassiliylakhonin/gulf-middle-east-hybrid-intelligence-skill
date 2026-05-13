@@ -37,12 +37,12 @@ What would need to happen, in honest order:
 
 1. ✅ First `live-source-backed` Iran sanctions example added (OFAC Iran shipping sanctions). Primary OFAC URLs and retrieval date included.
 2. ✅ Second `live-source-backed` example added (GCC correspondent banking). FATF UAE grey-listing record, BIS CBS, MENAFATF, CBUAE/SAMA AML frameworks cited.
-3. Add at least one `live-source-backed` Hormuz / Red Sea / Bab-el-Mandeb example with IMO and IEA primary sources.
-3. Add documented re-verification horizons to `docs/source-guide.md` (closes B2.6 once source-backed examples exist).
-4. ✅ GCC correspondent banking and sovereign wealth deployment risk examples added. Dark-fleet remains deferred (requires live AIS primary sources). B2.1 was already closed by previous step.
-5. Recruit at least one external reviewer for one example and one rubric application; record their attribution (closes B2.2 and B2.7).
-6. Run the skill against ≥3 real practitioner workflows; store outcomes in `validated-cases/` with attribution (closes B2.3).
-7. If real use happens, record it publicly with permission (closes B2.5 positively).
+3. ✅ GCC correspondent banking and sovereign wealth deployment risk examples added. Dark-fleet remains deferred (requires live AIS primary sources). B2.1 was already closed by previous step.
+4. ✅ Re-verification horizons documented in `docs/source-guide.md` and checked by `scripts/validate.py`.
+5. Optional quality lift: add at least one `live-source-backed` Hormuz / Red Sea / Bab-el-Mandeb example with IMO and IEA primary sources, without claiming vessel verification unless primary data was actually checked.
+6. Recruit at least one external reviewer for one example and one rubric application; record their attribution (closes B2.2 and B2.7).
+7. Run the skill against ≥3 real practitioner workflows; store outcomes in `validated-cases/` with attribution (closes B2.3).
+8. If real use happens, record it publicly with permission (closes B2.5 positively).
 
 None of these steps should be faked. Bar 2 is the hard bar.
 
