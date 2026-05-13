@@ -231,6 +231,30 @@ def check_signals():
             else:
                 ok("signals/feed.json covers signals/index.json entries")
 
+            feed_by_id = {item.get("id"): item for item in feed_payload.get("items", [])}
+            for signal in index_payload.get("signals", []):
+                slug = signal.get("slug")
+                feed_item = feed_by_id.get(slug)
+                if not feed_item:
+                    err(f"signals/feed.json missing item id for slug: {slug}")
+                    continue
+
+                if feed_item.get("title") == signal.get("title"):
+                    ok(f"signals/feed.json title matches index for {slug}")
+                else:
+                    err(f"signals/feed.json title mismatch for {slug}")
+
+                expected_date = f"{signal.get('date')}T00:00:00Z"
+                if feed_item.get("date_published") == expected_date:
+                    ok(f"signals/feed.json date matches index for {slug}")
+                else:
+                    err(f"signals/feed.json date mismatch for {slug}: expected {expected_date}")
+
+                if feed_item.get("url") == signal.get("url"):
+                    ok(f"signals/feed.json URL matches index for {slug}")
+                else:
+                    err(f"signals/feed.json URL mismatch for {slug}")
+
     signal_files = list(signals_dir.rglob("*.md"))
     signal_files = [f for f in signal_files if f.name not in ("TEMPLATE.md", "README.md", "latest.md")]
 
