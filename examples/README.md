@@ -6,6 +6,14 @@ Every example declares its evidence mode and includes a limitation note. None of
 
 ## Current examples
 
+## Learning path
+
+1. Start with [iran-sanctions-routing-exposure.md](iran-sanctions-routing-exposure.md) to see the reasoning-only structure for Iran sanctions adjacency.
+2. Read [hormuz-shipping-disruption.md](hormuz-shipping-disruption.md) to see illustrative source-packet handling for maritime chokepoint risk.
+3. Read [live-source-backed-ofac-iran-shipping-sanctions.md](live-source-backed-ofac-iran-shipping-sanctions.md) to see source-backed OFAC / Iran shipping-sector exposure.
+4. Read [live-source-backed-gcc-correspondent-banking.md](live-source-backed-gcc-correspondent-banking.md) to see source-backed GCC correspondent-banking risk framing.
+5. Read [user-provided-sources-sovereign-wealth-deployment.md](user-provided-sources-sovereign-wealth-deployment.md) to see the mode where the user's source packet is the evidence base.
+
 | File | Mode | Topic |
 |---|---|---|
 | [live-source-backed-ofac-iran-shipping-sanctions.md](live-source-backed-ofac-iran-shipping-sanctions.md) | `live-source-backed` | OFAC Iran shipping-sector sanctions — exposure framing for a GCC-hub commodity trader. Primary sources: E.O. 13846, E.O. 13902, OFAC SDN list, OFAC Iran program page. Retrieved 2026-05-12. |

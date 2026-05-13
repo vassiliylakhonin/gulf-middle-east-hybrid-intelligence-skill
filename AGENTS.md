@@ -155,18 +155,20 @@ README should make value clear in 30 seconds.
 Recommended structure:
 1. One-line positioning
 2. Problem
-3. What it does
-4. What it is not
-5. Relationship to Agenda Intelligence MD, Global Think Tank Analyst, and Central Asia + Caspian Skill
-6. Quick usage
-7. Before / after
-8. Flagship example
-9. Skill files
-10. Source guide
-11. Risk archetypes
-12. Review checklist
-13. Limitations
-14. Roadmap
+3. Try this prompt
+4. What it does
+5. What it is not
+6. Relationship to Agenda Intelligence MD, Global Think Tank Analyst, and Central Asia + Caspian Skill
+7. Quick usage
+8. Before / after
+9. Flagship examples and examples learning path
+10. Signal archive
+11. Skill files
+12. Source guide
+13. Risk archetypes
+14. Review checklist
+15. Limitations
+16. Roadmap
 
 ## Examples
 
@@ -181,6 +183,8 @@ Preferred examples:
 - Iraq banking-sector reform exposure for a fintech or correspondent bank
 
 Every example must include evidence mode and limitation note.
+
+Examples should be navigable as a learning path, not only as a flat file list. Keep `examples/README.md` aligned with the flagship examples section in `README.md`.
 
 ## Evaluation docs
 

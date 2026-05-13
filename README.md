@@ -10,7 +10,31 @@ Generic LLMs produce broad commentary on the Gulf and Middle East: vague "tensio
 
 That output is not decision-useful for sanctions and AML teams, energy traders, shipping insurers, Gulf banking correspondents, sovereign wealth co-investors, or analysts with operational exposure to Iran sanctions, OFAC SDN risk, Hormuz / Bab-el-Mandeb chokepoints, or GCC financial flows. They need mechanism-first reasoning, explicit evidence boundaries, and role-based implications — not regional essays.
 
-## 3. What it does
+## 3. Try this prompt
+
+Paste this into an AI agent using the Claude or Codex skill file:
+
+```text
+Use the Gulf + Middle East Hybrid Intelligence Skill.
+
+Question: A GCC-hub commodity trader is reviewing exposure to Iran-linked shipping, payment rails, and Gulf correspondent banks. What sanctions, AML, maritime and counterparty risks matter over the next 90 days?
+Audience: sanctions compliance and trading-risk leadership.
+Time horizon: 90 days.
+Evidence mode: reasoning-only unless live source tools are available.
+Mode: risk / compliance.
+
+State the primary driver, mechanism, exposure map, actor incentives, role-based actions, trigger points, confidence, unknowns, and limitation note.
+```
+
+Expected shape of a good answer:
+- starts with `Primary driver is: ...`;
+- distinguishes Iran-state, IRGC-affiliated, and Iran-private commercial actors where material;
+- explains how risk transmits through shipping, payment rails, correspondent banking, energy flows or sovereign wealth channels;
+- labels uncertainty using `Verified` / `Plausible` / `Judgment` / `Unknown` where useful;
+- gives trigger points and role-based actions, not vague "monitor closely" advice;
+- includes a limitation note and avoids legal, compliance, sanctions, AML or investment determinations.
+
+## 4. What it does
 
 This skill helps agents produce mechanism-first, evidence-aware, decision-useful regional risk analysis for the Gulf and Middle East. It:
 
@@ -24,7 +48,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - produces trigger points and watch-next indicators
 - supports role-based implications for sanctions compliance, AML, energy traders, shipping insurers, Gulf bank correspondents, sovereign wealth co-investors and policy analysts
 
-## 4. What it is not
+## 5. What it is not
 
 - not legal advice
 - not compliance advice
@@ -38,7 +62,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - not a CLI, MCP server, or validation platform
 - not a replacement for human analyst, counsel, or compliance review
 
-## 5. Relationship to Agenda Intelligence MD, Global Think Tank Analyst and Central Asia + Caspian Skill
+## 6. Relationship to Agenda Intelligence MD, Global Think Tank Analyst and Central Asia + Caspian Skill
 
 This skill is one of several repos in a wider portfolio. Each has a distinct role; do not blur them.
 
@@ -53,19 +77,25 @@ This repo does **not** itself perform Agenda Intelligence MD validation, schema 
 
 [docs/companion-patterns.md](docs/companion-patterns.md) describes structural patterns for using this skill alongside the other repos.
 
-## 6. Quick usage
+## 7. Quick usage
 
 Use the skill variant matching your environment as the operating instruction in your agent setup:
 
 | Environment | File | Notes |
 |---|---|---|
-| Claude | `skills/claude/SKILL.md` | YAML frontmatter |
-| ChatGPT / other LLMs | same file | Paste or attach as system / project instruction |
-| Codex / OpenClaw | not yet provided | Use `skills/claude/SKILL.md` as system prompt for now |
+| Claude | `skills/claude/SKILL.md` | Claude Projects setup, web search guidance, extended-context user-provided source workflows |
+| Codex | `skills/codex/SKILL.md` | Agentic-loop output discipline, JSON output mode, Agenda Intelligence MD pipeline pattern |
+| ChatGPT / other LLMs | `skills/claude/SKILL.md` or `skills/codex/SKILL.md` | Paste or attach as system / project instruction |
 
-No validation script in this initial release — see `STATUS.md` for the honest status of B1.5 deferral.
+Validation:
 
-## 7. Before / after
+```bash
+python3 scripts/validate.py
+```
+
+The validator checks skill structure, evidence-mode declarations, retrieval-date discipline, limitation notes, forbidden determinative claims, signal structure, eval files, and source-guide freshness rules. It does **not** verify factuality of any output produced by the skill.
+
+## 8. Before / after
 
 **Before — generic LLM answer:**
 - broad regional commentary ("tensions remain elevated")
@@ -85,7 +115,9 @@ No validation script in this initial release — see `STATUS.md` for the honest 
 - role-based implications (sanctions compliance, AML, energy trader, shipping insurer, banker, sovereign wealth co-investor)
 - evidence mode stated explicitly
 
-## 8. Flagship examples
+## 9. Flagship examples
+
+For a guided route through the examples, start with [examples/README.md](examples/README.md).
 
 | File | Mode | Topic |
 |---|---|---|
@@ -97,7 +129,7 @@ No validation script in this initial release — see `STATUS.md` for the honest 
 | [examples/user-provided-sources-iraq-banking.md](examples/user-provided-sources-iraq-banking.md) | `user-provided sources` | Iraq banking-sector reform exposure for a correspondent bank (template) |
 | Dark-fleet / sanctioned-oil flow | — | Deferred (requires live AIS primary sources) — see [examples/README.md](examples/README.md) |
 
-## 9. Signal archive
+## 10. Signal archive
 
 [`signals/`](signals/) holds short public examples of the skill style: one regional event or structural condition, why it matters, a bounded assessment, and indicators to watch.
 
@@ -108,22 +140,23 @@ No validation script in this initial release — see `STATUS.md` for the honest 
 
 These are public examples of skill output, not official intelligence or real-time data.
 
-## 10. Skill files
+## 11. Skill files
 
-- [`skills/claude/SKILL.md`](skills/claude/SKILL.md) — main skill instruction (YAML frontmatter)
-- Codex and OpenClaw variants are not provided in initial release; a single skill file is the deliberate starting position. See `STATUS.md` for B2.4 reasoning.
+- [`skills/claude/SKILL.md`](skills/claude/SKILL.md) — Claude variant with Projects setup, web search guidance for `live-source-backed` mode, extended-context `user-provided sources` workflows and tool-use discipline.
+- [`skills/codex/SKILL.md`](skills/codex/SKILL.md) — Codex variant with agentic-loop output discipline, JSON output mode for Agenda Intelligence MD, and a multi-step pipeline integration pattern.
+- OpenClaw is intentionally not provided yet. See `STATUS.md` for B2.4 reasoning.
 
-## 11. Source guide
+## 12. Source guide
 
 [`docs/source-guide.md`](docs/source-guide.md) lists primary and authoritative sources for Gulf + Middle East risk analysis: OFAC, BIS, EU Council, UK OFSI, MENAFATF, IEA, IMF, BIS banking statistics, central banks (SAMA, CBUAE, QCB, CBI Iran, CBI Iraq, CBL Lebanon), IMO, and tiered secondary sources (think tanks, energy and shipping reporters).
 
-## 12. Risk archetypes
+## 13. Risk archetypes
 
 [`docs/risk-archetypes.md`](docs/risk-archetypes.md) catalogues recurring risk patterns: Iran sanctions adjacency, dark-fleet and ship-to-ship transfers, GCC correspondent-banking exposure, sovereign wealth deployment risk, maritime chokepoint disruption, sanctioned-oil flows, sanctioned-party post-designation reconstitution.
 
 Patterns, not factual claims about any specific entity, vessel or jurisdiction. Operational use requires source-backed verification.
 
-## 13. Review checklist
+## 14. Review checklist
 
 [`evals/checklist.md`](evals/checklist.md) — yes/no review pass over any memo produced with the skill. Aid for human reviewers, not an automated validator.
 
@@ -131,7 +164,7 @@ Patterns, not factual claims about any specific entity, vessel or jurisdiction. 
 
 [`evals/starter-rubric.md`](evals/starter-rubric.md) — starter scoring rubric for human review. Not a benchmark.
 
-## 14. Limitations
+## 15. Limitations
 
 - This project is intentionally conservative about evidence. It does not fabricate sources, vessel names, IMO numbers, or sanctions designations.
 - It is a **decision-support skill**, not legal, compliance, sanctions, AML, or investment advice.
@@ -140,14 +173,14 @@ Patterns, not factual claims about any specific entity, vessel or jurisdiction. 
 - This is an initial release. The honest status is in [`STATUS.md`](STATUS.md).
 - No production usage record exists yet (see B2.5).
 
-## 15. Roadmap
+## 16. Roadmap
 
 Directional, not committed. Items here are not implemented unless noted.
 
-- **Signal archive:** first signal live — [Red Sea disruption](signals/2026/2026-05-12-red-sea-houthi-shipping.md). Next priorities: OPEC+ production posture signal; US-Iran nuclear file signal.
-- **Validation script (B1.5):** structural validator for skill files, evidence-mode declarations and forbidden determinative claims. Deferred; on roadmap.
+- **Signal archive:** initial Red Sea, OPEC+ and US-Iran diplomatic signals are live in [`signals/`](signals/).
+- **Validation script (B1.5):** implemented as [`scripts/validate.py`](scripts/validate.py) and should pass before changes are merged.
 - **Dark-fleet / sanctioned-oil flow example:** deferred pending live AIS primary sources from Kpler, TankerTrackers, or Windward.
-- **Codex and OpenClaw skill variants (B2.4):** add only if platform-specific differentiation produces materially different output; otherwise keep consolidated.
+- **OpenClaw skill variant:** deferred until there is an active OpenClaw use case; avoid creating a near-identical third wrapper.
 - **External review (B2.2, B2.3, B2.7):** open to external reviewers from sanctions compliance, energy trading, shipping insurance, Gulf banking, or Iran-watcher analyst backgrounds. These criteria require humans outside the author's circle.
 
 If you'd like to influence the roadmap or contribute a review, open an issue.

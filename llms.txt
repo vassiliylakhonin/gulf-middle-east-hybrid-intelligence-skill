@@ -43,14 +43,17 @@ Evidence modes (declare for every output):
 
 Core files:
 - AGENTS.md — project identity, scope, evidence and safety rules, Definition of Done.
-- skills/claude/SKILL.md — canonical skill behavior (YAML frontmatter, full workflow).
+- skills/claude/SKILL.md — Claude variant (Projects setup, web search guidance, extended-context user-provided source workflows).
+- skills/codex/SKILL.md — Codex variant (agentic-loop output discipline, JSON output mode, Agenda Intelligence MD pipeline pattern).
 - README.md — public documentation.
 - docs/source-guide.md — primary sources by domain with re-verification horizons.
 - docs/regional-logic.md — scope extension rules, Iran actor distinction, GCC actor distinction.
 - docs/risk-archetypes.md — seven recurring risk archetypes.
+- examples/README.md — guided route through examples and evidence modes.
 - examples/ — worked memo examples in all four evidence modes.
 - evals/ — checklist, failure-modes (13 patterns), starter rubric.
 - signals/ — bounded, dated signal examples (not official intelligence).
+- scripts/validate.py — structural validator for skills, examples, signals, evals and docs.
 
 Agent guidance:
 - Always state evidence mode and retrieval date (if live-source-backed) before analysis.

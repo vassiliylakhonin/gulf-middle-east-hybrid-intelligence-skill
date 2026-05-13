@@ -6,6 +6,7 @@ This is a structural check — it does not verify factual correctness.
 """
 
 import os
+import json
 import re
 import sys
 from pathlib import Path
@@ -189,6 +190,46 @@ def check_signals():
         ok("index.json present")
     else:
         err("signals/index.json missing")
+
+    feed = signals_dir / "feed.json"
+    if feed.exists():
+        ok("feed.json present")
+    else:
+        err("signals/feed.json missing")
+
+    latest = signals_dir / "latest.md"
+    if latest.exists():
+        ok("latest.md present")
+    else:
+        err("signals/latest.md missing")
+
+    if index.exists() and feed.exists() and latest.exists():
+        try:
+            index_payload = json.loads(index.read_text(encoding="utf-8"))
+            feed_payload = json.loads(feed.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            err(f"signals JSON is invalid: {exc}")
+        else:
+            latest_entry = index_payload.get("latest", {})
+            latest_path = ROOT / latest_entry.get("path", "")
+            if latest_path.exists():
+                ok("signals/index.json latest path exists")
+            else:
+                err(f"signals/index.json latest path missing: {latest_entry.get('path')}")
+
+            latest_text = latest.read_text(encoding="utf-8")
+            if latest_entry.get("title") and latest_entry["title"] in latest_text:
+                ok("signals/latest.md matches signals/index.json latest title")
+            else:
+                err("signals/latest.md does not contain signals/index.json latest title")
+
+            index_urls = {item.get("url") for item in index_payload.get("signals", [])[:20]}
+            feed_urls = {item.get("url") for item in feed_payload.get("items", [])}
+            missing = sorted(index_urls - feed_urls)
+            if missing:
+                err(f"signals/feed.json missing URLs from signals/index.json: {missing}")
+            else:
+                ok("signals/feed.json covers signals/index.json entries")
 
     signal_files = list(signals_dir.rglob("*.md"))
     signal_files = [f for f in signal_files if f.name not in ("TEMPLATE.md", "README.md", "latest.md")]
