@@ -29,28 +29,28 @@ An **active reminder** of fast-moving topics in the region that any source-backe
 - **What to re-verify:** Current SDN status of named counterparties; current vessel-list status of named ships; recent OFAC enforcement actions involving Iran; General Licenses and FAQs affecting Iran energy / financial sectors; Determinations under EO 13902 or successor authorities.
 - **Where to verify:** OFAC SDN search; OFAC vessel list; OFAC recent actions; OFAC General Licenses and FAQs; State / Treasury joint statements.
 - **Freshness horizon for derived claims:** 30 days, and always at point of operational decision.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: EU and UK Iran sanctions divergence
 - **Why it matters:** EU and UK regimes diverge from US on specific Iran designations and on the scope of sectoral measures. Memos for users with multi-jurisdictional exposure must not assume convergence.
 - **What to re-verify:** Current EU consolidated list status; latest UK OFSI Iran designations; sectoral scope of EU Council decisions affecting Iran energy or finance.
 - **Where to verify:** EU consolidated sanctions list; OFSI consolidated list and Iran-specific guidance.
 - **Freshness horizon for derived claims:** 30 days.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: IRGC and IRGC-affiliated entity scope
 - **Why it matters:** IRGC FTO status, affiliated-entity designations, and front-company turnover create constant secondary-sanctions exposure. Memos must distinguish Iran-state, IRGC-affiliated, and Iran-private commercial actors throughout.
 - **What to re-verify:** Recent IRGC-affiliated designations; recent enforcement actions naming IRGC fronts; State Department designations.
 - **Where to verify:** OFAC recent actions filtered for IRGC; State Department designations; credible secondary reporting cross-checked against primaries.
 - **Freshness horizon for derived claims:** 30 days for specific entity claims.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: US-Iran negotiation status and nuclear file
 - **Why it matters:** Affects sanctions-relief expectations, snapback risk, and Gulf-state political alignment. High volatility, low predictability. Overconfident forecasting on this file is explicitly listed as an anti-pattern in `AGENTS.md`.
 - **What to re-verify:** Official statements (State, Treasury, EU, IAEA, Iran MFA); IAEA Board of Governors outputs; specific named-deal status.
 - **Where to verify:** Official communiqué texts; IAEA reports; credible reporting cross-checked.
 - **Freshness horizon for derived claims:** 1 month; treat any claim about negotiation status as **time-sensitive** and explicitly time-stamped.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ## Maritime chokepoints and shipping risk
 
@@ -59,21 +59,21 @@ An **active reminder** of fast-moving topics in the region that any source-backe
 - **What to re-verify:** Recent UKMTO / IMSC advisories; Operation Prosperity Guardian or successor mission posture; insurance market premia patterns for Red Sea transits.
 - **Where to verify:** UKMTO advisories; IMSC; flag-state advisories; credible shipping-trade press cross-checked.
 - **Freshness horizon for derived claims:** 1 month for operational claims; 3 months for structural.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: Hormuz incident pattern and Iranian seizure activity
 - **Why it matters:** Iranian seizures of tankers, regional naval posture changes, and US-Iran maritime incidents affect insurance and routing for any Hormuz transit.
 - **What to re-verify:** Recent named seizure incidents; CENTCOM and IRGC Navy posture statements; Hormuz transit advisories.
 - **Where to verify:** UKMTO; CENTCOM releases; credible reporting cross-checked.
 - **Freshness horizon for derived claims:** 3 months.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: Dark-fleet and STS transfer patterns
 - **Why it matters:** Sanctioned-crude flows, vessel-identity manipulation, and ship-to-ship transfer patterns shift continuously. Specific vessel claims age within weeks. Note: detection of dark-fleet activity is explicitly outside this skill's claimed capabilities (see `AGENTS.md`).
 - **What to re-verify:** Specific vessel status in OFAC list; AIS gaps and re-flagging events from competent providers; sector enforcement actions naming vessels.
 - **Where to verify:** OFAC vessel list; IMO GISIS; AIS providers (Kpler, Vortexa, Lloyd's List Intelligence, MarineTraffic); enforcement-action announcements.
 - **Freshness horizon for derived claims:** 1 month; treat as time-sensitive for any vessel-level claim.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ## GCC banking, finance, and sovereign-wealth
 
@@ -82,28 +82,28 @@ An **active reminder** of fast-moving topics in the region that any source-backe
 - **What to re-verify:** Recent enforcement actions against correspondents serving the region; named-bank-level correspondent posture changes; CBI and CBI-adjacent central-bank statements.
 - **Where to verify:** OFAC and DOJ enforcement actions; central bank communiqués (CBI, SAMA, CBUAE, QCB, CBK, CBB, CBO); credible secondary reporting cross-checked.
 - **Freshness horizon for derived claims:** 6 months structural; immediately for any named-bank claim.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: Iraq banking-sector reform and CBI dollar-auction structure
 - **Why it matters:** CBI dollar-auction restrictions, named-bank suspensions, and FATF-driven AML reforms reshape Iraq financial-system risk. Volatile file.
 - **What to re-verify:** Recent CBI statements on bank suspensions and auction structure; FATF / MENAFATF Iraq follow-ups; US Treasury actions affecting Iraqi banks.
 - **Where to verify:** CBI press releases; FATF country page; OFAC; credible secondary cross-checked.
 - **Freshness horizon for derived claims:** 3 months.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: Sovereign-wealth deployment posture (PIF, ADIA, Mubadala, QIA, KIA)
 - **Why it matters:** Mandates, leverage on portfolio companies, and political alignment with US/EU/China shift with regional priorities and ruling-family dynamics. Specific deal claims age fast.
 - **What to re-verify:** Recent annual reports and disclosures where available; specific named-deal announcements; political-context shifts.
 - **Where to verify:** SWF official disclosures; portfolio company announcements; credible financial reporting cross-checked.
 - **Freshness horizon for derived claims:** 6 months structural; 1 month for specific deals.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: MENAFATF country status and AML posture
 - **Why it matters:** Mutual evaluation outcomes, follow-ups, and rating changes affect EDD requirements and correspondent posture toward in-scope jurisdictions.
 - **What to re-verify:** Latest MENAFATF plenary statements; specific country MER / follow-up status; FATF public statements.
 - **Where to verify:** MENAFATF reports and statements; FATF country pages.
 - **Freshness horizon for derived claims:** 3 months follow-ups, 12 months MER findings.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ## Energy markets and OPEC+
 
@@ -112,21 +112,21 @@ An **active reminder** of fast-moving topics in the region that any source-backe
 - **What to re-verify:** Latest OPEC and OPEC+ communiqués; MOMR; specific country quota changes; sector reporting cross-checked.
 - **Where to verify:** OPEC and OPEC+ statements; MOMR; IEA OMR; credible secondary cross-checked.
 - **Freshness horizon for derived claims:** 1 month for production decisions; 3 months for structural framing.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: Iran crude export volumes and destination patterns
 - **Why it matters:** Sanctioned-crude flows, destination concentration (China dominance), and STS-laundering patterns affect enforcement and secondary-sanctions exposure analysis.
 - **What to re-verify:** Specific volume estimates from competent providers (Kpler, Vortexa); IEA OMR mentions; US Treasury enforcement actions naming specific flow patterns.
 - **Where to verify:** Paid AIS / flow-data providers; IEA OMR; OFAC enforcement actions.
 - **Freshness horizon for derived claims:** 3 months for structural patterns; 1 month for volume claims.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: LNG and gas export developments (Qatar, UAE, Israel-Mediterranean)
 - **Why it matters:** Project sanctions, capacity expansions, and offtake structures affect medium-term energy procurement and counterparty-risk analysis.
 - **What to re-verify:** Project-level announcements; specific offtake-deal disclosures; ministry-of-energy publications.
 - **Where to verify:** Operator and ministry publications; IEA / IGU reports.
 - **Freshness horizon for derived claims:** 6 months.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ## Regional security and political alignment
 
@@ -135,14 +135,14 @@ An **active reminder** of fast-moving topics in the region that any source-backe
 - **What to re-verify:** Latest official statements; specific named-deal status; sector developments in defense, tech, and energy crossings.
 - **Where to verify:** Official communiqués; credible reporting cross-checked.
 - **Freshness horizon for derived claims:** 3 months.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ### Topic: Iranian proxy network activity (Hezbollah, Iraqi militias, Houthis)
 - **Why it matters:** Affects sanctions-screening scope, country-risk premia, and specific transit-route risk. Highly dynamic.
 - **What to re-verify:** Recent OFAC and Treasury designations naming proxy-network entities; specific incident reporting; sector enforcement actions.
 - **Where to verify:** OFAC recent actions; Treasury press releases; credible reporting cross-checked.
 - **Freshness horizon for derived claims:** 3 months for structural; 1 month for specific incidents.
-- **Last reviewed:** [YYYY-MM-DD]
+- **Last reviewed:** Not yet verified — topic added 2026-05-15. Re-verify against primary sources before deriving claims.
 
 ---
 

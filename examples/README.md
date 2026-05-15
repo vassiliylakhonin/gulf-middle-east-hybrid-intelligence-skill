@@ -4,8 +4,6 @@ Worked examples produced in the Gulf + Middle East Hybrid Intelligence skill sty
 
 Every example declares its evidence mode and includes a limitation note. None of these are intelligence products. None are legal, compliance, sanctions, AML, or investment advice.
 
-## Current examples
-
 ## Learning path
 
 1. Start with [iran-sanctions-routing-exposure.md](iran-sanctions-routing-exposure.md) to see the reasoning-only structure for Iran sanctions adjacency.
