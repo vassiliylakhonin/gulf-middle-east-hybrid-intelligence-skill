@@ -32,6 +32,12 @@ Gulf + Middle East Hybrid Intelligence Skill:
 - specialist Gulf, Iran, Iraq, maritime-chokepoint risk reasoning
 - Iran sanctions, GCC banking and sovereign wealth, energy market and shipping route analysis patterns
 
+Source Ingest skill (Agenda Intelligence MD):
+- use before analysis when a user provides a PDF, DOCX, XLSX, URL, article, or transcript
+- normalizes the document into a structured source record: metadata, Axis A/B provenance tags, key claims table, excerpts, limitations
+- for routing, load `docs/source-guide.md` from this repo — it defines the regional source tier hierarchy, freshness horizons, and specific URL pointers for Gulf / Middle East analysis
+- do not duplicate source-guide content inside the source record; reference it
+
 Do not duplicate Agenda Intelligence MD inside this repo.
 Do not duplicate Central Asia + Caspian skill content; reference it when a flow crosses both regions.
 Do not turn this repo into a CLI, MCP server, screening engine, or validation platform unless explicitly requested.
