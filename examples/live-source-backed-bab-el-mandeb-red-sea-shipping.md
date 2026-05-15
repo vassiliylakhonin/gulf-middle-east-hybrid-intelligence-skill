@@ -4,7 +4,7 @@
 **Decision:** Whether to tighten war-risk pricing for Red Sea / Gulf of Aden transits, change route guidance to Cape of Good Hope routing for selected voyages, or adjust contract clauses (war risk, deviation, JWC-listed-area triggers).
 **Audience:** Marine war-risk underwriter, hull war reinsurer, industrial charterer's logistics / risk lead, or shipping legal team.
 **Time horizon:** 6–12 months, with structural overlay.
-**Evidence mode:** `live-source-backed`.
+**Evidence mode:** `live-source-backed`. This example also demonstrates the canonical Axis A / Axis B provenance-tag system from AGENTS.md (`[primary]` / `[secondary]` / `[analyst-judgment]` on Axis A; `[verify]` / `[stale-risk: YYYY-MM]` on Axis B).
 **Primary sources retrieved:** See Source table below. Two primary sources (Combined Maritime Forces, IMO) were retrieved live on 2026-05-15. Other named primary sources (UKMTO, Lloyd's Joint War Committee, IEA OMR) could not be retrieved in this session (UKMTO returned HTTP 403; Lloyd's JWC page returned 404) and are flagged `[verify]` for the reader.
 **Retrieval note:** Multinational naval task-force structure and IMO regulatory role are stable. Specific UKMTO advisories, JWC listed-area designations, premium levels, and incident counts are time-sensitive and must be re-verified against the relevant primary source before operational use. This memo deliberately does not state attack counts, named vessels, IMO numbers, premium percentages, or specific dated incidents — those belong in a sourced advisory, not in a structural decision-support brief.
 **Limitation note:** This is a decision-support brief. It is not war-risk underwriting advice, vessel screening, maritime due diligence, legal advice, or operational routing guidance. It does not constitute a JWC listed-area determination or an UKMTO advisory. Operational decisions require qualified marine war-risk underwriting review, current UKMTO and IMSC / CMF advisories, current JWC listed-areas, and entity-level vessel and counterparty screening as of the transit date.
@@ -34,11 +34,11 @@ For a marine war-risk underwriter or industrial charterer, Bab-el-Mandeb / Red S
 
 ## Primary driver
 
-`Primary driver (Judgment):` The Red Sea / Bab-el-Mandeb route's risk profile is set by the interaction of three structural variables — Houthi targeting posture, multinational naval-task-force coverage, and the Lloyd's market's listed-areas designation — none of which the insurer or charterer controls. Pricing must reflect the *distribution* of these variables, not a snapshot of any one of them.
+`Primary driver [analyst-judgment]:` The Red Sea / Bab-el-Mandeb route's risk profile is set by the interaction of three structural variables — Houthi targeting posture, multinational naval-task-force coverage, and the Lloyd's market's listed-areas designation — none of which the insurer or charterer controls. Pricing must reflect the *distribution* of these variables, not a snapshot of any one of them.
 
 ## Why now
 
-`Why now (Judgment):` Two years into the campaign of Houthi attacks on Red Sea shipping, the route has neither normalized to pre-2024 conditions nor remained at peak-disruption intensity. Underwriters and charterers face a sustained elevated-volatility regime rather than an acute incident-response decision. Clause structures and pricing built for short-duration disruption may now be mispriced against duration risk.
+`Why now [analyst-judgment]:` Two years into the campaign of Houthi attacks on Red Sea shipping, the route has neither normalized to pre-2024 conditions nor remained at peak-disruption intensity. Underwriters and charterers face a sustained elevated-volatility regime rather than an acute incident-response decision. Clause structures and pricing built for short-duration disruption may now be mispriced against duration risk.
 
 ## Mechanism
 
@@ -47,7 +47,7 @@ Bab-el-Mandeb is the southern entrance to the Red Sea, connecting the Indian Oce
 
 ### Three structural variables (the actual exposure)
 
-1. **Houthi attack posture.** The Yemen-based Houthi movement has, since late 2023, used drones, ballistic missiles, and surface vessels to attack commercial shipping in the Red Sea and Gulf of Aden corridor. Targeting has explicitly cited the Israel-Gaza conflict as the political pretext. `[Judgment]` Posture has varied over time with the broader Israel-aligned / Iran-aligned conflict file — pauses and resumptions have occurred. Specific incident counts, target patterns, and dates of any specific attack are `[verify]` against UKMTO and credible reporting.
+1. **Houthi attack posture.** The Yemen-based Houthi movement has, since late 2023, used drones, ballistic missiles, and surface vessels to attack commercial shipping in the Red Sea and Gulf of Aden corridor. Targeting has explicitly cited the Israel-Gaza conflict as the political pretext. `[analyst-judgment]` Posture has varied over time with the broader Israel-aligned / Iran-aligned conflict file — pauses and resumptions have occurred. Specific incident counts, target patterns, and dates of any specific attack are `[verify]` against UKMTO and credible reporting.
 2. **Multinational naval-task-force coverage.** Two distinct multinational efforts have been publicly disclosed: **Operation Prosperity Guardian** (US-led, announced December 2023) and **CTF 153 — Red Sea Maritime Security**, operating under Combined Maritime Forces (CMF). CMF is a 47-nation naval partnership; CTF 153 is one of five primary task forces under CMF, with command rotating among member nations. **Retrieved 2026-05-15.** Current force composition, ship presence, and rules of engagement are `[verify]` — these change with operational rotations.
 3. **Lloyd's Joint War Committee listed-areas designation.** The JWC publishes a list of areas requiring hull-war notification under standard London market war-risk clauses. Inclusion of the Red Sea / Gulf of Aden / specific approaches as listed areas triggers additional premium and notification requirements in standard contracts. `[verify]` — JWC updates the list periodically and the current perimeter and conditions require live retrieval from Lloyd's.
 
@@ -58,7 +58,7 @@ For an underwriter or charterer, exposure transmits through:
 - **War-risk premium.** Routes through JWC-listed areas attract additional war-risk premium under standard hull-war clauses. The premium level is market-determined and not stated here — `[verify]` against the current market.
 - **CONWARTIME / VOYWAR clause triggers.** Time-charter (CONWARTIME) and voyage-charter (VOYWAR) clauses allow the master / owner to refuse or deviate from voyages into areas of war-like risk. `[verify]` the current BIMCO clause language and case-law interpretation.
 - **Deviation rights and cargo coverage interplay.** Deviation to Cape of Good Hope routing affects voyage performance, demurrage, and cargo coverage — coverage of consequential cargo loss, delay, and contractual penalty exposure requires policy-level review, not structural reasoning.
-- **Operational risk mitigations.** Convoy participation (when offered), AIS protocols, hardening (citadels, advisory transit guidance) are operational, not pricing-level, controls. Their effectiveness is `[Judgment]` and varies by vessel and voyage.
+- **Operational risk mitigations.** Convoy participation (when offered), AIS protocols, hardening (citadels, advisory transit guidance) are operational, not pricing-level, controls. Their effectiveness is `[analyst-judgment]` and varies by vessel and voyage.
 
 ## Iran actor distinction
 

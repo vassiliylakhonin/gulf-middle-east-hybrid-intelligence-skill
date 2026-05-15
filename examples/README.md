@@ -11,7 +11,7 @@ Every example declares its evidence mode and includes a limitation note. None of
 3. Read [live-source-backed-ofac-iran-shipping-sanctions.md](live-source-backed-ofac-iran-shipping-sanctions.md) to see source-backed OFAC / Iran shipping-sector exposure.
 4. Read [live-source-backed-gcc-correspondent-banking.md](live-source-backed-gcc-correspondent-banking.md) to see source-backed GCC correspondent-banking risk framing.
 5. Read [user-provided-sources-sovereign-wealth-deployment.md](user-provided-sources-sovereign-wealth-deployment.md) to see the mode where the user's source packet is the evidence base.
-6. Read [live-source-backed-bab-el-mandeb-red-sea-shipping.md](live-source-backed-bab-el-mandeb-red-sea-shipping.md) to see source-backed Bab-el-Mandeb / Red Sea shipping disruption framing for a war-risk underwriter or industrial charterer.
+6. Read [live-source-backed-bab-el-mandeb-red-sea-shipping.md](live-source-backed-bab-el-mandeb-red-sea-shipping.md) to see source-backed Bab-el-Mandeb / Red Sea shipping disruption framing for a war-risk underwriter or industrial charterer. **This example is the canonical demonstration of the Axis A / Axis B provenance-tag system** (`[primary]` / `[secondary]` / `[analyst-judgment]` + optional `[verify]` / `[stale-risk: YYYY-MM]`) defined in AGENTS.md.
 
 | File | Mode | Topic |
 |---|---|---|
