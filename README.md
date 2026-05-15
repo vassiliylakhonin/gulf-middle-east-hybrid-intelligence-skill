@@ -26,6 +26,18 @@ It does not replace sanctions screening, AML monitoring, vessel due diligence, l
 - an explicit evidence mode and a limitation note on every output
 - no fabricated citations, sanctions designations, vessel names, IMO numbers or dates
 
+**Where this sits in the production AI stack**
+
+Reasoning skills (markdown-first reasoning contracts for agents):
+- [Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst) — horizontal: policy, sanctions, regulatory, geopolitical, trade memos
+- [Central Asia + Caspian Hybrid Intelligence Skill](https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill) — vertical: sanctions, AML, banking, corridor risk in Central Asia / Caspian
+- **→ Gulf + Middle East Hybrid Intelligence Skill (this repo)** — vertical: Iran sanctions, GCC banking, sovereign wealth, maritime chokepoint risk
+
+Evidence & audit layer (CI / MCP / schemas):
+- [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md) — validate, score and audit strategic-risk agent output structure
+
+The skills define how agents *reason*. Agenda Intelligence MD defines how the output is *audited*. Together they let agents produce auditable strategic-intelligence — not just plausible-sounding summaries.
+
 ## 4. Try this prompt
 
 Paste this into an AI agent using the Claude or Codex skill file:
