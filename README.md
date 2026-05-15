@@ -47,6 +47,8 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - identifies leverage shifts and actor incentives across GCC states, Iran, US, EU and Asian buyers
 - produces trigger points and watch-next indicators
 - supports role-based implications for sanctions compliance, AML, energy traders, shipping insurers, Gulf bank correspondents, sovereign wealth co-investors and policy analysts
+- runs a cold-start interview ([`docs/cold-start-interview.md`](docs/cold-start-interview.md)) to capture role, geography, decision context, risk appetite, source access and required actor distinctions (Iran-state / IRGC / Iran-private commercial) into a populated practice profile ([`templates/practice-profile.md`](templates/practice-profile.md)) before substantive memos
+- carries an active currency watch ([`docs/currency-watch.md`](docs/currency-watch.md)) listing fast-moving topics — Iran SDN evolution, IRGC scope, US-Iran negotiation file, Houthi / Bab-el-Mandeb posture, Hormuz, dark-fleet, GCC correspondent banking, Iraq CBI, MENAFATF, OPEC+ — that source-backed memos should re-verify against current primary sources, with a 90-day staleness rule
 
 ## 5. What it is not
 
@@ -144,6 +146,9 @@ These are public examples of skill output, not official intelligence or real-tim
 
 - [`skills/claude/SKILL.md`](skills/claude/SKILL.md) — Claude variant with Projects setup, web search guidance for `live-source-backed` mode, extended-context `user-provided sources` workflows and tool-use discipline.
 - [`skills/codex/SKILL.md`](skills/codex/SKILL.md) — Codex variant with agentic-loop output discipline, JSON output mode for Agenda Intelligence MD, and a multi-step pipeline integration pattern.
+- [`docs/cold-start-interview.md`](docs/cold-start-interview.md) — preflight procedure that captures role, geography, decision context, risk appetite, source access, and required Iran-state / IRGC / Iran-private actor distinctions before substantive memo work. STOP rule blocks generic memos when the practice profile is missing or contains `[PLACEHOLDER]` markers.
+- [`templates/practice-profile.md`](templates/practice-profile.md) — populated profile read by every memo in the session as the default `Decision / Audience / Geography / Time horizon` block.
+- [`docs/currency-watch.md`](docs/currency-watch.md) — active list of fast-moving topics that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
 - OpenClaw is intentionally not provided yet. See `STATUS.md` for B2.4 reasoning.
 
 ## 12. Source guide
