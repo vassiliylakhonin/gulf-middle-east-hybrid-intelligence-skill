@@ -13,11 +13,13 @@ Every example declares its evidence mode and includes a limitation note. None of
 3. Read [live-source-backed-ofac-iran-shipping-sanctions.md](live-source-backed-ofac-iran-shipping-sanctions.md) to see source-backed OFAC / Iran shipping-sector exposure.
 4. Read [live-source-backed-gcc-correspondent-banking.md](live-source-backed-gcc-correspondent-banking.md) to see source-backed GCC correspondent-banking risk framing.
 5. Read [user-provided-sources-sovereign-wealth-deployment.md](user-provided-sources-sovereign-wealth-deployment.md) to see the mode where the user's source packet is the evidence base.
+6. Read [live-source-backed-bab-el-mandeb-red-sea-shipping.md](live-source-backed-bab-el-mandeb-red-sea-shipping.md) to see source-backed Bab-el-Mandeb / Red Sea shipping disruption framing for a war-risk underwriter or industrial charterer.
 
 | File | Mode | Topic |
 |---|---|---|
 | [live-source-backed-ofac-iran-shipping-sanctions.md](live-source-backed-ofac-iran-shipping-sanctions.md) | `live-source-backed` | OFAC Iran shipping-sector sanctions — exposure framing for a GCC-hub commodity trader. Primary sources: E.O. 13846, E.O. 13902, OFAC SDN list, OFAC Iran program page. Retrieved 2026-05-12. |
 | [live-source-backed-gcc-correspondent-banking.md](live-source-backed-gcc-correspondent-banking.md) | `live-source-backed` | GCC correspondent banking exposure for a Western respondent bank. Primary sources: FATF UAE grey-listing/de-listing record, BIS CBS, MENAFATF assessments, CBUAE and SAMA AML frameworks. Retrieved 2026-05-12. |
+| [live-source-backed-bab-el-mandeb-red-sea-shipping.md](live-source-backed-bab-el-mandeb-red-sea-shipping.md) | `live-source-backed` | Bab-el-Mandeb / Red Sea shipping disruption — pricing and routing exposure for a shipping insurer or industrial charterer. Combined Maritime Forces (CTF 153) and IMO primary pages retrieved 2026-05-15. UKMTO and Lloyd's JWC cited `[verify]` (retrieval failed). |
 | [iran-sanctions-routing-exposure.md](iran-sanctions-routing-exposure.md) | `reasoning-only` | Iran sanctions adjacency for a European refiner sourcing Gulf crude |
 | [hormuz-shipping-disruption.md](hormuz-shipping-disruption.md) | `illustrative source packet` | Hormuz disruption exposure framing for a shipping insurer |
 | [user-provided-sources-sovereign-wealth-deployment.md](user-provided-sources-sovereign-wealth-deployment.md) | `user-provided sources` | Sovereign wealth deployment risk for a target company or co-investor receiving GCC SWF capital. Template with PIF / ADIA / Mubadala / QIA / KIA public mandate URLs. |
@@ -29,6 +31,7 @@ The following preferred examples (per `AGENTS.md` "Examples") are not in the ini
 
 - **GCC correspondent banking exposure for a Western respondent bank** — ✅ added. See [live-source-backed-gcc-correspondent-banking.md](live-source-backed-gcc-correspondent-banking.md).
 - **Sovereign wealth deployment risk for a target company or co-investor** — ✅ added. See [user-provided-sources-sovereign-wealth-deployment.md](user-provided-sources-sovereign-wealth-deployment.md).
+- **Maritime chokepoint disruption (Bab-el-Mandeb / Red Sea) for a shipping insurer or industrial buyer** — ✅ added. See [live-source-backed-bab-el-mandeb-red-sea-shipping.md](live-source-backed-bab-el-mandeb-red-sea-shipping.md). Complements the illustrative-source-packet Hormuz example with `live-source-backed` Red Sea framing.
 - **Dark-fleet / sanctioned-oil flow exposure for a refiner or trader** — deferred. Requires `live-source-backed` mode with current OFAC vessel designations, AIS-derived patterns from primary maritime intelligence sources, and current G7 price-cap enforcement guidance. Not produced in `reasoning-only` mode because the value of this archetype depends on source-anchored vessel and flow data.
 
 ## `live-source-backed` mode
