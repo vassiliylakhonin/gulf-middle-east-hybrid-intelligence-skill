@@ -1,16 +1,32 @@
 # Gulf + Middle East Hybrid Intelligence Skill
 
-## 1. Positioning
+> **GULF + MIDDLE EAST RISK REASONING SKILL** — a reasoning method for AI agents working on Iran sanctions, GCC financial and energy hubs, maritime chokepoint risk and regional geopolitical exposure. Open-source. No live data. No legal or compliance advice.
 
-**Gulf & Middle East specialist skill for AI agents working on Iran sanctions, GCC financial and energy hubs, maritime chokepoint risk, and regional geopolitical exposure.**
+## 1. What this is
 
-## 2. Problem
+A reasoning method that runs inside an AI agent (Claude, ChatGPT, Codex, or a custom assistant) and produces mechanism-first, evidence-aware risk analysis on the Gulf and Middle East — instead of the generic "tensions remain elevated" commentary that default LLM output usually returns.
 
-Generic LLMs produce broad commentary on the Gulf and Middle East: vague "tensions remain elevated", undifferentiated treatment of Iran-state versus IRGC-affiliated versus Iran-private commercial actors, no transmission mechanism, no exposure mapping, no actor-incentive analysis, no trigger points.
+It does not replace sanctions screening, AML monitoring, vessel due diligence, legal review or human analyst judgement. It changes the *shape* of the reasoning your AI tool produces before any of those steps.
 
-That output is not decision-useful for sanctions and AML teams, energy traders, shipping insurers, Gulf banking correspondents, sovereign wealth co-investors, or analysts with operational exposure to Iran sanctions, OFAC SDN risk, Hormuz / Bab-el-Mandeb chokepoints, or GCC financial flows. They need mechanism-first reasoning, explicit evidence boundaries, and role-based implications — not regional essays.
+## 2. Who it is for
 
-## 3. Try this prompt
+- sanctions compliance and AML teams at banks, fintechs and trade-finance providers with Iran adjacency or GCC correspondent exposure
+- energy traders, refiners and commodity desks tracking OFAC SDN risk, dark-fleet patterns and OPEC+ dynamics
+- shipping insurers and maritime risk teams covering Hormuz, Bab-el-Mandeb, Red Sea and Suez approaches
+- sovereign wealth co-investors and corporate development teams assessing PIF / ADIA / Mubadala / QIA / KIA deployment risk
+- analysts and researchers covering Iran, GCC states, Iraq and adjacent Levant exposure
+- AI builders embedding regional risk reasoning into agents or assistants
+
+## 3. What you get
+
+- mechanism-first reasoning: primary driver → transmission channel → exposure map
+- explicit Iran-state / IRGC-affiliated / Iran-private commercial actor distinctions where they matter
+- explicit uncertainty labels: `Verified` / `Plausible` / `Judgment` / `Unknown`
+- role-based actions and trigger points — not "tensions remain elevated"
+- an explicit evidence mode and a limitation note on every output
+- no fabricated citations, sanctions designations, vessel names, IMO numbers or dates
+
+## 4. Try this prompt
 
 Paste this into an AI agent using the Claude or Codex skill file:
 
@@ -34,7 +50,7 @@ Expected shape of a good answer:
 - gives trigger points and role-based actions, not vague "monitor closely" advice;
 - includes a limitation note and avoids legal, compliance, sanctions, AML or investment determinations.
 
-## 4. What it does
+## 5. What it does
 
 This skill helps agents produce mechanism-first, evidence-aware, decision-useful regional risk analysis for the Gulf and Middle East. It:
 
@@ -50,7 +66,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - runs a cold-start interview ([`docs/cold-start-interview.md`](docs/cold-start-interview.md)) to capture role, geography, decision context, risk appetite, source access and required actor distinctions (Iran-state / IRGC / Iran-private commercial) into a populated practice profile ([`templates/practice-profile.md`](templates/practice-profile.md)) before substantive memos
 - carries an active currency watch ([`docs/currency-watch.md`](docs/currency-watch.md)) listing fast-moving topics — Iran SDN evolution, IRGC scope, US-Iran negotiation file, Houthi / Bab-el-Mandeb posture, Hormuz, dark-fleet, GCC correspondent banking, Iraq CBI, MENAFATF, OPEC+ — that source-backed memos should re-verify against current primary sources, with a 90-day staleness rule
 
-## 5. What it is not
+## 6. What it is not
 
 - not legal advice
 - not compliance advice
@@ -64,7 +80,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - not a CLI, MCP server, or validation platform
 - not a replacement for human analyst, counsel, or compliance review
 
-## 6. Relationship to Agenda Intelligence MD, Global Think Tank Analyst and Central Asia + Caspian Skill
+## 7. Relationship to Agenda Intelligence MD, Global Think Tank Analyst and Central Asia + Caspian Skill
 
 This skill is one of several repos in a wider portfolio. Each has a distinct role; do not blur them.
 
@@ -79,7 +95,7 @@ This repo does **not** itself perform Agenda Intelligence MD validation, schema 
 
 [docs/companion-patterns.md](docs/companion-patterns.md) describes structural patterns for using this skill alongside the other repos.
 
-## 7. Quick usage
+## 8. Quick usage
 
 Use the skill variant matching your environment as the operating instruction in your agent setup:
 
@@ -97,7 +113,7 @@ python3 scripts/validate.py
 
 The validator checks skill structure, evidence-mode declarations, retrieval-date discipline, limitation notes, forbidden determinative claims, signal structure, eval files, and source-guide freshness rules. It does **not** verify factuality of any output produced by the skill.
 
-## 8. Before / after
+## 9. Before / after
 
 **Before — generic LLM answer:**
 - broad regional commentary ("tensions remain elevated")
@@ -117,7 +133,7 @@ The validator checks skill structure, evidence-mode declarations, retrieval-date
 - role-based implications (sanctions compliance, AML, energy trader, shipping insurer, banker, sovereign wealth co-investor)
 - evidence mode stated explicitly
 
-## 9. Flagship examples
+## 10. Flagship examples
 
 For a guided route through the examples, start with [examples/README.md](examples/README.md).
 
@@ -132,7 +148,7 @@ For a guided route through the examples, start with [examples/README.md](example
 | [examples/user-provided-sources-iraq-banking.md](examples/user-provided-sources-iraq-banking.md) | `user-provided sources` | Iraq banking-sector reform exposure for a correspondent bank (template) |
 | Dark-fleet / sanctioned-oil flow | — | Deferred (requires live AIS primary sources) — see [examples/README.md](examples/README.md) |
 
-## 10. Signal archive
+## 11. Signal archive
 
 [`signals/`](signals/) holds short public examples of the skill style: one regional event or structural condition, why it matters, a bounded assessment, and indicators to watch.
 
@@ -143,7 +159,7 @@ For a guided route through the examples, start with [examples/README.md](example
 
 These are public examples of skill output, not official intelligence or real-time data.
 
-## 11. Skill files
+## 12. Skill files
 
 - [`skills/claude/SKILL.md`](skills/claude/SKILL.md) — Claude variant with Projects setup, web search guidance for `live-source-backed` mode, extended-context `user-provided sources` workflows and tool-use discipline.
 - [`skills/codex/SKILL.md`](skills/codex/SKILL.md) — Codex variant with agentic-loop output discipline, JSON output mode for Agenda Intelligence MD, and a multi-step pipeline integration pattern.
@@ -152,17 +168,17 @@ These are public examples of skill output, not official intelligence or real-tim
 - [`docs/currency-watch.md`](docs/currency-watch.md) — active list of fast-moving topics that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
 - OpenClaw is intentionally not provided yet. See `STATUS.md` for B2.4 reasoning.
 
-## 12. Source guide
+## 13. Source guide
 
 [`docs/source-guide.md`](docs/source-guide.md) lists primary and authoritative sources for Gulf + Middle East risk analysis: OFAC, BIS, EU Council, UK OFSI, MENAFATF, IEA, IMF, BIS banking statistics, central banks (SAMA, CBUAE, QCB, CBI Iran, CBI Iraq, CBL Lebanon), IMO, and tiered secondary sources (think tanks, energy and shipping reporters).
 
-## 13. Risk archetypes
+## 14. Risk archetypes
 
 [`docs/risk-archetypes.md`](docs/risk-archetypes.md) catalogues recurring risk patterns: Iran sanctions adjacency, dark-fleet and ship-to-ship transfers, GCC correspondent-banking exposure, sovereign wealth deployment risk, maritime chokepoint disruption, sanctioned-oil flows, sanctioned-party post-designation reconstitution.
 
 Patterns, not factual claims about any specific entity, vessel or jurisdiction. Operational use requires source-backed verification.
 
-## 14. Review checklist
+## 15. Review checklist
 
 [`evals/checklist.md`](evals/checklist.md) — yes/no review pass over any memo produced with the skill. Aid for human reviewers, not an automated validator.
 
@@ -170,7 +186,7 @@ Patterns, not factual claims about any specific entity, vessel or jurisdiction. 
 
 [`evals/starter-rubric.md`](evals/starter-rubric.md) — starter scoring rubric for human review. Not a benchmark.
 
-## 15. Limitations
+## 16. Limitations
 
 - This project is intentionally conservative about evidence. It does not fabricate sources, vessel names, IMO numbers, or sanctions designations.
 - It is a **decision-support skill**, not legal, compliance, sanctions, AML, or investment advice.
@@ -179,7 +195,7 @@ Patterns, not factual claims about any specific entity, vessel or jurisdiction. 
 - This is an initial release. The honest status is in [`STATUS.md`](STATUS.md).
 - No production usage record exists yet (see B2.5).
 
-## 16. Roadmap
+## 17. Roadmap
 
 Directional, not committed. Items here are not implemented unless noted.
 
