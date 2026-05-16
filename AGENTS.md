@@ -313,7 +313,7 @@ The criteria below close the weaknesses that Bar 1 alone cannot close. Each crit
 
 Current honest status (2026-05-15):
 
-- **Bar 1 — cleared.** B1.1, B1.2, B1.4, B1.5 (validation script, 0 errors), B1.6 met. B1.3 partial (5 of 6 preferred examples; dark-fleet deferred with documented reason — requires live AIS primary sources).
-- **Bar 2 — partially cleared.** B2.1 met (5 of 7 flagship examples in README source-anchored, 71%; Bab-el-Mandeb / Red Sea `live-source-backed` example added with CMF and IMO primary pages retrieved 2026-05-15). B2.6 met (re-verification horizons in source-guide.md; live-source-backed examples carry retrieval dates). B2.5 honest (no real-use evidence disclosed). B2.2, B2.3, B2.7 not met — require external humans. B2.4 met (two platform variants: claude with Claude Projects/web-search setup, codex with agentic-loop output discipline and JSON output mode). Single-author state; no external review, no validated cases.
+- **Bar 1 — cleared.** B1.1, B1.2, B1.3 (6 of 6 preferred examples; dark-fleet added as user-provided sources skeleton packet), B1.4, B1.5 (validation script, 0 errors), B1.6 met.
+- **Bar 2 — not cleared.** B2.1 met (6 of 8 flagship examples source-anchored, 75%; dark-fleet / sanctioned-oil user-provided sources skeleton packet added). B2.6 met (re-verification horizons in source-guide.md; live-source-backed examples carry retrieval dates). B2.5 partial (honest disclosure in place; no positive real-use record yet). B2.4 met (two platform variants: claude with Claude Projects/web-search setup, codex with agentic-loop output discipline and JSON output mode). B2.2, B2.3, B2.7 not met — require external humans. Single-author state; no external review, no validated cases.
 
 Future contributors must update this status truthfully as criteria are met, and must not advance the status without verifiable evidence.
