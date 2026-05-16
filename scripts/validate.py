@@ -379,6 +379,107 @@ def check_root():
             err("STATUS.md must explicitly state: **Bar 2 — not cleared.**")
 
 
+# ── 7. taxonomy.json: internal consistency and example tags ──────────────────
+
+# Slug form (taxonomy IDs) ↔ prose form (text inside example files).
+EVIDENCE_MODE_SLUG_TO_PROSE = {
+    "live-source-backed": "live-source-backed",
+    "user-provided-sources": "user-provided sources",
+    "illustrative-source-packet": "illustrative source packet",
+    "reasoning-only": "reasoning-only",
+}
+
+
+def check_taxonomy():
+    print("\n[7] taxonomy.json")
+    path = ROOT / "taxonomy.json"
+    if not path.exists():
+        warn("taxonomy.json missing (optional)")
+        return
+
+    try:
+        tax = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        err(f"taxonomy.json is invalid JSON: {exc}")
+        return
+    ok("taxonomy.json parses as JSON")
+
+    evidence_ids = {m["id"] for m in tax.get("evidence_modes", [])}
+    archetype_ids = {a["id"] for a in tax.get("risk_archetypes", [])}
+    source_domain_ids = {s["id"] for s in tax.get("source_domains", [])}
+
+    region_ids = set()
+    for bucket in tax.get("regions", {}).values():
+        region_ids.update(r["id"] for r in bucket)
+
+    actor_ids = set()
+    for bucket in tax.get("actor_categories", {}).values():
+        actor_ids.update(a["id"] for a in bucket)
+
+    if not (evidence_ids and archetype_ids and region_ids and actor_ids):
+        err("taxonomy.json missing one of: evidence_modes, risk_archetypes, regions, actor_categories")
+        return
+    ok(f"Taxonomy has {len(region_ids)} regions, {len(actor_ids)} actors, "
+       f"{len(archetype_ids)} archetypes, {len(source_domain_ids)} source domains")
+
+    # Every evidence_mode slug must have a known prose form.
+    for eid in evidence_ids:
+        if eid not in EVIDENCE_MODE_SLUG_TO_PROSE:
+            err(f"taxonomy.json evidence_mode id '{eid}' has no prose mapping in validator")
+
+    # example_tags: file exists, IDs are known, evidence_mode matches the file.
+    for entry in tax.get("example_tags", []):
+        rel = entry.get("file", "")
+        f = ROOT / rel
+        if not f.exists():
+            err(f"taxonomy.json example_tags references missing file: {rel}")
+            continue
+
+        em = entry.get("evidence_mode")
+        if em not in evidence_ids:
+            err(f"{rel}: evidence_mode '{em}' not in taxonomy.evidence_modes")
+        else:
+            prose = EVIDENCE_MODE_SLUG_TO_PROSE[em]
+            file_text = f.read_text(encoding="utf-8").lower()
+            if prose not in file_text:
+                err(f"{rel}: taxonomy tags evidence_mode '{em}' "
+                    f"but file does not contain '{prose}'")
+
+        for r in entry.get("regions", []):
+            if r not in region_ids:
+                err(f"{rel}: unknown region id '{r}'")
+        for a in entry.get("actors", []):
+            if a not in actor_ids:
+                err(f"{rel}: unknown actor id '{a}'")
+        for arch in entry.get("archetypes", []):
+            if arch not in archetype_ids:
+                err(f"{rel}: unknown archetype id '{arch}'")
+        for sd in entry.get("source_domains", []):
+            if sd not in source_domain_ids:
+                err(f"{rel}: unknown source_domain id '{sd}'")
+
+    # Every non-README example file should be tagged.
+    examples_dir = ROOT / "examples"
+    tagged_files = {entry.get("file") for entry in tax.get("example_tags", [])}
+    for f in sorted(examples_dir.glob("*.md")):
+        if f.name == "README.md":
+            continue
+        rel = f"examples/{f.name}"
+        if rel not in tagged_files:
+            warn(f"{rel} is not tagged in taxonomy.json example_tags")
+
+    # README must be in sync with the generated taxonomy block.
+    import subprocess
+    result = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "render-readme.py"), "--check"],
+        capture_output=True, text=True
+    )
+    if result.returncode == 0:
+        ok("README.md taxonomy block is in sync with taxonomy.json")
+    else:
+        err("README.md taxonomy block is stale. Run: python3 scripts/render-readme.py")
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -393,6 +494,7 @@ def main():
     check_signals()
     check_evals()
     check_docs()
+    check_taxonomy()
 
     print("\n" + "=" * 60)
     print(f"Errors:   {len(ERRORS)}")

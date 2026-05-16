@@ -1,0 +1,102 @@
+{
+  "$schema_version": "0.1",
+  "repo": "gulf-middle-east-hybrid-intelligence-skill",
+  "purpose": "Canonical IDs for the analytical axes used in this skill. Source of truth for tagging examples, generating cross-references, and keeping sibling skill repos consistent. Prose definitions live in docs/; this file holds only the stable IDs and one-line labels.",
+  "last_reviewed": "2026-05-16",
+
+  "evidence_modes": [
+    { "id": "live-source-backed", "label": "Live source-backed", "definition_ref": "AGENTS.md#evidence-rules" },
+    { "id": "user-provided-sources", "label": "User-provided sources", "definition_ref": "AGENTS.md#evidence-rules" },
+    { "id": "illustrative-source-packet", "label": "Illustrative source packet", "definition_ref": "AGENTS.md#evidence-rules" },
+    { "id": "reasoning-only", "label": "Reasoning only", "definition_ref": "AGENTS.md#evidence-rules" }
+  ],
+
+  "regions": {
+    "core": [
+      { "id": "sa", "label": "Saudi Arabia" },
+      { "id": "ae", "label": "United Arab Emirates" },
+      { "id": "qa", "label": "Qatar" },
+      { "id": "kw", "label": "Kuwait" },
+      { "id": "bh", "label": "Bahrain" },
+      { "id": "om", "label": "Oman" },
+      { "id": "ir", "label": "Iran" },
+      { "id": "iq", "label": "Iraq" }
+    ],
+    "chokepoints": [
+      { "id": "hormuz", "label": "Strait of Hormuz" },
+      { "id": "bab-el-mandeb", "label": "Bab-el-Mandeb" },
+      { "id": "red-sea-suez", "label": "Red Sea / Suez approaches" }
+    ],
+    "conditional_extension": [
+      { "id": "lb", "label": "Lebanon" },
+      { "id": "sy", "label": "Syria" },
+      { "id": "jo", "label": "Jordan" },
+      { "id": "il", "label": "Israel" },
+      { "id": "tr", "label": "Turkey" },
+      { "id": "ru", "label": "Russia (as Gulf-flow actor)" },
+      { "id": "cn", "label": "China (as Gulf-flow actor)" },
+      { "id": "in", "label": "India (as Gulf-flow actor)" },
+      { "id": "us", "label": "United States (as Gulf-flow actor)" },
+      { "id": "eu", "label": "European Union (as Gulf-flow actor)" }
+    ],
+    "out_of_scope_redirect": [
+      { "id": "maghreb", "label": "North Africa / Maghreb", "redirect_to": "external" },
+      { "id": "central-asia-caspian", "label": "Central Asia + Caspian", "redirect_to": "central-asia-caspian-hybrid-intelligence-skill" },
+      { "id": "israel-palestine-internal", "label": "Israel-Palestine internal politics", "redirect_to": "external" },
+      { "id": "south-asia", "label": "South Asia (Afghanistan / Pakistan internal)", "redirect_to": "external" },
+      { "id": "sub-saharan-africa", "label": "Sub-Saharan Africa", "redirect_to": "external" }
+    ]
+  },
+
+  "actor_categories": {
+    "iran": [
+      { "id": "iran-state", "label": "Iran-state" },
+      { "id": "iran-irgc", "label": "IRGC-affiliated" },
+      { "id": "iran-private-commercial", "label": "Iran-private commercial" }
+    ],
+    "gcc": [
+      { "id": "gcc-sovereign", "label": "GCC sovereign / state body" },
+      { "id": "gcc-swf", "label": "GCC sovereign wealth fund" },
+      { "id": "gcc-royal-commercial", "label": "Royal-family commercial network" },
+      { "id": "gcc-private-commercial", "label": "GCC private commercial" }
+    ],
+    "swfs": [
+      { "id": "swf-pif", "label": "PIF (Saudi Arabia)" },
+      { "id": "swf-adia", "label": "ADIA (UAE / Abu Dhabi)" },
+      { "id": "swf-mubadala", "label": "Mubadala (UAE / Abu Dhabi)" },
+      { "id": "swf-qia", "label": "QIA (Qatar)" },
+      { "id": "swf-kia", "label": "KIA (Kuwait)" }
+    ]
+  },
+
+  "risk_archetypes": [
+    { "id": "iran-sanctions-adjacency", "label": "Iran sanctions adjacency", "ref": "docs/risk-archetypes.md#1-iran-sanctions-adjacency" },
+    { "id": "dark-fleet-sts", "label": "Dark-fleet and ship-to-ship transfers", "ref": "docs/risk-archetypes.md#2-dark-fleet-and-ship-to-ship-sts-transfers" },
+    { "id": "gcc-correspondent-banking", "label": "GCC correspondent banking exposure", "ref": "docs/risk-archetypes.md#3-gcc-correspondent-banking-exposure" },
+    { "id": "sovereign-wealth-deployment", "label": "Sovereign wealth deployment risk", "ref": "docs/risk-archetypes.md#4-sovereign-wealth-deployment-risk" },
+    { "id": "chokepoint-disruption", "label": "Maritime chokepoint disruption", "ref": "docs/risk-archetypes.md#5-maritime-chokepoint-disruption-hormuz-bab-el-mandeb" },
+    { "id": "sanctioned-oil-concentration", "label": "Sanctioned-oil flow concentration", "ref": "docs/risk-archetypes.md#6-sanctioned-oil-flow-concentration" },
+    { "id": "post-designation-reconstitution", "label": "Sanctioned-party post-designation reconstitution", "ref": "docs/risk-archetypes.md#7-sanctioned-party-post-designation-reconstitution" }
+  ],
+
+  "source_domains": [
+    { "id": "sanctions", "label": "Sanctions", "ref": "docs/source-guide.md#sanctions" },
+    { "id": "aml-fatf", "label": "AML / FATF", "ref": "docs/source-guide.md#aml--fatf" },
+    { "id": "energy", "label": "Energy", "ref": "docs/source-guide.md#energy" },
+    { "id": "maritime", "label": "Maritime", "ref": "docs/source-guide.md#maritime" },
+    { "id": "banking", "label": "Banking", "ref": "docs/source-guide.md#banking" },
+    { "id": "macro", "label": "Macro", "ref": "docs/source-guide.md#macro" },
+    { "id": "court-enforcement", "label": "Court records and enforcement", "ref": "docs/source-guide.md#court-records-and-enforcement" }
+  ],
+
+  "example_tags": [
+    { "file": "examples/hormuz-shipping-disruption.md", "evidence_mode": "illustrative-source-packet", "regions": ["ir", "om", "ae", "hormuz"], "actors": ["iran-state", "iran-irgc"], "archetypes": ["chokepoint-disruption"], "source_domains": ["maritime", "energy"] },
+    { "file": "examples/iran-sanctions-routing-exposure.md", "evidence_mode": "reasoning-only", "regions": ["ir", "ae", "om"], "actors": ["iran-state", "iran-irgc", "iran-private-commercial"], "archetypes": ["iran-sanctions-adjacency", "post-designation-reconstitution", "dark-fleet-sts", "sanctioned-oil-concentration"], "source_domains": ["sanctions", "aml-fatf", "maritime", "banking"] },
+    { "file": "examples/live-source-backed-bab-el-mandeb-red-sea-shipping.md", "evidence_mode": "live-source-backed", "regions": ["ir", "bab-el-mandeb", "red-sea-suez"], "actors": ["iran-state", "iran-irgc"], "archetypes": ["chokepoint-disruption"], "source_domains": ["maritime", "energy", "sanctions"] },
+    { "file": "examples/live-source-backed-gcc-correspondent-banking.md", "evidence_mode": "live-source-backed", "regions": ["ae", "sa", "qa", "kw", "bh", "om", "ir", "iq"], "actors": ["gcc-private-commercial", "gcc-sovereign", "iran-state", "iran-irgc"], "archetypes": ["gcc-correspondent-banking", "iran-sanctions-adjacency"], "source_domains": ["banking", "sanctions", "aml-fatf"] },
+    { "file": "examples/live-source-backed-ofac-iran-shipping-sanctions.md", "evidence_mode": "live-source-backed", "regions": ["ir", "ae", "om", "hormuz"], "actors": ["iran-state", "iran-irgc", "iran-private-commercial", "gcc-private-commercial"], "archetypes": ["iran-sanctions-adjacency", "dark-fleet-sts", "sanctioned-oil-concentration"], "source_domains": ["sanctions", "maritime", "banking", "energy"] },
+    { "file": "examples/user-provided-sources-dark-fleet-sanctioned-oil.md", "evidence_mode": "user-provided-sources", "regions": ["ir", "ae", "om", "hormuz", "cn", "in", "ru"], "actors": ["iran-state", "iran-irgc", "iran-private-commercial"], "archetypes": ["dark-fleet-sts", "sanctioned-oil-concentration"], "source_domains": ["maritime", "energy", "sanctions", "aml-fatf", "banking", "court-enforcement"] },
+    { "file": "examples/user-provided-sources-iraq-banking.md", "evidence_mode": "user-provided-sources", "regions": ["iq", "ir", "us"], "actors": ["iran-state"], "archetypes": ["iran-sanctions-adjacency"], "source_domains": ["banking", "sanctions", "aml-fatf"] },
+    { "file": "examples/user-provided-sources-sovereign-wealth-deployment.md", "evidence_mode": "user-provided-sources", "regions": ["sa", "ae", "qa", "kw"], "actors": ["gcc-swf", "swf-pif", "swf-adia", "swf-mubadala", "swf-qia", "swf-kia"], "archetypes": ["sovereign-wealth-deployment"], "source_domains": ["macro", "court-enforcement", "sanctions"] }
+  ]
+}

@@ -160,6 +160,43 @@ For a guided route through the examples, start with [examples/README.md](example
 | [examples/user-provided-sources-iraq-banking.md](examples/user-provided-sources-iraq-banking.md) | `user-provided sources` | Iraq banking-sector reform exposure for a correspondent bank (template) |
 | [examples/user-provided-sources-dark-fleet-sanctioned-oil.md](examples/user-provided-sources-dark-fleet-sanctioned-oil.md) | `user-provided sources` | Dark-fleet / sanctioned-oil flow exposure for a refiner or trader — skeleton packet (OFAC, EU, UK OFSI, Swiss SECO, IMO, IGP&I, FATF/MENAFATF) + structural framing of three deceptive-practice patterns and six transmission channels; Iran actor distinction applied |
 
+<!-- TAXONOMY:START -->
+
+### Examples by archetype
+
+_Generated from `taxonomy.json`. To update, edit `taxonomy.json` and run `python3 scripts/render-readme.py`._
+
+**Iran sanctions adjacency**
+- [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
+- [`examples/live-source-backed-gcc-correspondent-banking.md`](examples/live-source-backed-gcc-correspondent-banking.md) — `live-source-backed`
+- [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md) — `live-source-backed`
+- [`examples/user-provided-sources-iraq-banking.md`](examples/user-provided-sources-iraq-banking.md) — `user-provided-sources`
+
+**Dark-fleet and ship-to-ship transfers**
+- [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
+- [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md) — `live-source-backed`
+- [`examples/user-provided-sources-dark-fleet-sanctioned-oil.md`](examples/user-provided-sources-dark-fleet-sanctioned-oil.md) — `user-provided-sources`
+
+**GCC correspondent banking exposure**
+- [`examples/live-source-backed-gcc-correspondent-banking.md`](examples/live-source-backed-gcc-correspondent-banking.md) — `live-source-backed`
+
+**Sovereign wealth deployment risk**
+- [`examples/user-provided-sources-sovereign-wealth-deployment.md`](examples/user-provided-sources-sovereign-wealth-deployment.md) — `user-provided-sources`
+
+**Maritime chokepoint disruption**
+- [`examples/hormuz-shipping-disruption.md`](examples/hormuz-shipping-disruption.md) — `illustrative-source-packet`
+- [`examples/live-source-backed-bab-el-mandeb-red-sea-shipping.md`](examples/live-source-backed-bab-el-mandeb-red-sea-shipping.md) — `live-source-backed`
+
+**Sanctioned-oil flow concentration**
+- [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
+- [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md) — `live-source-backed`
+- [`examples/user-provided-sources-dark-fleet-sanctioned-oil.md`](examples/user-provided-sources-dark-fleet-sanctioned-oil.md) — `user-provided-sources`
+
+**Sanctioned-party post-designation reconstitution**
+- [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
+
+<!-- TAXONOMY:END -->
+
 ## 11. Signal archive
 
 [`signals/`](signals/) holds short public examples of the skill style: one regional event or structural condition, why it matters, a bounded assessment, and indicators to watch.
