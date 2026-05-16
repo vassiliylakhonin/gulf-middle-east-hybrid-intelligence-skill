@@ -210,7 +210,7 @@ If user asks for prediction → give scenarios with triggers and indicators, not
 
 ## Companion Projects
 
-- **Agenda Intelligence MD** — validation, schemas, scoring, CLI, MCP: https://github.com/vassiliylakhonin/Agenda-Intelligence-md
+- **Agenda Intelligence MD** — validation, schemas, scoring, CLI, MCP: https://github.com/vassiliylakhonin/agenda-intelligence-md
 - **Global Think Tank Analyst** — horizontal strategic-risk memo method: https://github.com/vassiliylakhonin/global-think-tank-analyst
 - **Central Asia + Caspian Skill** — sibling vertical for CA/Caspian flows: https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill
 

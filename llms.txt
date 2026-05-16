@@ -16,11 +16,11 @@ What this repository is not:
 - not an MCP server, CLI tool, validator, schema layer, or eval framework;
 - not a replacement for primary OFAC/EU/UK list checks, qualified legal review, or maritime intelligence vendors.
 
-Relationship to the portfolio (three layers, separately maintained):
+Relationship to the portfolio (four layers, separately maintained):
 - Vertical specialist — Gulf + Middle East (this repo): specialist Iran, GCC, maritime-chokepoint risk reasoning.
 - Horizontal domain skill: https://github.com/vassiliylakhonin/global-think-tank-analyst — broad strategic-risk memo workflow, memo modes, general policy-risk analysis.
 - Vertical specialist — Central Asia Caspian: https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill — reference when a flow crosses both regions.
-- Infrastructure / validation: https://github.com/vassiliylakhonin/Agenda-Intelligence-md — schemas, validation, scoring, evidence audit, CLI / MCP / CI tooling.
+- Infrastructure / validation: https://github.com/vassiliylakhonin/agenda-intelligence-md — schemas, validation, scoring, evidence audit, CLI / MCP / CI tooling.
 
 Key distinctions this skill enforces:
 
@@ -43,6 +43,7 @@ Evidence modes (declare for every output):
 
 Core files:
 - AGENTS.md — project identity, scope, evidence and safety rules, Definition of Done.
+- STATUS.md — honest current status against Bar 1 / Bar 2 Definition-of-Done criteria.
 - skills/claude/SKILL.md — Claude variant (Projects setup, web search guidance, extended-context user-provided source workflows).
 - skills/codex/SKILL.md — Codex variant (agentic-loop output discipline, JSON output mode, Agenda Intelligence MD pipeline pattern).
 - README.md — public documentation.
