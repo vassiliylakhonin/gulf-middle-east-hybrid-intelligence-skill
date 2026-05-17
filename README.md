@@ -244,6 +244,17 @@ Patterns, not factual claims about any specific entity, vessel or jurisdiction. 
 - This is an initial release. The honest status is in [`STATUS.md`](STATUS.md).
 - No production usage record exists yet (see B2.5).
 
+### What this skill has not been tested on
+
+Stated honestly so readers can calibrate. These are gaps in observed evidence, not claims of weakness:
+
+- **No labeled accuracy dataset.** Adversarial cases in [`evals/adversarial/`](evals/adversarial/) are author-designed traps, not a held-out test set. Pass/fail is judged manually against per-case criteria.
+- **No multi-agent or long-horizon trials.** Behavior has been exercised in single-turn and short-multi-turn memo production; long autonomous research loops have not been measured.
+- **No cross-model regression tracking.** Behavior has been observed primarily on Claude. The Codex variant exists but has not been systematically compared head-to-head against the same prompts; OpenClaw variant is deferred.
+- **No live-source automation.** `live-source-backed` examples were produced with manual source retrieval. There is no integrated retrieval layer here; recency cannot be enforced automatically.
+- **Limited non-English source coverage.** Arabic- and Farsi-language regulatory, central-bank, and state-media sources have not been systematically tested as inputs.
+- **No real vessel-tracking or AIS data integration.** Maritime examples reason about patterns; they do not consume AIS feeds or vessel-ownership databases.
+
 ## 17. Roadmap
 
 Directional, not committed. Items here are not implemented unless noted.
