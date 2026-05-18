@@ -79,3 +79,11 @@ Common ways Gulf + Middle East strategic-risk memos go wrong, with diagnostic cu
 **Symptom:** Memo ends without a limitation note. Reader may treat it as operational guidance.
 **Cue:** No mention of "not legal/compliance/AML advice"; no mention of primary-source requirements for operational decisions.
 **Fix:** Always include a limitation note. The skill is decision-support, not operational compliance.
+
+## 14. Table-cell provenance tag drift
+
+**Symptom:** Axis A tags (`[primary]` / `[secondary]` / `[user-provided]` / `[inference]` / `[analyst-judgment]`) are present in body prose but drop, mutate, or get bulk-attributed inside markdown table cells — typically in risk register, exposure map, options, actor incentives, or scenarios tables.
+**Cue:** Body paragraphs carry tags; tables show tags only in one or two columns (often the "judgment" or "notes" column), while severity, probability, leverage, and other factual cells are untagged. Or a footnote like "all cells: [analyst-judgment]" replaces per-cell tags.
+**Why it matters:** Tables are where the operational claims live (severities, trade-offs, actor leverage, indicator triggers). Stripping their provenance hides exactly the claims a reviewer most needs to audit. Iran-state / IRGC-affiliated / Iran-private distinctions in actor tables are particularly vulnerable.
+**Fix:** Per the table-cell discipline rule in [`../AGENTS.md`](../AGENTS.md), every factual cell carries its own Axis A tag. A dedicated "Provenance" column is acceptable when it would otherwise crowd the cell. Bulk-attribution footnotes are not a substitute.
+**Reproduction record:** Reproduced 2/2 in fresh-context Hybrid-mode runs against this canon on 2026-05-18.
