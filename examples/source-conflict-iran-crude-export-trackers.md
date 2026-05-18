@@ -108,6 +108,6 @@ This memo demonstrates the **source-conflict-surfacing rule** from `AGENTS.md` a
 
 The Iran actor distinction (Iran-state / IRGC-affiliated / Iran-private commercial) is not the subject of this memo — that distinction belongs in the per-actor attribution work that this volume estimate then feeds.
 
-## Limitations
+## Limitation note
 
 Illustrative. Figures are representative, not retrieved. Not sanctions, compliance, legal, AML, or trading advice. A real Iran-volume compliance calibration requires current commercial-tracker subscriptions, current OFAC SDN list state, qualified sanctions counsel, and integration with the firm's specific counterparty book.
