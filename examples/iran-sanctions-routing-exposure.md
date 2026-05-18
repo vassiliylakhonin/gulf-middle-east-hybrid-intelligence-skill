@@ -23,9 +23,11 @@ Adjacency risk concentrates not in the GCC trading hub itself but in the interme
 
 ## Mechanism
 
-- Iranian-origin or sanctioned-blend crude moves via dark-fleet vessels through STS transfers in permissive zones (Persian Gulf, eastern Mediterranean).
-- Cargo is re-papered as a Gulf-origin or "blend" product through trading-house documentation.
-- A free-zone trading entity (often UAE, occasionally Oman or Singapore) with shallow operational footprint serves as the documentary counterparty to the European refiner.
+`[analyst-judgment]` The mechanism below is a reasoning-only pattern assessed from public sanctions advisories, OFAC enforcement actions, and trade-finance reporting on sanctioned-oil routing. It is not retrieved or verified in this session and individual transaction structures vary; the structural logic is the basis for diligence design, not for asserting that any specific shipment fits the pattern.
+
+- Iranian-origin or sanctioned-blend crude is assessed to move via dark-fleet vessels through STS transfers in permissive zones (Persian Gulf, eastern Mediterranean).
+- Cargo is typically re-papered as a Gulf-origin or "blend" product through trading-house documentation.
+- A free-zone trading entity (often UAE, occasionally Oman or Singapore) with shallow operational footprint commonly serves as the documentary counterparty to the European refiner.
 - The refiner pays a Gulf-jurisdiction entity, receives a Gulf-labeled cargo, and books a non-Iranian-origin transaction.
 - Sanctions exposure transmits through: (a) OFAC enforcement reach to the trading-house entity if sanctioned-origin crude is traced to the cargo; (b) correspondent-banking risk on the USD payment leg; (c) reputational and regulatory risk on disclosure if the cargo is later identified.
 
@@ -37,7 +39,7 @@ Adjacency risk concentrates not in the GCC trading hub itself but in the interme
 
 ## Actor incentives and leverage
 
-- **Iran-state and IRGC-affiliated commercial networks:** maximize sanctioned-oil revenue by widening the buyer pool and obscuring provenance. Strong incentive to support documentary cover at the trading-house layer.
+- **Iran-state and IRGC-affiliated commercial networks** `[analyst-judgment]`: assessed to maximize sanctioned-oil revenue by widening the buyer pool and obscuring provenance; strong incentive to support documentary cover at the trading-house layer.
 - **GCC trading-house entities:** range from established merchants (low-risk) to newly incorporated free-zone shells (high-risk). Reputational and enforcement risk for established merchants creates self-screening incentive; newly incorporated shells have weak self-screening incentive.
 - **Western refiner:** wants reliable Gulf-origin crude supply at competitive pricing; sanctions enforcement risk and reputational exposure create strong incentive for provenance discipline if internalized.
 - **OFAC:** has demonstrated willingness to enforce against trading-house facilitators and downstream buyers; enforcement against major Western refiners would be high-impact but politically costly.
