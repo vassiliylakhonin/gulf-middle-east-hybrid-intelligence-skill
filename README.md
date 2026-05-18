@@ -267,6 +267,19 @@ Directional, not committed. Items here are not implemented unless noted.
 
 If you'd like to influence the roadmap or contribute a review, open an issue.
 
+## 18. Contact
+
+Author: **Vassiliy Lakhonin** — Almaty, Kazakhstan (UTC+5).
+
+- Portfolio: [vassiliylakhonin.github.io](https://vassiliylakhonin.github.io/)
+- Analyst entry route: [vassiliylakhonin.github.io/for-analysts.html](https://vassiliylakhonin.github.io/for-analysts.html)
+- Email: [vassiliy.lakhonin@gmail.com](mailto:vassiliy.lakhonin@gmail.com)
+- LinkedIn: [linkedin.com/in/vassiliy-lakhonin](https://www.linkedin.com/in/vassiliy-lakhonin/)
+- GitHub: [github.com/vassiliylakhonin](https://github.com/vassiliylakhonin)
+- Issues and PRs on this repo are welcome.
+
+For Bar 2 external-review collaboration (see [`STATUS.md`](STATUS.md) — sanctions compliance, energy trading, shipping insurance, Gulf banking, or Iran-watcher backgrounds), please open an issue or email with your background. For bespoke analysis under retainer: same channel, include decision context, geography and time horizon.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
