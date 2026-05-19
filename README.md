@@ -159,6 +159,7 @@ For a guided route through the examples, start with [examples/README.md](example
 | [examples/hormuz-shipping-disruption.md](examples/hormuz-shipping-disruption.md) | `illustrative source packet` | Hormuz disruption exposure for a shipping insurer |
 | [examples/user-provided-sources-iraq-banking.md](examples/user-provided-sources-iraq-banking.md) | `user-provided sources` | Iraq banking-sector reform exposure for a correspondent bank (template) |
 | [examples/user-provided-sources-dark-fleet-sanctioned-oil.md](examples/user-provided-sources-dark-fleet-sanctioned-oil.md) | `user-provided sources` | Dark-fleet / sanctioned-oil flow exposure for a refiner or trader — skeleton packet (OFAC, EU, UK OFSI, Swiss SECO, IMO, IGP&I, FATF/MENAFATF) + structural framing of three deceptive-practice patterns and six transmission channels; Iran actor distinction applied |
+| [examples/source-conflict-iran-crude-export-trackers.md](examples/source-conflict-iran-crude-export-trackers.md) | `illustrative source packet` | Iranian crude export tracker divergence — source-conflict surfacing rule applied to dark-fleet / STS exposure sizing |
 
 <!-- TAXONOMY:START -->
 
