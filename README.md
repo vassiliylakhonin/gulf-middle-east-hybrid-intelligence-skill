@@ -105,7 +105,7 @@ This skill is one of several repos in a wider portfolio. Each has a distinct rol
 
 This repo does **not** itself perform Agenda Intelligence MD validation, schema enforcement on outputs, or live source retrieval.
 
-[docs/companion-patterns.md](docs/companion-patterns.md) describes structural patterns for using this skill alongside the other repos.
+For the full portfolio architecture, see [PORTFOLIO.md in Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/PORTFOLIO.md). [docs/companion-patterns.md](docs/companion-patterns.md) describes structural patterns for using this skill alongside the other repos.
 
 ## 8. Quick usage
 
@@ -279,6 +279,10 @@ Author: **Vassiliy Lakhonin** — Almaty, Kazakhstan (UTC+5).
 - Issues and PRs on this repo are welcome.
 
 For Bar 2 external-review collaboration (see [`STATUS.md`](STATUS.md) — sanctions compliance, energy trading, shipping insurance, Gulf banking, or Iran-watcher backgrounds), please open an issue or email with your background. For bespoke analysis under retainer: same channel, include decision context, geography and time horizon.
+
+## Disclaimer
+
+This repository is for informational and educational purposes only. It does not constitute investment, financial, legal, compliance, sanctions screening, or trading advice. It does not verify factual truth, predict outcomes, or replace professional judgment. Use at your own risk.
 
 ## License
 
