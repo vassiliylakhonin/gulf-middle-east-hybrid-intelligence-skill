@@ -96,31 +96,31 @@ For a refiner or trader, exposure transmits through:
 
 ## Exposure map
 
-| Exposure concentration | Type | Control point |
-|---|---|---|
-| Pattern-density voyages not visible in per-vessel screening | Sanctions / secondary-sanctions risk | Pattern-aware EDD on voyage chain (independent of named-vessel screening) |
-| Attestation-chain gaps under G7 price cap | Price-cap compliance | Attestation discipline; documentation completeness; recordkeeping window |
-| P&I and hull-coverage void on a dark-fleet finding | Insurance / commercial risk | Pre-voyage P&I confirmation; coverage-void scenarios stress-tested |
-| Trade-finance / correspondent-bank rail loss | Operational / commercial risk | Diversified financing; defensive disclosure to correspondents on pattern controls |
-| Cargo seizure at port | Operational / commercial risk | Pre-loading chain-of-custody documentation; port-state control intelligence |
-| Iran actor mis-categorization | Sanctions / OFAC SDN risk | Apply Iran actor distinction taxonomy; refuse on Iran-state and IRGC-affiliated nexus; case-by-case on Iran-private commercial |
-| Reputation cascade from a single enforcement action | Reputation / governance risk | Board-level limits on pattern-density concentration |
+| Exposure concentration | Type | Control point | Provenance |
+|---|---|---|---|
+| Pattern-density voyages not visible in per-vessel screening | Sanctions / secondary-sanctions risk | Pattern-aware EDD on voyage chain (independent of named-vessel screening) | `[analyst-judgment]` |
+| Attestation-chain gaps under G7 price cap | Price-cap compliance | Attestation discipline; documentation completeness; recordkeeping window | `[analyst-judgment]` |
+| P&I and hull-coverage void on a dark-fleet finding | Insurance / commercial risk | Pre-voyage P&I confirmation; coverage-void scenarios stress-tested | `[analyst-judgment]` |
+| Trade-finance / correspondent-bank rail loss | Operational / commercial risk | Diversified financing; defensive disclosure to correspondents on pattern controls | `[analyst-judgment]` |
+| Cargo seizure at port | Operational / commercial risk | Pre-loading chain-of-custody documentation; port-state control intelligence | `[analyst-judgment]` |
+| Iran actor mis-categorization | Sanctions / OFAC SDN risk | Apply Iran actor distinction taxonomy; refuse on Iran-state and IRGC-affiliated nexus; case-by-case on Iran-private commercial | `[analyst-judgment]` |
+| Reputation cascade from a single enforcement action | Reputation / governance risk | Board-level limits on pattern-density concentration | `[analyst-judgment]` |
 
 `[analyst-judgment]` Concentrated exposures for a typical refiner / trader: (1) screening systems priced on per-vessel list checks rather than pattern density; (2) attestation discipline weaker than the regime's evidentiary expectations; (3) insurance and finance assumed available rather than confirmed per voyage.
 
 ## Actor incentives
 
-| Actor | Incentive | Leverage point |
-|---|---|---|
-| Sanctioned-origin seller (Iran-state, Russia-state, Venezuelan PdVSA or proxies) | Maintain export volume despite sanctions environment | Dark-fleet capacity provision; intermediary network depth; documentation falsification |
-| Dark-fleet vessel operator | Capture margin premium on sanctioned voyages | AIS manipulation, STS infrastructure, flag-hopping, registry obfuscation |
-| Intermediary trader / brokerage | Capture margin on origin-obscuring intermediation | Chain-of-custody opacity; multiple intermediation layers |
-| Refiner | Maintain feedstock supply at acceptable risk-adjusted return | Counterparty screening; voyage acceptance criteria; cargo origin verification |
-| Oil trader | Capture trading margin; preserve banking and insurance rails | Pre-trade pattern screening; attestation discipline; rail-relationship management |
-| P&I and hull insurer | Avoid claims on void coverage; maintain market discipline | Coverage-issuance discipline; voyage-specific declarations |
-| Trade-finance bank | Avoid downstream exposure to deceptive-practice voyages | Pre-trade screening; respondent tiering; attestation requirements |
-| US / EU / UK enforcement | Deter dark-fleet construction; impose cost on willful blindness | Designations; enforcement actions; maritime advisories |
-| Gulf hub jurisdictions (UAE, Oman, others) | Balance commercial throughput against secondary-sanctions risk to domestic financial sector | Port-state controls; FATF / MENAFATF posture; licensing of intermediaries |
+| Actor | Incentive | Leverage point | Provenance |
+|---|---|---|---|
+| Sanctioned-origin seller (Iran-state, Russia-state, Venezuelan PdVSA or proxies) | Maintain export volume despite sanctions environment | Dark-fleet capacity provision; intermediary network depth; documentation falsification | `[analyst-judgment]` |
+| Dark-fleet vessel operator | Capture margin premium on sanctioned voyages | AIS manipulation, STS infrastructure, flag-hopping, registry obfuscation | `[analyst-judgment]` |
+| Intermediary trader / brokerage | Capture margin on origin-obscuring intermediation | Chain-of-custody opacity; multiple intermediation layers | `[analyst-judgment]` |
+| Refiner | Maintain feedstock supply at acceptable risk-adjusted return | Counterparty screening; voyage acceptance criteria; cargo origin verification | `[analyst-judgment]` |
+| Oil trader | Capture trading margin; preserve banking and insurance rails | Pre-trade pattern screening; attestation discipline; rail-relationship management | `[analyst-judgment]` |
+| P&I and hull insurer | Avoid claims on void coverage; maintain market discipline | Coverage-issuance discipline; voyage-specific declarations | `[analyst-judgment]` |
+| Trade-finance bank | Avoid downstream exposure to deceptive-practice voyages | Pre-trade screening; respondent tiering; attestation requirements | `[analyst-judgment]` |
+| US / EU / UK enforcement | Deter dark-fleet construction; impose cost on willful blindness | Designations; enforcement actions; maritime advisories | `[analyst-judgment]` |
+| Gulf hub jurisdictions (UAE, Oman, others) | Balance commercial throughput against secondary-sanctions risk to domestic financial sector | Port-state controls; FATF / MENAFATF posture; licensing of intermediaries | `[analyst-judgment]` |
 
 ## Role-based implications
 
@@ -144,28 +144,28 @@ For a refiner or trader, exposure transmits through:
 
 ## Trigger points and indicators
 
-| Indicator | Source category | Posture change if triggered |
-|---|---|---|
-| New OFAC vessel designation in a voyage chain touched by the firm | OFAC SDN updates `[verify against U1]` | Immediate freeze on the named vessel; review voyage chain for related vessels / owners / managers |
-| Price-cap-regime change (attestation requirements, recordkeeping window) | US Treasury Price Cap Coalition guidance `[verify against U4, U7]` | Refresh attestation packs; engage compliance and legal on documentary changes |
-| New OFAC maritime advisory on deceptive shipping practices | OFAC compliance advisories `[verify against U5]` | Incorporate the named typology into pattern-density screen; brief desk and compliance |
-| P&I market guidance change on dark-fleet voyages | International Group of P&I Clubs `[verify against U10]` | Re-confirm coverage on active voyages; review pre-voyage P&I confirmation protocol |
-| Port-state control enforcement action against a sanctioned-adjacent cargo | Port-state authority releases, credible reporting cross-checked `[verify]` | Review the firm's recent activity in that port; pre-emptive engagement with port agents |
-| Material change in Iran-related secondary-sanctions doctrine | OFAC Iran program `[verify against U2][stale-risk: at point of decision]` | Re-evaluate Iran-conduit pattern weight; treat conservatively until guidance assessed |
-| FATF / MENAFATF action against a Gulf hub jurisdiction | FATF / MENAFATF mutual-evaluation outputs `[verify against U11]` | Re-tier intermediary and trade-finance counterparties domiciled in the named jurisdiction |
-| Public reporting of a specific enforcement action against a refiner / trader for dark-fleet adjacency | Treasury / DOJ / OFSI / OFAC press; credible reporting cross-checked `[verify]` | Stress-test the firm's exposure to the named pattern; engage with legal and PR proactively |
+| Indicator | Source category | Posture change if triggered | Provenance |
+|---|---|---|---|
+| New OFAC vessel designation in a voyage chain touched by the firm | OFAC SDN updates `[verify against U1]` | Immediate freeze on the named vessel; review voyage chain for related vessels / owners / managers | `[user-provided][verify]` |
+| Price-cap-regime change (attestation requirements, recordkeeping window) | US Treasury Price Cap Coalition guidance `[verify against U4, U7]` | Refresh attestation packs; engage compliance and legal on documentary changes | `[user-provided][verify]` |
+| New OFAC maritime advisory on deceptive shipping practices | OFAC compliance advisories `[verify against U5]` | Incorporate the named typology into pattern-density screen; brief desk and compliance | `[user-provided][verify]` |
+| P&I market guidance change on dark-fleet voyages | International Group of P&I Clubs `[verify against U10]` | Re-confirm coverage on active voyages; review pre-voyage P&I confirmation protocol | `[user-provided][verify]` |
+| Port-state control enforcement action against a sanctioned-adjacent cargo | Port-state authority releases, credible reporting cross-checked `[verify]` | Review the firm's recent activity in that port; pre-emptive engagement with port agents | `[analyst-judgment][verify]` |
+| Material change in Iran-related secondary-sanctions doctrine | OFAC Iran program `[verify against U2][stale-risk: at point of decision]` | Re-evaluate Iran-conduit pattern weight; treat conservatively until guidance assessed | `[user-provided][verify]` |
+| FATF / MENAFATF action against a Gulf hub jurisdiction | FATF / MENAFATF mutual-evaluation outputs `[verify against U11]` | Re-tier intermediary and trade-finance counterparties domiciled in the named jurisdiction | `[user-provided][verify]` |
+| Public reporting of a specific enforcement action against a refiner / trader for dark-fleet adjacency | Treasury / DOJ / OFSI / OFAC press; credible reporting cross-checked `[verify]` | Stress-test the firm's exposure to the named pattern; engage with legal and PR proactively | `[analyst-judgment][verify]` |
 
 ## Unknowns
 
-| Unknown | Impact |
-|---|---|
-| Current SDN status of any specific vessel, owner, or counterparty | Time-sensitive; requires live OFAC SDN search at point of decision (U1) |
-| Current G7 price-cap attestation requirements and recordkeeping window | Time-sensitive; requires live retrieval from U4 / U7 |
-| Current OFAC maritime advisory state and typology list | Time-sensitive; requires live retrieval from U5 |
-| Current P&I market posture on a specific voyage | Voyage-specific; not publicly stated; needs direct insurer engagement |
-| Current AIS-derived patterns on a specific vessel or chokepoint | Time-sensitive; requires licensed maritime-intelligence provider — outside the skill's authority |
-| Current enforcement-narrative tilt (active flags, registries, intermediary chains) | Drives where the next named action lands; structural reasoning cannot price the specific landing point |
-| Trajectory of US-Iran negotiation file and direct effect on Iran-origin oil flow | Structural uncertainty with high pattern-weight implication |
+| Unknown | Impact | Provenance |
+|---|---|---|
+| Current SDN status of any specific vessel, owner, or counterparty | Time-sensitive; requires live OFAC SDN search at point of decision (U1) | `[analyst-judgment]` |
+| Current G7 price-cap attestation requirements and recordkeeping window | Time-sensitive; requires live retrieval from U4 / U7 | `[analyst-judgment]` |
+| Current OFAC maritime advisory state and typology list | Time-sensitive; requires live retrieval from U5 | `[analyst-judgment]` |
+| Current P&I market posture on a specific voyage | Voyage-specific; not publicly stated; needs direct insurer engagement | `[analyst-judgment]` |
+| Current AIS-derived patterns on a specific vessel or chokepoint | Time-sensitive; requires licensed maritime-intelligence provider — outside the skill's authority | `[analyst-judgment]` |
+| Current enforcement-narrative tilt (active flags, registries, intermediary chains) | Drives where the next named action lands; structural reasoning cannot price the specific landing point | `[analyst-judgment]` |
+| Trajectory of US-Iran negotiation file and direct effect on Iran-origin oil flow | Structural uncertainty with high pattern-weight implication | `[analyst-judgment]` |
 
 ## Confidence
 
@@ -179,14 +179,14 @@ This memo's confidence ceiling is moderate because no primary sources were retri
 
 ## What would change the judgment
 
-| Evidence update | Direction of change |
-|---|---|
-| Enforcement action against a refiner or trader for dark-fleet adjacency in a Gulf-hub context | Increases urgency; pattern-density screening becomes mandatory baseline control across the sector |
-| Material relaxation of Iran secondary-sanctions doctrine | Iran-conduit pattern weight decreases; dark-fleet risk shape shifts to Russia- and Venezuela-origin patterns |
-| Material tightening of G7 price-cap attestation regime | Documentation discipline becomes table-stakes; the attestation gap becomes the dominant breach vector |
-| Public hardening of P&I and hull insurance posture against dark-fleet voyages | Insurance-void transmission channel becomes binding constraint on dark-fleet commercial viability |
-| FATF / MENAFATF action against a Gulf hub jurisdiction central to the intermediary network | Respondent-tiering posture across trade-finance banks tightens; intermediary chains re-route |
-| Material change in major flag registries' dark-fleet posture | Registry-of-convenience supply contracts; flag-hopping pattern shifts to smaller / opaque registries |
+| Evidence update | Direction of change | Provenance |
+|---|---|---|
+| Enforcement action against a refiner or trader for dark-fleet adjacency in a Gulf-hub context | Increases urgency; pattern-density screening becomes mandatory baseline control across the sector | `[analyst-judgment]` |
+| Material relaxation of Iran secondary-sanctions doctrine | Iran-conduit pattern weight decreases; dark-fleet risk shape shifts to Russia- and Venezuela-origin patterns | `[analyst-judgment]` |
+| Material tightening of G7 price-cap attestation regime | Documentation discipline becomes table-stakes; the attestation gap becomes the dominant breach vector | `[analyst-judgment]` |
+| Public hardening of P&I and hull insurance posture against dark-fleet voyages | Insurance-void transmission channel becomes binding constraint on dark-fleet commercial viability | `[analyst-judgment]` |
+| FATF / MENAFATF action against a Gulf hub jurisdiction central to the intermediary network | Respondent-tiering posture across trade-finance banks tightens; intermediary chains re-route | `[analyst-judgment]` |
+| Material change in major flag registries' dark-fleet posture | Registry-of-convenience supply contracts; flag-hopping pattern shifts to smaller / opaque registries | `[analyst-judgment]` |
 
 ## Three-value response logic — application to this memo
 

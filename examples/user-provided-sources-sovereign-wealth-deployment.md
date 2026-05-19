@@ -56,13 +56,13 @@ The binding question is whether the governance structure embedded in the specifi
 
 Different GCC sovereign wealth funds carry different mandates, governance structures, and strategic objectives. These distinctions are relevant before you receive the term sheet; the term sheet then either confirms or complicates the baseline.
 
-| Fund | Formal mandate | Strategic posture | Public disclosure level |
-|---|---|---|---|
-| **PIF** (Saudi Arabia) | Diversify Saudi economy; domestic and international investment | Explicitly strategic: Vision 2030 alignment, tech and sector access, SoftBank-style large stakes | Medium — annual letter, limited portfolio detail |
-| **ADIA** (Abu Dhabi) | Preserve and grow Abu Dhabi's wealth for future generations | Long-term financial return; more passive than PIF; avoids board seats as a rule | High for a SWF — annual review with allocation and governance detail |
-| **Mubadala** (Abu Dhabi) | Strategic and financial return; industrial policy alignment | More operationally engaged than ADIA; takes active governance roles in portfolio companies | High — detailed annual report, portfolio disclosure |
-| **QIA** (Qatar) | Diversify Qatar's wealth; strategic positioning | Mix of passive and active; less transparent than ADIA | Low — limited public disclosure |
-| **KIA** (Kuwait) | Preserve wealth for future Kuwaiti generations | Primarily passive financial; one of the oldest and most conservative SWFs | Low — very limited public disclosure; separate General Reserve Fund and Future Generations Fund |
+| Fund | Formal mandate | Strategic posture | Public disclosure level | Provenance |
+|---|---|---|---|---|
+| **PIF** (Saudi Arabia) | Diversify Saudi economy; domestic and international investment | Explicitly strategic: Vision 2030 alignment, tech and sector access, SoftBank-style large stakes | Medium — annual letter, limited portfolio detail | `[secondary][verify]` |
+| **ADIA** (Abu Dhabi) | Preserve and grow Abu Dhabi's wealth for future generations | Long-term financial return; more passive than PIF; avoids board seats as a rule | High for a SWF — annual review with allocation and governance detail | `[secondary][verify]` |
+| **Mubadala** (Abu Dhabi) | Strategic and financial return; industrial policy alignment | More operationally engaged than ADIA; takes active governance roles in portfolio companies | High — detailed annual report, portfolio disclosure | `[secondary][verify]` |
+| **QIA** (Qatar) | Diversify Qatar's wealth; strategic positioning | Mix of passive and active; less transparent than ADIA | Low — limited public disclosure | `[secondary][verify]` |
+| **KIA** (Kuwait) | Preserve wealth for future Kuwaiti generations | Primarily passive financial; one of the oldest and most conservative SWFs | Low — very limited public disclosure; separate General Reserve Fund and Future Generations Fund | `[secondary][verify]` |
 
 **Key distinction:** ADIA's governing document historically limits it from seeking board representation or operational involvement. PIF and Mubadala take a more active governance posture. QIA and KIA are less transparent about their approach. The term sheet overrides the general characterisation — always read the specific document.
 
@@ -84,12 +84,12 @@ What to look for in the term sheet:
 
 Applicable regimes depend on the company's sector, jurisdiction, and the SWF's country of origin. Key thresholds to check:
 
-| Regime | Jurisdiction | Trigger | What it reviews |
-|---|---|---|---|
-| **CFIUS** (Committee on Foreign Investment in the United States) | US | Any GCC SWF investment in a US company with TID US business (technology, infrastructure, data) | National security; mandatory filing for certain deals; voluntary for others |
-| **EU FDI Screening Regulation** | EU member states (implementation varies) | GCC SWF investment in EU companies in sectors covered by national FDI regimes | National security, public order; screening timelines vary by member state |
-| **UK NSI Act** | UK | Mandatory notification for acquisitions of 25%+ in sensitive sectors; also voluntary notification option | 17 sensitive sectors including AI, data infrastructure, military, energy |
-| **National regimes** | Germany (BMWi), France (DGT), Italy (Golden Power), Netherlands, Spain | Sector-specific thresholds | Critical infrastructure, technology, strategic assets |
+| Regime | Jurisdiction | Trigger | What it reviews | Provenance |
+|---|---|---|---|---|
+| **CFIUS** (Committee on Foreign Investment in the United States) | US | Any GCC SWF investment in a US company with TID US business (technology, infrastructure, data) | National security; mandatory filing for certain deals; voluntary for others | `[primary][verify]` |
+| **EU FDI Screening Regulation** | EU member states (implementation varies) | GCC SWF investment in EU companies in sectors covered by national FDI regimes | National security, public order; screening timelines vary by member state | `[primary][verify]` |
+| **UK NSI Act** | UK | Mandatory notification for acquisitions of 25%+ in sensitive sectors; also voluntary notification option | 17 sensitive sectors including AI, data infrastructure, military, energy | `[primary][verify]` |
+| **National regimes** | Germany (BMWi), France (DGT), Italy (Golden Power), Netherlands, Spain | Sector-specific thresholds | Critical infrastructure, technology, strategic assets | `[primary][verify]` |
 
 **Practical signal:** If the company operates in AI, semiconductors, critical minerals, data centers, energy infrastructure, or defense supply chain, mandatory filing is likely in at least one jurisdiction. The SWF's willingness to accept clearance conditions and timeline risk is a negotiating variable.
 
@@ -141,13 +141,13 @@ Check the fund's principal address, legal entity, and counterparty against the O
 
 ## Trigger points and indicators
 
-| Indicator | Source | Posture change if triggered |
-|---|---|---|
-| Foreign investment review clearance denied or conditioned | CFIUS / EU / UK NSI formal decision | Deal must be restructured or unwound; escalate to board immediately |
-| SWF named in OFAC enforcement action or SDN designation (directly or as a related entity) | OFAC enforcement releases (https://ofac.treasury.gov/civil-penalties-and-enforcement-information) | Legal review; assess whether the existing investment agreement can continue without violating OFAC; voluntary disclosure review |
-| SWF country of origin added to FATF grey list | FATF plenary press releases | Raise monitoring level; assess whether existing AML obligations are triggered |
-| SWF requests amendment to information rights or board governance beyond original term sheet | Direct negotiation | Escalate to board; assess whether the amendment triggers new FDI review obligations |
-| Co-investor or portfolio company of the SWF is publicly designated or sanctioned | OFAC/EU/UK list updates | Assess whether the SWF's co-investment with a designated entity creates sanctions-adjacency risk for your company |
+| Indicator | Source | Posture change if triggered | Provenance |
+|---|---|---|---|
+| Foreign investment review clearance denied or conditioned | CFIUS / EU / UK NSI formal decision | Deal must be restructured or unwound; escalate to board immediately | `[analyst-judgment]` |
+| SWF named in OFAC enforcement action or SDN designation (directly or as a related entity) | OFAC enforcement releases (https://ofac.treasury.gov/civil-penalties-and-enforcement-information) | Legal review; assess whether the existing investment agreement can continue without violating OFAC; voluntary disclosure review | `[analyst-judgment]` |
+| SWF country of origin added to FATF grey list | FATF plenary press releases | Raise monitoring level; assess whether existing AML obligations are triggered | `[analyst-judgment]` |
+| SWF requests amendment to information rights or board governance beyond original term sheet | Direct negotiation | Escalate to board; assess whether the amendment triggers new FDI review obligations | `[analyst-judgment]` |
+| Co-investor or portfolio company of the SWF is publicly designated or sanctioned | OFAC/EU/UK list updates | Assess whether the SWF's co-investment with a designated entity creates sanctions-adjacency risk for your company | `[analyst-judgment]` |
 
 ---
 
@@ -177,13 +177,13 @@ Standard unknowns before document review:
 
 ## What would change the judgment
 
-| Evidence update | Direction |
-|---|---|
-| Term sheet has narrow information rights, no board seat, no veto over strategic decisions | Reduces governance risk materially; FDI and reputational dimensions remain |
-| Term sheet includes technology or data information rights beyond what a passive investor needs | Raises governance risk; elevate FDI review diligence |
-| FDI review authority issues a clearance with no conditions | Removes binary regulatory risk for that jurisdiction |
-| SWF annual review discloses ESG framework consistent with company's own commitments | Reduces reputational friction with institutional investors |
-| SWF is confirmed to hold a stake in an OFAC-designated or sanctioned entity | Raises sanctions-adjacency concern; requires legal analysis |
+| Evidence update | Direction | Provenance |
+|---|---|---|
+| Term sheet has narrow information rights, no board seat, no veto over strategic decisions | Reduces governance risk materially; FDI and reputational dimensions remain | `[analyst-judgment]` |
+| Term sheet includes technology or data information rights beyond what a passive investor needs | Raises governance risk; elevate FDI review diligence | `[analyst-judgment]` |
+| FDI review authority issues a clearance with no conditions | Removes binary regulatory risk for that jurisdiction | `[analyst-judgment]` |
+| SWF annual review discloses ESG framework consistent with company's own commitments | Reduces reputational friction with institutional investors | `[analyst-judgment]` |
+| SWF is confirmed to hold a stake in an OFAC-designated or sanctioned entity | Raises sanctions-adjacency concern; requires legal analysis | `[analyst-judgment]` |
 
 ---
 

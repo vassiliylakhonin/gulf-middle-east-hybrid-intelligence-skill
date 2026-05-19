@@ -65,12 +65,12 @@ Multiple credible sources publish materially different H2 Iranian crude export e
 
 ## Options and trade-offs
 
-| Option | Pros | Cons |
-|---|---|---|
-| Calibrate diligence triggers to higher tracker range | Asymmetric regret protection; minimizes sanctions-detection failure | Operational friction; counterparty pushback on borderline cargoes |
-| Calibrate to US official range | Lower operational friction; defensible against over-restriction challenge | Sanctions-detection gap risk if commercial trackers are closer to true volume |
-| Calibrate to midpoint of all four | Simplest implementation | Silently resolves the conflict; worst-of-both regret profile |
-| Maintain dual calibration (trigger on higher, defense reference on lower) | Preserves both for different purposes | Operational complexity; requires explicit documentation of when each applies |
+| Option | Pros | Cons | Provenance |
+|---|---|---|---|
+| Calibrate diligence triggers to higher tracker range | Asymmetric regret protection; minimizes sanctions-detection failure | Operational friction; counterparty pushback on borderline cargoes | `[analyst-judgment]` |
+| Calibrate to US official range | Lower operational friction; defensible against over-restriction challenge | Sanctions-detection gap risk if commercial trackers are closer to true volume | `[analyst-judgment]` |
+| Calibrate to midpoint of all four | Simplest implementation | Silently resolves the conflict; worst-of-both regret profile | `[analyst-judgment]` |
+| Maintain dual calibration (trigger on higher, defense reference on lower) | Preserves both for different purposes | Operational complexity; requires explicit documentation of when each applies | `[analyst-judgment]` |
 
 ## Decision-relevant takeaway
 

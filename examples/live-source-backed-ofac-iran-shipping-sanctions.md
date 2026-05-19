@@ -56,36 +56,36 @@ The OFAC Iran shipping sanctions regime (E.O. 13846, E.O. 13902) covers Iranian 
 
 ## Iran actor distinction
 
-| Category | Relevance to this archetype |
-|---|---|
-| **Iran-state** (`Verified` regime type) | NIOC (National Iranian Oil Company) and NIORDC (National Iranian Oil Refining and Distribution Company) are SDN-listed. Trading with them directly is prohibited. |
-| **IRGC-affiliated** (`Judgment` — requires entity-level verification) | IRGC-QF and affiliated entities control parts of Iran's shadow shipping fleet. Basis for affiliation claims: SDN list tags (IRGC, SDGT); public OFAC press releases naming networks. Do not assert IRGC affiliation without SDN list or primary-source basis. |
-| **Iran-private commercial** (`Unknown — requires entity-level verification`) | Iranian private commercial firms are a heterogeneous category. Many are not designated; some are. Do not assume designation; verify against SDN list. |
+| Category | Relevance to this archetype | Provenance |
+|---|---|---|
+| **Iran-state** | NIOC (National Iranian Oil Company) and NIORDC (National Iranian Oil Refining and Distribution Company) are SDN-listed. Trading with them directly is prohibited. | `[primary][verify]` |
+| **IRGC-affiliated** | IRGC-QF and affiliated entities control parts of Iran's shadow shipping fleet. Basis for affiliation claims: SDN list tags (IRGC, SDGT); public OFAC press releases naming networks. Do not assert IRGC affiliation without SDN list or primary-source basis. | `[analyst-judgment][verify]` |
+| **Iran-private commercial** | Iranian private commercial firms are a heterogeneous category. Many are not designated; some are. Do not assume designation; verify against SDN list. | `[analyst-judgment][verify]` |
 
 ## Exposure map
 
 For a commodity trader operating through GCC hubs:
 
-| Exposure concentration | Type | Control point |
-|---|---|---|
-| UAE free-zone trading-house counterparty | Counterparty SDN-list status | SDN screen at onboarding and periodically; enhanced due diligence on beneficial ownership |
-| USD payment leg through New York correspondent | Correspondent-bank blocking risk | Correspondent bank screens independently; trader should screen before payment instruction |
-| Cargo provenance — Iranian-origin crude re-papered | Cargo-origin risk | Provenance documentation depth: vessel history, STS transfer records, certificate of origin chain |
-| Vessel — dark-fleet tanker used in STS transfer | Vessel SDN-list status | Vessel IMO number screen against SDN; maritime intelligence (Kpler, TankerTrackers, Windward) for AIS pattern |
-| Re-export through third-country refinery | Secondary-sanctions exposure on refinery | Know-your-customer on refinery; OFAC enforcement actions on refineries are precedent |
+| Exposure concentration | Type | Control point | Provenance |
+|---|---|---|---|
+| UAE free-zone trading-house counterparty | Counterparty SDN-list status | SDN screen at onboarding and periodically; enhanced due diligence on beneficial ownership | `[analyst-judgment]` |
+| USD payment leg through New York correspondent | Correspondent-bank blocking risk | Correspondent bank screens independently; trader should screen before payment instruction | `[analyst-judgment]` |
+| Cargo provenance — Iranian-origin crude re-papered | Cargo-origin risk | Provenance documentation depth: vessel history, STS transfer records, certificate of origin chain | `[analyst-judgment]` |
+| Vessel — dark-fleet tanker used in STS transfer | Vessel SDN-list status | Vessel IMO number screen against SDN; maritime intelligence (Kpler, TankerTrackers, Windward) for AIS pattern | `[analyst-judgment]` |
+| Re-export through third-country refinery | Secondary-sanctions exposure on refinery | Know-your-customer on refinery; OFAC enforcement actions on refineries are precedent | `[analyst-judgment]` |
 
 Concentrated exposures for a typical GCC-hub crude trader: (1) thin-footprint UAE or Oman free-zone counterparties; (2) vessels without continuous AIS signal; (3) cargo documentation relying on counterparty certificates alone without independent provenance check.
 
 ## Actor incentives
 
-| Actor | Incentive | Leverage point |
-|---|---|---|
-| OFAC | Enforce Iran sanctions, deter evasion, maintain secondary-sanctions deterrence | Designation authority; civil monetary penalties; voluntary self-disclosure discount |
-| Iran (state) | Monetise petroleum exports; evade oil embargo | Layering through GCC hubs, re-papering, dark-fleet STS |
-| IRGC-affiliated entities | Generate revenue for sanctioned network | Control parts of the shadow fleet; exploit thin-footprint front entities in GCC free zones |
-| GCC-hub trading house (legitimate) | Access international commodity markets; avoid designation | Compliance programs; KYC on cargo origin; distance from Iranian-origin flows |
-| GCC-hub trading house (sanctions-evasion) | Earn re-papering margin; channel Iranian oil to buyers | Thin documentation; rapid entity turnover; free-zone opaqueness |
-| Western correspondent banks | Maintain USD clearing access; avoid OFAC penalties | Independent SDN screening; transaction monitoring; de-risking of high-risk commodity flows |
+| Actor | Incentive | Leverage point | Provenance |
+|---|---|---|---|
+| OFAC | Enforce Iran sanctions, deter evasion, maintain secondary-sanctions deterrence | Designation authority; civil monetary penalties; voluntary self-disclosure discount | `[analyst-judgment]` |
+| Iran (state) | Monetise petroleum exports; evade oil embargo | Layering through GCC hubs, re-papering, dark-fleet STS | `[analyst-judgment]` |
+| IRGC-affiliated entities | Generate revenue for sanctioned network | Control parts of the shadow fleet; exploit thin-footprint front entities in GCC free zones | `[analyst-judgment]` |
+| GCC-hub trading house (legitimate) | Access international commodity markets; avoid designation | Compliance programs; KYC on cargo origin; distance from Iranian-origin flows | `[analyst-judgment]` |
+| GCC-hub trading house (sanctions-evasion) | Earn re-papering margin; channel Iranian oil to buyers | Thin documentation; rapid entity turnover; free-zone opaqueness | `[analyst-judgment]` |
+| Western correspondent banks | Maintain USD clearing access; avoid OFAC penalties | Independent SDN screening; transaction monitoring; de-risking of high-risk commodity flows | `[analyst-judgment]` |
 
 ## Role-based implications
 
@@ -102,22 +102,22 @@ Concentrated exposures for a typical GCC-hub crude trader: (1) thin-footprint UA
 
 ## Trigger points and indicators
 
-| Indicator | Source | Posture change if triggered |
-|---|---|---|
-| OFAC designates a new UAE/Oman/GCC-hub trading entity on the SDN list | OFAC press releases (https://home.treasury.gov/news/press-releases); OFAC SDN list | Immediate re-screen of all active counterparties; freeze any pending transactions with the named entity; legal review |
-| OFAC enforcement action against a comparable trader for GCC-hub Iran-origin crude | OFAC enforcement actions page (https://ofac.treasury.gov/civil-penalties-and-enforcement-information) | Benchmark against own controls; consider voluntary disclosure if analogous exposure exists |
-| Treasury OFAC updates FAQs or general licenses on Iran petroleum sector | OFAC FAQs Iran (https://ofac.treasury.gov/faqs/topic/1541) | Review for any scope change affecting permissible transactions or provenance documentation standards |
-| Vessel used in recent trade appears on Kpler/TankerTrackers dark-fleet watch list or new IMO flag notice | Primary maritime intelligence vendors (Kpler, TankerTrackers, Windward, Lloyd's List Intelligence) | Escalate to legal; do not proceed with further trades involving that vessel pending verification |
-| US-Iran diplomatic breakdown or new OFAC designation wave on Iran oil sector | OFAC press releases; US Treasury statements | Heightened counterparty re-screening cycle; reduce tolerance for thin-footprint counterparties |
+| Indicator | Source | Posture change if triggered | Provenance |
+|---|---|---|---|
+| OFAC designates a new UAE/Oman/GCC-hub trading entity on the SDN list | OFAC press releases (https://home.treasury.gov/news/press-releases); OFAC SDN list | Immediate re-screen of all active counterparties; freeze any pending transactions with the named entity; legal review | `[analyst-judgment]` |
+| OFAC enforcement action against a comparable trader for GCC-hub Iran-origin crude | OFAC enforcement actions page (https://ofac.treasury.gov/civil-penalties-and-enforcement-information) | Benchmark against own controls; consider voluntary disclosure if analogous exposure exists | `[analyst-judgment]` |
+| Treasury OFAC updates FAQs or general licenses on Iran petroleum sector | OFAC FAQs Iran (https://ofac.treasury.gov/faqs/topic/1541) | Review for any scope change affecting permissible transactions or provenance documentation standards | `[analyst-judgment]` |
+| Vessel used in recent trade appears on Kpler/TankerTrackers dark-fleet watch list or new IMO flag notice | Primary maritime intelligence vendors (Kpler, TankerTrackers, Windward, Lloyd's List Intelligence) | Escalate to legal; do not proceed with further trades involving that vessel pending verification | `[analyst-judgment]` |
+| US-Iran diplomatic breakdown or new OFAC designation wave on Iran oil sector | OFAC press releases; US Treasury statements | Heightened counterparty re-screening cycle; reduce tolerance for thin-footprint counterparties | `[analyst-judgment]` |
 
 ## Unknowns
 
-| Unknown | Impact |
-|---|---|
-| Beneficial ownership of specific GCC-hub trading-house counterparties | Unknown. Requires entity-level KYC and, where available, corporate registry search. Cannot be resolved by structural reasoning. |
-| Current SDN list state for any specific entity | Unknown without live SDN list check. This memo does not name specific entities as designated or not designated; verify against the SDN list at the URL above. |
-| US-Iran diplomatic trajectory and its effect on OFAC enforcement posture | Judgment-level uncertainty. Enforcement priority and designation tempo vary with diplomatic context. |
-| Whether a specific cargo has Iranian-origin component | Unknown without independent vessel history and provenance documentation. |
+| Unknown | Impact | Provenance |
+|---|---|---|
+| Beneficial ownership of specific GCC-hub trading-house counterparties | Unknown. Requires entity-level KYC and, where available, corporate registry search. Cannot be resolved by structural reasoning. | `[analyst-judgment]` |
+| Current SDN list state for any specific entity | Unknown without live SDN list check. This memo does not name specific entities as designated or not designated; verify against the SDN list at the URL above. | `[analyst-judgment]` |
+| US-Iran diplomatic trajectory and its effect on OFAC enforcement posture | Judgment-level uncertainty. Enforcement priority and designation tempo vary with diplomatic context. | `[analyst-judgment]` |
+| Whether a specific cargo has Iranian-origin component | Unknown without independent vessel history and provenance documentation. | `[analyst-judgment]` |
 
 ## Confidence
 
@@ -129,12 +129,12 @@ Concentrated exposures for a typical GCC-hub crude trader: (1) thin-footprint UA
 
 ## What would change the judgment
 
-| Evidence update | Direction of change |
-|---|---|
-| OFAC issues a General License broadly permitting certain Iran petroleum transactions | Reduces direct prohibition risk; scope and conditions of the license must be read precisely |
-| Confirmed nuclear deal restoring JCPOA-era waivers | Would materially reduce near-term enforcement risk; would not remove SDN-list obligations until waivers are formally issued |
-| Major OFAC enforcement action against a GCC-hub trading house with fact pattern matching the trader's own counterparties | Would raise urgency of voluntary self-disclosure review; would narrow any "I didn't know" defense |
-| Primary maritime intelligence vendor flags the trader's vessel as IRGC-affiliated | Immediate escalation trigger; would change judgment from "screening risk" to "potential blocked transaction" |
+| Evidence update | Direction of change | Provenance |
+|---|---|---|
+| OFAC issues a General License broadly permitting certain Iran petroleum transactions | Reduces direct prohibition risk; scope and conditions of the license must be read precisely | `[analyst-judgment]` |
+| Confirmed nuclear deal restoring JCPOA-era waivers | Would materially reduce near-term enforcement risk; would not remove SDN-list obligations until waivers are formally issued | `[analyst-judgment]` |
+| Major OFAC enforcement action against a GCC-hub trading house with fact pattern matching the trader's own counterparties | Would raise urgency of voluntary self-disclosure review; would narrow any "I didn't know" defense | `[analyst-judgment]` |
+| Primary maritime intelligence vendor flags the trader's vessel as IRGC-affiliated | Immediate escalation trigger; would change judgment from "screening risk" to "potential blocked transaction" | `[analyst-judgment]` |
 
 ## Limitation note
 

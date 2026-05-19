@@ -51,22 +51,22 @@ GCC correspondent banking is not monolithic. Saudi and UAE banking systems carry
 
 ## Iran actor distinction — relevance to GCC correspondent banking
 
-| Category | Correspondent banking relevance |
-|---|---|
-| **Iran-state** (NIOC, CBI of Iran) | Blocked; any transaction involving Iran-state financial institutions via GCC correspondent is a potential OFAC violation |
-| **IRGC-affiliated entities** | SDN-listed; routing transactions through GCC accounts to avoid OFAC detection is a documented evasion pattern; requires beneficial-ownership due diligence beyond the GCC shell |
-| **Iran-private commercial** | Not categorically blocked; designation status varies by entity; requires entity-level SDN screen |
+| Category | Correspondent banking relevance | Provenance |
+|---|---|---|
+| **Iran-state** (NIOC, CBI of Iran) | Blocked; any transaction involving Iran-state financial institutions via GCC correspondent is a potential OFAC violation | `[primary][verify]` |
+| **IRGC-affiliated entities** | SDN-listed; routing transactions through GCC accounts to avoid OFAC detection is a documented evasion pattern; requires beneficial-ownership due diligence beyond the GCC shell | `[primary][verify]` |
+| **Iran-private commercial** | Not categorically blocked; designation status varies by entity; requires entity-level SDN screen | `[analyst-judgment]` |
 
 The GCC correspondent banking risk channel for Iran exposure is: Iranian or IRGC-affiliated beneficial owners route funds through UAE or GCC entities to access USD clearing. The GCC entity appears as the correspondent counterparty; the Iranian-origin beneficial interest is not visible at the counterparty level without enhanced due diligence.
 
 ## GCC actor distinction — correspondent banking risk tiering
 
-| Category | Correspondent risk profile |
-|---|---|
-| **State-owned GCC banks with primary banking license** (e.g., National Bank of Kuwait, First Abu Dhabi Bank, Saudi National Bank) | Lower inherent risk for AML at entity level; standard correspondent KYC; primary risk is sanctions-exposure through their own correspondent network and counterparty base |
-| **Sovereign wealth fund-affiliated entities** (e.g., entities linked to PIF, ADIA, Mubadala, QIA) | Lower inherent risk for AML; higher profile for sanctions-adjacency if the SWF maintains relationships with sanctioned jurisdictions or entities |
-| **Royal-family commercial entities** | Risk is entity-specific; beneficial ownership documentation matters; not automatically high or low risk |
-| **Private commercial GCC banks and free-zone entities** | Highest AML/CFT risk variation; beneficial ownership disclosure is the binding variable; UAE free-zone entities in particular warrant enhanced due diligence |
+| Category | Correspondent risk profile | Provenance |
+|---|---|---|
+| **State-owned GCC banks with primary banking license** (e.g., National Bank of Kuwait, First Abu Dhabi Bank, Saudi National Bank) | Lower inherent risk for AML at entity level; standard correspondent KYC; primary risk is sanctions-exposure through their own correspondent network and counterparty base | `[analyst-judgment]` |
+| **Sovereign wealth fund-affiliated entities** (e.g., entities linked to PIF, ADIA, Mubadala, QIA) | Lower inherent risk for AML; higher profile for sanctions-adjacency if the SWF maintains relationships with sanctioned jurisdictions or entities | `[analyst-judgment]` |
+| **Royal-family commercial entities** | Risk is entity-specific; beneficial ownership documentation matters; not automatically high or low risk | `[analyst-judgment]` |
+| **Private commercial GCC banks and free-zone entities** | Highest AML/CFT risk variation; beneficial ownership disclosure is the binding variable; UAE free-zone entities in particular warrant enhanced due diligence | `[analyst-judgment]` |
 
 ## Mechanism
 
@@ -90,13 +90,13 @@ The GCC correspondent banking risk channel for Iran exposure is: Iranian or IRGC
 
 For a Western respondent bank with GCC correspondent relationships:
 
-| Exposure type | Concentration risk | Control point |
-|---|---|---|
-| UAE free-zone entity bank accounts | High — opaque UBO, DNFBP exposure, documented use as Iran-flow conduit | Enhanced KYC to beneficial ownership; CBUAE license category verification |
-| UAE licensed banks (primary banking license) | Medium — improved post-grey-listing but supervisory track record is short | Standard correspondent due diligence; periodic review of CBUAE compliance disclosures |
-| Saudi SAMA-regulated banks | Lower inherent — no grey-listing, FATF mutual evaluation cleared | Standard enhanced correspondent due diligence; review correspondent's own Iran-exposure controls |
-| Bahrain/Kuwait licensed banks | Variable — check current FATF status; Bahrain is a major offshore booking center | Jurisdiction-level FATF status check; correspondent's own offshore book exposure |
-| Iraqi banks | High — CBI Iraq faces structural AML challenges; USD auction mechanism creates documented OFAC exposure (see Iraq banking example) | Separate assessment required; do not treat as GCC for risk purposes |
+| Exposure type | Concentration risk | Control point | Provenance |
+|---|---|---|---|
+| UAE free-zone entity bank accounts | High — opaque UBO, DNFBP exposure, documented use as Iran-flow conduit | Enhanced KYC to beneficial ownership; CBUAE license category verification | `[analyst-judgment]` |
+| UAE licensed banks (primary banking license) | Medium — improved post-grey-listing but supervisory track record is short | Standard correspondent due diligence; periodic review of CBUAE compliance disclosures | `[analyst-judgment]` |
+| Saudi SAMA-regulated banks | Lower inherent — no grey-listing, FATF mutual evaluation cleared | Standard enhanced correspondent due diligence; review correspondent's own Iran-exposure controls | `[analyst-judgment]` |
+| Bahrain/Kuwait licensed banks | Variable — check current FATF status; Bahrain is a major offshore booking center | Jurisdiction-level FATF status check; correspondent's own offshore book exposure | `[analyst-judgment]` |
+| Iraqi banks | High — CBI Iraq faces structural AML challenges; USD auction mechanism creates documented OFAC exposure (see Iraq banking example) | Separate assessment required; do not treat as GCC for risk purposes | `[analyst-judgment]` |
 
 ## Role-based implications
 
@@ -117,22 +117,22 @@ For a Western respondent bank with GCC correspondent relationships:
 
 ## Trigger points and indicators
 
-| Indicator | Source | Posture change if triggered |
-|---|---|---|
-| FATF adds a GCC state to increased monitoring (grey list) | FATF press releases after each plenary (Feb, Jun, Oct); https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/ | Immediate enhanced due diligence review for all correspondents in affected jurisdiction; legal advice on regulatory obligations |
-| OFAC enforcement action naming a GCC correspondent or entity in the correspondent's customer base | OFAC enforcement releases (https://ofac.treasury.gov/civil-penalties-and-enforcement-information) | Re-assess all transactions with that correspondent; voluntary self-disclosure review; legal advice |
-| CBUAE issues regulatory action or license revocation against a GCC bank | CBUAE public notices (https://www.centralbank.ae/) | Immediate review of any correspondent relationship with that bank |
-| BIS CBS shows material change in cross-border claims to/from GCC banking sector | BIS quarterly CBS release (https://www.bis.org/statistics/consstats.htm) | Analytical signal only — use as context for re-tiering decisions, not a direct trigger |
-| FATF issues UAE follow-up monitoring report post-de-listing | FATF follow-up reports (https://www.fatf-gafi.org/en/countries/detail/United-Arab-Emirates.html) | Read for supervisory trajectory; incorporate into UAE correspondent risk rating review |
+| Indicator | Source | Posture change if triggered | Provenance |
+|---|---|---|---|
+| FATF adds a GCC state to increased monitoring (grey list) | FATF press releases after each plenary (Feb, Jun, Oct); https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/ | Immediate enhanced due diligence review for all correspondents in affected jurisdiction; legal advice on regulatory obligations | `[analyst-judgment]` |
+| OFAC enforcement action naming a GCC correspondent or entity in the correspondent's customer base | OFAC enforcement releases (https://ofac.treasury.gov/civil-penalties-and-enforcement-information) | Re-assess all transactions with that correspondent; voluntary self-disclosure review; legal advice | `[analyst-judgment]` |
+| CBUAE issues regulatory action or license revocation against a GCC bank | CBUAE public notices (https://www.centralbank.ae/) | Immediate review of any correspondent relationship with that bank | `[analyst-judgment]` |
+| BIS CBS shows material change in cross-border claims to/from GCC banking sector | BIS quarterly CBS release (https://www.bis.org/statistics/consstats.htm) | Analytical signal only — use as context for re-tiering decisions, not a direct trigger | `[analyst-judgment]` |
+| FATF issues UAE follow-up monitoring report post-de-listing | FATF follow-up reports (https://www.fatf-gafi.org/en/countries/detail/United-Arab-Emirates.html) | Read for supervisory trajectory; incorporate into UAE correspondent risk rating review | `[analyst-judgment]` |
 
 ## Unknowns
 
-| Unknown | Impact |
-|---|---|
-| Beneficial ownership of specific GCC correspondent bank customers | Unknown without correspondent KYC disclosure. Iranian-origin beneficial interest is not visible at correspondent counterparty level without enhanced documentation. |
-| UAE post-grey-listing supervisory durability | Judgment-level uncertainty. CBUAE has made documented improvements; whether enforcement cadence is sustained past the 2-year post-de-listing window is unknown. |
-| Current FATF status of Kuwait, Bahrain, and other GCC states | Verify against FATF/MENAFATF websites at the retrieval date relevant to the analysis. Status changes at FATF plenaries. |
-| Extent to which specific GCC correspondents have implemented CBUAE's post-grey-listing AML upgrades | Requires correspondent-level review. Public documentation exists (CBUAE framework); correspondent-level implementation is entity-specific. |
+| Unknown | Impact | Provenance |
+|---|---|---|
+| Beneficial ownership of specific GCC correspondent bank customers | Unknown without correspondent KYC disclosure. Iranian-origin beneficial interest is not visible at correspondent counterparty level without enhanced documentation. | `[analyst-judgment]` |
+| UAE post-grey-listing supervisory durability | Judgment-level uncertainty. CBUAE has made documented improvements; whether enforcement cadence is sustained past the 2-year post-de-listing window is unknown. | `[analyst-judgment]` |
+| Current FATF status of Kuwait, Bahrain, and other GCC states | Verify against FATF/MENAFATF websites at the retrieval date relevant to the analysis. Status changes at FATF plenaries. | `[analyst-judgment]` |
+| Extent to which specific GCC correspondents have implemented CBUAE's post-grey-listing AML upgrades | Requires correspondent-level review. Public documentation exists (CBUAE framework); correspondent-level implementation is entity-specific. | `[analyst-judgment]` |
 
 ## Confidence
 
@@ -144,13 +144,13 @@ For a Western respondent bank with GCC correspondent relationships:
 
 ## What would change the judgment
 
-| Evidence update | Direction of change |
-|---|---|
-| UAE re-grey-listed by FATF | Major escalation trigger — enhanced due diligence obligations across UAE correspondent book; likely regulatory scrutiny |
-| FATF issues positive UAE follow-up report with documented supervisory improvements | Modestly positive — would support continued UAE correspondent relationships with standard enhanced due diligence |
-| Saudi Arabia receives an adverse FATF or MENAFATF follow-up report | Would raise Saudi correspondent risk rating from "lower inherent" |
-| OFAC enforcement action against a Western bank specifically for GCC correspondent failures | Would sharpen regulatory and reputational cost calculation; would set a precedent for fact-pattern comparison |
-| Confirmed nuclear deal and sanctions relief for Iran | Would materially change the Iran-exposure channel; general licenses and SDN relief must be verified specifically before any operational change |
+| Evidence update | Direction of change | Provenance |
+|---|---|---|
+| UAE re-grey-listed by FATF | Major escalation trigger — enhanced due diligence obligations across UAE correspondent book; likely regulatory scrutiny | `[analyst-judgment]` |
+| FATF issues positive UAE follow-up report with documented supervisory improvements | Modestly positive — would support continued UAE correspondent relationships with standard enhanced due diligence | `[analyst-judgment]` |
+| Saudi Arabia receives an adverse FATF or MENAFATF follow-up report | Would raise Saudi correspondent risk rating from "lower inherent" | `[analyst-judgment]` |
+| OFAC enforcement action against a Western bank specifically for GCC correspondent failures | Would sharpen regulatory and reputational cost calculation; would set a precedent for fact-pattern comparison | `[analyst-judgment]` |
+| Confirmed nuclear deal and sanctions relief for Iran | Would materially change the Iran-exposure channel; general licenses and SDN relief must be verified specifically before any operational change | `[analyst-judgment]` |
 
 ## Limitation note
 

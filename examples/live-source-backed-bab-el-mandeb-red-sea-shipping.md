@@ -64,12 +64,12 @@ For an underwriter or charterer, exposure transmits through:
 
 The Houthi movement is an **Iran-aligned** non-state actor, not an **Iran-state** actor and not an **IRGC-affiliated commercial entity** in the OFAC SDN sense. This distinction matters for:
 
-| Category | Relevance to this archetype |
-|---|---|
-| **Iran-state** | Iran's overt position on the Red Sea attack file is a political variable, not a direct sanctions exposure for the underwriter. Iran has been designated and sanctioned in other regimes; that is separate from the maritime risk question. |
-| **IRGC-affiliated** (`Judgment` — requires SDN verification) | IRGC has been publicly linked to supply and training for Houthi missile and drone capability. Operational implications: any cargo or vessel with potential IRGC-supply nexus is a distinct sanctions question independent of Red Sea route risk. Do not conflate the two exposures. |
-| **Houthi-controlled** | Houthi-controlled and Houthi-designated entities are subject to specific US Treasury designations (which have shifted between SDGT and FTO frameworks over time — `[verify]` current designation status). Operational shipping nexus to Houthi-controlled entities is a sanctions question separate from war-risk pricing. |
-| **Iran-private commercial** | Not the relevant axis for this archetype. |
+| Category | Relevance to this archetype | Provenance |
+|---|---|---|
+| **Iran-state** | Iran's overt position on the Red Sea attack file is a political variable, not a direct sanctions exposure for the underwriter. Iran has been designated and sanctioned in other regimes; that is separate from the maritime risk question. | `[analyst-judgment]` |
+| **IRGC-affiliated** (`Judgment` — requires SDN verification) | IRGC has been publicly linked to supply and training for Houthi missile and drone capability. Operational implications: any cargo or vessel with potential IRGC-supply nexus is a distinct sanctions question independent of Red Sea route risk. Do not conflate the two exposures. | `[analyst-judgment]` |
+| **Houthi-controlled** | Houthi-controlled and Houthi-designated entities are subject to specific US Treasury designations (which have shifted between SDGT and FTO frameworks over time — `[verify]` current designation status). Operational shipping nexus to Houthi-controlled entities is a sanctions question separate from war-risk pricing. | `[analyst-judgment]` |
+| **Iran-private commercial** | Not the relevant axis for this archetype. | `[analyst-judgment]` |
 
 The point: the route-risk question (war-risk pricing) and the counterparty-sanctions question (OFAC / SDN screening) are **distinct exposures** that may both apply. Conflating them produces either over-priced policies or under-screened transactions.
 
@@ -77,31 +77,31 @@ The point: the route-risk question (war-risk pricing) and the counterparty-sanct
 
 For an underwriter or charterer:
 
-| Exposure concentration | Type | Control point |
-|---|---|---|
-| Premium mispricing across duration regime | Pricing risk | War-risk pricing model: input distribution, not point estimate. Re-calibrate to listed-area duration, not single incidents. |
-| Voyage refusal / deviation right friction | Contract risk | CONWARTIME / VOYWAR clause precision; pre-agreed deviation terms |
-| Cargo coverage interaction with deviation | Cargo / policy gap risk | Policy review — coverage of deviation costs, demurrage, contractual penalty cascades |
-| Counterparty / vessel sanctions adjacency | Sanctions risk (distinct from war risk) | OFAC SDN screen on counterparty and vessel; do not assume war-risk coverage equates to sanctions coverage |
-| Reputational risk on continuation of Red Sea transits | Reputation risk | Disclosure to internal stakeholders, board, regulators on route choice rationale |
-| Cape of Good Hope routing — fuel, time, schedule cascade | Operational / financial risk | Voyage planning, time-charter language on routing election |
+| Exposure concentration | Type | Control point | Provenance |
+|---|---|---|---|
+| Premium mispricing across duration regime | Pricing risk | War-risk pricing model: input distribution, not point estimate. Re-calibrate to listed-area duration, not single incidents. | `[analyst-judgment]` |
+| Voyage refusal / deviation right friction | Contract risk | CONWARTIME / VOYWAR clause precision; pre-agreed deviation terms | `[analyst-judgment]` |
+| Cargo coverage interaction with deviation | Cargo / policy gap risk | Policy review — coverage of deviation costs, demurrage, contractual penalty cascades | `[analyst-judgment]` |
+| Counterparty / vessel sanctions adjacency | Sanctions risk (distinct from war risk) | OFAC SDN screen on counterparty and vessel; do not assume war-risk coverage equates to sanctions coverage | `[analyst-judgment]` |
+| Reputational risk on continuation of Red Sea transits | Reputation risk | Disclosure to internal stakeholders, board, regulators on route choice rationale | `[analyst-judgment]` |
+| Cape of Good Hope routing — fuel, time, schedule cascade | Operational / financial risk | Voyage planning, time-charter language on routing election | `[analyst-judgment]` |
 
 Concentrated exposures for a typical underwriter or charterer: **(1)** pricing built on attack-frequency snapshots rather than duration-of-listed-area regime; **(2)** clause language not optimized for sustained moderate risk vs acute high risk; **(3)** failure to separate war-risk and sanctions exposures.
 
 ## Actor incentives
 
-| Actor | Incentive | Leverage point |
-|---|---|---|
-| Houthi movement | Maintain political leverage via maritime disruption; signal alignment with Iran-aligned axis and Israel-conflict file | Targeting tempo and target selection; public claims |
-| Iran (state) | Maintain regional leverage without direct attribution; deny direct operational role | Plausibly-deniable material support to proxies; diplomatic posture |
-| US-led multinational coalition (Operation Prosperity Guardian, allied missions) | Restore freedom of navigation; deter further attacks; avoid wider regional escalation | Naval presence; selective strikes against launch infrastructure; coalition coordination via CMF |
-| Combined Maritime Forces (CTF 153 — Red Sea Maritime Security) | Coordinate multinational maritime security; preserve shipping access | Task-force structure; information-sharing via Joint Maritime Information Center (retrieved 2026-05-15) |
-| Egypt | Preserve Suez Canal revenue; restore transit volumes | Diplomatic position on conflict and shipping security |
-| Saudi Arabia | Stabilize Red Sea; manage Yemen file; avoid direct conflict | Yemen ceasefire process; quiet diplomacy |
-| Israel | Maintain shipping access; respond to Houthi attacks on its-flagged or Israel-linked vessels | Direct military action; coalition diplomacy |
-| London insurance market (Lloyd's JWC) | Maintain market-clearing pricing for war risk in listed areas | Listed-area designations; clause framework |
-| Shipping owners and charterers | Maintain commercial operations at acceptable risk-adjusted return | Route choice; flag / corporate structure; clause negotiation |
-| Underwriters | Price war risk accurately across the duration; avoid concentration | Premium calibration; capacity allocation; reinsurance |
+| Actor | Incentive | Leverage point | Provenance |
+|---|---|---|---|
+| Houthi movement | Maintain political leverage via maritime disruption; signal alignment with Iran-aligned axis and Israel-conflict file | Targeting tempo and target selection; public claims | `[analyst-judgment]` |
+| Iran (state) | Maintain regional leverage without direct attribution; deny direct operational role | Plausibly-deniable material support to proxies; diplomatic posture | `[analyst-judgment]` |
+| US-led multinational coalition (Operation Prosperity Guardian, allied missions) | Restore freedom of navigation; deter further attacks; avoid wider regional escalation | Naval presence; selective strikes against launch infrastructure; coalition coordination via CMF | `[analyst-judgment]` |
+| Combined Maritime Forces (CTF 153 — Red Sea Maritime Security) | Coordinate multinational maritime security; preserve shipping access | Task-force structure; information-sharing via Joint Maritime Information Center (retrieved 2026-05-15) | `[analyst-judgment]` |
+| Egypt | Preserve Suez Canal revenue; restore transit volumes | Diplomatic position on conflict and shipping security | `[analyst-judgment]` |
+| Saudi Arabia | Stabilize Red Sea; manage Yemen file; avoid direct conflict | Yemen ceasefire process; quiet diplomacy | `[analyst-judgment]` |
+| Israel | Maintain shipping access; respond to Houthi attacks on its-flagged or Israel-linked vessels | Direct military action; coalition diplomacy | `[analyst-judgment]` |
+| London insurance market (Lloyd's JWC) | Maintain market-clearing pricing for war risk in listed areas | Listed-area designations; clause framework | `[analyst-judgment]` |
+| Shipping owners and charterers | Maintain commercial operations at acceptable risk-adjusted return | Route choice; flag / corporate structure; clause negotiation | `[analyst-judgment]` |
+| Underwriters | Price war risk accurately across the duration; avoid concentration | Premium calibration; capacity allocation; reinsurance | `[analyst-judgment]` |
 
 ## Role-based implications
 
@@ -125,26 +125,26 @@ Concentrated exposures for a typical underwriter or charterer: **(1)** pricing b
 
 ## Trigger points and indicators
 
-| Indicator | Source | Posture change if triggered |
-|---|---|---|
-| UKMTO issues warning of widened or intensified attack pattern in Red Sea / Gulf of Aden | UKMTO advisories (https://www.ukmto.org/indian-ocean) — `[verify]` | Immediate underwriting re-pricing cycle; charterer reviews active voyages in transit |
-| Lloyd's JWC updates listed-areas to widen perimeter, add conditions, or remove the Red Sea | Lloyd's JWC — `[verify]` | Market-wide pricing adjustment; charter-clause re-negotiation cycle |
-| Combined Maritime Forces / CTF 153 announces force-posture change (additional escort capacity, rotation, drawdown) | CMF (https://combinedmaritimeforces.com/) — retrieved 2026-05-15; check operational announcements | Underwriting re-pricing; charterer voyage planning |
-| Houthi political statement or operational pattern materially shifts (linked to Israel-Gaza file or Iran-US negotiation file) | Credible reporting and Houthi own statements cross-checked — `[verify]` | Probability re-estimate of duration regime |
-| IMO Maritime Safety Committee resolution on Red Sea security | IMO (https://www.imo.org/) — structural; retrieved 2026-05-15 | Compliance and clause review; longer-term framework input |
-| US Treasury OFAC redesignates Houthi-related entities (SDGT / FTO shifts) | OFAC press releases (https://home.treasury.gov/news/press-releases) — `[verify]` | Sanctions-screening re-baselining; clarity on which counterparties are blocked |
-| Yemen ceasefire process produces verifiable cessation in maritime attacks | Multilateral sources; credible reporting cross-checked — `[verify]` | Underwriting de-escalation cycle (will lag listed-area updates) |
+| Indicator | Source | Posture change if triggered | Provenance |
+|---|---|---|---|
+| UKMTO issues warning of widened or intensified attack pattern in Red Sea / Gulf of Aden | UKMTO advisories (https://www.ukmto.org/indian-ocean) — `[verify]` | Immediate underwriting re-pricing cycle; charterer reviews active voyages in transit | `[analyst-judgment]` |
+| Lloyd's JWC updates listed-areas to widen perimeter, add conditions, or remove the Red Sea | Lloyd's JWC — `[verify]` | Market-wide pricing adjustment; charter-clause re-negotiation cycle | `[analyst-judgment]` |
+| Combined Maritime Forces / CTF 153 announces force-posture change (additional escort capacity, rotation, drawdown) | CMF (https://combinedmaritimeforces.com/) — retrieved 2026-05-15; check operational announcements | Underwriting re-pricing; charterer voyage planning | `[analyst-judgment]` |
+| Houthi political statement or operational pattern materially shifts (linked to Israel-Gaza file or Iran-US negotiation file) | Credible reporting and Houthi own statements cross-checked — `[verify]` | Probability re-estimate of duration regime | `[analyst-judgment]` |
+| IMO Maritime Safety Committee resolution on Red Sea security | IMO (https://www.imo.org/) — structural; retrieved 2026-05-15 | Compliance and clause review; longer-term framework input | `[analyst-judgment]` |
+| US Treasury OFAC redesignates Houthi-related entities (SDGT / FTO shifts) | OFAC press releases (https://home.treasury.gov/news/press-releases) — `[verify]` | Sanctions-screening re-baselining; clarity on which counterparties are blocked | `[analyst-judgment]` |
+| Yemen ceasefire process produces verifiable cessation in maritime attacks | Multilateral sources; credible reporting cross-checked — `[verify]` | Underwriting de-escalation cycle (will lag listed-area updates) | `[analyst-judgment]` |
 
 ## Unknowns
 
-| Unknown | Impact |
-|---|---|
-| Current UKMTO advisory state and recent incident pattern | Time-sensitive. Requires live UKMTO retrieval not performed in this session. |
-| Current JWC listed-areas perimeter and any recent conditions | Time-sensitive. Requires live Lloyd's retrieval not performed in this session. |
-| Current Operation Prosperity Guardian / national mission force levels | Time-sensitive. Public announcements vary by participating nation. |
-| Trajectory of Israel-Gaza file and direct effect on Houthi targeting | Structural uncertainty. High impact on route-risk distribution. |
-| US-Iran negotiation file effect on Iran-aligned proxy posture | Structural uncertainty. Indirect but material. |
-| Market pricing of war-risk premium and reinsurance capacity | Market data not retrieved in this session. |
+| Unknown | Impact | Provenance |
+|---|---|---|
+| Current UKMTO advisory state and recent incident pattern | Time-sensitive. Requires live UKMTO retrieval not performed in this session. | `[analyst-judgment]` |
+| Current JWC listed-areas perimeter and any recent conditions | Time-sensitive. Requires live Lloyd's retrieval not performed in this session. | `[analyst-judgment]` |
+| Current Operation Prosperity Guardian / national mission force levels | Time-sensitive. Public announcements vary by participating nation. | `[analyst-judgment]` |
+| Trajectory of Israel-Gaza file and direct effect on Houthi targeting | Structural uncertainty. High impact on route-risk distribution. | `[analyst-judgment]` |
+| US-Iran negotiation file effect on Iran-aligned proxy posture | Structural uncertainty. Indirect but material. | `[analyst-judgment]` |
+| Market pricing of war-risk premium and reinsurance capacity | Market data not retrieved in this session. | `[analyst-judgment]` |
 
 ## Confidence
 
@@ -158,14 +158,14 @@ This memo's confidence ceiling is moderate because the time-sensitive variables 
 
 ## What would change the judgment
 
-| Evidence update | Direction of change |
-|---|---|
-| Verifiable, sustained cessation of attacks aligned with a Gaza-conflict resolution | Reduces structural exposure; underwriting de-escalates with a lag against listed-area updates |
-| Houthi targeting expansion to a wider set of flag states or to cargo categories previously avoided | Increases structural exposure; widens premium and clause-trigger scope |
-| Coalition drawdown without Houthi de-escalation | Increases exposure; market price should reprice toward reduced naval-coverage premium |
-| Lloyd's JWC removes Red Sea / Gulf of Aden from listed areas | Material market-pricing shift; underwriting must re-calibrate without the standard premium mechanism |
-| New OFAC designations of entities operating in Red Sea / Bab-el-Mandeb shipping | Sanctions-screening re-baselining; does not directly change war-risk pricing |
-| IEA OMR or other primary trade-flow source reports sustained recovery of Suez transit volumes | Confirms commercial normalization signal; underwriting may follow |
+| Evidence update | Direction of change | Provenance |
+|---|---|---|
+| Verifiable, sustained cessation of attacks aligned with a Gaza-conflict resolution | Reduces structural exposure; underwriting de-escalates with a lag against listed-area updates | `[analyst-judgment]` |
+| Houthi targeting expansion to a wider set of flag states or to cargo categories previously avoided | Increases structural exposure; widens premium and clause-trigger scope | `[analyst-judgment]` |
+| Coalition drawdown without Houthi de-escalation | Increases exposure; market price should reprice toward reduced naval-coverage premium | `[analyst-judgment]` |
+| Lloyd's JWC removes Red Sea / Gulf of Aden from listed areas | Material market-pricing shift; underwriting must re-calibrate without the standard premium mechanism | `[analyst-judgment]` |
+| New OFAC designations of entities operating in Red Sea / Bab-el-Mandeb shipping | Sanctions-screening re-baselining; does not directly change war-risk pricing | `[analyst-judgment]` |
+| IEA OMR or other primary trade-flow source reports sustained recovery of Suez transit volumes | Confirms commercial normalization signal; underwriting may follow | `[analyst-judgment]` |
 
 ## Limitation note
 
