@@ -2,6 +2,8 @@
 
 > **GULF + MIDDLE EAST RISK REASONING SKILL** — a reasoning method for AI agents working on Iran sanctions, GCC financial and energy hubs, maritime chokepoint risk and regional geopolitical exposure. Open-source. No live data. No legal or compliance advice.
 
+> **Regional specialist module for [Agenda Intelligence](https://github.com/vassiliylakhonin/agenda-intelligence-md).** Activated automatically when the `analyze` tool sees a Gulf / Middle East / chokepoint geography (Iran, UAE, Saudi Arabia, Qatar, Bahrain, Kuwait, Oman, Yemen, Iraq, Red Sea, Hormuz, Bab-el-Mandeb). Also usable standalone via paste/attach into any agent.
+
 ## 1. What this is
 
 A reasoning method that runs inside an AI agent (Claude, ChatGPT, Codex, or a custom assistant) and produces mechanism-first, evidence-aware risk analysis on the Gulf and Middle East — instead of the generic "tensions remain elevated" commentary that default LLM output usually returns.
