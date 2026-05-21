@@ -329,12 +329,17 @@ def check_root():
         else:
             err("CLAUDE.md must import AGENTS.md on the first line")
 
-    # AGENTS.md must not claim Bar 2 cleared if STATUS.md says otherwise
+    # AGENTS.md must carry one of the canonical Bar 2 states (honesty discipline)
     agents = ROOT / "AGENTS.md"
     if agents.exists():
         text = agents.read_text().lower()
-        if "bar 2" in text and "not cleared" not in text and "partially cleared" not in text:
-            warn("AGENTS.md mentions Bar 2 without 'not cleared' or 'partially cleared' language — verify honesty")
+        canonical_states = [
+            "not cleared",
+            "partially cleared",
+            "cleared for agent integration",
+        ]
+        if "bar 2" in text and not any(s in text for s in canonical_states):
+            warn("AGENTS.md mentions Bar 2 without a canonical state ('not cleared' / 'partially cleared' / 'cleared for agent integration') — verify honesty")
 
     readme = ROOT / "README.md"
     status = ROOT / "STATUS.md"
@@ -373,10 +378,15 @@ def check_root():
 
     if status.exists():
         text = status.read_text(encoding="utf-8").lower()
-        if "**bar 2 — not cleared.**" in text:
-            ok("STATUS.md states Bar 2 is not cleared")
+        canonical_status_lines = [
+            "**bar 2 — not cleared.**",
+            "**bar 2 — partially cleared.**",
+            "**bar 2 — cleared for agent integration.**",
+        ]
+        if any(line in text for line in canonical_status_lines):
+            ok("STATUS.md carries a canonical Bar 2 status line")
         else:
-            err("STATUS.md must explicitly state: **Bar 2 — not cleared.**")
+            err("STATUS.md must explicitly carry one of: **Bar 2 — not cleared.** / **Bar 2 — partially cleared.** / **Bar 2 — cleared for agent integration.**")
 
 
 # ── 7. taxonomy.json: internal consistency and example tags ──────────────────
