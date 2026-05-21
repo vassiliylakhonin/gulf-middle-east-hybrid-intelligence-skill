@@ -266,7 +266,9 @@ Directional, not committed. Items here are not implemented unless noted.
 - **Validation script (B1.5):** implemented as [`scripts/validate.py`](scripts/validate.py) and should pass before changes are merged.
 - **Dark-fleet / sanctioned-oil flow example:** delivered 2026-05-15 as a `user-provided sources` skeleton packet ([`examples/user-provided-sources-dark-fleet-sanctioned-oil.md`](examples/user-provided-sources-dark-fleet-sanctioned-oil.md)). Upgrade to `live-source-backed` is still deferred pending AIS primary access (Kpler, TankerTrackers, or Windward).
 - **OpenClaw skill variant:** deferred until there is an active OpenClaw use case; avoid creating a near-identical third wrapper.
-- **External review (B2.3, B2.7, B2.8):** open to external reviewers from sanctions compliance, energy trading, shipping insurance, Gulf banking, or Iran-watcher analyst backgrounds. These criteria require humans outside the author's circle. (B2.2a — agent-eval methodology demonstrated — is closed; B2.2b — agent-eval breadth across distinct sub-domains — is open and does not require external humans, only two additional cases under `evals/agent-eval/`.)
+- **Agent-eval delta (B2.2):** one case committed (`evals/agent-eval/2026-05-20-hormuz-shipping-insurer.md`, delta +6). Two more needed across distinct Gulf sub-domains to clear B2.2.
+- **Evidence-mode mapping (B2.3):** open — needs an agent-eval that runs source-backed specialist material through Agenda Intelligence `analyze` and maps it to `user_provided` or `mixed`.
+- **Practitioner review (B2.8, optional):** open to reviewers from sanctions compliance, energy trading, shipping insurance, Gulf banking, or Iran-watcher analyst backgrounds. Not a hard Bar 2 gate for agent-first validation — it is a trust layer for the practitioner audience.
 
 If you'd like to influence the roadmap or contribute a review, open an issue.
 

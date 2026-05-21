@@ -306,7 +306,7 @@ Do not introduce heavy dependencies unless necessary.
 
 ## Definition of done
 
-The repo aims to clear two bars in sequence. Bar 1 is the threshold for being a credible artifact. Bar 2 is the threshold for being an externally validated specialist resource. The repo's `STATUS.md` must always state honestly which bar has been cleared and which has not. **Do not pretend a bar is cleared if it is not.**
+The repo aims to clear two hard bars in sequence, with an optional practitioner-trust layer when the audience requires it. Bar 1 is the threshold for being a credible artifact. Bar 2 is the threshold for being an agent-validated specialist resource. Practitioner review is valuable for buying-side trust, but it is not the hard gate when the downstream consumer is an agent integrator. The repo's `STATUS.md` must always state honestly which bar has been cleared and which has not. **Do not pretend a bar is cleared if it is not.**
 
 ### Bar 1 — Early but credible (the minimum bar)
 
@@ -319,26 +319,26 @@ A senior AI or agent engineering reviewer should understand that this repo is no
 - **B1.5** Validation script exists and passes — or is explicitly deferred with a reason in `STATUS.md`.
 - **B1.6** Honesty constraints in "Safety and limitation rules" are observed everywhere.
 
-### Bar 2 — Externally validated specialist resource (the harder bar)
+### Bar 2 — Agent-validated specialist resource (the harder bar)
 
-The criteria below close the weaknesses that Bar 1 alone cannot close. Each criterion is binary: either met with verifiable evidence, or not.
+The criteria below close the weaknesses that Bar 1 alone cannot close for agent integration: untested routing, no with/without product-shell deltas, fragile evidence-mode mapping, undifferentiated skill files, stale source-backed examples, and overclaim risk. Each criterion is binary: either met with verifiable evidence, or not.
 
 - **B2.1 — Source-anchored majority.** At least half of the flagship examples in `examples/` are `live-source-backed` or `user-provided sources` (not `reasoning-only` or `illustrative source packet`). Source-backed examples must cite primary URLs (regulators, OFAC, IFIs, FATF/MENAFATF, central banks, IMO, court records) for legal-grade claims, with secondary reporting clearly tiered.
-- **B2.2a — Agent-eval methodology demonstrated.** At least one agent-eval committed under `evals/agent-eval/` per the methodology at https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/agent-eval-methodology.md. The case runs the same model on the same question with and without the Agenda Intelligence MCP server (loaded with this skill as the regional specialist) and scores both outputs against the 8-criterion structural rubric tied to `agenda-memo.schema.json`. Self-scored by the author; no aggregate claim. The case must include the model, date, full prompts, and a delta + observations section. This sub-criterion demonstrates that the methodology applies in this domain; it does not establish breadth.
-- **B2.2b — Agent-eval breadth.** At least three agent-evals under `evals/agent-eval/` covering distinct sub-domains within the skill's scope (e.g., for this repo: Iran sanctions, GCC banking, energy / OPEC+ dynamics, maritime chokepoint / shipping, dark-fleet / sanctioned-oil routing). Breadth is what supports an external claim that the skill helps across the domain, not only on a single question. This sub-criterion is appropriate when the downstream consumer is an agent; for a domain-practitioner audience use B2.8 instead or in addition.
-- **B2.3 — Validated cases (not a benchmark).** At least three memos produced with the skill have been reviewed by a domain practitioner (sanctions compliance, AML, energy trading, shipping, Gulf banking, Iran-watcher analyst) and labeled as either "useful in their workflow" or "useful with the specified revisions". Stored in a `validated-cases/` directory. **This is not a benchmark.** No aggregated scores; no claims of "X% accuracy".
+- **B2.2 — Agent-eval delta documented.** At least three agent-evals committed under `evals/agent-eval/` per the methodology at https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/agent-eval-methodology.md. Each case runs the same model on the same question with and without the Agenda Intelligence MCP server or product shell loaded with this skill as the regional specialist, then scores both outputs against the structural rubric tied to `agenda-memo.schema.json`. Self-scored by the author is acceptable for this agent-integration bar; aggregate scores are not claimed. Cases must include the model, date, full prompts or enough prompt text to reproduce, both outputs or excerpts, and a delta + observations section.
+- **B2.3 — Evidence-mode mapping exercised.** At least one agent-eval demonstrates how source-backed specialist work is passed into Agenda Intelligence MD's `analyze` contract as `user_provided` or `mixed`, not as `live_source_backed`. This proves the specialist evidence vocabulary does not break the product-shell schema.
 - **B2.4 — Platform differentiation or consolidation.** Each variant in `skills/{codex,claude,openclaw}/SKILL.md` either has at least one platform-specific feature that meaningfully changes output, or is consolidated.
 - **B2.5 — Honest real-use evidence.** Either the repo links to at least one public, attributable real-use record, or the README and `STATUS.md` explicitly state that no real-use evidence exists yet.
 - **B2.6 — Source freshness discipline.** `live-source-backed` examples carry a retrieval date; documented re-verification practice in `docs/source-guide.md`. Examples beyond the horizon are refreshed or labeled stale.
-- **B2.7 — Independent rubric application.** At least one application of `evals/starter-rubric.md` to a memo has been performed by someone other than the author, with their scorecard added under their attribution.
-- **B2.8 — Practitioner review (optional, audience-gated).** If the downstream audience includes domain practitioners (sanctions compliance, AML, energy trading, shipping risk, Gulf banking leadership), at least one named domain practitioner has read at least one example and recorded "useful in their workflow" or "useful with the specified revisions" under `validated-cases/`. This was the original B2.2 framing; it is retained as an additional optional criterion. Skip when the downstream audience is purely AI engineers / agent integrators.
+- **B2.7 — Agent-eval honesty discipline.** Agent-eval writeups explicitly state that deltas are structural, not factual verification, not model-quality comparisons, and not aggregate benchmarks. They must not claim accuracy, compliance usefulness, or practitioner validation.
+- **B2.8 — Practitioner review (optional, audience-gated).** If the downstream audience includes domain practitioners (sanctions compliance, AML, energy trading, shipping risk, Gulf banking leadership), record practitioner review separately under `validated-cases/` with attribution where consented, anonymized otherwise. This is a trust layer, not a hard Bar 2 gate for agent-first validation.
 
 ### Anti-criteria (things that do **not** count as progress toward done)
 
 - Adding more `reasoning-only` examples once Bar 1 is cleared. Source-anchored ratio is the binding constraint.
-- Adding worked scorecards by the same author to imply external validation.
+- Presenting self-scored agent-evals as external validation, factual verification, model-quality comparison, or aggregate benchmark evidence.
 - Renaming a starter rubric a "benchmark" without underlying validated cases.
 - Adding adoption-style language ("used by", "trusted by", "production-grade") without B2.5 evidence.
+- Treating optional practitioner review as a substitute for agent-eval delta when the stated audience is agent integrators.
 - Adding more topics, badges or boilerplate without a corresponding substance change.
 
 ### Honest current status
@@ -346,6 +346,6 @@ The criteria below close the weaknesses that Bar 1 alone cannot close. Each crit
 Current honest status (2026-05-21):
 
 - **Bar 1 — cleared.** B1.1, B1.2, B1.3 (6 of 6 preferred examples; dark-fleet added as user-provided sources skeleton packet), B1.4, B1.5 (validation script, 0 errors), B1.6 met.
-- **Bar 2 — not cleared.** B2.1 met (6 of 8 flagship examples source-anchored, 75%; dark-fleet / sanctioned-oil user-provided sources skeleton packet added). B2.2a met (one agent-eval committed under `evals/agent-eval/` per canonical methodology). B2.2b not met (only one sub-domain covered so far; two more agent-evals needed in distinct sub-domains). B2.6 met (re-verification horizons in source-guide.md; live-source-backed examples carry retrieval dates). B2.5 partial (honest disclosure in place; no positive real-use record yet). B2.4 met (two platform variants: claude with Claude Projects/web-search setup, codex with agentic-loop output discipline and JSON output mode). B2.3, B2.7, B2.8 not met — require external humans. Single-author state; no external review, no validated cases.
+- **Bar 2 — not cleared.** B2.1 met (6 of 8 flagship examples source-anchored, 75%; dark-fleet / sanctioned-oil user-provided sources skeleton packet added). B2.2 not met — one agent-eval committed (`evals/agent-eval/2026-05-20-hormuz-shipping-insurer.md`); two more needed in distinct Gulf sub-domains (e.g., Iran sanctions, GCC banking, energy / OPEC+, dark-fleet routing). B2.3 not met — the Hormuz case is `reasoning_only`; no `mixed` or `user_provided` mapping case yet. B2.4 met (two platform variants: claude with Claude Projects/web-search setup, codex with agentic-loop output discipline and JSON output mode). B2.5 met via negative disclosure (README and STATUS.md state no production-usage or real-use evidence). B2.6 met (re-verification horizons in source-guide.md; live-source-backed examples carry retrieval dates). B2.7 partially demonstrated by the Hormuz case (structural-only limitation note present); the discipline is binding across the full case set once B2.2 reaches three. B2.8 optional / not required for agent-first Bar 2.
 
 Future contributors must update this status truthfully as criteria are met, and must not advance the status without verifiable evidence.
