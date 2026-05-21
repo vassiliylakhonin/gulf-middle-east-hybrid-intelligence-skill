@@ -266,7 +266,7 @@ Directional, not committed. Items here are not implemented unless noted.
 - **Validation script (B1.5):** implemented as [`scripts/validate.py`](scripts/validate.py) and should pass before changes are merged.
 - **Dark-fleet / sanctioned-oil flow example:** delivered 2026-05-15 as a `user-provided sources` skeleton packet ([`examples/user-provided-sources-dark-fleet-sanctioned-oil.md`](examples/user-provided-sources-dark-fleet-sanctioned-oil.md)). Upgrade to `live-source-backed` is still deferred pending AIS primary access (Kpler, TankerTrackers, or Windward).
 - **OpenClaw skill variant:** deferred until there is an active OpenClaw use case; avoid creating a near-identical third wrapper.
-- **External review (B2.2, B2.3, B2.7):** open to external reviewers from sanctions compliance, energy trading, shipping insurance, Gulf banking, or Iran-watcher analyst backgrounds. These criteria require humans outside the author's circle.
+- **External review (B2.3, B2.7, B2.8):** open to external reviewers from sanctions compliance, energy trading, shipping insurance, Gulf banking, or Iran-watcher analyst backgrounds. These criteria require humans outside the author's circle. (B2.2a — agent-eval methodology demonstrated — is closed; B2.2b — agent-eval breadth across distinct sub-domains — is open and does not require external humans, only two additional cases under `evals/agent-eval/`.)
 
 If you'd like to influence the roadmap or contribute a review, open an issue.
 
