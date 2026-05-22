@@ -29,6 +29,8 @@ Requirements: Python 3.8+. No additional packages — the validator uses the sta
 - For the signal lifecycle: skim [`signals/latest.md`](signals/latest.md) and the [`signals/TEMPLATE.md`](signals/TEMPLATE.md). The 4-file consistency rule across `signals/` is the most common reason a partial signal-add fails CI.
 - For the agent-eval validation pattern that closes Bar 2: skim [`evals/agent-eval/README.md`](evals/agent-eval/README.md) and one case file.
 
+**Unfamiliar with a term in `AGENTS.md`?** See the [portfolio glossary](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/glossary.md) — single source of truth across the four repos for evidence modes, uncertainty labels (`Verified`/`Plausible`/`Judgment`/`Unknown`), Axis A/B provenance tags, table-cell discipline, three-value response logic, and the maturity-framework asymmetry (this repo and the CA-Caspian sibling use Bar 1/2; `global-think-tank-analyst` uses the Maturity framework from `VALIDATION_PLAN.md`; `agenda-intelligence-md` uses `ROADMAP.md` version targets — do not transplant terminology between them).
+
 **When something is unclear**, the lookup order is: this repo's [`AGENTS.md`](AGENTS.md) → portfolio canon ([agenda-intelligence-md/AGENTS.md](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/AGENTS.md), [global-think-tank-analyst/AGENTS.md](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/AGENTS.md), [central-asia-caspian-hybrid-intelligence-skill/AGENTS.md](https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill/blob/main/AGENTS.md)) → open an issue using the template under [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/).
 
 ---
@@ -144,6 +146,7 @@ Validation, schemas, scoring and audit tooling belong in [Agenda Intelligence MD
 ## PR checklist
 
 - [ ] `python3 scripts/validate.py` passes locally
+- [ ] `python3 scripts/render-readme.py --check` passes locally (README in sync with `taxonomy.json` — fails CI even when no taxonomy or example was touched in this PR)
 - [ ] If a signal was added: all four signal files updated atomically (`signals/<slug>.md`, `index.json`, `feed.json`, `latest.md`)
 - [ ] If an example was added or renamed: `README.md` flagship table, `examples/README.md`, and README mode-count summary updated in the same PR; `taxonomy.json` updated and `render-readme.py` run if archetype applies
 - [ ] No claims of external verification, validation, MCP, CLI, or CI checks unless truly implemented in this repo
