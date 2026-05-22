@@ -211,6 +211,30 @@ _Generated from `taxonomy.json`. To update, edit `taxonomy.json` and run `python
 
 These are public examples of skill output, not official intelligence or real-time data.
 
+## Repository layout
+
+```text
+.
+├── README.md            # Public positioning (this file)
+├── AGENTS.md            # Canonical project contract (identity, scope, evidence rules)
+├── CLAUDE.md            # Claude Code working rules (inherits AGENTS.md)
+├── SKILL.md             # Runtime skill contract
+├── STATUS.md            # Honest Bar 1 / Bar 2 status against the Definition of Done
+├── CONTRIBUTING.md      # Local validator workflow and CI invariants
+├── llms.txt             # Orientation for LLMs and agent indexers
+├── taxonomy.json        # Example archetypes (drives an auto-generated README block)
+├── skills/              # Runtime skill files per platform (claude/, codex/)
+├── examples/            # Flagship memo examples (state evidence mode)
+├── evals/               # Review checklist, failure modes, starter rubric, agent-eval cases
+├── signals/             # Public signal archive + JSON Feed + template
+├── docs/                # Source guide, currency watch, cold-start interview, regional logic
+├── templates/           # Practice-profile template populated by the cold-start interview
+├── scripts/             # Validator (validate.py) and README renderer (render-readme.py)
+└── .github/             # CI workflows and issue templates
+```
+
+For new contributors: read `AGENTS.md` for project rules, then `CONTRIBUTING.md` for the local validator workflow before touching any file.
+
 ## 12. Skill files
 
 - [`skills/claude/SKILL.md`](skills/claude/SKILL.md) — Claude variant with Projects setup, web search guidance for `live-source-backed` mode, extended-context `user-provided sources` workflows and tool-use discipline.

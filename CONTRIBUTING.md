@@ -22,6 +22,37 @@ CI runs this on every push. Run it locally before opening a PR — a red CI on `
 4. Keep changes scoped and explain the decision value in the PR.
 5. Open a PR with before/after where positioning or skill behavior changed.
 
+## Required artifacts for a vertical specialist skill
+
+This repo and its sibling [Central Asia + Caspian](https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill) follow the same minimum file set. Keep the topology aligned.
+
+**Root files (required, file-presence checked by `scripts/validate.py`):**
+- `README.md` — public positioning per AGENTS.md "README priorities"
+- `AGENTS.md` — canonical project contract (identity, scope, evidence rules, Definition of Done)
+- `CLAUDE.md` — Claude Code working rules (inherits AGENTS.md)
+- `SKILL.md` — runtime skill contract
+- `STATUS.md` — honest Bar 1 / Bar 2 status
+- `CONTRIBUTING.md` — this file
+- `LICENSE`
+- `SECURITY.md`
+- `llms.txt` — orientation for LLMs and agent indexers
+- `.gitignore`
+
+**Directories (required):**
+- `skills/{claude,codex}/SKILL.md` — runtime variants per platform; OpenClaw deferred with a reason in STATUS.md (B2.4)
+- `examples/` — flagship memos; every non-`README.md` file must declare an `Evidence mode:`
+- `evals/` — must contain `checklist.md`, `failure-modes.md`, `starter-rubric.md`; `evals/agent-eval/` holds Bar 2 cases
+- `docs/` — must contain `source-guide.md`, `regional-logic.md`, `risk-archetypes.md`
+- `templates/` — at minimum `practice-profile.md`
+- `scripts/` — at minimum `validate.py`
+- `.github/workflows/validate.yml`
+
+**Gulf-specific additions** (not present in CA-Caspian):
+- `signals/` — public signal archive with `latest.md`, `index.json`, `feed.json`, `TEMPLATE.md` (atomic 4-file consistency enforced by validator)
+- `taxonomy.json` — drives the auto-generated archetype block in README (run `scripts/render-readme.py` after edits)
+
+`scripts/validate.py` is the authoritative list. Run it after any structural change.
+
 ## Where things live
 
 - [`AGENTS.md`](AGENTS.md) — project identity, honesty, evidence, naming rules.

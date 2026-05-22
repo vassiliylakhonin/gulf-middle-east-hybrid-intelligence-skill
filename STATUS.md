@@ -2,6 +2,15 @@
 
 Honest status against the Definition of Done in [`AGENTS.md`](AGENTS.md). Update this file truthfully whenever a criterion is met or no longer met. Do not advance status without verifiable evidence.
 
+## What Bar 1 and Bar 2 mean
+
+This repo uses a two-bar Definition of Done. Full criteria live in [`AGENTS.md`](AGENTS.md) under "Definition of done"; the short version:
+
+- **Bar 1 — Early but credible.** Structural minimum for a vertical specialist skill: README follows the structure in AGENTS.md "README priorities", all four evidence modes (`live-source-backed`, `user-provided sources`, `illustrative source packet`, `reasoning-only`) demonstrated, all preferred examples present, an `evals/` triad (checklist + rubric + failure-modes) with honest labels, validation script passing, no exaggerated claims.
+- **Bar 2 — Agent-validated specialist resource.** The harder bar for agent-integration use: source-anchored majority of flagship examples, at least three agent-eval delta cases under `evals/agent-eval/`, evidence-mode mapping exercised through Agenda Intelligence MD's `analyze` tool, platform differentiation (or honest consolidation) across `skills/{claude,codex,openclaw}/SKILL.md`, source freshness discipline, and explicit structural-only honesty on every agent-eval. B2.8 (practitioner review) is optional and audience-gated, not a hard gate.
+
+Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in `AGENTS.md` list moves that do *not* count as progress.
+
 **Last updated:** 2026-05-21. Bar 2 aligned with the "Agent-validated specialist resource" canon adopted in CA-Caspian: B2.2 is a single criterion (≥3 agent-eval delta cases), B2.3 is "evidence-mode mapping exercised through `analyze`", B2.7 is "Agent-eval honesty discipline", B2.8 is optional practitioner review. The earlier B2.2a / B2.2b decomposition is superseded.
 
 Update (2026-05-21, later in day): Added two new agent-eval delta cases — `evals/agent-eval/2026-05-21-dark-fleet-sanctioned-oil-mixed.md` (refiner / dark-fleet / sanctioned-oil; upstream `live-source-backed` + `user-provided sources` mapped through `analyze` as `mixed`; delta +6, 3/9 → 9/9) and `evals/agent-eval/2026-05-21-gcc-correspondent-tiering.md` (Western respondent bank tiering of GCC correspondents; `reasoning_only`; delta +5.5, 2.5/8 → 8/8). B2.2 ✅ (three agent-evals across distinct sub-domains: chokepoint underwriting, dark-fleet adjacency, GCC banking). B2.3 ✅ (dark-fleet case exercises `mixed` mapping). B2.7 ✅ across the full case set (each writeup states structural-only, self-scored, not factual / not model-quality / not aggregate). Added `evals/agent-eval/README.md` mirroring the CA-Caspian pattern.
