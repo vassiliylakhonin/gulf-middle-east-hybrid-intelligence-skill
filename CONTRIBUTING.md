@@ -2,6 +2,37 @@
 
 Contributions welcome. Before opening a PR, read [`AGENTS.md`](AGENTS.md) (project identity, scope, evidence and safety rules) and [`STATUS.md`](STATUS.md) (what's cleared, what isn't, what's deferred).
 
+## First 15 minutes
+
+If you've just landed in this repo and want to understand it before editing, do these in order. Each step is real-time-boxed at ~5 minutes.
+
+**1. Read these three files, in order:**
+
+1. [`README.md`](README.md) — what this is (Gulf + Middle East vertical specialist), the four-repo stack, and what's *out of scope* (CA-Caspian content, North Africa, Israel-Palestine internal politics, terrorism analysis beyond financial/sanctions transmission).
+2. [`AGENTS.md`](AGENTS.md) — canonical project rules: scope, the Iran-state / IRGC-affiliated / Iran-private commercial actor distinctions (collapsing them is a **Stop-and-request** trigger), evidence rules, per-claim provenance tags (Axis A/B + table-cell discipline), currency triggers, three-value response logic, README priorities, and the Bar 1 / Bar 2 Definition of Done.
+3. [`STATUS.md`](STATUS.md) — honest current state per Bar 1 / Bar 2 criterion. This is where you find out what's actually shipped vs what's claimed.
+
+**2. Get the validators running locally:**
+
+```bash
+git clone https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill
+cd gulf-middle-east-hybrid-intelligence-skill
+python3 scripts/validate.py
+python3 scripts/render-readme.py --check  # README in sync with taxonomy.json
+```
+
+Requirements: Python 3.8+. No additional packages — the validator uses the standard library. CI runs `scripts/validate.py` on every push; run it locally before pushing or `main` will go red.
+
+**3. Read one concrete artifact end-to-end:**
+
+- A `live-source-backed` flagship example, e.g. [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md). Look for: evidence mode declaration at top, per-claim provenance tags inside the body and in tables (table-cell discipline), retrieval date, Iran actor-distinction language, mechanism-first structure, what the limitation note actually limits.
+- For the signal lifecycle: skim [`signals/latest.md`](signals/latest.md) and the [`signals/TEMPLATE.md`](signals/TEMPLATE.md). The 4-file consistency rule across `signals/` is the most common reason a partial signal-add fails CI.
+- For the agent-eval validation pattern that closes Bar 2: skim [`evals/agent-eval/README.md`](evals/agent-eval/README.md) and one case file.
+
+**When something is unclear**, the lookup order is: this repo's [`AGENTS.md`](AGENTS.md) → portfolio canon ([agenda-intelligence-md/AGENTS.md](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/AGENTS.md), [global-think-tank-analyst/AGENTS.md](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/AGENTS.md), [central-asia-caspian-hybrid-intelligence-skill/AGENTS.md](https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill/blob/main/AGENTS.md)) → open an issue using the template under [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/).
+
+---
+
 ## Local environment
 
 Requirements: Python 3.8+. No additional packages needed — the validator uses the standard library.
