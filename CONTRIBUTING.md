@@ -146,6 +146,7 @@ Validation, schemas, scoring and audit tooling belong in [Agenda Intelligence MD
 ## PR checklist
 
 - [ ] `python3 scripts/validate.py` passes locally
+- [ ] `python3 scripts/render-readme.py --check` passes locally (README in sync with `taxonomy.json` — fails CI even when no taxonomy or example was touched in this PR)
 - [ ] If a signal was added: all four signal files updated atomically (`signals/<slug>.md`, `index.json`, `feed.json`, `latest.md`)
 - [ ] If an example was added or renamed: `README.md` flagship table, `examples/README.md`, and README mode-count summary updated in the same PR; `taxonomy.json` updated and `render-readme.py` run if archetype applies
 - [ ] No claims of external verification, validation, MCP, CLI, or CI checks unless truly implemented in this repo
