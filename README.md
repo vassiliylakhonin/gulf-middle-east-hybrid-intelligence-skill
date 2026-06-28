@@ -10,6 +10,12 @@ A reasoning method that runs inside an AI agent (Claude, ChatGPT, Codex, or a cu
 
 It does not replace sanctions screening, AML monitoring, vessel due diligence, legal review or human analyst judgement. It changes the *shape* of the reasoning your AI tool produces before any of those steps.
 
+## Commercial role
+
+This repo is a **regional specialist reasoning layer**, not a standalone commercial product. The current Agenda Intelligence MD product focus is evidence-readiness / trust-routing for high-stakes AI-assisted decisions, with AI vendor evidence-readiness for regulated procurement as the first discovery wedge.
+
+Gulf maritime / trade-finance risk-file readiness remains a backup risk-intelligence wedge for Agenda Intelligence MD. This repo should support that hypothesis through source guides, currency-watch discipline, and regional reasoning depth, not by adding new buyer-facing surfaces or deployed workers before buyer evidence exists.
+
 ## 2. Who it is for
 
 - sanctions compliance and AML teams at banks, fintechs and trade-finance providers with Iran adjacency or GCC correspondent exposure

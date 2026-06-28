@@ -10,6 +10,14 @@ Use this positioning:
 
 This repo is a domain skill, not an infrastructure product.
 
+## Commercial role
+
+This repo is a regional specialist reasoning layer in the Agenda Intelligence stack. It is not a standalone commercial product.
+
+Current product focus lives in Agenda Intelligence MD: evidence-readiness / trust-routing for high-stakes AI-assisted decisions, with AI vendor evidence-readiness for regulated procurement as the first discovery wedge. Gulf maritime / trade-finance risk-file readiness is a backup risk-intelligence hypothesis only.
+
+Do not add buyer-facing copy, pilot pages, new deployed surfaces, outreach sequences, or monetization claims here. If a request is commercially oriented, run the market gate in Agenda Intelligence MD and keep this repo focused on domain reasoning, source-guide quality, and currency-watch discipline.
+
 ## Relationship to the broader stack
 
 Agenda Intelligence MD:
