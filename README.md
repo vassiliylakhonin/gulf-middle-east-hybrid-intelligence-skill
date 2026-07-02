@@ -185,11 +185,13 @@ _Generated from `taxonomy.json`. To update, edit `taxonomy.json` and run `python
 - [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
 - [`examples/live-source-backed-gcc-correspondent-banking.md`](examples/live-source-backed-gcc-correspondent-banking.md) — `live-source-backed`
 - [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md) — `live-source-backed`
+- [`examples/source-conflict-iran-crude-export-trackers.md`](examples/source-conflict-iran-crude-export-trackers.md) — `illustrative-source-packet`
 - [`examples/user-provided-sources-iraq-banking.md`](examples/user-provided-sources-iraq-banking.md) — `user-provided-sources`
 
 **Dark-fleet and ship-to-ship transfers**
 - [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
 - [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md) — `live-source-backed`
+- [`examples/source-conflict-iran-crude-export-trackers.md`](examples/source-conflict-iran-crude-export-trackers.md) — `illustrative-source-packet`
 - [`examples/user-provided-sources-dark-fleet-sanctioned-oil.md`](examples/user-provided-sources-dark-fleet-sanctioned-oil.md) — `user-provided-sources`
 
 **GCC correspondent banking exposure**
@@ -205,6 +207,7 @@ _Generated from `taxonomy.json`. To update, edit `taxonomy.json` and run `python
 **Sanctioned-oil flow concentration**
 - [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
 - [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md) — `live-source-backed`
+- [`examples/source-conflict-iran-crude-export-trackers.md`](examples/source-conflict-iran-crude-export-trackers.md) — `illustrative-source-packet`
 - [`examples/user-provided-sources-dark-fleet-sanctioned-oil.md`](examples/user-provided-sources-dark-fleet-sanctioned-oil.md) — `user-provided-sources`
 
 **Sanctioned-party post-designation reconstitution**
