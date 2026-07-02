@@ -50,7 +50,7 @@ CI runs this on every push. Run it locally before opening a PR — a red CI on `
 ## Development workflow
 
 1. Create a branch from `main`.
-2. Edit the relevant files: skill files under `skills/`, `AGENTS.md`, `llms.txt`, examples, signals.
+2. Edit the relevant files: skill files under `runtimes/`, `AGENTS.md`, `llms.txt`, examples, signals.
 3. Run `python3 scripts/validate.py` — all checks must pass.
 4. Keep changes scoped and explain the decision value in the PR.
 5. Open a PR with before/after where positioning or skill behavior changed.
@@ -72,7 +72,7 @@ This repo and its sibling [Central Asia + Caspian](https://github.com/vassiliyla
 - `.gitignore`
 
 **Directories (required):**
-- `skills/{claude,codex}/SKILL.md` — runtime variants per platform; OpenClaw deferred with a reason in STATUS.md (B2.4)
+- `runtimes/{claude,codex}/SKILL.md` — runtime variants per platform; OpenClaw deferred with a reason in STATUS.md (B2.4)
 - `examples/` — flagship memos; every non-`README.md` file must declare an `Evidence mode:`
 - `evals/` — must contain `checklist.md`, `failure-modes.md`, `starter-rubric.md`; `evals/agent-eval/` holds Bar 2 cases
 - `docs/` — must contain `source-guide.md`, `regional-logic.md`, `risk-archetypes.md`
@@ -89,7 +89,7 @@ This repo and its sibling [Central Asia + Caspian](https://github.com/vassiliyla
 ## Where things live
 
 - [`AGENTS.md`](AGENTS.md) — project identity, honesty, evidence, naming rules.
-- [`SKILL.md`](SKILL.md) and [`skills/`](skills/) — runtime skill behavior for different runtimes.
+- [`SKILL.md`](SKILL.md) and [`runtimes/`](runtimes/) — runtime skill behavior for different runtimes.
 - [`examples/`](examples/) — illustrative memos. Always state evidence mode.
 - [`evals/`](evals/) — human review checklist, failure modes, starter rubric.
 - [`signals/`](signals/) — public signal examples; contribute via [`signals/TEMPLATE.md`](signals/TEMPLATE.md).

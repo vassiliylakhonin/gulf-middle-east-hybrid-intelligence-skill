@@ -4,8 +4,8 @@ Date: 2026-05-27
 
 Change under review:
 
-- Added `Response-Mode Hard Stops` to `skills/claude/SKILL.md`.
-- Added `Response-Mode Hard Stops` to `skills/codex/SKILL.md`.
+- Added `Response-Mode Hard Stops` to `runtimes/claude/SKILL.md`.
+- Added `Response-Mode Hard Stops` to `runtimes/codex/SKILL.md`.
 - Added machine-readable eval cases and a validator under `evals/skill-improvement/`.
 
 This is a manual structural re-score only. It is not a benchmark, factual validation, sanctions screen, AML review, legal opinion, maritime-intelligence product, investment recommendation, or operational safety assessment.

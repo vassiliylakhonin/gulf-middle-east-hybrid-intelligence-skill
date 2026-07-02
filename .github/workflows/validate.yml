@@ -20,8 +20,8 @@ jobs:
           test -f CONTRIBUTING.md
           test -f SECURITY.md
           test -f examples/README.md
-          test -f skills/claude/SKILL.md
-          test -f skills/codex/SKILL.md
+          test -f runtimes/claude/SKILL.md
+          test -f runtimes/codex/SKILL.md
           test -f scripts/validate.py
       - name: Validate skill, examples, signals and docs
         run: python3 scripts/validate.py

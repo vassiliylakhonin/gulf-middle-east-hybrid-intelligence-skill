@@ -44,6 +44,6 @@ The first `live-source-backed` example is now included: [live-source-backed-ofac
 
 ## How to read these examples
 
-Each example follows the output structure in [`skills/claude/SKILL.md`](../skills/claude/SKILL.md): bottom line, scope, primary driver, mechanism, exposure map, actor incentives, role-based implications, trigger points, unknowns, confidence, what-would-change-the-judgment, limitation note.
+Each example follows the output structure in [`runtimes/claude/SKILL.md`](../runtimes/claude/SKILL.md): bottom line, scope, primary driver, mechanism, exposure map, actor incentives, role-based implications, trigger points, unknowns, confidence, what-would-change-the-judgment, limitation note.
 
 Skip sections that do not apply to a specific question.

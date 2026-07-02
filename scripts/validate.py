@@ -33,10 +33,10 @@ def ok(msg):
 # ── 1. SKILL.md structure ──────────────────────────────────────────────────────
 
 def check_skill_md():
-    print("\n[1] skills/claude/SKILL.md")
-    path = ROOT / "skills" / "claude" / "SKILL.md"
+    print("\n[1] runtimes/claude/SKILL.md")
+    path = ROOT / "runtimes" / "claude" / "SKILL.md"
     if not path.exists():
-        err("skills/claude/SKILL.md missing")
+        err("runtimes/claude/SKILL.md missing")
         return
 
     text = path.read_text()
