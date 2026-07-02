@@ -8,6 +8,8 @@
 
 A reasoning method that runs inside an AI agent (Claude, ChatGPT, Codex, or a custom assistant) and produces mechanism-first, evidence-aware risk analysis on the Gulf and Middle East — instead of the generic "tensions remain elevated" commentary that default LLM output usually returns.
 
+That default weakness is measured, not anecdotal: LLM factual accuracy is systematically lower for regions underrepresented in training data, and generic retrieval agents have been shown to widen that gap rather than close it (arXiv:2503.22877). This is why the skill leans on primary sources, currency triggers and per-claim provenance tags instead of the model's prior.
+
 It does not replace sanctions screening, AML monitoring, vessel due diligence, legal review or human analyst judgement. It changes the *shape* of the reasoning your AI tool produces before any of those steps.
 
 ## Commercial role
