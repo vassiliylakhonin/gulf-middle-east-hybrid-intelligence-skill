@@ -1,0 +1,12 @@
+{
+  "name": "gulf-middle-east",
+  "description": "Regional specialist layer: decision-grade analysis for the Gulf and Middle East across Iran/GCC dynamics, maritime chokepoints, energy, sanctions exposure, and strategic risk.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Vassiliy Lakhonin",
+    "url": "https://github.com/vassiliylakhonin"
+  },
+  "homepage": "https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill",
+  "license": "MIT",
+  "keywords": ["gulf", "middle-east", "iran", "maritime-risk", "strategic-risk"]
+}

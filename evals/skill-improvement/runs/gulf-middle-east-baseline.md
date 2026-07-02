@@ -2,7 +2,7 @@
 
 Date: 2026-05-27
 
-Scope: manual structural review of the current `skills/claude/SKILL.md` and `skills/codex/SKILL.md` contracts against `evals/skill-improvement/cases/gulf-middle-east.jsonl`.
+Scope: manual structural review of the current `runtimes/claude/SKILL.md` and `runtimes/codex/SKILL.md` contracts against `evals/skill-improvement/cases/gulf-middle-east.jsonl`.
 
 This is not a model benchmark. No live source retrieval was performed. No factual, legal, AML, sanctions, maritime, investment, or operational suitability validation is implied.
 

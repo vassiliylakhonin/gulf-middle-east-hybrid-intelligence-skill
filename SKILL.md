@@ -11,8 +11,8 @@ Two platform-specific variants are available — choose the one matching your en
 
 | Environment | File |
 |---|---|
-| Claude | [`skills/claude/SKILL.md`](skills/claude/SKILL.md) |
-| Codex | [`skills/codex/SKILL.md`](skills/codex/SKILL.md) |
+| Claude | [`runtimes/claude/SKILL.md`](runtimes/claude/SKILL.md) |
+| Codex | [`runtimes/codex/SKILL.md`](runtimes/codex/SKILL.md) |
 
 Both variants share the same analytical contract: mechanism-first reasoning, evidence labels (`Verified` / `Plausible` / `Judgment` / `Unknown`), Iran actor distinctions (Iran-state / IRGC-affiliated / Iran-private commercial), role-based implications, trigger points, confidence footer, and explicit limitation notes. Platform additions are documented inside each file.
 

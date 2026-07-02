@@ -16,7 +16,7 @@ Treat `AGENTS.md`, `llms.txt`, and this file as the behavior contract. When work
 ```
 AGENTS.md
 llms.txt
-skills/codex/SKILL.md
+runtimes/codex/SKILL.md
 ```
 
 **Tool-use discipline:**

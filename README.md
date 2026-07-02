@@ -125,9 +125,9 @@ Use the skill variant matching your environment as the operating instruction in 
 
 | Environment | File | Notes |
 |---|---|---|
-| Claude | `skills/claude/SKILL.md` | Claude Projects setup, web search guidance, extended-context user-provided source workflows |
-| Codex | `skills/codex/SKILL.md` | Agentic-loop output discipline, JSON output mode, Agenda Intelligence MD pipeline pattern |
-| ChatGPT / other LLMs | `skills/claude/SKILL.md` or `skills/codex/SKILL.md` | Paste or attach as system / project instruction |
+| Claude | `runtimes/claude/SKILL.md` | Claude Projects setup, web search guidance, extended-context user-provided source workflows |
+| Codex | `runtimes/codex/SKILL.md` | Agentic-loop output discipline, JSON output mode, Agenda Intelligence MD pipeline pattern |
+| ChatGPT / other LLMs | `runtimes/claude/SKILL.md` or `runtimes/codex/SKILL.md` | Paste or attach as system / project instruction |
 
 Validation:
 
@@ -233,7 +233,8 @@ These are public examples of skill output, not official intelligence or real-tim
 ├── CONTRIBUTING.md      # Local validator workflow and CI invariants
 ├── llms.txt             # Orientation for LLMs and agent indexers
 ├── taxonomy.json        # Example archetypes (drives an auto-generated README block)
-├── skills/              # Runtime skill files per platform (claude/, codex/)
+├── runtimes/            # Runtime overlay skill files per platform (claude/, codex/)
+├── skills/              # Claude Code plugin packaging (symlink to root SKILL.md)
 ├── examples/            # Flagship memo examples (state evidence mode)
 ├── evals/               # Review checklist, failure modes, starter rubric, agent-eval cases
 ├── signals/             # Public signal archive + JSON Feed + template
@@ -251,8 +252,8 @@ Cross-repo terminology — evidence modes, Verified/Plausible/Judgment/Unknown l
 
 ## 12. Skill files
 
-- [`skills/claude/SKILL.md`](skills/claude/SKILL.md) — Claude variant with Projects setup, web search guidance for `live-source-backed` mode, extended-context `user-provided sources` workflows and tool-use discipline.
-- [`skills/codex/SKILL.md`](skills/codex/SKILL.md) — Codex variant with agentic-loop output discipline, JSON output mode for Agenda Intelligence MD, and a multi-step pipeline integration pattern.
+- [`runtimes/claude/SKILL.md`](runtimes/claude/SKILL.md) — Claude variant with Projects setup, web search guidance for `live-source-backed` mode, extended-context `user-provided sources` workflows and tool-use discipline.
+- [`runtimes/codex/SKILL.md`](runtimes/codex/SKILL.md) — Codex variant with agentic-loop output discipline, JSON output mode for Agenda Intelligence MD, and a multi-step pipeline integration pattern.
 - [`docs/cold-start-interview.md`](docs/cold-start-interview.md) — preflight procedure that captures role, geography, decision context, risk appetite, source access, and required Iran-state / IRGC / Iran-private actor distinctions before substantive memo work. STOP rule blocks generic memos when the practice profile is missing or contains `[PLACEHOLDER]` markers.
 - [`templates/practice-profile.md`](templates/practice-profile.md) — populated profile read by every memo in the session as the default `Decision / Audience / Geography / Time horizon` block.
 - [`docs/currency-watch.md`](docs/currency-watch.md) — active list of fast-moving topics that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
