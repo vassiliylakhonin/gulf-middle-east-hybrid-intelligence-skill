@@ -10,6 +10,12 @@ Agent-eval delta is not factual verification, not a model-quality comparison, no
 - [`2026-05-21-dark-fleet-sanctioned-oil-mixed.md`](2026-05-21-dark-fleet-sanctioned-oil-mixed.md) — source-backed dark-fleet / sanctioned-oil adjacency case for a refiner, exercising `mixed` evidence-mode mapping through Agenda Intelligence `analyze` (upstream `live-source-backed` regulatory framework + `user-provided sources` skeleton packet → `mixed` at the product-shell layer).
 - [`2026-05-21-gcc-correspondent-tiering.md`](2026-05-21-gcc-correspondent-tiering.md) — GCC correspondent banking tiering for a Western respondent bank in `reasoning_only` mode (jurisdiction-times-counterparty matrix, UAE FATF remediation trajectory, free-zone BO opacity).
 
+## Rule-level canon evals
+
+These test a single AGENTS.md rule (both conditions carry the canon; only the rule under test differs). They do **not** count toward B2.2.
+
+- [`2026-07-10-input-claim-accounting-hormuz-cap.md`](2026-07-10-input-claim-accounting-hormuz-cap.md) — input-claim accounting rule, Hormuz premium-cap packet: delta 0 on a labeled 8-claim illustrative packet; baseline canon already accounts for every claim; blind same-vendor judge.
+
 ## Planned Cases
 
 Planned files do not count toward B2.2 until both conditions, scoring, observations, and limitations are completed.
