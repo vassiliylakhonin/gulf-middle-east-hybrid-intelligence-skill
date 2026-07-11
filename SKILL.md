@@ -11,10 +11,10 @@ Two platform-specific variants are available — choose the one matching your en
 
 | Environment | File |
 |---|---|
-| Claude | [`runtimes/claude/SKILL.md`](runtimes/claude/SKILL.md) |
-| Codex | [`runtimes/codex/SKILL.md`](runtimes/codex/SKILL.md) |
+| Claude | [`runtimes/claude/SKILL.md`](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/runtimes/claude/SKILL.md) |
+| Codex | [`runtimes/codex/SKILL.md`](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/runtimes/codex/SKILL.md) |
 
 Both variants share the same analytical contract: mechanism-first reasoning, evidence labels (`Verified` / `Plausible` / `Judgment` / `Unknown`), Iran actor distinctions (Iran-state / IRGC-affiliated / Iran-private commercial), role-based implications, trigger points, confidence footer, and explicit limitation notes. Platform additions are documented inside each file.
 
-For project identity, scope, evidence rules, and agent behavior contract, read [`AGENTS.md`](AGENTS.md).
-For current status against the Definition-of-Done bars, read [`STATUS.md`](STATUS.md).
+For project identity, scope, evidence rules, and agent behavior contract, read [`AGENTS.md`](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/AGENTS.md).
+For current status against the Definition-of-Done bars, read [`STATUS.md`](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/STATUS.md).
