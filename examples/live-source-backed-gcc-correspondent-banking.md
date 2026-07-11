@@ -27,11 +27,11 @@ GCC correspondent banking is not monolithic. Saudi and UAE banking systems carry
 | FATF — UAE country page (grey-listing Feb 2022; de-listing Feb 2024) | https://www.fatf-gafi.org/en/countries/detail/United-Arab-Emirates.html | Regulatory status | At each major decision; FATF plenary decisions can change status |
 | FATF — Saudi Arabia country page | https://www.fatf-gafi.org/en/countries/detail/Saudi-Arabia.html | Regulatory status | At each major decision |
 | FATF — Kuwait country page | https://www.fatf-gafi.org/en/countries/detail/Kuwait.html | Regulatory status | At each major decision |
-| MENAFATF — member state assessments | https://www.menafatf.org/mutual-evaluation | Regional AML/CFT assessments | At each MENAFATF plenary; assessments published on rolling basis |
+| MENAFATF — second-round member-state assessments | https://www.menafatf.org/mutual-evaluations-follow/evaluation-reports-2 | Regional AML/CFT assessments | At each MENAFATF plenary; assessments published on rolling basis |
 | OFAC Iran sanctions — blocked entities including financial institutions | https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions | Entity screen | Same-day for any operational claim; SDN list updated without schedule |
 | OFAC enforcement actions (correspondent banking and AML-related) | https://ofac.treasury.gov/civil-penalties-and-enforcement-information | Enforcement precedent | Monitor monthly; no fixed publication schedule |
 | CBUAE — anti-money laundering and sanctions framework | https://www.centralbank.ae/en/our-operations/anti-money-laundering | Regulatory | Verify when UAE regulatory framework changes |
-| SAMA — AML/CFT framework | https://www.sama.gov.sa/en-US/RulesInstructions/Pages/Anti-MoneyLaundering.aspx | Regulatory | Verify when Saudi regulatory framework changes |
+| SAMA Rulebook — in-force AML/CTF guidance | https://rulebook.sama.gov.sa/en/guidance-anti-money-laundering-and-combating-terrorist-financing | Regulatory | Verify when Saudi regulatory framework changes |
 
 **Retrieval date for above URLs:** 2026-05-12.
 

@@ -5,7 +5,7 @@
 **Audience:** Marine war-risk underwriter, hull war reinsurer, industrial charterer's logistics / risk lead, or shipping legal team.
 **Time horizon:** 6–12 months, with structural overlay.
 **Evidence mode:** `live-source-backed`. This example also demonstrates the canonical Axis A / Axis B provenance-tag system from AGENTS.md (`[primary]` / `[secondary]` / `[analyst-judgment]` on Axis A; `[verify]` / `[stale-risk: YYYY-MM]` on Axis B).
-**Primary sources retrieved:** See Source table below. Two primary sources (Combined Maritime Forces, IMO) were retrieved live on 2026-05-15. Other named primary sources (UKMTO, Lloyd's Joint War Committee, IEA OMR) could not be retrieved in this session (UKMTO returned HTTP 403; Lloyd's JWC page returned 404) and are flagged `[verify]` for the reader.
+**Primary sources retrieved:** See Source table below. Combined Maritime Forces and IMO were retrieved live on 2026-05-15. The current Lloyd's Market Association Joint War Committee page, its listed-areas page, and the IEA June 2026 OMR were retrieved during the 2026-07-11 source refresh. UKMTO still returned HTTP 403 and remains `[verify]` for the reader.
 **Retrieval note:** Multinational naval task-force structure and IMO regulatory role are stable. Specific UKMTO advisories, JWC listed-area designations, premium levels, and incident counts are time-sensitive and must be re-verified against the relevant primary source before operational use. This memo deliberately does not state attack counts, named vessels, IMO numbers, premium percentages, or specific dated incidents — those belong in a sourced advisory, not in a structural decision-support brief.
 **Limitation note:** This is a decision-support brief. It is not war-risk underwriting advice, vessel screening, maritime due diligence, legal advice, or operational routing guidance. It does not constitute a JWC listed-area determination or an UKMTO advisory. Operational decisions require qualified marine war-risk underwriting review, current UKMTO and IMSC / CMF advisories, current JWC listed-areas, and entity-level vessel and counterparty screening as of the transit date.
 
@@ -17,7 +17,7 @@ For a marine war-risk underwriter or industrial charterer, Bab-el-Mandeb / Red S
 
 ## Scope and evidence mode
 
-`live-source-backed`. Combined Maritime Forces and IMO primary pages retrieved live on 2026-05-15 (see Source table). UKMTO, Lloyd's JWC, and IEA OMR could not be retrieved in this session; their structural role is known from prior public disclosure and is cited `[verify]`. Mechanism analysis is structural (`Judgment`). No vessel-level claims, no premium-level claims, no incident-count claims are made — those require live primary retrieval that this memo does not perform.
+`live-source-backed`. Combined Maritime Forces and IMO primary pages were retrieved live on 2026-05-15; LMA JWC and IEA OMR sources were refreshed on 2026-07-11 (see Source table). UKMTO could not be retrieved and is cited `[verify]`. Mechanism analysis is structural (`Judgment`). No vessel-level claims, no premium-level claims, no incident-count claims are made — those require live primary retrieval that this memo does not perform.
 
 ## Primary sources
 
@@ -26,11 +26,11 @@ For a marine war-risk underwriter or industrial charterer, Bab-el-Mandeb / Red S
 | Combined Maritime Forces — CTF 153 Red Sea Maritime Security; 47-nation naval partnership; Joint Maritime Information Center | https://combinedmaritimeforces.com/ | Multinational operational | ✅ Retrieved 2026-05-15 | 3 months for posture; immediately for any specific advisory claim |
 | International Maritime Organization (IMO) — UN specialized agency for shipping safety, security, and pollution prevention; 176 member states; 50 conventions | https://www.imo.org/ | UN regulatory | ✅ Retrieved 2026-05-15 | 6 months for structural framework; check IMO Maritime Safety Committee outputs for recent resolutions |
 | UKMTO (UK Maritime Trade Operations) — issues maritime security advisories and incident reports for the Indian Ocean / Red Sea / Gulf of Aden region | https://www.ukmto.org/indian-ocean | Government advisory | ❌ Retrieval failed (HTTP 403) — `[verify]` | 1 month for operational claims; immediately at point of transit decision |
-| Lloyd's Joint War Committee (JWC) — list of areas designated for hull-war notification under standard London market clauses | https://www.lloyds.com/about-lloyds/our-market/joint-war-committee | Market designation | ❌ Retrieval failed (HTTP 404) — `[verify]` | 1 month; JWC updates are non-fixed schedule |
-| IEA Oil Market Report (OMR) — global oil market context; trade flow and route disruption coverage | https://www.iea.org/reports/ | Energy market | Not attempted live — `[verify]` | 1 month for current month's report |
+| Lloyd's Market Association Joint War Committee — current listed areas and war-risk context | https://lmalloyds.com/specialist-areas/underwriting/listed-areas/ | Market designation | ✅ Retrieved 2026-07-11; current page links JWLA-033 (2026-03-03) | 1 month; JWC updates are non-fixed schedule |
+| IEA Oil Market Report — June 2026 | https://www.iea.org/reports/oil-market-report-june-2026 | Energy market | ✅ Retrieved 2026-07-11 | 1 month for current market context |
 | BIMCO — industry shipping association; standard clauses (war-risk, CONWARTIME, VOYWAR), guidance | https://www.bimco.org/ | Industry | Not attempted live — `[verify]` | 6 months for clause framework; immediately for current guidance circulars |
 
-**Retrieval date for live-retrieved URLs:** 2026-05-15. UKMTO advisories, JWC listed areas, IEA OMR figures, BIMCO circulars must be independently verified before operational use.
+**Retrieval dates for live-retrieved URLs:** 2026-05-15 for CMF/IMO; 2026-07-11 for LMA JWC and the IEA June 2026 OMR. UKMTO advisories, current JWC changes, current IEA figures, and BIMCO circulars must still be independently verified before operational use.
 
 ## Primary driver
 
@@ -150,7 +150,7 @@ Concentrated exposures for a typical underwriter or charterer: **(1)** pricing b
 
 **Overall confidence: Moderate.**
 
-- **High confidence (structural, retrieved or stably-known):** Geographic chokepoint role of Bab-el-Mandeb; CMF / CTF 153 multinational naval-task-force structure (retrieved 2026-05-15); IMO regulatory framework role (retrieved 2026-05-15); existence of JWC listed-areas framework and standard war-risk clause architecture; distinction between war-risk and sanctions exposures.
+- **High confidence (structural, retrieved or stably-known):** Geographic chokepoint role of Bab-el-Mandeb; CMF / CTF 153 multinational naval-task-force structure (retrieved 2026-05-15); IMO regulatory framework role (retrieved 2026-05-15); JWC listed-areas framework (refreshed 2026-07-11); distinction between war-risk and sanctions exposures.
 - **Moderate confidence (Judgment based on documented public record):** Houthi attack campaign as documented public history; Iran-aligned-proxy logic; underwriter and charterer decision channels.
 - **Low confidence (time-sensitive without live retrieval):** Current advisory state, current listed-areas perimeter, current force posture, current premium levels, current OFAC Houthi designations.
 
@@ -169,7 +169,7 @@ This memo's confidence ceiling is moderate because the time-sensitive variables 
 
 ## Limitation note
 
-This is a `live-source-backed` decision-support brief, not war-risk underwriting advice, vessel screening, maritime due diligence, sanctions screening, AML transaction monitoring, or legal advice. Combined Maritime Forces and IMO primary pages were retrieved on 2026-05-15; UKMTO and Lloyd's Joint War Committee pages could not be retrieved in this session and are cited `[verify]`. No specific incident counts, vessel names, IMO numbers, premium percentages, or dated advisories are stated in this brief — those belong in a sourced advisory with live retrieval. Operational decisions require:
+This is a `live-source-backed` decision-support brief, not war-risk underwriting advice, vessel screening, maritime due diligence, sanctions screening, AML transaction monitoring, or legal advice. Combined Maritime Forces and IMO primary pages were retrieved on 2026-05-15; LMA JWC and IEA sources were refreshed on 2026-07-11; UKMTO remained inaccessible and is cited `[verify]`. No specific incident counts, vessel names, IMO numbers, premium percentages, or dated advisories are stated in this brief — those belong in a sourced advisory with live retrieval. Operational decisions require:
 
 - current UKMTO advisories (https://www.ukmto.org/indian-ocean);
 - current Lloyd's Joint War Committee listed areas;

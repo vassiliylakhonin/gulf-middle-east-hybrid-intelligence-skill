@@ -167,7 +167,7 @@ For a guided route through the examples, start with [examples/README.md](example
 |---|---|---|
 | [examples/live-source-backed-ofac-iran-shipping-sanctions.md](examples/live-source-backed-ofac-iran-shipping-sanctions.md) | `live-source-backed` | OFAC Iran shipping-sector sanctions — GCC-hub commodity trader exposure |
 | [examples/live-source-backed-gcc-correspondent-banking.md](examples/live-source-backed-gcc-correspondent-banking.md) | `live-source-backed` | GCC correspondent banking — Western respondent bank exposure |
-| [examples/live-source-backed-bab-el-mandeb-red-sea-shipping.md](examples/live-source-backed-bab-el-mandeb-red-sea-shipping.md) | `live-source-backed` | Bab-el-Mandeb / Red Sea shipping disruption — war-risk underwriter or industrial charterer exposure (CMF and IMO retrieved 2026-05-15; UKMTO and Lloyd's JWC `[verify]`) |
+| [examples/live-source-backed-bab-el-mandeb-red-sea-shipping.md](examples/live-source-backed-bab-el-mandeb-red-sea-shipping.md) | `live-source-backed` | Bab-el-Mandeb / Red Sea shipping disruption — war-risk underwriter or industrial charterer exposure (CMF/IMO retrieved 2026-05-15; LMA JWC and IEA OMR refreshed 2026-07-11; UKMTO `[verify]`) |
 | [examples/user-provided-sources-sovereign-wealth-deployment.md](examples/user-provided-sources-sovereign-wealth-deployment.md) | `user-provided sources` | Sovereign wealth deployment risk for a target company or co-investor |
 | [examples/iran-sanctions-routing-exposure.md](examples/iran-sanctions-routing-exposure.md) | `reasoning-only` | Iran sanctions adjacency for a European refiner sourcing Gulf crude |
 | [examples/hormuz-shipping-disruption.md](examples/hormuz-shipping-disruption.md) | `illustrative source packet` | Hormuz disruption exposure for a shipping insurer |
@@ -265,6 +265,8 @@ Cross-repo terminology — evidence modes, Verified/Plausible/Judgment/Unknown l
 - OpenClaw is intentionally not provided yet. See `STATUS.md` for B2.4 reasoning.
 
 ## 13. Source guide
+
+Latest source-maintenance pass: [`docs/source-refresh-2026-07-11.md`](docs/source-refresh-2026-07-11.md).
 
 [`docs/source-guide.md`](docs/source-guide.md) lists primary and authoritative sources for Gulf + Middle East risk analysis: OFAC, BIS, EU Council, UK OFSI, MENAFATF, IEA, IMF, BIS banking statistics, central banks (SAMA, CBUAE, QCB, CBI Iran, CBI Iraq, CBL Lebanon), IMO, and tiered secondary sources (think tanks, energy and shipping reporters).
 
