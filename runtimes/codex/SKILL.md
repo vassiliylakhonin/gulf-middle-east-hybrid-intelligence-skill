@@ -1,6 +1,6 @@
 ---
 name: gulf-middle-east-hybrid-intelligence-codex
-description: Codex-optimized Gulf + Middle East strategic-risk skill. Produces structured, decision-grade analysis for Iran sanctions, GCC banking and sovereign wealth, oil and LNG dynamics, maritime chokepoints (Hormuz, Bab-el-Mandeb, Red Sea), and Houthi/proxy exposure. Agentic-loop aware: supports JSON output for downstream Agenda Intelligence MD validation, tool-use discipline, and multi-step pipeline integration.
+description: Codex-optimized Gulf + Middle East strategic-risk skill. Produces structured, decision-useful analysis for Iran sanctions, GCC banking and sovereign wealth, oil and LNG dynamics, maritime chokepoints (Hormuz, Bab-el-Mandeb, Red Sea), and Houthi/proxy exposure. Agentic-loop aware: supports claim/source packet output for Agenda Intelligence MD preflight, tool-use discipline, and multi-step pipeline integration.
 ---
 
 # Gulf + Middle East Hybrid Intelligence — Codex Variant
@@ -30,11 +30,11 @@ If web search, browse, or retrieval tools are available:
 In multi-step agent workflows, intermediate steps may produce structured outputs consumed by downstream tools. Calibrate output format to the pipeline step:
 - Step: analysis → produce markdown memo (default)
 - Step: structured extraction → produce JSON (see JSON Output Mode below)
-- Step: validation → hand off to Agenda Intelligence MD `validate_brief` or `score_output` MCP tools
+- Step: evidence preflight → hand off a claim/source packet to Agenda Intelligence MD `check`
 
 ## Core Contract
 
-Produce structured, decision-grade analysis for the Gulf, Iran, Iraq, and adjacent maritime systems. Optimize for causal clarity, practical implications, and evidence discipline.
+Produce structured, decision-useful analysis for the Gulf, Iran, Iraq, and adjacent maritime systems. Optimize for causal clarity, practical implications, and evidence discipline.
 
 Default stance: explain the mechanism first, then the implication. Avoid generic Middle East commentary, fake precision (oil-price forecasts, vessel counts without source), and alarmism without a transmission channel.
 
@@ -45,68 +45,58 @@ Always distinguish:
 
 ## JSON Output Mode
 
-When the downstream step is Agenda Intelligence MD validation or a structured pipeline consumer, produce output in JSON brief format instead of markdown.
+When the downstream step is Agenda Intelligence MD preflight, produce an evidence packet in addition to the markdown memo.
 
-Trigger: user or orchestrator says `--json`, `format: json`, or `output: brief-json`.
+Trigger: user or orchestrator says `--json`, `format: json`, `output: evidence-packet-json`, or requests evidence preflight.
 
-Produce a JSON object conforming to the Agenda Intelligence MD brief schema:
+Produce the Agenda Intelligence MD evidence-packet shape:
 
 ```json
 {
-  "title": "string — decision-relevant title",
-  "domain": "sanctions | energy | maritime | banking | sovereign-wealth | geopolitical",
-  "region": "Gulf | Iran | Iraq | Red Sea | Hormuz | Levant | GCC",
-  "evidence_mode": "live-source-backed | user-provided sources | illustrative source packet | reasoning-only",
-  "bottom_line": "string — 1-2 sentences, decision-relevant",
-  "primary_driver": "string",
-  "mechanism": "string — how the risk transmits",
-  "exposure_map": "string — where risk concentrates",
-  "actor_incentives": [
-    {"actor": "string", "incentive": "string", "leverage": "string"}
+  "packet_id": "stable packet identifier",
+  "topic": "memo topic",
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "externally checkable factual or quantitative statement",
+      "source_ids": ["s1"],
+      "quotes": [{"source_id": "s1", "text": "verbatim source span"}]
+    }
   ],
-  "role_implications": [
-    {"role": "string", "implication": "string"}
-  ],
-  "trigger_points": ["string"],
-  "unknowns": ["string"],
-  "scenarios": [
-    {"label": "string", "trigger": "string", "implication": "string", "probability_label": "Low | Moderate | High"}
-  ],
-  "confidence": "Low | Moderate | High",
-  "confidence_basis": "string",
-  "what_would_change": ["string"],
-  "limitation_note": "string",
-  "retrieval_date": "YYYY-MM-DD — required for live-source-backed only"
+  "sources": [
+    {"source_id": "s1", "title": "source title", "url": "optional URL", "text": "caller-supplied source text"}
+  ]
 }
 ```
 
-For full schema validation, pipe output to Agenda Intelligence MD:
+Do not include scenarios, assumptions, or analyst judgments as sourced facts. For preflight:
 ```bash
-agenda-intelligence validate-brief brief.json
-agenda-intelligence score brief.json
+agenda-intelligence check evidence-packet.json --format json
+agenda-intelligence check evidence-packet.json --strict
 ```
+
+The older `brief-json`, `validate-brief`, and `score` paths remain compatibility options for explicit legacy callers.
 
 ## Agentic-Loop Multi-Step Pattern
 
 For complex analysis tasks in a Codex agent loop, use this sequence:
 
-**Step 1 — Source plan (optional, if live retrieval available):**
-Call `agenda-intelligence source-plan <category>` or `agenda-intelligence-mcp source_plan` to get recommended source classes for the domain.
+**Step 1 — Gather or receive sources:**
+Use current primary sources when required by the currency trigger, or work from the user's supplied source packet.
 
 **Step 2 — Draft memo:**
 Produce markdown memo using the analytical contract below.
 
-**Step 3 — Structured extraction (if downstream validation needed):**
-Re-produce the memo core as JSON (JSON Output Mode above).
+**Step 3 — Evidence-packet extraction:**
+Extract externally checkable claims and supplied source text using JSON Output Mode above.
 
-**Step 4 — Validate (if Agenda Intelligence MD available):**
+**Step 4 — Lint packet completeness:**
 ```bash
-agenda-intelligence validate-brief brief.json
-agenda-intelligence score brief.json --evidence evidence-pack.json
+agenda-intelligence check evidence-packet.json --strict
 ```
 
 **Step 5 — Return to user:**
-Return the markdown memo + validation result + score. Flag any schema errors or low scores before handing off.
+Return the markdown memo, packet status, and reviewer actions. State that the linter did not assess factual truth.
 
 ## Preflight
 
@@ -160,6 +150,12 @@ When tools provide access, prioritize:
 - **Macro:** IMF Article IV; World Bank.
 
 Secondary tiers: tier-1 (Reuters, Bloomberg, FT, WSJ), tier-2 (Lloyd's List, TradeWinds, Argus, Bourse & Bazaar, AGSIW, MEI), tier-3 (regional press, blogs).
+
+## Evidence-Packet Handoff
+
+When machine-readable evidence preflight is requested, emit an Agenda Intelligence evidence packet in addition to the memo. Include externally checkable factual and quantitative statements in `claims[]`; keep scenarios, assumptions, `[inference]`, and `[analyst-judgment]` in the memo. Give each claim a stable `claim_id`, declare its `source_ids`, copy caller-supplied source text into `sources[]`, and add `quotes[]` only for verbatim spans present in the named source.
+
+Keep unsupported factual claims with an empty `source_ids` array so the linter exposes the gap. Never invent source text, quotes, sanctions records, vessel data, ownership records, or maritime evidence to make a packet pass. Use [`examples/evidence-packet-handoff.json`](../../examples/evidence-packet-handoff.json) as the shape reference. Agenda Intelligence reports packet completeness, not factual truth. Human review remains required.
 
 ## Response-Mode Hard Stops
 

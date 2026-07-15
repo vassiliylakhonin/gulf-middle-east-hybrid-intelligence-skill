@@ -11,7 +11,9 @@ This repo uses a two-bar Definition of Done. Full criteria live in [`AGENTS.md`]
 
 Each criterion is binary: met with verifiable evidence, or not. Anti-criteria in `AGENTS.md` list moves that do *not* count as progress.
 
-**Last updated:** 2026-05-21. Bar 2 aligned with the "Agent-validated specialist resource" canon adopted in CA-Caspian: B2.2 is a single criterion (≥3 agent-eval delta cases), B2.3 is "evidence-mode mapping exercised through `analyze`", B2.7 is "Agent-eval honesty discipline", B2.8 is optional practitioner review. The earlier B2.2a / B2.2b decomposition is superseded.
+**Last updated:** 2026-07-15. Primary composition now uses the v1.3 evidence-packet handoff. Existing `analyze` agent-eval delta cases remain compatibility evidence for the older strategic-intelligence runtime; they do not validate the current evidence-packet linter.
+
+Current Agenda composition: this repo produces regional reasoning and an optional claim/source packet; Agenda Intelligence MD lints packet completeness before human review. The linter does not assess factual truth.
 
 Update (2026-05-21, later in day): Added two new agent-eval delta cases — `evals/agent-eval/2026-05-21-dark-fleet-sanctioned-oil-mixed.md` (refiner / dark-fleet / sanctioned-oil; upstream `live-source-backed` + `user-provided sources` mapped through `analyze` as `mixed`; delta +6, 3/9 → 9/9) and `evals/agent-eval/2026-05-21-gcc-correspondent-tiering.md` (Western respondent bank tiering of GCC correspondents; `reasoning_only`; delta +5.5, 2.5/8 → 8/8). B2.2 ✅ (three agent-evals across distinct sub-domains: chokepoint underwriting, dark-fleet adjacency, GCC banking). B2.3 ✅ (dark-fleet case exercises `mixed` mapping). B2.7 ✅ across the full case set (each writeup states structural-only, self-scored, not factual / not model-quality / not aggregate). Added `evals/agent-eval/README.md` mirroring the CA-Caspian pattern.
 

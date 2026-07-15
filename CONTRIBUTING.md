@@ -18,6 +18,7 @@ If you've just landed in this repo and want to understand it before editing, do 
 git clone https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill
 cd gulf-middle-east-hybrid-intelligence-skill
 python3 scripts/validate.py
+python3 scripts/validate_evidence_packet_handoff.py
 python3 scripts/render-readme.py --check  # README in sync with taxonomy.json
 ```
 
@@ -43,6 +44,7 @@ Run the validator from the repo root:
 
 ```bash
 python3 scripts/validate.py
+python3 scripts/validate_evidence_packet_handoff.py
 ```
 
 CI runs this on every push. Run it locally before opening a PR — a red CI on `main` is the only feedback you will get otherwise. Read [`scripts/validate.py`](scripts/validate.py) directly for the authoritative list of constraints.
@@ -139,9 +141,9 @@ This repo is a domain skill, not an infrastructure product. Do not add or imply:
 - live intelligence collection
 - factuality verification guarantees
 - legal, sanctions, investment, or security advice
-- production-grade monitoring guarantees
+- claims of operational monitoring maturity
 
-Validation, schemas, scoring and audit tooling belong in [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md). Cross-region Central Asia / AML content belongs in [Central Asia + Caspian Hybrid Intelligence Skill](https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill).
+Product linting, schemas, and runtime tooling belong in [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md). This repo may keep dependency-free CI validators for its own documentation and handoff examples. Cross-region Central Asia / AML content belongs in [Central Asia + Caspian Hybrid Intelligence Skill](https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill).
 
 ## PR checklist
 

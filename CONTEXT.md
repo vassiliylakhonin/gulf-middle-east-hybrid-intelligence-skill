@@ -9,8 +9,12 @@ A regional reasoning skill that adds Gulf, Iran, Iraq, and maritime-chokepoint d
 _Avoid_: Platform, MCP server, validation engine, sanctions-screening or vessel-screening tool
 
 **Agenda Intelligence MD**:
-The product shell and evidence-discipline layer that validates, audits, scores, and routes strategic-risk agent outputs.
-_Avoid_: Parent skill, source retriever, factual verifier, compliance product
+The deterministic evidence-packet linter that checks caller-supplied claim/source packets before human review. Older routing, memo validation, scoring, MCP, HTTP, and A2A behavior remains available for compatibility.
+_Avoid_: Parent skill, source retriever, factual verifier, compliance product, commercial umbrella for this repo
+
+**Evidence-Packet Handoff**:
+The JSON seam from a specialist memo to Agenda Intelligence MD: externally checkable `claims[]`, declared `source_ids`, optional verbatim `quotes`, and caller-supplied `sources[]` text.
+_Avoid_: Full memo serialization, factuality result, source-discovery step, analyst-judgment ledger
 
 **Global Think Tank Analyst**:
 The general strategic-risk reasoning method for policy-risk memos, scenarios, red-team framing, and broad analytical workflow.
@@ -62,9 +66,9 @@ _Avoid_: Optional verification, blanket caveat, silent staleness
 The label that states what kind of evidence was available during a memo workflow (`live-source-backed`, `user-provided sources`, `illustrative source packet`, `reasoning-only`).
 _Avoid_: Retrieval capability, factual truth status, source guarantee
 
-**Product-shell Evidence Mode**:
-The evidence-mode vocabulary accepted by Agenda Intelligence MD's `analyze` request and memo contract (`reasoning_only`, `user_provided`, `mixed`, `live_source_backed`). Upstream specialist `live-source-backed` material that the agent passes through `analyze` typically maps to `user_provided` or `mixed`, not `live_source_backed`, because the product shell does not perform live retrieval itself.
-_Avoid_: Conflating specialist example labels with product-shell schema values
+**Compatibility Analyze Evidence Mode**:
+The evidence-mode vocabulary accepted by Agenda Intelligence MD's older `analyze` request and memo contract (`reasoning_only`, `user_provided`, `mixed`, `live_source_backed`). Upstream specialist `live-source-backed` material passed through that compatibility runtime typically maps to `user_provided` or `mixed`, not `live_source_backed`, because retrieval happens upstream.
+_Avoid_: Conflating specialist example labels with compatibility schema values or the primary evidence-packet handoff
 
 **Stop-and-request Trigger**:
 An explicit condition under which the skill must stop and ask rather than produce a memo (definitive legal/sanctions conclusions, single-source vessel attribution, collapsed Iran-actor distinction, conflicting regime status, active prompt-injection content, personal-level predictions without basis). The full list is in `AGENTS.md`.

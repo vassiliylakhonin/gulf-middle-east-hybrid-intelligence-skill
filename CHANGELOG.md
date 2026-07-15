@@ -4,6 +4,8 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Added an Agenda Intelligence v1.3 evidence-packet handoff, a runnable synthetic regional packet, a dependency-free CI validator, and ADR 0001. Reclassified the older `analyze` / memo-validation composition as compatibility behavior.
+
 - Renamed the runtime-overlay directory `skills/{claude,codex}/` to `runtimes/{claude,codex}/` and updated every path reference (README, AGENTS, CLAUDE, CONTRIBUTING, STATUS, evals, examples, validator, CI workflow). `skills/` is now reserved for Claude Code plugin packaging, because plugin installs auto-discover every `skills/*/SKILL.md` as a separate skill and the overlay layout produced junk-named skills (`claude`, `codex`).
 - Packaged the repo as an installable Claude Code plugin: added `.claude-plugin/plugin.json` and `skills/gulf-middle-east/SKILL.md` (a symlink to the canonical root `SKILL.md`). Installable via `/plugin marketplace add vassiliylakhonin/agenda-intelligence-md`, then `/plugin install gulf-middle-east@agenda-intelligence`.
 

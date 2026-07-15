@@ -26,14 +26,15 @@ Do not duplicate Central Asia + Caspian content here. State the cross-reference 
 
 ## With Agenda Intelligence MD
 
-If you need to validate, score, or audit a memo produced with this skill:
+For the current primary handoff:
 
-- Project the memo into Agenda Intelligence MD's JSON brief format.
-- Score the brief structurally first; add an evidence pack to score with source-backed honesty.
-- Treat lower scores from honest evidence packs as the integration working as intended (matches the Global Think Tank Analyst signal of 2026-05-08 on this topic).
-- For maritime, vessel, and AIS-derived claims, an evidence pack should explicitly mark unverified claims as `unsupported` and list `required_but_missing_sources` (Kpler, IMO, AIS data sources, OFAC vessel designations).
+- Produce the regional memo with facts, assessments, assumptions, scenarios, and unknowns kept distinct.
+- Select externally checkable factual and quantitative claims; do not serialize analyst judgments as sourced facts.
+- Build the claim/source packet described in [`docs/evidence-packet-handoff.md`](evidence-packet-handoff.md).
+- Run `agenda-intelligence check evidence-packet.json --strict`.
+- Use missing references, quote mismatches, weak lexical support, unmatched numbers, and reviewer actions to revise the packet or originating memo.
 
-This skill does not perform validation, scoring, or evidence audit itself. Use Agenda Intelligence MD when those capabilities are needed.
+This skill does not lint the packet itself. Agenda Intelligence MD reports packet completeness, not factual truth, sanctions status, vessel identity, ownership, or operational clearance. The older brief-schema, scoring, `analyze`, and MCP paths remain compatibility workflows for callers that explicitly depend on them.
 
 ## Pattern: Hormuz disruption memo
 
@@ -44,4 +45,5 @@ A typical end-to-end pattern for a Hormuz disruption analysis:
 3. **This skill — risk archetype #5** — maritime chokepoint disruption mechanism.
 4. **This skill — source guide** — IEA, EIA, IMO, war-risk insurance market, AIS aggregate data sources.
 5. **GTTA — Mode C scenario brief or Mode E decision pack** — structure the output.
-6. **Agenda Intelligence MD** — validate the JSON projection if structural compliance matters; add evidence pack for source-backed honesty scoring.
+6. **Evidence-packet extraction** — select externally checkable claims and caller-supplied source text; keep scenarios and judgments in the memo.
+7. **Agenda Intelligence MD** — lint packet completeness before human review.

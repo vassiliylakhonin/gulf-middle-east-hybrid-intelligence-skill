@@ -1,0 +1,29 @@
+{
+  "packet_id": "gulf-synthetic-port-circular-001",
+  "topic": "Synthetic Gulf port handoff",
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "Terminal B will suspend night berthing for 48 hours starting 2026-08-10.",
+      "source_ids": ["synthetic-port-circular"],
+      "quotes": [
+        {
+          "source_id": "synthetic-port-circular",
+          "text": "Terminal B will suspend night berthing for 48 hours starting 2026-08-10"
+        }
+      ]
+    },
+    {
+      "claim_id": "c2",
+      "text": "Vessels must request a revised berth window during the suspension.",
+      "source_ids": ["synthetic-port-circular"]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "synthetic-port-circular",
+      "title": "Synthetic port circular",
+      "text": "Synthetic example. Terminal B will suspend night berthing for 48 hours starting 2026-08-10. Vessels must request a revised berth window during the suspension. This source does not describe a real port, terminal, vessel, or event."
+    }
+  ]
+}

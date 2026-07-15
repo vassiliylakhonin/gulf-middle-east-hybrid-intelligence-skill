@@ -59,6 +59,7 @@ def check_skill_md():
         "## Core Contract",
         "## Intake",
         "## Evidence Discipline",
+        "## Evidence-Packet Handoff",
         "## Output Structure",
         "## Failure handling",
         "## Self-check",

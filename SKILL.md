@@ -18,3 +18,4 @@ Both variants share the same analytical contract: mechanism-first reasoning, evi
 
 For project identity, scope, evidence rules, and agent behavior contract, read [`AGENTS.md`](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/AGENTS.md).
 For current status against the Definition-of-Done bars, read [`STATUS.md`](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/STATUS.md).
+For the primary claim/source handoff to the Agenda Intelligence MD evidence-packet linter, read [`docs/evidence-packet-handoff.md`](https://github.com/vassiliylakhonin/gulf-middle-east-hybrid-intelligence-skill/blob/main/docs/evidence-packet-handoff.md).

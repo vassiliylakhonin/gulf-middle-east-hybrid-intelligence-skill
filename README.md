@@ -14,7 +14,7 @@ It does not replace sanctions screening, AML monitoring, vessel due diligence, l
 
 ## Commercial role
 
-This repo is a **regional specialist reasoning layer**, not a standalone commercial product. The current Agenda Intelligence MD product focus is evidence-readiness / trust-routing for high-stakes AI-assisted decisions, with AI vendor evidence-readiness for regulated procurement as the first discovery wedge.
+This repo is a **regional specialist reasoning layer**, not a standalone commercial product. Agenda Intelligence MD is now primarily a deterministic evidence-packet linter; this repo can hand it externally checkable claims and supplied source text without inheriting a buyer claim.
 
 Gulf maritime / trade-finance risk-file readiness remains a backup risk-intelligence wedge for Agenda Intelligence MD. This repo should support that hypothesis through source guides, currency-watch discipline, and regional reasoning depth, not by adding new buyer-facing surfaces or deployed workers before buyer evidence exists.
 
@@ -44,9 +44,11 @@ Reasoning skills (markdown-first reasoning contracts for agents):
 - **→ Gulf + Middle East Hybrid Intelligence Skill (this repo)** — vertical: Iran sanctions, GCC banking, sovereign wealth, maritime chokepoint risk
 
 Evidence & audit layer (CI / MCP / schemas):
-- [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md) — validate, score and audit strategic-risk agent output structure
+- [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md) — checks claim/source references, declared quotes, lexical support, and unmatched numbers before human review
 
-The skills define how agents *reason*. Agenda Intelligence MD defines how the output is *audited*. Together they let agents produce auditable strategic-intelligence — not just plausible-sounding summaries.
+The skills define how agents *reason*. Agenda Intelligence MD reports whether the supplied claim/source packet is complete enough for review. It does not establish factual truth.
+
+Primary handoff: [`docs/evidence-packet-handoff.md`](docs/evidence-packet-handoff.md) with runnable synthetic [`examples/evidence-packet-handoff.json`](examples/evidence-packet-handoff.json).
 
 ## 4. Try this prompt
 
@@ -106,16 +108,16 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 
 This skill is one of four repos in a wider portfolio. Each has a distinct role; do not blur them.
 
-This repo is the **Gulf / Middle East vertical specialist** — activated by the `analyze` tool when geography matches (Iran, GCC, Hormuz, Bab-el-Mandeb, Red Sea), or used standalone via paste/attach. The canonical 4-layer map (product shell, reasoning method, two vertical specialists) lives in the product-shell repo: [Where this fits in the Agenda Intelligence stack](https://github.com/vassiliylakhonin/agenda-intelligence-md#where-this-fits-in-the-agenda-intelligence-stack). Maintained in one place to avoid drift across repos.
+This repo is the **Gulf / Middle East vertical specialist**. Use it standalone or inside the older `analyze` compatibility workflow. The current primary composition is: horizontal method → regional specialist → claim/source packet → Agenda Intelligence MD linter → human review.
 
 > **Project maturity.** This repo uses a two-bar Definition of Done (Bar 1 — early but credible; Bar 2 — agent-validated specialist resource). Current honest status, per criterion, lives in [STATUS.md](STATUS.md). Criteria are defined in [AGENTS.md](AGENTS.md) under "Definition of done".
 
 - **Gulf + Middle East Hybrid Intelligence Skill** *(this repo)* — specialist Gulf, Iran, Iraq and maritime-chokepoint risk reasoning; Iran sanctions, GCC banking, sovereign wealth, energy market and shipping route analysis patterns.
 - **Central Asia + Caspian Hybrid Intelligence Skill** — Central Asia / Caspian regional specialist; reference it when a flow crosses both regions (e.g., Iran-Caspian routes, Iraq-Kurdistan corridors, Russia-Iran-China tri-junction): https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill
 - **Global Think Tank Analyst** — broader strategic-risk memo workflow, general policy-risk analysis, scenario and red-team memo modes: https://github.com/vassiliylakhonin/global-think-tank-analyst
-- **Agenda Intelligence MD** — schemas, validation, evidence audit, scoring, CLI / MCP / CI tooling where implemented: https://github.com/vassiliylakhonin/agenda-intelligence-md
+- **Agenda Intelligence MD** — primary evidence-packet linter; older validation, scoring, CLI / MCP / HTTP / A2A surfaces remain compatible: https://github.com/vassiliylakhonin/agenda-intelligence-md
 
-> Use this repo for specialist Gulf + Middle East reasoning. Use Global Think Tank Analyst for broader strategic-risk memo workflows. Use Agenda Intelligence MD to validate, score or audit outputs where that functionality is implemented.
+> Use this repo for specialist Gulf + Middle East reasoning. Use Global Think Tank Analyst for broader strategic-risk memo workflows. Use Agenda Intelligence MD to lint the claim/source packet; treat its result as packet completeness, not factual truth.
 
 This repo does **not** itself perform Agenda Intelligence MD validation, schema enforcement on outputs, or live source retrieval.
 
