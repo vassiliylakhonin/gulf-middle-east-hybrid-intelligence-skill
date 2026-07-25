@@ -130,6 +130,8 @@ For `live-source-backed` and `user-provided sources` examples: include a `Retrie
 
 The full content contract lives in [AGENTS.md](AGENTS.md). [CLAUDE.md](CLAUDE.md) inherits from it for Claude Code sessions.
 
+**Where a new rule goes.** `AGENTS.md` is the contract and stays short; task-specific detail lives in `docs/` and is reached from it by a pointer — see AGENTS.md "Where a new rule goes". Adding a section to `AGENTS.md` when it belongs in `docs/analysis-contract.md`, `docs/definition-of-done.md`, or `docs/repo-conventions.md` is the drift this layout exists to prevent. Bar status belongs in `STATUS.md` only, and `scripts/validate.py` warns if it reappears in `AGENTS.md`.
+
 ## Project boundaries
 
 This repo is a domain skill, not an infrastructure product. Do not add or imply:

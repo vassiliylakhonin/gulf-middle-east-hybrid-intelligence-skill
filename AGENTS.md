@@ -212,6 +212,17 @@ Avoid:
 - vague "monitor closely" recommendations
 - conflating Iran-state, IRGC-affiliated, and Iran-private commercial actors without distinction
 
+## Where a new rule goes
+
+This file is the contract, deliberately short. Detail that is only needed for a specific task lives in `docs/` and is reached from here by a pointer:
+
+- how a claim must be tagged, calibrated, or accounted for → [`docs/analysis-contract.md`](docs/analysis-contract.md)
+- what counts as done → [`docs/definition-of-done.md`](docs/definition-of-done.md)
+- README, example, and eval-doc conventions → [`docs/repo-conventions.md`](docs/repo-conventions.md)
+- current bar status → [`STATUS.md`](STATUS.md), which is the only place it lives; `scripts/validate.py` warns if a bar state appears in this file
+
+Add a rule here only if it is needed before any output — identity, scope, evidence rules, retrieved-content trust, safety limits. Everything else goes in the file above that owns it, with a one-line summary here at most. Do not move detail back inline so that "the agent sees it"; the pointer is the mechanism, and re-inlining is how this file grew to 3,700 words before 2026-07-25.
+
 ## Repository conventions
 
 README structure, example requirements, evaluation-doc labelling, and pre-finalize validation are in [`docs/repo-conventions.md`](docs/repo-conventions.md).
