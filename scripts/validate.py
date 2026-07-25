@@ -330,20 +330,26 @@ def check_root():
         else:
             err("CLAUDE.md must import AGENTS.md on the first line")
 
-    # AGENTS.md must carry one of the canonical Bar 2 states (honesty discipline)
+    readme = ROOT / "README.md"
+    status = ROOT / "STATUS.md"
+
+    # Bar 2 status must carry one of the canonical states, and must live in
+    # STATUS.md only — a second copy in AGENTS.md drifts and then lies.
+    canonical_states = [
+        "not cleared",
+        "partially cleared",
+        "cleared for agent integration",
+    ]
+    if status.exists():
+        text = status.read_text().lower()
+        if "bar 2" in text and not any(s in text for s in canonical_states):
+            warn("STATUS.md mentions Bar 2 without a canonical state ('not cleared' / 'partially cleared' / 'cleared for agent integration') — verify honesty")
+
     agents = ROOT / "AGENTS.md"
     if agents.exists():
         text = agents.read_text().lower()
-        canonical_states = [
-            "not cleared",
-            "partially cleared",
-            "cleared for agent integration",
-        ]
-        if "bar 2" in text and not any(s in text for s in canonical_states):
-            warn("AGENTS.md mentions Bar 2 without a canonical state ('not cleared' / 'partially cleared' / 'cleared for agent integration') — verify honesty")
-
-    readme = ROOT / "README.md"
-    status = ROOT / "STATUS.md"
+        if any(s in text for s in canonical_states):
+            warn("AGENTS.md states a Bar 2 status — bar status belongs in STATUS.md only; AGENTS.md should point to it")
 
     if readme.exists():
         text = readme.read_text(encoding="utf-8").lower()

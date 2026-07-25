@@ -9,7 +9,7 @@ If you've just landed in this repo and want to understand it before editing, do 
 **1. Read these three files, in order:**
 
 1. [`README.md`](README.md) — what this is (Gulf + Middle East vertical specialist), the four-repo stack, and what's *out of scope* (CA-Caspian content, North Africa, Israel-Palestine internal politics, terrorism analysis beyond financial/sanctions transmission).
-2. [`AGENTS.md`](AGENTS.md) — canonical project rules: scope, the Iran-state / IRGC-affiliated / Iran-private commercial actor distinctions (collapsing them is a **Stop-and-request** trigger), evidence rules, per-claim provenance tags (Axis A/B + table-cell discipline), currency triggers, three-value response logic, README priorities, and the Bar 1 / Bar 2 Definition of Done.
+2. [`AGENTS.md`](AGENTS.md) — canonical project rules: identity, scope, the Iran-state / IRGC-affiliated / Iran-private commercial actor distinctions (collapsing them is a **Stop-and-request** trigger), evidence rules, retrieved-content trust, and currency triggers. It points to [`docs/analysis-contract.md`](docs/analysis-contract.md) (provenance tags, calibration, response modes, input-claim accounting), [`docs/definition-of-done.md`](docs/definition-of-done.md), and [`docs/repo-conventions.md`](docs/repo-conventions.md).
 3. [`STATUS.md`](STATUS.md) — honest current state per Bar 1 / Bar 2 criterion. This is where you find out what's actually shipped vs what's claimed.
 
 **2. Get the validators running locally:**
@@ -62,7 +62,7 @@ CI runs this on every push. Run it locally before opening a PR — a red CI on `
 This repo and its sibling [Central Asia + Caspian](https://github.com/vassiliylakhonin/central-asia-caspian-hybrid-intelligence-skill) follow the same minimum file set. Keep the topology aligned.
 
 **Root files (required, file-presence checked by `scripts/validate.py`):**
-- `README.md` — public positioning per AGENTS.md "README priorities"
+- `README.md` — public positioning per [`docs/repo-conventions.md`](docs/repo-conventions.md) "README priorities"
 - `AGENTS.md` — canonical project contract (identity, scope, evidence rules, Definition of Done)
 - `CLAUDE.md` — Claude Code working rules (inherits AGENTS.md)
 - `SKILL.md` — runtime skill contract
