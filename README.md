@@ -1,24 +1,20 @@
 # Gulf + Middle East Hybrid Intelligence Skill
 
-> **GULF + MIDDLE EAST RISK REASONING SKILL** — a reasoning method for AI agents working on Iran sanctions, GCC financial and energy hubs, maritime chokepoint risk and regional geopolitical exposure. Open-source. No live data. No legal or compliance advice.
+**Risk reasoning for AI agents working on the Gulf and Middle East.**
 
-> **Regional specialist module for [Agenda Intelligence](https://github.com/vassiliylakhonin/agenda-intelligence-md).** Activated automatically when the `analyze` tool sees a Gulf / Middle East / chokepoint geography (Iran, UAE, Saudi Arabia, Qatar, Bahrain, Kuwait, Oman, Yemen, Iraq, Red Sea, Hormuz, Bab-el-Mandeb). Also usable standalone via paste/attach into any agent.
+Use this skill when an agent must explain how Iran sanctions, correspondent banking, energy flows, sovereign wealth, or maritime disruption affect a decision. The output starts with the driver, traces the transmission channel and exposure, distinguishes the actors involved, and ends with role-specific actions and triggers.
 
-## 1. What this is
+It is for sanctions and AML teams, energy and commodity desks, shipping insurers, regional analysts, and AI builders.
 
-A reasoning method that runs inside an AI agent (Claude, ChatGPT, Codex, or a custom assistant) and produces mechanism-first, evidence-aware risk analysis on the Gulf and Middle East — instead of the generic "tensions remain elevated" commentary that default LLM output usually returns.
+[Try one prompt](#try-this-prompt) · [Open the skill file](SKILL.md) · [See worked examples](#flagship-examples)
 
-That default weakness is measured, not anecdotal: LLM factual accuracy is systematically lower for regions underrepresented in training data, and generic retrieval agents have been shown to widen that gap rather than close it (arXiv:2503.22877). This is why the skill leans on primary sources, currency triggers and per-claim provenance tags instead of the model's prior.
+> No live data. Not sanctions screening, AML monitoring, vessel due diligence, legal advice, or compliance advice. Human review and current-source verification are required before operational use.
 
-It does not replace sanctions screening, AML monitoring, vessel due diligence, legal review or human analyst judgement. It changes the *shape* of the reasoning your AI tool produces before any of those steps.
+## Problem it handles
 
-## Commercial role
+General-purpose agents often stop at “tensions remain elevated.” This skill makes the agent name the mechanism, distinguish Iran-state, IRGC-affiliated, and Iran-private commercial actors where material, map the exposure, and state what evidence still needs checking.
 
-This repo is a **regional specialist reasoning layer**, not a standalone commercial product. Agenda Intelligence MD is now primarily a deterministic evidence-packet linter; this repo can hand it externally checkable claims and supplied source text without inheriting a buyer claim.
-
-Gulf maritime / trade-finance risk-file readiness remains a backup risk-intelligence wedge for Agenda Intelligence MD. This repo should support that hypothesis through source guides, currency-watch discipline, and regional reasoning depth, not by adding new buyer-facing surfaces or deployed workers before buyer evidence exists.
-
-## 2. Who it is for
+## Who it is for
 
 - sanctions compliance and AML teams at banks, fintechs and trade-finance providers with Iran adjacency or GCC correspondent exposure
 - energy traders, refiners and commodity desks tracking OFAC SDN risk, dark-fleet patterns and OPEC+ dynamics
@@ -27,7 +23,7 @@ Gulf maritime / trade-finance risk-file readiness remains a backup risk-intellig
 - analysts and researchers covering Iran, GCC states, Iraq and adjacent Levant exposure
 - AI builders embedding regional risk reasoning into agents or assistants
 
-## 3. What you get
+## What you get
 
 - mechanism-first reasoning: primary driver → transmission channel → exposure map
 - explicit Iran-state / IRGC-affiliated / Iran-private commercial actor distinctions where they matter
@@ -50,7 +46,7 @@ The skills define how agents *reason*. Agenda Intelligence MD reports whether th
 
 Primary handoff: [`docs/evidence-packet-handoff.md`](docs/evidence-packet-handoff.md) with runnable synthetic [`examples/evidence-packet-handoff.json`](examples/evidence-packet-handoff.json).
 
-## 4. Try this prompt
+## Try this prompt
 
 Paste this into an AI agent using the Claude or Codex skill file:
 
@@ -74,7 +70,7 @@ Expected shape of a good answer:
 - gives trigger points and role-based actions, not vague "monitor closely" advice;
 - includes a limitation note and avoids legal, compliance, sanctions, AML or investment determinations.
 
-## 5. What it does
+## What it does
 
 This skill helps agents produce mechanism-first, evidence-aware, decision-useful regional risk analysis for the Gulf and Middle East. It:
 
@@ -90,7 +86,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - runs a cold-start interview ([`docs/cold-start-interview.md`](docs/cold-start-interview.md)) to capture role, geography, decision context, risk appetite, source access and required actor distinctions (Iran-state / IRGC / Iran-private commercial) into a populated practice profile ([`templates/practice-profile.md`](templates/practice-profile.md)) before substantive memos
 - carries an active currency watch ([`docs/currency-watch.md`](docs/currency-watch.md)) listing fast-moving topics — Iran SDN evolution, IRGC scope, US-Iran negotiation file, Houthi / Bab-el-Mandeb posture, Hormuz, dark-fleet, GCC correspondent banking, Iraq CBI, MENAFATF, OPEC+ — that source-backed memos should re-verify against current primary sources, with a 90-day staleness rule
 
-## 6. What it is not
+## What it is not
 
 - not legal advice
 - not compliance advice
@@ -104,7 +100,7 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 - not a CLI, MCP server, or validation platform
 - not a replacement for human analyst, counsel, or compliance review
 
-## 7. Relationship to Agenda Intelligence MD, Global Think Tank Analyst and Central Asia + Caspian Skill
+## Relationship to Agenda Intelligence MD, Global Think Tank Analyst and Central Asia + Caspian Skill
 
 This skill is one of four repos in a wider portfolio. Each has a distinct role; do not blur them.
 
@@ -123,7 +119,7 @@ This repo does **not** itself perform Agenda Intelligence MD validation, schema 
 
 For the full portfolio architecture, see [PORTFOLIO.md in Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/PORTFOLIO.md). [docs/companion-patterns.md](docs/companion-patterns.md) describes structural patterns for using this skill alongside the other repos.
 
-## 8. Quick usage
+## Quick usage
 
 Use the skill variant matching your environment as the operating instruction in your agent setup:
 
@@ -141,7 +137,7 @@ python3 scripts/validate.py
 
 The validator checks skill structure, evidence-mode declarations, retrieval-date discipline, limitation notes, forbidden determinative claims, signal structure, eval files, and source-guide freshness rules. It does **not** verify factuality of any output produced by the skill.
 
-## 9. Before / after
+## Before / after
 
 **Before — generic LLM answer:**
 - broad regional commentary ("tensions remain elevated")
@@ -161,7 +157,7 @@ The validator checks skill structure, evidence-mode declarations, retrieval-date
 - role-based implications (sanctions compliance, AML, energy trader, shipping insurer, banker, sovereign wealth co-investor)
 - evidence mode stated explicitly
 
-## 10. Flagship examples
+## Flagship examples
 
 For a guided route through the examples, start with [examples/README.md](examples/README.md).
 
@@ -217,7 +213,7 @@ _Generated from `taxonomy.json`. To update, edit `taxonomy.json` and run `python
 
 <!-- TAXONOMY:END -->
 
-## 11. Signal archive
+## Signal archive
 
 [`signals/`](signals/) holds short public examples of the skill style: one regional event or structural condition, why it matters, a bounded assessment, and indicators to watch.
 
@@ -257,7 +253,7 @@ New contributors: [`CONTRIBUTING.md`](CONTRIBUTING.md) opens with a "First 15 mi
 
 Cross-repo terminology — evidence modes, Verified/Plausible/Judgment/Unknown labels, Axis A/B provenance tags (incl. table-cell discipline), three-value response logic (incl. the Iran actor-distinction Stop-and-request trigger), and the deliberate maturity-framework asymmetry across the four-repo stack (this repo and the CA-Caspian sibling use Bar 1/2; `global-think-tank-analyst` uses `VALIDATION_PLAN.md`; `agenda-intelligence-md` uses `ROADMAP.md` version targets) — is consolidated in the portfolio glossary at [`agenda-intelligence-md/docs/glossary.md`](https://github.com/vassiliylakhonin/agenda-intelligence-md/blob/main/docs/glossary.md).
 
-## 12. Skill files
+## Skill files
 
 - [`runtimes/claude/SKILL.md`](runtimes/claude/SKILL.md) — Claude variant with Projects setup, web search guidance for `live-source-backed` mode, extended-context `user-provided sources` workflows and tool-use discipline.
 - [`runtimes/codex/SKILL.md`](runtimes/codex/SKILL.md) — Codex variant with agentic-loop output discipline, JSON output mode for Agenda Intelligence MD, and a multi-step pipeline integration pattern.
@@ -266,19 +262,19 @@ Cross-repo terminology — evidence modes, Verified/Plausible/Judgment/Unknown l
 - [`docs/currency-watch.md`](docs/currency-watch.md) — active list of fast-moving topics that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
 - OpenClaw is intentionally not provided yet. See `STATUS.md` for B2.4 reasoning.
 
-## 13. Source guide
+## Source guide
 
 Latest source-maintenance pass: [`docs/source-refresh-2026-07-11.md`](docs/source-refresh-2026-07-11.md).
 
 [`docs/source-guide.md`](docs/source-guide.md) lists primary and authoritative sources for Gulf + Middle East risk analysis: OFAC, BIS, EU Council, UK OFSI, MENAFATF, IEA, IMF, BIS banking statistics, central banks (SAMA, CBUAE, QCB, CBI Iran, CBI Iraq, CBL Lebanon), IMO, and tiered secondary sources (think tanks, energy and shipping reporters).
 
-## 14. Risk archetypes
+## Risk archetypes
 
 [`docs/risk-archetypes.md`](docs/risk-archetypes.md) catalogues recurring risk patterns: Iran sanctions adjacency, dark-fleet and ship-to-ship transfers, GCC correspondent-banking exposure, sovereign wealth deployment risk, maritime chokepoint disruption, sanctioned-oil flows, sanctioned-party post-designation reconstitution.
 
 Patterns, not factual claims about any specific entity, vessel or jurisdiction. Operational use requires source-backed verification.
 
-## 15. Review checklist
+## Review checklist
 
 [`evals/checklist.md`](evals/checklist.md) — yes/no review pass over any memo produced with the skill. Aid for human reviewers, not an automated validator.
 
@@ -286,7 +282,7 @@ Patterns, not factual claims about any specific entity, vessel or jurisdiction. 
 
 [`evals/starter-rubric.md`](evals/starter-rubric.md) — starter scoring rubric for human review. Not a benchmark.
 
-## 16. Limitations
+## Limitations
 
 - This project is intentionally conservative about evidence. It does not fabricate sources, vessel names, IMO numbers, or sanctions designations.
 - It is a **decision-support skill**, not legal, compliance, sanctions, AML, or investment advice.
@@ -306,7 +302,7 @@ Stated honestly so readers can calibrate. These are gaps in observed evidence, n
 - **Limited non-English source coverage.** Arabic- and Farsi-language regulatory, central-bank, and state-media sources have not been systematically tested as inputs.
 - **No real vessel-tracking or AIS data integration.** Maritime examples reason about patterns; they do not consume AIS feeds or vessel-ownership databases.
 
-## 17. Roadmap
+## Roadmap
 
 Directional, not committed. Items here are not implemented unless noted.
 
@@ -321,7 +317,7 @@ Directional, not committed. Items here are not implemented unless noted.
 
 If you'd like to influence the roadmap or contribute a review, open an issue.
 
-## 18. Contact
+## Contact
 
 Author: **Vassiliy Lakhonin** — Almaty, Kazakhstan (UTC+5).
 
