@@ -8,6 +8,6 @@ Lightweight, honest review materials for memos produced with the Gulf + Middle E
 - [`adversarial/`](adversarial/README.md) — domain stress cases: inputs designed to fail predictably (OFAC vs local-regulator conflicts; advocacy/state-media chokepoint reports as primary). Author-designed traps, not external validation; does not change `STATUS.md`.
 - [`skill-improvement/`](skill-improvement/README.md) — SkillOpt-inspired improvement loop with JSONL cases, rubric, validator, and before/after run notes. Manual structural checks only; not factual validation or certification.
 
-These are aids for human reviewers. They do not validate factual correctness or operational suitability of any output. For machine-readable validation, scoring, and audit, use [Agenda Intelligence MD](https://github.com/vassiliylakhonin/Agenda-Intelligence-md).
+These are aids for human reviewers. They do not validate factual correctness or operational suitability of any output. For machine-readable validation, scoring, and audit, use [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md).
 
 For honest status against the Definition of Done in `AGENTS.md`, see [`STATUS.md`](../STATUS.md).

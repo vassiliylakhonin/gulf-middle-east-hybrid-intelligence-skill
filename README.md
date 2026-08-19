@@ -322,7 +322,7 @@ If you'd like to influence the roadmap or contribute a review, open an issue.
 Author: **Vassiliy Lakhonin** — Almaty, Kazakhstan (UTC+5).
 
 - Portfolio: [vassiliylakhonin.github.io](https://vassiliylakhonin.github.io/)
-- Analyst entry route: [vassiliylakhonin.github.io/for-analysts.html](https://vassiliylakhonin.github.io/for-analysts.html)
+- Case study for this skill: [vassiliylakhonin.github.io/case-study-gulf-middle-east-skill.html](https://vassiliylakhonin.github.io/case-study-gulf-middle-east-skill.html)
 - Email: [vassiliy.lakhonin@gmail.com](mailto:vassiliy.lakhonin@gmail.com)
 - LinkedIn: [linkedin.com/in/vassiliy-lakhonin](https://www.linkedin.com/in/vassiliy-lakhonin/)
 - GitHub: [github.com/vassiliylakhonin](https://github.com/vassiliylakhonin)
