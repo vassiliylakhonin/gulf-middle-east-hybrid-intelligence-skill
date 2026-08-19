@@ -47,3 +47,32 @@ A typical end-to-end pattern for a Hormuz disruption analysis:
 5. **GTTA — Mode C scenario brief or Mode E decision pack** — structure the output.
 6. **Evidence-packet extraction** — select externally checkable claims and caller-supplied source text; keep scenarios and judgments in the memo.
 7. **Agenda Intelligence MD** — lint packet completeness before human review.
+
+## Portfolio boundaries — who owns what
+
+Moved here from `AGENTS.md` on 2026-08-19 under that file's own "Where a new rule goes" rule: this is an inventory, not a rule that binds before output. `AGENTS.md` keeps only the two behavioural lines it needs.
+
+Agenda Intelligence MD:
+- deterministic checks for claim/source references, declared quotes, lexical support, and unmatched numbers
+- packet-completeness statuses and reviewer actions
+- no factuality, sanctions, vessel, ownership, or legal determination
+- older routing, memo validation, scoring, CLI, MCP, HTTP, and A2A behavior as compatibility surfaces
+
+Global Think Tank Analyst:
+- broad strategic-risk memo workflows
+- general policy-risk analysis
+- scenario and red-team memo modes
+
+Central Asia + Caspian Hybrid Intelligence Skill:
+- Central Asia / Caspian regional specialist
+- adjacent vertical for sanctions-circumvention, corridor and BO patterns
+
+Gulf + Middle East Hybrid Intelligence Skill:
+- specialist Gulf, Iran, Iraq, maritime-chokepoint risk reasoning
+- Iran sanctions, GCC banking and sovereign wealth, energy market and shipping route analysis patterns
+
+Source Ingest skill (Agenda Intelligence MD):
+- use before analysis when a user provides a PDF, DOCX, XLSX, URL, article, or transcript
+- normalizes the document into a structured source record: metadata, Axis A/B provenance tags, key claims table, excerpts, limitations
+- for routing, load `docs/source-guide.md` from this repo — it defines the regional source tier hierarchy, freshness horizons, and specific URL pointers for Gulf / Middle East analysis
+- do not duplicate source-guide content inside the source record; reference it
