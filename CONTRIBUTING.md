@@ -49,6 +49,8 @@ python3 scripts/validate_evidence_packet_handoff.py
 
 CI runs this on every push. Run it locally before opening a PR — a red CI on `main` is the only feedback you will get otherwise. Read [`scripts/validate.py`](scripts/validate.py) directly for the authoritative list of constraints.
 
+For packaging changes, the common failure is composition drift: `skills/gulf-middle-east/SKILL.md` must remain a regular file whose `name` matches its directory and whose description matches the root contract. It must attach `${CLAUDE_PLUGIN_ROOT}/SKILL.md` once, then `${CLAUDE_PLUGIN_ROOT}/runtimes/claude/SKILL.md` once, without copying their sections. The validator also requires both plugin manifests to stay synchronized.
+
 ## Development workflow
 
 1. Create a branch from `main`.
@@ -65,7 +67,7 @@ This repo and its sibling [Central Asia + Caspian](https://github.com/vassiliyla
 - `README.md` — public positioning per [`docs/repo-conventions.md`](docs/repo-conventions.md) "README priorities"
 - `AGENTS.md` — canonical project contract (identity, scope, evidence rules, Definition of Done)
 - `CLAUDE.md` — Claude Code working rules (inherits AGENTS.md)
-- `SKILL.md` — runtime skill contract
+- `SKILL.md` — complete canonical runtime-neutral skill contract
 - `STATUS.md` — honest Bar 1 / Bar 2 status
 - `CONTRIBUTING.md` — this file
 - `LICENSE`
@@ -74,7 +76,8 @@ This repo and its sibling [Central Asia + Caspian](https://github.com/vassiliyla
 - `.gitignore`
 
 **Directories (required):**
-- `runtimes/{claude,codex}/SKILL.md` — runtime variants per platform; OpenClaw deferred with a reason in STATUS.md (B2.4)
+- `skills/gulf-middle-east/SKILL.md` — regular Claude Code composition adapter that attaches the root contract first and the Claude overlay second
+- `runtimes/{claude,codex}/SKILL.md` — additive runtime overlays loaded after the root contract; OpenClaw deferred with a reason in STATUS.md (B2.4)
 - `examples/` — flagship memos; every non-`README.md` file must declare an `Evidence mode:`
 - `evals/` — must contain `checklist.md`, `failure-modes.md`, `starter-rubric.md`; `evals/agent-eval/` holds Bar 2 cases
 - `docs/` — must contain `source-guide.md`, `regional-logic.md`, `risk-archetypes.md`
@@ -91,7 +94,8 @@ This repo and its sibling [Central Asia + Caspian](https://github.com/vassiliyla
 ## Where things live
 
 - [`AGENTS.md`](AGENTS.md) — project identity, honesty, evidence, naming rules.
-- [`SKILL.md`](SKILL.md) and [`runtimes/`](runtimes/) — runtime skill behavior for different runtimes.
+- [`SKILL.md`](SKILL.md) — complete common skill behavior; [`runtimes/`](runtimes/) contains only additive platform behavior.
+- [`skills/gulf-middle-east/SKILL.md`](skills/gulf-middle-east/SKILL.md) — Claude Code package composition adapter; do not copy the root or overlay into it.
 - [`examples/`](examples/) — illustrative memos. Always state evidence mode.
 - [`evals/`](evals/) — human review checklist, failure modes, starter rubric.
 - [`signals/`](signals/) — public signal examples; contribute via [`signals/TEMPLATE.md`](signals/TEMPLATE.md).
@@ -154,6 +158,7 @@ Product linting, schemas, and runtime tooling belong in [Agenda Intelligence MD]
 - [ ] If a signal was added: all four signal files updated atomically (`signals/<slug>.md`, `index.json`, `feed.json`, `latest.md`)
 - [ ] If an example was added or renamed: `README.md` flagship table, `examples/README.md`, and README mode-count summary updated in the same PR; `taxonomy.json` updated and `render-readme.py` run if archetype applies
 - [ ] No claims of external verification, validation, MCP, CLI, or CI checks unless truly implemented in this repo
+- [ ] Root behavior remains in `SKILL.md`; runtime files contain only their additive, allowlisted sections
 - [ ] No exaggerated language ("revolutionary", "production-grade", "guarantees correctness", "fully autonomous")
 - [ ] Behavior or positioning change noted in commit message or PR description
 
