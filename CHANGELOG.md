@@ -4,6 +4,10 @@ All notable changes to this repository are documented here.
 
 ## Unreleased
 
+- Moved the complete runtime-neutral analytical contract into the root `SKILL.md` and reduced the Claude and Codex files to additive overlays.
+- Replaced the packaged Claude symlink with a composition adapter whose name matches its directory. The validator now enforces the root/overlay split, package identity, attachment order, and plugin-manifest parity.
+- Added a structural Claude/Codex runtime-loading smoke record. It covers instruction loading and bounded safety behavior only; it is not a factuality or model-quality benchmark.
+- Removed unsupported production-stack and retainer wording from the public README. OpenClaw remains deliberately deferred.
 - Fixed a dead link to the author's site: the contact section listed `for-analysts.html`, which has returned 404 since the site was restructured. It now links the live case-study page for this skill.
 - Corrected the repository name casing in `evals/README.md` (`Agenda-Intelligence-md` -> `agenda-intelligence-md`); it resolved only through a GitHub redirect.
 - Extended `scripts/check_markdown_links.py` to fail on 404/410 for links to the author's own site, which previously went unchecked because every `http(s)://` target was skipped. Network errors and other statuses are reported without failing; `SKIP_SITE_LINK_CHECK=1` skips the network step.

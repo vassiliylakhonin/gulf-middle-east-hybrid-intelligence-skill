@@ -44,8 +44,10 @@ Evidence modes (declare for every output):
 Core files:
 - AGENTS.md — project identity, scope, evidence and safety rules, Definition of Done.
 - STATUS.md — honest current status against Bar 1 / Bar 2 Definition-of-Done criteria.
-- skills/claude/SKILL.md — Claude variant (Projects setup, web search guidance, extended-context user-provided source workflows).
-- skills/codex/SKILL.md — Codex variant (agentic-loop output discipline, JSON output mode, Agenda Intelligence MD pipeline pattern).
+- SKILL.md — complete runtime-neutral analytical contract.
+- runtimes/claude/SKILL.md — additive Claude retrieval and document-use overlay; load after SKILL.md.
+- runtimes/codex/SKILL.md — additive Codex agent-loop, JSON-output, and validation-chaining overlay; load after SKILL.md.
+- skills/gulf-middle-east/SKILL.md — Claude Code composition adapter that attaches the root contract and Claude overlay in order.
 - README.md — public documentation.
 - docs/source-guide.md — primary sources by domain with re-verification horizons.
 - docs/regional-logic.md — scope extension rules, Iran actor distinction, GCC actor distinction.

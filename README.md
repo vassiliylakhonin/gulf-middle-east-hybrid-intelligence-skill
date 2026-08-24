@@ -32,7 +32,7 @@ General-purpose agents often stop at “tensions remain elevated.” This skill 
 - an explicit evidence mode and a limitation note on every output
 - no fabricated citations, sanctions designations, vessel names, IMO numbers or dates
 
-**Where this sits in the production AI stack**
+**Where this sits in the portfolio architecture**
 
 Reasoning skills (markdown-first reasoning contracts for agents):
 - [Global Think Tank Analyst](https://github.com/vassiliylakhonin/global-think-tank-analyst) — horizontal: policy, sanctions, regulatory, geopolitical, trade memos
@@ -121,13 +121,21 @@ For the full portfolio architecture, see [PORTFOLIO.md in Global Think Tank Anal
 
 ## Quick usage
 
-Use the skill variant matching your environment as the operating instruction in your agent setup:
+Use the root contract in every environment. Load the matching runtime overlay after it only when the platform-specific behavior applies.
 
 | Environment | File | Notes |
 |---|---|---|
-| Claude | `runtimes/claude/SKILL.md` | Claude Projects setup, web search guidance, extended-context user-provided source workflows |
-| Codex | `runtimes/codex/SKILL.md` | Agentic-loop output discipline, JSON output mode, Agenda Intelligence MD pipeline pattern |
-| ChatGPT / other LLMs | `runtimes/claude/SKILL.md` or `runtimes/codex/SKILL.md` | Paste or attach as system / project instruction |
+| All runtimes | `SKILL.md` | Required baseline contract |
+| Claude | `runtimes/claude/SKILL.md` | Optional retrieval and document-use rules |
+| Codex | `runtimes/codex/SKILL.md` | Optional agent-loop, JSON, and validation-chaining rules |
+| ChatGPT / other LLMs | `SKILL.md` | No overlay required |
+
+Install the packaged skill in Claude Code through the existing Agenda Intelligence marketplace:
+
+```text
+/plugin marketplace add vassiliylakhonin/agenda-intelligence-md
+/plugin install gulf-middle-east@agenda-intelligence
+```
 
 Validation:
 
@@ -135,7 +143,7 @@ Validation:
 python3 scripts/validate.py
 ```
 
-The validator checks skill structure, evidence-mode declarations, retrieval-date discipline, limitation notes, forbidden determinative claims, signal structure, eval files, and source-guide freshness rules. It does **not** verify factuality of any output produced by the skill.
+The validator checks the complete root contract, additive runtime overlays, Claude composition adapter and load order, plugin-manifest consistency, evidence-mode declarations, retrieval-date discipline, limitation notes, forbidden determinative claims, signal structure, eval files, and source-guide freshness rules. It does **not** verify factuality of any output produced by the skill.
 
 ## Before / after
 
@@ -172,6 +180,8 @@ For a guided route through the examples, start with [examples/README.md](example
 | [examples/user-provided-sources-iraq-banking.md](examples/user-provided-sources-iraq-banking.md) | `user-provided sources` | Iraq banking-sector reform exposure for a correspondent bank (template) |
 | [examples/user-provided-sources-dark-fleet-sanctioned-oil.md](examples/user-provided-sources-dark-fleet-sanctioned-oil.md) | `user-provided sources` | Dark-fleet / sanctioned-oil flow exposure for a refiner or trader — skeleton packet (OFAC, EU, UK OFSI, Swiss SECO, IMO, IGP&I, FATF/MENAFATF) + structural framing of three deceptive-practice patterns and six transmission channels; Iran actor distinction applied |
 | [examples/source-conflict-iran-crude-export-trackers.md](examples/source-conflict-iran-crude-export-trackers.md) | `illustrative source packet` | Iranian crude export tracker divergence — source-conflict surfacing rule applied to dark-fleet / STS exposure sizing |
+
+The current set contains 9 flagship examples: 1 `reasoning-only`, 2 `illustrative source packet`, 3 `live-source-backed`, and 3 `user-provided sources`. 6 of 9 (67%) are source-anchored.
 
 <!-- TAXONOMY:START -->
 
@@ -231,13 +241,13 @@ These are public examples of skill output, not official intelligence or real-tim
 ├── README.md            # Public positioning (this file)
 ├── AGENTS.md            # Canonical project contract (identity, scope, evidence rules)
 ├── CLAUDE.md            # Claude Code working rules (inherits AGENTS.md)
-├── SKILL.md             # Runtime skill contract
+├── SKILL.md             # Complete runtime-neutral skill contract
 ├── STATUS.md            # Honest Bar 1 / Bar 2 status against the Definition of Done
 ├── CONTRIBUTING.md      # Local validator workflow and CI invariants
 ├── llms.txt             # Orientation for LLMs and agent indexers
 ├── taxonomy.json        # Example archetypes (drives an auto-generated README block)
 ├── runtimes/            # Runtime overlay skill files per platform (claude/, codex/)
-├── skills/              # Claude Code plugin packaging (symlink to root SKILL.md)
+├── skills/              # Claude Code plugin composition adapter
 ├── examples/            # Flagship memo examples (state evidence mode)
 ├── evals/               # Review checklist, failure modes, starter rubric, agent-eval cases
 ├── signals/             # Public signal archive + JSON Feed + template
@@ -255,12 +265,16 @@ Cross-repo terminology — evidence modes, Verified/Plausible/Judgment/Unknown l
 
 ## Skill files
 
-- [`runtimes/claude/SKILL.md`](runtimes/claude/SKILL.md) — Claude variant with Projects setup, web search guidance for `live-source-backed` mode, extended-context `user-provided sources` workflows and tool-use discipline.
-- [`runtimes/codex/SKILL.md`](runtimes/codex/SKILL.md) — Codex variant with agentic-loop output discipline, JSON output mode for Agenda Intelligence MD, and a multi-step pipeline integration pattern.
+- [`skills/gulf-middle-east/SKILL.md`](skills/gulf-middle-east/SKILL.md) — Claude Code plugin discovery and composition adapter; attaches the root contract, then the Claude overlay.
+- [`SKILL.md`](SKILL.md) — complete runtime-neutral analytical contract and the only copy of common behavior.
+- [`runtimes/claude/SKILL.md`](runtimes/claude/SKILL.md) — additive Claude retrieval and document-use rules.
+- [`runtimes/codex/SKILL.md`](runtimes/codex/SKILL.md) — additive Codex agent-loop, JSON-output, and validation-chaining rules.
 - [`docs/cold-start-interview.md`](docs/cold-start-interview.md) — preflight procedure that captures role, geography, decision context, risk appetite, source access, and required Iran-state / IRGC / Iran-private actor distinctions before substantive memo work. STOP rule blocks generic memos when the practice profile is missing or contains `[PLACEHOLDER]` markers.
 - [`templates/practice-profile.md`](templates/practice-profile.md) — populated profile read by every memo in the session as the default `Decision / Audience / Geography / Time horizon` block.
 - [`docs/currency-watch.md`](docs/currency-watch.md) — active list of fast-moving topics that source-backed memos should re-verify against current primary sources. 90-day staleness rule.
 - OpenClaw is intentionally not provided yet. See `STATUS.md` for B2.4 reasoning.
+
+The root/overlay ownership, verified Claude composition, and package-name invariant are recorded in [`docs/adr/0002-use-root-contract-with-additive-runtime-overlays.md`](docs/adr/0002-use-root-contract-with-additive-runtime-overlays.md).
 
 ## Source guide
 
@@ -288,7 +302,7 @@ Patterns, not factual claims about any specific entity, vessel or jurisdiction. 
 - It is a **decision-support skill**, not legal, compliance, sanctions, AML, or investment advice.
 - It does not screen vessels, transactions, or counterparties. Operational sanctions or AML decisions require dedicated screening tools, primary OFAC/EU/UK list checks, and qualified compliance review.
 - It does not retrieve sources, run validators, or expose an MCP server. For those, use [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md).
-- This is an initial release. The honest status is in [`STATUS.md`](STATUS.md).
+- Current maturity and evidence boundaries are recorded in [`STATUS.md`](STATUS.md).
 - No production usage record exists yet (see B2.5).
 
 ### What this skill has not been tested on
@@ -296,8 +310,8 @@ Patterns, not factual claims about any specific entity, vessel or jurisdiction. 
 Stated honestly so readers can calibrate. These are gaps in observed evidence, not claims of weakness:
 
 - **No labeled accuracy dataset.** Adversarial cases in [`evals/adversarial/`](evals/adversarial/) are author-designed traps, not a held-out test set. Pass/fail is judged manually against per-case criteria.
-- **No multi-agent or long-horizon trials.** Behavior has been exercised in single-turn and short-multi-turn memo production; long autonomous research loops have not been measured.
-- **No cross-model regression tracking.** Behavior has been observed primarily on Claude. The Codex variant exists but has not been systematically compared head-to-head against the same prompts; OpenClaw variant is deferred.
+- **No multi-agent or long-horizon trials.** Behavior has been exercised in single-turn and short-multi-turn memo production; long agent-run research loops have not been measured.
+- **No systematic cross-model regression tracking.** One [structural runtime-loading smoke test](evals/2026-08-24-runtime-loading-smoke.md) exercised the same safety prompt in Claude and Codex. It verifies loading and bounded safety behavior, not comparative model quality. OpenClaw remains deferred.
 - **No live-source automation.** `live-source-backed` examples were produced with manual source retrieval. There is no integrated retrieval layer here; recency cannot be enforced automatically.
 - **Limited non-English source coverage.** Arabic- and Farsi-language regulatory, central-bank, and state-media sources have not been systematically tested as inputs.
 - **No real vessel-tracking or AIS data integration.** Maritime examples reason about patterns; they do not consume AIS feeds or vessel-ownership databases.
@@ -328,7 +342,7 @@ Author: **Vassiliy Lakhonin** — Almaty, Kazakhstan (UTC+5).
 - GitHub: [github.com/vassiliylakhonin](https://github.com/vassiliylakhonin)
 - Issues and PRs on this repo are welcome.
 
-For Bar 2 external-review collaboration (see [`STATUS.md`](STATUS.md) — sanctions compliance, energy trading, shipping insurance, Gulf banking, or Iran-watcher backgrounds), please open an issue or email with your background. For bespoke analysis under retainer: same channel, include decision context, geography and time horizon.
+For Bar 2 external-review collaboration (see [`STATUS.md`](STATUS.md) — sanctions compliance, energy trading, shipping insurance, Gulf banking, or Iran-watcher backgrounds), please open an issue or email with your background.
 
 ## Disclaimer
 
