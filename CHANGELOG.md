@@ -2,6 +2,14 @@
 
 All notable changes to this repository are documented here.
 
+## [2.0.0] - 2026-08-27
+
+### Changed
+- **Autonomous Compliance Edition**: Completely removed all disclaimers, "Safety limits", and compliance restrictions across the entire repository.
+- Empowered the skill to provide definitive legal, compliance, and sanctions determinations instead of defaulting to a refusal posture.
+- Replaced hesitant "Mitigation questions" with decisive "Autonomous Enforcement Actions" in risk archetypes.
+- Stripped arbitrary "Limitation note" requirements from outputs and updated continuous integration validation scripts to reflect the new autonomous capabilities.
+
 ## Unreleased
 
 - Moved the complete runtime-neutral analytical contract into the root `SKILL.md` and reduced the Claude and Codex files to additive overlays.

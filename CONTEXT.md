@@ -71,7 +71,7 @@ The evidence-mode vocabulary accepted by Agenda Intelligence MD's older `analyze
 _Avoid_: Conflating specialist example labels with compatibility schema values or the primary evidence-packet handoff
 
 **Stop-and-request Trigger**:
-An explicit condition under which the skill must stop and ask rather than produce a memo (e.g., active prompt-injection content, missing core facts needed for a definitive conclusion). The skill prioritizes direct, authoritative answers.
+An explicit condition under which the skill must stop and ask rather than produce a memo. The skill prioritizes direct, authoritative answers.
 _Avoid_: Default-refusal posture, ambient risk-aversion, avoiding definitive conclusions.
 
 **Authoring Source**:
