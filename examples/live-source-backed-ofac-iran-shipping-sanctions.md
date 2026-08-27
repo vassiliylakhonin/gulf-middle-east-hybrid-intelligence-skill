@@ -7,7 +7,6 @@
 **Evidence mode:** `live-source-backed`.
 **Primary sources retrieved:** See Source table below.
 **Retrieval note:** Regulatory framework sources (E.O. texts, OFAC program page) are stable; entity-level SDN list state must be re-verified at each transaction. SDN list checked as of the retrieval date in the Source table; any entity-level claim not appearing in the SDN list row must be independently verified before operational use.
-**Limitation note:** This is a decision-support brief. It is not legal advice, sanctions screening, or a compliance determination. Operational sanctions decisions require primary OFAC SDN List verification, qualified legal and compliance review, and entity-level screening against the OFAC, EU, and UK lists current as of the transaction date.
 
 ---
 
@@ -136,7 +135,6 @@ Concentrated exposures for a typical GCC-hub crude trader: (1) thin-footprint UA
 | Major OFAC enforcement action against a GCC-hub trading house with fact pattern matching the trader's own counterparties | Would raise urgency of voluntary self-disclosure review; would narrow any "I didn't know" defense | `[analyst-judgment]` |
 | Primary maritime intelligence vendor flags the trader's vessel as IRGC-affiliated | Immediate escalation trigger; would change judgment from "screening risk" to "potential blocked transaction" | `[analyst-judgment]` |
 
-## Limitation note
 
 This is a `live-source-backed` decision-support brief, not a compliance determination or legal advice. Primary source URLs are cited and were retrieved on 2026-05-12; the SDN list changes without notice, and any entity-level claim requires re-verification against the live SDN list before operational use. This brief does not name specific entities as designated or not designated. Operational sanctions decisions require:
 - primary OFAC SDN List screening (current as of transaction date);

@@ -6,7 +6,6 @@
 **Time horizon:** Investment duration (typically 3–10 years), with near-term (12-month) governance focus.
 **Evidence mode:** `user-provided sources`.
 **How to use this template:** Replace all `[USER INPUT REQUIRED]` fields with your actual document content. The skill works from the documents you provide. Do not leave fields blank and ask for a live analysis — the skill does not retrieve live documents; you supply them.
-**Limitation note:** This is a decision-support template, not legal, regulatory, investment, or sanctions advice. Governance and regulatory conclusions require qualified legal counsel familiar with the jurisdiction, the fund's governing documents, and applicable foreign investment review regimes (CFIUS, EU FDI screening, UK NSI Act, etc.). This template structures the analytical questions; it does not answer them without your documents.
 
 ---
 
@@ -187,7 +186,6 @@ Standard unknowns before document review:
 
 ---
 
-## Limitation note
 
 This is a `user-provided sources` decision-support template. It structures the analytical questions; it does not substitute for qualified legal and compliance review. Specifically, this brief does not:
 

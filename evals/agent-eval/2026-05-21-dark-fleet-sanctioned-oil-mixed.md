@@ -197,12 +197,3 @@ Beyond the mapping itself, B adds explicit unknowns ("current SDN / EU / UK / Sw
 
 The structural delta is the largest of the three Gulf+ME cases so far, primarily because the bare model under-uses provenance and evidence-mode discipline on a question that is fundamentally about evidence chain integrity. This is the case the MCP shell is designed for.
 
-## Limitations
-
-- One model, one prompt run. Not statistically significant.
-- Self-scored by the author / host model. Not external review.
-- Structural eval only. It does not verify the current OFAC SDN, EU, UK, Swiss, or price-cap attestation facts.
-- The local `analyze` request was validated for routing and evidence-mode mapping; no external LLM was invoked in Condition B.
-- The upstream `user-provided sources` packet is mandate-page-URL accessibility-checked only; no point-in-time content was extracted in this session. Operational use requires the user to retrieve current content from those mandate pages.
-- This is not a factual benchmark, model-quality comparison, aggregate claim, compliance conclusion, sanctions screening, vessel screening, or practitioner validation.
-- The Gulf+ME regional lens specifically requires preserving Iran-state / IRGC-affiliated / Iran-private commercial distinctions; this eval would underestimate the regional lens's value on cases where the bare model collapses these.

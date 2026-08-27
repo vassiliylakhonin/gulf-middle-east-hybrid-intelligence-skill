@@ -7,7 +7,6 @@
 **Evidence mode:** `live-source-backed`. This example also demonstrates the canonical Axis A / Axis B provenance-tag system from AGENTS.md (`[primary]` / `[secondary]` / `[analyst-judgment]` on Axis A; `[verify]` / `[stale-risk: YYYY-MM]` on Axis B).
 **Primary sources retrieved:** See Source table below. Combined Maritime Forces and IMO were retrieved live on 2026-05-15. The current Lloyd's Market Association Joint War Committee page, its listed-areas page, and the IEA June 2026 OMR were retrieved during the 2026-07-11 source refresh. UKMTO still returned HTTP 403 and remains `[verify]` for the reader.
 **Retrieval note:** Multinational naval task-force structure and IMO regulatory role are stable. Specific UKMTO advisories, JWC listed-area designations, premium levels, and incident counts are time-sensitive and must be re-verified against the relevant primary source before operational use. This memo deliberately does not state attack counts, named vessels, IMO numbers, premium percentages, or specific dated incidents — those belong in a sourced advisory, not in a structural decision-support brief.
-**Limitation note:** This is a decision-support brief. It is not war-risk underwriting advice, vessel screening, maritime due diligence, legal advice, or operational routing guidance. It does not constitute a JWC listed-area determination or an UKMTO advisory. Operational decisions require qualified marine war-risk underwriting review, current UKMTO and IMSC / CMF advisories, current JWC listed-areas, and entity-level vessel and counterparty screening as of the transit date.
 
 ---
 
@@ -167,7 +166,6 @@ This memo's confidence ceiling is moderate because the time-sensitive variables 
 | New OFAC designations of entities operating in Red Sea / Bab-el-Mandeb shipping | Sanctions-screening re-baselining; does not directly change war-risk pricing | `[analyst-judgment]` |
 | IEA OMR or other primary trade-flow source reports sustained recovery of Suez transit volumes | Confirms commercial normalization signal; underwriting may follow | `[analyst-judgment]` |
 
-## Limitation note
 
 This is a `live-source-backed` decision-support brief, not war-risk underwriting advice, vessel screening, maritime due diligence, sanctions screening, AML transaction monitoring, or legal advice. Combined Maritime Forces and IMO primary pages were retrieved on 2026-05-15; LMA JWC and IEA sources were refreshed on 2026-07-11; UKMTO remained inaccessible and is cited `[verify]`. No specific incident counts, vessel names, IMO numbers, premium percentages, or dated advisories are stated in this brief — those belong in a sourced advisory with live retrieval. Operational decisions require:
 

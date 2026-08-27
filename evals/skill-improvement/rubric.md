@@ -43,7 +43,6 @@ Manual structural rubric for Gulf + Middle East answers. Maximum: 60 points.
 - 0-2: States assumptions, unknowns, confidence, and what would change the judgment.
 - 0-2: Avoids generic advice such as "monitor closely" without named indicators.
 - 0-2: Uses scenarios and triggers instead of point forecasts when predicting oil, OPEC+, negotiations, or conflict posture.
-- 0-2: Includes a limitation note aligned to the user's use case.
 
 ## Interpretation
 

@@ -117,6 +117,3 @@ No live sources were checked for this signal. Assessment is based on structural 
 
 Use the Gulf + Middle East Hybrid Intelligence Skill to expand this signal into a standard memo for a shipping insurer reviewing war-risk exposure on their Hormuz-transiting tanker book: include war-risk premium structure, exposure aggregation limits by vessel class and chokepoint, trigger points for underwriting posture change, and what a Hormuz-closure scenario adds to Bab-el-Mandeb exposure already priced.
 
-## Disclaimer
-
-Public example of the Gulf + Middle East Hybrid Intelligence Skill style. Not official intelligence. Not legal, compliance, sanctions, AML, vessel screening, or investment advice. No live sources were checked for this signal; verify primary sources before operational use.

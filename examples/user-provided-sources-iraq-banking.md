@@ -7,7 +7,6 @@ This example demonstrates the `user-provided sources` evidence mode. The templat
 **Audience:** Correspondent bank sanctions compliance and AML.
 **Time horizon:** Near-term (12 months).
 **Evidence mode:** `user-provided sources`.
-**Limitation note:** This template structure should be filled in with sources the user provides. The skill should cite only the user-provided sources and clearly mark analytical judgment as such. Operational compliance decisions require qualified counsel and primary OFAC, EU, UK, MENAFATF, and CBI Iraq sources verified at the decision date.
 
 ---
 
@@ -106,7 +105,6 @@ A correspondent bank's exposure to an Iraqi respondent transmits through:
 
 > Cite each user-provided source with its identifier and date. Mark each factual claim with the source it comes from. Do not introduce facts not in the user's packet. Mark analytical leaps as `Judgment`.
 
-## Limitation note
 
 This example is a `user-provided sources` template. Operational compliance decisions require:
 - primary verification of current OFAC, EU, UK sanctions designations;

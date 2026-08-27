@@ -5,7 +5,6 @@
 **Audience:** Shipping insurer underwriting and risk management.
 **Time horizon:** Near-term (90 days), with structural overlay.
 **Evidence mode:** `illustrative source packet`.
-**Limitation note:** This example uses an *illustrative* source packet — sources named are real organizations and publication types, but specific cited values, dates, and conclusions are illustrative for skill demonstration. Do not treat as live data. Operational underwriting requires primary IEA, IMO, war-risk insurance market data, and AIS-derived traffic data current as of the underwriting date.
 
 ---
 
@@ -95,6 +94,5 @@ Sustained pattern of Iranian harassment and US Fifth Fleet posture changes in th
 
 > Specific values cited in any operational underwriting must be from current primary sources, not from this illustrative example.
 
-## Limitation note
 
 This example is `illustrative source packet`. Specific dispersion estimates, premium levels, and incident counts are illustrative. Operational underwriting requires current data from the sources listed in the source packet and from the insurer's own market intelligence. This skill does not perform underwriting, war-risk pricing, vessel screening, or aggregation modeling.

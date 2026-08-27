@@ -2,7 +2,6 @@
 
 Worked examples produced in the Gulf + Middle East Hybrid Intelligence skill style.
 
-Every example declares its evidence mode and includes a limitation note. None of these are intelligence products. None are legal, compliance, sanctions, AML, or investment advice.
 
 ## Learning path
 
@@ -44,6 +43,5 @@ The first `live-source-backed` example is now included: [live-source-backed-ofac
 
 ## How to read these examples
 
-Each example follows the output structure in the canonical root [`SKILL.md`](../SKILL.md): bottom line, scope, primary driver, mechanism, exposure map, actor incentives, role-based implications, trigger points, unknowns, confidence, what-would-change-the-judgment, limitation note.
 
 Skip sections that do not apply to a specific question.

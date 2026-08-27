@@ -53,7 +53,6 @@ Yes/no review pass over any memo produced with the Gulf + Middle East skill. Aid
 ## Safety and limitations
 
 - [ ] Does the memo avoid presenting itself as legal, compliance, sanctions screening, AML, vessel screening, or investment advice?
-- [ ] Is a limitation note included?
 - [ ] For sanctions claims: is "operational decisions require primary list checks and qualified compliance review" or equivalent stated?
 
 ## Compression

@@ -16,7 +16,6 @@
 
 **Time horizon:** 12 months, with structural overlay through 2027.
 
-**Limitation note:** See top. Structural reasoning only; not a vessel-screening framework, not a price-cap compliance tool, not legal advice.
 
 ## User-provided source packet (skeleton)
 
@@ -196,7 +195,6 @@ This memo applies the three-value logic from AGENTS.md as follows:
 - **Flag-but-don't-use (used):** specific enforcement-doctrine direction; current price-cap attestation requirement state; current P&I market posture on dark-fleet voyages. Acknowledged as uncertain; not used as a load-bearing input to the structural reasoning.
 - **Stop and request (would apply):** any operational decision on a specific vessel, voyage, cargo, or counterparty requires source-backed re-verification (U1–U11) and qualified maritime-compliance and legal review, not this memo. A refiner or trader applying this memo to a real voyage decision should Stop and request live retrieval and licensed maritime-intelligence input before acting.
 
-## Limitation note
 
 This is a `user-provided sources` decision-support brief delivered as a skeleton packet plus structural framing. **The binding evidence is the user's retrieval of [U1]–[U11] and licensed maritime-intelligence data at the point of decision.** This memo does not retrieve those items itself, does not perform vessel screening, does not perform AIS analysis, and does not constitute maritime due diligence. It is not legal, sanctions, AML, price-cap compliance, vessel-screening, marine-insurance, or investment advice. It does not state any current vessel designation, IMO number, ownership chain, AIS observation, or named counterparty. It does not constitute an opinion on whether any specific voyage, cargo, or counterparty is permissible under any sanctions or price-cap regime.
 

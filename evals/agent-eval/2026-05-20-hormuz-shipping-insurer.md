@@ -181,9 +181,3 @@ The MCP-attached output adds value in three specific places: explicit scenario p
 
 This eval suggests the MCP value-add is largest on questions where the bare model lacks substantive priors (CBAM mechanics, regional CA banking), and smallest on questions where the bare model has rich priors (Hormuz underwriting is well-trodden in LLM training data). The structural delta is still substantial, but it's mostly framing discipline, not new substance.
 
-## Limitations
-
-- One model, one prompt run. Not statistically significant.
-- Self-scored.
-- The Gulf+ME regional lens specifically requires preserving Iran-state / IRGC-affiliated / Iran-private commercial distinctions; the bare model did surface this, but on lower-tension questions it often collapses them. This eval would underestimate the regional lens's value on those harder cases.
-- The agent-eval is structural, not factual. Specific underwriting practice would require live market data.

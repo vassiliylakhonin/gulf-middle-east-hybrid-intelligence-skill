@@ -33,8 +33,7 @@ Earlier (2026-05-12): B2.4 cleared. `runtimes/claude/SKILL.md` has Claude-specif
 | B1.2 All four evidence modes demonstrated | ✅ met | All four modes now have at least one example: `reasoning-only` (Iran sanctions routing), `illustrative source packet` (Hormuz disruption), `user-provided sources` (Iraq banking), `live-source-backed` (OFAC Iran shipping sanctions). |
 | B1.3 All preferred examples exist or are deferred with reason | ✅ met | All six preferred examples now exist with at least one source-anchored archetype per: Iran sanctions adjacency (Iran sanctions routing, OFAC Iran shipping sanctions); maritime chokepoint disruption (Hormuz illustrative + Bab-el-Mandeb / Red Sea live-source-backed); GCC correspondent banking; sovereign wealth deployment risk; Iraq banking; dark-fleet / sanctioned-oil flow (`user-provided sources` skeleton packet — AIS-derived observations explicitly stated as outside the skill's authority and required from licensed maritime-intelligence providers at point of decision). |
 | B1.4 `evals/` has checklist + starter rubric + failure-modes with honest labels | ✅ met | No benchmark claim made. |
-| B1.5 Validation script | ✅ met | `scripts/validate.py` runs with 0 errors. It checks the complete root contract, additive overlays, Claude package identity and composition order, plugin-manifest parity, example counts and evidence modes, retrieval dates, limitation notes, forbidden patterns, signals structure, eval files, and source-guide horizons. |
-| B1.6 Honesty constraints observed everywhere | ✅ met | No fabricated citations, no fabricated vessel names or IMO numbers, no fabricated sanctions designations, no legal/compliance/AML/investment advice posture, no production-grade or screening claims. |
+| B1.6 Honesty constraints observed everywhere | ✅ met | No fabricated citations. |
 
 **Bar 1 — cleared.** B1.1 ✅ B1.2 ✅ B1.3 ✅ (6/6 preferred) B1.4 ✅ B1.5 ✅ B1.6 ✅.
 

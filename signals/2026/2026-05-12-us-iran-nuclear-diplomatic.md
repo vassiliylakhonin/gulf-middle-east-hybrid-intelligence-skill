@@ -121,6 +121,3 @@ No live sources were checked for this signal. Assessment is based on structural 
 
 Use the Gulf + Middle East Hybrid Intelligence Skill to expand this signal into a scenario brief for a sanctions compliance officer at a GCC-hub bank: for each of the four scenarios, specify what changes in the OFAC Iran sanctions architecture, what entity-level re-screening is required, what correspondent banking posture change is warranted, and what the timeline for operational response looks like.
 
-## Disclaimer
-
-Public example of the Gulf + Middle East Hybrid Intelligence Skill style. Not official intelligence. Not legal, compliance, sanctions, or investment advice. This signal explicitly states Low confidence on a topic with structural uncertainty; do not treat it as a forecast or a compliance determination. Verify primary sources before any operational decision.

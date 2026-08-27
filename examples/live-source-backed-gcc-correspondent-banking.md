@@ -7,7 +7,6 @@
 **Evidence mode:** `live-source-backed`.
 **Primary sources retrieved:** See Source table below.
 **Retrieval note:** Regulatory and FATF framework sources are stable at the document level; country-level FATF status and OFAC enforcement actions change. Verify current FATF status and SDN/blocked-entities list before operational use.
-**Limitation note:** This is a decision-support brief. It is not AML compliance guidance, legal advice, or a regulatory determination. Operational correspondent banking decisions require primary FATF/MENAFATF country status verification, current OFAC SDN and blocked-entities list checks, current EU and UK sanctions list checks, and qualified legal and compliance review.
 
 ---
 
@@ -152,7 +151,6 @@ For a Western respondent bank with GCC correspondent relationships:
 | OFAC enforcement action against a Western bank specifically for GCC correspondent failures | Would sharpen regulatory and reputational cost calculation; would set a precedent for fact-pattern comparison | `[analyst-judgment]` |
 | Confirmed nuclear deal and sanctions relief for Iran | Would materially change the Iran-exposure channel; general licenses and SDN relief must be verified specifically before any operational change | `[analyst-judgment]` |
 
-## Limitation note
 
 This is a `live-source-backed` decision-support brief, not AML compliance guidance, legal advice, or a regulatory determination. Primary source URLs are cited and were retrieved on 2026-05-12.
 

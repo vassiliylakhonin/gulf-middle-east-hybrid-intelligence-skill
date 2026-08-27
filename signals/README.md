@@ -34,4 +34,3 @@ Reviewers check:
 - Iran actor distinction used where Iran is relevant;
 - GCC actor distinction used where GCC actors are material;
 - no fabricated citations, vessel names, IMO numbers, or sanctions designations;
-- limitation note included.

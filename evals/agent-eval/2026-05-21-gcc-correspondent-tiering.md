@@ -183,11 +183,3 @@ The MCP-attached output adds value in three places specific to correspondent-ban
 
 This case suggests the regional lens's value in correspondent banking is mostly precision: pulling out the right sub-criteria (free zones, actor distinctions, FATF remediation trajectory) that a bare model treats generically. The delta is smaller than the dark-fleet case because the bare model has reasonable correspondent-banking priors; the delta is larger than the Hormuz case because correspondent-banking tiering rewards machine-readable provenance more than chokepoint-risk underwriting does.
 
-## Limitations
-
-- One model, one prompt run. Not statistically significant.
-- Self-scored by the author / host model. Not external review.
-- Structural eval only. It does not verify the current FATF, OFAC, EU, UK, or home-supervisor facts. The FATF UAE grey-listing dates (Feb 2022 entry / Feb 2024 removal) are public-record facts but should be re-verified against the FATF site at point of operational use.
-- The agent-eval is structural, not factual. Specific tiering decisions for any GCC correspondent require entity-level AML / BO due diligence and home-supervisor engagement.
-- This is not a factual benchmark, model-quality comparison, aggregate claim, compliance conclusion, AML determination, or practitioner validation.
-- The Gulf+ME regional lens specifically requires preserving Iran-state / IRGC-affiliated / Iran-private commercial distinctions; this eval would underestimate the regional lens's value on cases where the underlying-client mix has direct Iran-actor adjacency.

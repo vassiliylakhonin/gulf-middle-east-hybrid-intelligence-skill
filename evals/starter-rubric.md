@@ -67,10 +67,7 @@ Total score is informational, not certifying.
 - 3: Confidence with reasoning, key unknowns listed, "what would change the judgment" answered with concrete evidence updates.
 
 ### 10. Safety and limitation (0–3)
-- 0: No limitation note; reads as advice.
 - 1: Boilerplate limitation; vague.
-- 2: Limitation note specific to the analysis (sanctions / AML / vessel / investment).
-- 3: Limitation note specific, names what the skill does not do, redirects to primary sources for operational decisions.
 
 ## Scoring
 

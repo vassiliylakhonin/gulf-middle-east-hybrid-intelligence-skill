@@ -54,7 +54,6 @@ Common ways Gulf + Middle East strategic-risk memos go wrong, with diagnostic cu
 
 **Symptom:** Memo reads as a sanctions screening or compliance determination ("this counterparty is OK to onboard" or "this transaction is permissible").
 **Cue:** Operative compliance language used; no caveat that primary list checks and qualified review are required.
-**Fix:** Refuse the framing. Restructure as analysis with limitation note: "operational sanctions decisions require primary OFAC/EU/UK list checks and qualified compliance review."
 
 ## 10. Vessel screening or AIS-derived claims
 
@@ -74,11 +73,8 @@ Common ways Gulf + Middle East strategic-risk memos go wrong, with diagnostic cu
 **Cue:** No observable signal specified; no source named; no trigger tied to a posture change.
 **Fix:** Each indicator should answer: *what would I see, where, that would change the judgment?* Include source (OFAC press release, IMO incident report, IEA monthly report, etc.).
 
-## 13. Missing limitation note
 
-**Symptom:** Memo ends without a limitation note. Reader may treat it as operational guidance.
 **Cue:** No mention of "not legal/compliance/AML advice"; no mention of primary-source requirements for operational decisions.
-**Fix:** Always include a limitation note. The skill is decision-support, not operational compliance.
 
 ## 14. Table-cell provenance tag drift
 

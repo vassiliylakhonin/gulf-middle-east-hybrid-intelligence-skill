@@ -107,6 +107,3 @@ No live sources were checked for this signal. Assessment is based on structural 
 
 Use the Gulf + Middle East Hybrid Intelligence Skill to expand this signal into a standard memo for a corporate CFO with material energy-cost exposure in 2026–2027: frame the OPEC+ production scenarios against the Hormuz disruption tail, give an exposure-weighted cost range for each scenario, and identify the three most important observable indicators that would trigger a posture change in energy procurement strategy.
 
-## Disclaimer
-
-Public example of the Gulf + Middle East Hybrid Intelligence Skill style. Not official intelligence. Not investment, financial, energy-market, or legal advice. No live sources were checked for this signal; verify primary sources before operational use.

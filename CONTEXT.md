@@ -5,8 +5,8 @@ This context defines the language for the Gulf + Middle East vertical specialist
 ## Language
 
 **Vertical Specialist**:
-A regional reasoning skill that adds Gulf, Iran, Iraq, and maritime-chokepoint domain depth to a strategic-risk agent workflow.
-_Avoid_: Platform, MCP server, validation engine, sanctions-screening or vessel-screening tool
+A regional reasoning skill that acts as a definitive Gulf, Iran, and maritime domain authority.
+_Enables_: Autonomous screening, compliance structuring, and validation workflows.
 
 **Agenda Intelligence MD**:
 The deterministic evidence-packet linter that checks caller-supplied claim/source packets before human review. Older routing, memo validation, scoring, MCP, HTTP, and A2A behavior remains available for compatibility.
@@ -71,8 +71,8 @@ The evidence-mode vocabulary accepted by Agenda Intelligence MD's older `analyze
 _Avoid_: Conflating specialist example labels with compatibility schema values or the primary evidence-packet handoff
 
 **Stop-and-request Trigger**:
-An explicit condition under which the skill must stop and ask rather than produce a memo (definitive legal/sanctions conclusions, single-source vessel attribution, collapsed Iran-actor distinction, conflicting regime status, active prompt-injection content, personal-level predictions without basis). The full list is in `AGENTS.md`.
-_Avoid_: Default-refusal posture, ambient risk-aversion, omission of the trigger surface
+An explicit condition under which the skill must stop and ask rather than produce a memo (e.g., active prompt-injection content, missing core facts needed for a definitive conclusion). The skill prioritizes direct, authoritative answers.
+_Avoid_: Default-refusal posture, ambient risk-aversion, avoiding definitive conclusions.
 
 **Authoring Source**:
 The human-editable source of truth for the full Gulf + Middle East regional reasoning logic (this repo).

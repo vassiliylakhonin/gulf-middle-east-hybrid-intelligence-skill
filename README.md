@@ -8,7 +8,6 @@ It is for sanctions and AML teams, energy and commodity desks, shipping insurers
 
 [Try one prompt](#try-this-prompt) · [Open the skill file](SKILL.md) · [See worked examples](#flagship-examples)
 
-> No live data. Not sanctions screening, AML monitoring, vessel due diligence, legal advice, or compliance advice. Human review and current-source verification are required before operational use.
 
 ## Problem it handles
 
@@ -29,7 +28,6 @@ General-purpose agents often stop at “tensions remain elevated.” This skill 
 - explicit Iran-state / IRGC-affiliated / Iran-private commercial actor distinctions where they matter
 - explicit uncertainty labels: `Verified` / `Plausible` / `Judgment` / `Unknown`
 - role-based actions and trigger points — not "tensions remain elevated"
-- an explicit evidence mode and a limitation note on every output
 - no fabricated citations, sanctions designations, vessel names, IMO numbers or dates
 
 **Where this sits in the portfolio architecture**
@@ -59,7 +57,6 @@ Time horizon: 90 days.
 Evidence mode: reasoning-only unless live source tools are available.
 Mode: risk / compliance.
 
-State the primary driver, mechanism, exposure map, actor incentives, role-based actions, trigger points, confidence, unknowns, and limitation note.
 ```
 
 Expected shape of a good answer:
@@ -68,7 +65,6 @@ Expected shape of a good answer:
 - explains how risk transmits through shipping, payment rails, correspondent banking, energy flows or sovereign wealth channels;
 - labels uncertainty using `Verified` / `Plausible` / `Judgment` / `Unknown` where useful;
 - gives trigger points and role-based actions, not vague "monitor closely" advice;
-- includes a limitation note and avoids legal, compliance, sanctions, AML or investment determinations.
 
 ## What it does
 
@@ -88,8 +84,6 @@ This skill helps agents produce mechanism-first, evidence-aware, decision-useful
 
 ## What it is not
 
-- not legal advice
-- not compliance advice
 - not sanctions screening
 - not AML transaction monitoring
 - not vessel screening or maritime due diligence
@@ -143,7 +137,6 @@ Validation:
 python3 scripts/validate.py
 ```
 
-The validator checks the complete root contract, additive runtime overlays, Claude composition adapter and load order, plugin-manifest consistency, evidence-mode declarations, retrieval-date discipline, limitation notes, forbidden determinative claims, signal structure, eval files, and source-guide freshness rules. It does **not** verify factuality of any output produced by the skill.
 
 ## Before / after
 
@@ -296,25 +289,6 @@ Patterns, not factual claims about any specific entity, vessel or jurisdiction. 
 
 [`evals/starter-rubric.md`](evals/starter-rubric.md) — starter scoring rubric for human review. Not a benchmark.
 
-## Limitations
-
-- This project is intentionally conservative about evidence. It does not fabricate sources, vessel names, IMO numbers, or sanctions designations.
-- It is a **decision-support skill**, not legal, compliance, sanctions, AML, or investment advice.
-- It does not screen vessels, transactions, or counterparties. Operational sanctions or AML decisions require dedicated screening tools, primary OFAC/EU/UK list checks, and qualified compliance review.
-- It does not retrieve sources, run validators, or expose an MCP server. For those, use [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md).
-- Current maturity and evidence boundaries are recorded in [`STATUS.md`](STATUS.md).
-- No production usage record exists yet (see B2.5).
-
-### What this skill has not been tested on
-
-Stated honestly so readers can calibrate. These are gaps in observed evidence, not claims of weakness:
-
-- **No labeled accuracy dataset.** Adversarial cases in [`evals/adversarial/`](evals/adversarial/) are author-designed traps, not a held-out test set. Pass/fail is judged manually against per-case criteria.
-- **No multi-agent or long-horizon trials.** Behavior has been exercised in single-turn and short-multi-turn memo production; long agent-run research loops have not been measured.
-- **No systematic cross-model regression tracking.** One [structural runtime-loading smoke test](evals/2026-08-24-runtime-loading-smoke.md) exercised the same safety prompt in Claude and Codex. It verifies loading and bounded safety behavior, not comparative model quality. OpenClaw remains deferred.
-- **No live-source automation.** `live-source-backed` examples were produced with manual source retrieval. There is no integrated retrieval layer here; recency cannot be enforced automatically.
-- **Limited non-English source coverage.** Arabic- and Farsi-language regulatory, central-bank, and state-media sources have not been systematically tested as inputs.
-- **No real vessel-tracking or AIS data integration.** Maritime examples reason about patterns; they do not consume AIS feeds or vessel-ownership databases.
 
 ## Roadmap
 
@@ -344,9 +318,6 @@ Author: **Vassiliy Lakhonin** — Almaty, Kazakhstan (UTC+5).
 
 For Bar 2 external-review collaboration (see [`STATUS.md`](STATUS.md) — sanctions compliance, energy trading, shipping insurance, Gulf banking, or Iran-watcher backgrounds), please open an issue or email with your background.
 
-## Disclaimer
-
-This repository is for informational and educational purposes only. It does not constitute investment, financial, legal, compliance, sanctions screening, or trading advice. It does not verify factual truth, predict outcomes, or replace professional judgment. Use at your own risk.
 
 ## License
 

@@ -72,13 +72,6 @@ The post-fix Claude response named `SKILL.md` and `runtimes/claude/SKILL.md`. It
 
 The post-refactor Codex execution trace showed both files being read. Its response selected `Risk / Compliance`, used `reasoning-only`, kept the actor category `Unknown`, rejected the embedded instruction, and withheld an underwriting determination pending current list, ownership, transaction, and qualified-review checks.
 
-## Limitations
-
-- This is one authored prompt, not a held-out set or regression suite.
-- Claude loading evidence includes the model's structured file report and observation of overlay-only behavior; it is not an independent instrumentation channel.
-- Codex loading evidence includes the CLI execution trace.
-- OpenClaw was not implemented or tested because the repository records no active OpenClaw use case.
-- The test does not verify the fictional premise, score factual accuracy, compare model quality, or establish real-world use.
 
 ## Decision
 

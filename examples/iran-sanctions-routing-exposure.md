@@ -5,7 +5,6 @@
 **Audience:** Refinery sanctions compliance and trade-finance.
 **Time horizon:** Near-term (6–12 months).
 **Evidence mode:** `reasoning-only`.
-**Limitation note:** This is a `reasoning-only` illustrative example. It does not cite live OFAC designations, specific entities, vessels, or enforcement actions. Operational sanctions decisions require primary OFAC SDN List checks, qualified compliance review, and entity-level verification.
 
 ---
 
@@ -80,6 +79,5 @@ Adjacency risk concentrates not in the GCC trading hub itself but in the interme
 - US-Iran nuclear file movement that leads to material sanctions easing → trading-house counterparty risk declines, but provenance discipline should remain (snapback risk).
 - Major correspondent-bank exit from Gulf trading-house payment flows → operational disruption risk rises independently of the sanctions-enforcement risk.
 
-## Limitation note
 
 This example is `reasoning-only` and illustrative. It does not name specific entities, vessels, designations, or enforcement actions. Operational sanctions and AML decisions require primary OFAC SDN List checks, BIS export-control checks if applicable, qualified counsel review, and entity-level beneficial ownership and provenance verification. This skill does not perform sanctions screening, AML monitoring, vessel screening, or compliance determinations.

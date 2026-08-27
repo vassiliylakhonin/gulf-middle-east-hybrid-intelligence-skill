@@ -39,9 +39,3 @@ This is a **rule-level canon eval**, not a skill-vs-no-skill delta case: both co
 
 **No measurable delta on a labeled 8-claim packet.** The rule stays in the canon on its logic (silent drops become a named, checkable violation), not on eval-backed evidence. Separately, the opposite-recommendation observation feeds the failure-modes file as a reminder: under-specified contractual mechanics can flip a recommendation while every structural criterion still scores perfect.
 
-## Limitations
-
-- One run per condition; the observed recommendation flip shows single-run variance exceeds the rule effect, which caps what any single-run rule eval here can claim.
-- The packet is labeled (K1–K8), which itself cues accounting; the silent-drop failure mode the rule targets is most likely with unlabeled prose sources, larger claim sets (20+), or multi-document packets.
-- Same-vendor blind judge (Haiku 4.5); per the canon's self-scoring honesty rule this is a structural sanity check, not validation.
-- Author-constructed case; the rubric tests exactly what the rule mandates, so it favors the treatment by construction — which makes the zero delta the informative outcome.

@@ -38,7 +38,6 @@ Preferred examples:
 - dark-fleet / sanctioned-oil flow exposure for a refiner or trader
 - Iraq banking-sector reform exposure for a fintech or correspondent bank
 
-Every example must include evidence mode and limitation note.
 
 Examples should be navigable as a learning path, not only as a flat file list. Keep `examples/README.md` aligned with the flagship examples section in `README.md`.
 

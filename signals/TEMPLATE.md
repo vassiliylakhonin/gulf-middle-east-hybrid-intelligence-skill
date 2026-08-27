@@ -88,6 +88,3 @@ Specific evidence whose appearance would force a re-write of the signal.
 
 Use the Gulf + Middle East Hybrid Intelligence Skill to expand this signal into a [memo mode] for a [audience role]: [specific question to answer].
 
-## Disclaimer
-
-Public example of the Gulf + Middle East Hybrid Intelligence Skill style. Not official intelligence. Not legal, compliance, sanctions, AML, vessel screening, or investment advice. Evidence mode and retrieval date stated above.

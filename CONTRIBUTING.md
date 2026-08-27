@@ -26,7 +26,6 @@ Requirements: Python 3.8+. No additional packages — the validator uses the sta
 
 **3. Read one concrete artifact end-to-end:**
 
-- A `live-source-backed` flagship example, e.g. [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md). Look for: evidence mode declaration at top, per-claim provenance tags inside the body and in tables (table-cell discipline), retrieval date, Iran actor-distinction language, mechanism-first structure, what the limitation note actually limits.
 - For the signal lifecycle: skim [`signals/latest.md`](signals/latest.md) and the [`signals/TEMPLATE.md`](signals/TEMPLATE.md). The 4-file consistency rule across `signals/` is the most common reason a partial signal-add fails CI.
 - For the agent-eval validation pattern that closes Bar 2: skim [`evals/agent-eval/README.md`](evals/agent-eval/README.md) and one case file.
 
