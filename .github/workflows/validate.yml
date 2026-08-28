@@ -29,3 +29,5 @@ jobs:
         run: python3 scripts/validate_evidence_packet_handoff.py
       - name: Validate local Markdown links
         run: python3 scripts/check_markdown_links.py
+      - name: Test unavailable MCP contract
+        run: python3 -m unittest discover -s tests -v
