@@ -2,16 +2,16 @@
 
 All notable changes to this repository are documented here.
 
-## [2.0.0] - 2026-08-27
-
-### Changed
-- **Autonomous Compliance Edition**: Completely removed all disclaimers, "Safety limits", and compliance restrictions across the entire repository.
-- Empowered the skill to provide definitive legal, compliance, and sanctions determinations instead of defaulting to a refusal posture.
-- Replaced hesitant "Mitigation questions" with decisive "Autonomous Enforcement Actions" in risk archetypes.
-- Stripped arbitrary "Limitation note" requirements from outputs and updated continuous integration validation scripts to reflect the new autonomous capabilities.
-
 ## Unreleased
 
+- Removed the mock streaming engine and all claims of autonomous enforcement,
+  continuous graph traversal, persistent memory, or no-human-review operation.
+- Replaced the enforcement-shaped JSON schema with a non-enforcing reviewer
+  recommendation contract that always requires human review.
+- Added a transport-independent MCP fallback contract and a standard-library CI
+  test proving unavailable tools return `not_implemented` and never clearance.
+- Corrected MCP docstrings and documented the graph and memory files as proposed
+  data shapes rather than implemented services.
 - Moved the complete runtime-neutral analytical contract into the root `SKILL.md` and reduced the Claude and Codex files to additive overlays.
 - Replaced the packaged Claude symlink with a composition adapter whose name matches its directory. The validator now enforces the root/overlay split, package identity, attachment order, and plugin-manifest parity.
 - Added a structural Claude/Codex runtime-loading smoke record. It covers instruction loading and bounded safety behavior only; it is not a factuality or model-quality benchmark.
