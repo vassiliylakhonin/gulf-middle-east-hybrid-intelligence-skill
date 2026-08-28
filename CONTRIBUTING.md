@@ -163,6 +163,6 @@ Product linting, schemas, and runtime tooling belong in [Agenda Intelligence MD]
 
 ## Contact
 
-Author: Vassiliy Lakhonin · [vassiliylakhonin.github.io](https://vassiliylakhonin.github.io/)
+Author: Vassiliy Lakhonin · [github.com/vassiliylakhonin](https://github.com/vassiliylakhonin)
 
-For questions about positioning, the broader Agenda Intelligence portfolio, or potential review collaboration, open an issue or use the contact path on the portfolio site.
+For questions about positioning, the broader Agenda Intelligence portfolio, or potential review collaboration, open an issue on this repository.
