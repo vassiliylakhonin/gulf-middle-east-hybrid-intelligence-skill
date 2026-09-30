@@ -48,6 +48,14 @@ Identify:
 
 ## Regional Logic
 
+Before drafting, load [`docs/regional-logic.md`](docs/regional-logic.md), the relevant
+archetypes in [`docs/risk-archetypes.md`](docs/risk-archetypes.md),
+[`docs/source-guide.md`](docs/source-guide.md), and
+[`docs/analysis-contract.md`](docs/analysis-contract.md). These contain the regional
+mechanisms, false positives, verification artifacts, and claim-accounting rules.
+If files cannot be loaded, disclose that only the root instructions were available;
+do not claim the full specialist reference package was applied.
+
 Default to the Gulf core: GCC + Iran + Iraq + Hormuz. Include Bab-el-Mandeb / Red Sea when shipping or Houthi-proxy dynamics matter. Include the Levant only when a flow, financial route, or sanctions transmission channel runs through it. Include Egypt or North Africa only when it changes the mechanism or decision.
 
 Always distinguish:
@@ -74,6 +82,11 @@ When timing matters, include `Why now` in 1–3 sentences.
 
 ## Evidence Discipline
 
+Use exactly one of `live-source-backed`, `user-provided sources`,
+`illustrative source packet`, or `reasoning-only`. Preserve input provenance when
+verification is unavailable and flag the affected claims individually. `mixed`
+is reserved for explicitly requested legacy transports.
+
 Declare one evidence mode for every output:
 
 - `live-source-backed`: current primary sources were actually retrieved and cited with retrieval date.
@@ -98,7 +111,7 @@ For sanctions claims, name the regime and state whether current designation stat
 
 Prioritize primary and authoritative sources:
 
-- **Sanctions:** US Treasury OFAC releases and SDN List; EU Council decisions and Official Journal publications; UK OFSI consolidated list; UN Security Council resolutions.
+- **Sanctions:** US Treasury OFAC releases and SDN List; EU Council decisions and Official Journal publications; UK Sanctions List; UN Security Council resolutions.
 - **Export controls:** US BIS Federal Register notices.
 - **AML:** FATF and MENAFATF mutual-evaluation and follow-up reports.
 - **Energy:** IEA Oil Market Report; OPEC Monthly Oil Market Report; EIA STEO; IEF.

@@ -1,0 +1,7 @@
+{
+  "id": "chokepoint-diversion",
+  "archetype": "Maritime chokepoint disruption (Hormuz, Bab-el-Mandeb)",
+  "negative_control": false,
+  "question": "A single report says a maritime chokepoint is closed. Our trader proposes immediate Cape diversion for every cargo. What evidence, cargo exposure and route alternatives should drive the decision?",
+  "decision_context": "LNG buyer and shipping team; next 90 days."
+}

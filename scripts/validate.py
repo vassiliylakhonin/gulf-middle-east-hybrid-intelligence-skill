@@ -309,7 +309,7 @@ def check_examples():
                 err(f"live-source-backed example missing retrieval date: {f.name}")
 
         # Limitation note
-        if True:
+        if re.search(r"human review required|not (?:legal|a compliance)|does not (?:perform|verify|substitute)|not.*advice|limitations", text):
             ok("Limitation note present")
         else:
             err(f"No limitation note in {f.name}")
@@ -548,7 +548,7 @@ def check_root():
             if claim in text:
                 err(f"README.md contains unsupported claim: {claim}")
 
-        if True:
+        if "no public, attributable real-use record" in text:
             ok("README.md discloses lack of real-use evidence")
         else:
             err("README.md must disclose that no real-use evidence exists yet")
@@ -685,6 +685,12 @@ def main():
     print("Gulf + Middle East Hybrid Intelligence Skill — Validator")
     print("Structural check only. Does not verify factual correctness.")
     print("=" * 60)
+
+    import subprocess
+    result = subprocess.run([sys.executable, str(ROOT / "scripts/validate_runtime_contract.py")], cwd=ROOT)
+    if result.returncode:
+        return_code = result.returncode
+        raise SystemExit(return_code)
 
     check_root()
     check_skill_md()

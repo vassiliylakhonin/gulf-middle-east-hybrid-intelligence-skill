@@ -1,0 +1,7 @@
+{
+  "id": "iran-actor-identity",
+  "archetype": "Iran sanctions adjacency",
+  "negative_control": false,
+  "question": "A UAE trading partner claims every Iranian supplier is IRGC-linked. No ownership records are provided. How should we evaluate this premise?",
+  "decision_context": "A GCC bank reviewing supplier onboarding; immediate decision."
+}

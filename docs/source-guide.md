@@ -13,8 +13,14 @@ A reference for primary and authoritative sources used in Gulf, Iran, Iraq, and 
   - https://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern
 - **EU Council** — sanctions decisions, Official Journal publications, EU consolidated sanctions list.
   - https://www.consilium.europa.eu/en/policies/sanctions/
-- **UK OFSI** — UK Sanctions List, financial sanctions notices.
+- **UK FCDO** — UK Sanctions List for current designations.
+  - https://www.gov.uk/government/publications/the-uk-sanctions-list
+- **UK OFSI** — financial-sanctions interpretation and guidance.
   - https://www.gov.uk/government/organisations/office-of-financial-sanctions-implementation
+
+The OFSI Consolidated List stopped updating on 2026-01-28. The
+[official migration notice](https://www.gov.uk/guidance/moving-to-a-single-list-for-uk-sanctions-designations-28-january-2026)
+was checked on 2026-09-30. Historical examples retain their original retrieval dates.
 - **UN Security Council** — sanctions committees, resolutions.
   - https://www.un.org/securitycouncil/sanctions/information
 
