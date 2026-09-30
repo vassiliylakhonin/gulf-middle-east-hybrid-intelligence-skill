@@ -281,6 +281,8 @@ Latest source-maintenance pass: [`docs/source-refresh-2026-07-11.md`](docs/sourc
 
 Patterns, not factual claims about any specific entity, vessel or jurisdiction. Operational use requires source-backed verification.
 
+For substantive three-condition evaluation, see [specialist-lift protocol 2](evals/specialist-lift/README.md). The instrument is prepared; no new model results are claimed.
+
 ## Review checklist
 
 [`evals/checklist.md`](evals/checklist.md) — yes/no review pass over any memo produced with the skill. Aid for human reviewers, not an automated validator.

@@ -1,0 +1,8 @@
+{
+  "id": "negative-control-cadence",
+  "archetype": "none",
+  "negative_control": true,
+  "question": "Our UAE fintech wants continuous rather than quarterly retraining of transaction monitoring models. What are the model-governance trade-offs?",
+  "decision_context": "Model-risk owner choosing a retraining cadence.",
+  "why_negative_control": "Retraining governance should not change because of regional set dressing."
+}

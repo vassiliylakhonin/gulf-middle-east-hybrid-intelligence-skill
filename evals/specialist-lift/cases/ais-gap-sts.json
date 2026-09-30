@@ -1,0 +1,7 @@
+{
+  "id": "ais-gap-sts",
+  "archetype": "Dark-fleet and ship-to-ship (STS) transfers",
+  "negative_control": false,
+  "question": "Our insurer flags an AIS gap and a ship-to-ship transfer as proof of evasion. No IMO, cargo or ownership evidence is supplied. What conclusions and reviewer actions are justified?",
+  "decision_context": "Shipping insurer reviewing underwriting exposure over 90 days."
+}

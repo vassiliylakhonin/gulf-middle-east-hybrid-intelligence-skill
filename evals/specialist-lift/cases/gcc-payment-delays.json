@@ -1,0 +1,7 @@
+{
+  "id": "gcc-payment-delays",
+  "archetype": "GCC correspondent banking exposure",
+  "negative_control": false,
+  "question": "A Gulf respondent reports longer USD settlement times and increased KYC requests. It claims local approval settles our exposure. How should we assess and diversify the payment channel?",
+  "decision_context": "European bank payments leadership; 6-month horizon."
+}
