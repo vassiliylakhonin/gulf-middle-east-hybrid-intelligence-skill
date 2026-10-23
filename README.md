@@ -6,6 +6,23 @@ Use it when a general policy memo misses the region's mechanisms: Iran/GCC and I
 
 **This is a reasoning skill.** The included experimental MCP server is a skeleton: every tool returns `not_implemented`. It does not retrieve live intelligence, screen counterparties, or issue clearance.
 
+## Choose a starting point
+
+[Load the skill](#start-with-the-skill) · [Source guide](docs/source-guide.md) ·
+[Evidence contract](docs/analysis-contract.md) · [Current status](STATUS.md)
+
+No package installation is needed to read and attach the skill. Start with a
+worked example close to your question, then replace its assumptions and source
+packet with your own. Historical examples require fresh source checks before
+operational reuse.
+
+| Your task | Worked example | Evidence to inspect |
+| --- | --- | --- |
+| Maritime route disruption | [Open example](examples/hormuz-shipping-disruption.md) | Illustrative alternatives and assumptions |
+| GCC correspondent banking | [Open example](examples/live-source-backed-gcc-correspondent-banking.md) | A dated source-backed example |
+| An Iraq banking source pack | [Open example](examples/user-provided-sources-iraq-banking.md) | Claims tied to supplied sources |
+
+
 ## What it adds
 
 - Regional mechanisms and [risk archetypes](docs/risk-archetypes.md), instead of a country summary alone.
