@@ -25,6 +25,14 @@ It is designed to improve the quality of strategic reasoning, not to replace hum
 - an evidence handoff to [Agenda Intelligence MD](https://github.com/vassiliylakhonin/agenda-intelligence-md) for deterministic checks
 - regional structure and guardrails for strategic analysis tasks
 
+## Choose a starting point
+
+| Your task | Worked example | Evidence to inspect |
+| --- | --- | --- |
+| Maritime route disruption | [Open example](examples/hormuz-shipping-disruption.md) | Illustrative alternatives and assumptions |
+| GCC correspondent banking | [Open example](examples/live-source-backed-gcc-correspondent-banking.md) | A dated source-backed example |
+| Iraq banking source pack | [Open example](examples/user-provided-sources-iraq-banking.md) | Claims tied to supplied sources |
+
 ## Start with the skill
 
 1. Load the canonical [SKILL.md](SKILL.md).
@@ -49,14 +57,6 @@ missing evidence and escalation conditions.
 For sourced analysis, choose `live-source-backed`, `user-provided sources`, or `illustrative source packet` explicitly. Supply the source packet or authorize collection. Preserve source dates and disclose unresolved source conflicts.
 
 See [regional logic](docs/regional-logic.md), [source guide](docs/source-guide.md), and [analysis contract](docs/analysis-contract.md). The [currency watch](docs/currency-watch.md) is a supporting regional lens for financial exposure analysis.
-
-## Choose a starting point
-
-| Your task | Worked example | Evidence to inspect |
-| --- | --- | --- |
-| Maritime route disruption | [Open example](examples/hormuz-shipping-disruption.md) | Illustrative alternatives and assumptions |
-| GCC correspondent banking | [Open example](examples/live-source-backed-gcc-correspondent-banking.md) | A dated source-backed example |
-| Iraq banking source pack | [Open example](examples/user-provided-sources-iraq-banking.md) | Claims tied to supplied sources |
 
 ## Place in the system
 
