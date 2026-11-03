@@ -84,6 +84,46 @@ The current set contains 9 flagship examples: 1 `reasoning-only`, 2 `illustrativ
 
 Source-backed examples are historical snapshots. Recheck current primary sources before reuse. Example counts describe coverage, not validated analytical performance.
 
+<!-- TAXONOMY:START -->
+
+### Examples by archetype
+
+_Generated from `taxonomy.json`. To update, edit `taxonomy.json` and run `python3 scripts/render-readme.py`._
+
+**Iran sanctions adjacency**
+- [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
+- [`examples/live-source-backed-gcc-correspondent-banking.md`](examples/live-source-backed-gcc-correspondent-banking.md) — `live-source-backed`
+- [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md) — `live-source-backed`
+- [`examples/source-conflict-iran-crude-export-trackers.md`](examples/source-conflict-iran-crude-export-trackers.md) — `illustrative-source-packet`
+- [`examples/user-provided-sources-iraq-banking.md`](examples/user-provided-sources-iraq-banking.md) — `user-provided-sources`
+
+**Dark-fleet and ship-to-ship transfers**
+- [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
+- [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md) — `live-source-backed`
+- [`examples/source-conflict-iran-crude-export-trackers.md`](examples/source-conflict-iran-crude-export-trackers.md) — `illustrative-source-packet`
+- [`examples/user-provided-sources-dark-fleet-sanctioned-oil.md`](examples/user-provided-sources-dark-fleet-sanctioned-oil.md) — `user-provided-sources`
+
+**GCC correspondent banking exposure**
+- [`examples/live-source-backed-gcc-correspondent-banking.md`](examples/live-source-backed-gcc-correspondent-banking.md) — `live-source-backed`
+
+**Sovereign wealth deployment risk**
+- [`examples/user-provided-sources-sovereign-wealth-deployment.md`](examples/user-provided-sources-sovereign-wealth-deployment.md) — `user-provided-sources`
+
+**Maritime chokepoint disruption**
+- [`examples/hormuz-shipping-disruption.md`](examples/hormuz-shipping-disruption.md) — `illustrative-source-packet`
+- [`examples/live-source-backed-bab-el-mandeb-red-sea-shipping.md`](examples/live-source-backed-bab-el-mandeb-red-sea-shipping.md) — `live-source-backed`
+
+**Sanctioned-oil flow concentration**
+- [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
+- [`examples/live-source-backed-ofac-iran-shipping-sanctions.md`](examples/live-source-backed-ofac-iran-shipping-sanctions.md) — `live-source-backed`
+- [`examples/source-conflict-iran-crude-export-trackers.md`](examples/source-conflict-iran-crude-export-trackers.md) — `illustrative-source-packet`
+- [`examples/user-provided-sources-dark-fleet-sanctioned-oil.md`](examples/user-provided-sources-dark-fleet-sanctioned-oil.md) — `user-provided-sources`
+
+**Sanctioned-party post-designation reconstitution**
+- [`examples/iran-sanctions-routing-exposure.md`](examples/iran-sanctions-routing-exposure.md) — `reasoning-only`
+
+<!-- TAXONOMY:END -->
+
 ## What this is not
 
 This project does not:
