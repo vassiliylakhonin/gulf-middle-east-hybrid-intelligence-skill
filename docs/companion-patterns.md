@@ -6,6 +6,8 @@ How to compose this skill with the other repos in the portfolio. These are struc
 
 Use Global Think Tank Analyst (GTTA) for the broader memo workflow (intake, evidence-mode declaration, scenarios, options, indicators, confidence, what-would-change-the-judgment). Use this skill to add Gulf + Middle East depth: Iran actor distinctions, GCC banking and sovereign wealth specifics, maritime chokepoint mechanics, dark-fleet patterns, OFAC/EU/UK sanctions handling.
 
+Probabilistic judgments from Gulf memos go into GTTA's [forecast log](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/forecasts/README.md) (resolution date, resolution rule, indicator). This repo keeps no log of its own. Logging does not validate a forecast.
+
 Suggested composition:
 
 1. Frame the memo with GTTA's intake block (`Question / Decision / Audience / Time horizon / Evidence mode`).

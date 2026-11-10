@@ -63,7 +63,7 @@ Regional geopolitical and sanctions questions are often distorted by generic int
 - clear comparison of alternatives and escalation conditions
 - evidence-aware output that can be checked by a deterministic verifier
 
-It is designed to improve the quality of strategic reasoning, not to replace human judgment or legal review.
+It is designed to make regional reasoning checkable: claims, sources, assumptions, and triggers are explicit, so a reviewer can inspect them. It has not been shown to produce better analysis than a strong general prompt, and it does not replace human judgment or legal review.
 
 ## What this project includes
 

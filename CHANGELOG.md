@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added a GTTA composition rule to `SKILL.md` (aligned with the Central Asia & Caspian skill): GTTA owns memo structure and shared confidence labels, this skill owns regional mechanism and evidence rules. Added a pointer to GTTA's forecast log for dated probabilistic judgments. Reworded the README "why this exists" claim from improving reasoning quality to making reasoning checkable; no lift over a strong prompt is shown. Documentation-only; no mode, schema, eval, or benchmark change. This is not Bar 3 progress.
 - Correct current UK source routing and preserve unverified topic status.
 - Align evidence modes, calibration, and regional reference loading.
 - Restore substantive documentation checks and harden specialist evaluation.

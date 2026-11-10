@@ -167,6 +167,18 @@ Do not stop at `monitor closely`, `engage stakeholders`, `stay agile`, or `remai
 - If evidence is thin, reduce certainty and mark assumptions explicitly.
 - If the user asks for a prediction, provide scenarios with triggers and indicators instead of false precision.
 
+## Composition with the Horizontal Method (GTTA)
+
+When the horizontal strategic-risk skill (`global-think-tank-analyst`, GTTA) is active together with this one:
+
+- **Structure**: GTTA's selected memo mode and canonical output labels govern the memo skeleton. This skill's output structure becomes content guidance inside those sections: it decides which regional mechanisms, archetypes, actors, and triggers to emphasize. It is not a competing heading set.
+- **Evidence**: this skill's source guide, currency watch, freshness horizons, false-positive rules, and the Iran actor distinction apply in full.
+- **Confidence**: use the shared labels `Low` / `Moderate` / `High`. Regional evidence requirements narrow the level and never raise it.
+- **Estimative language**: GTTA's likelihood terms describe likelihood, not confidence.
+- **Forecasts**: a dated, resolvable probability in a Gulf memo (for example on US-Iran talks, Houthi attacks, or Hormuz incidents) belongs in GTTA's [forecast log](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/forecasts/README.md), with a resolution date, a resolution rule, and the indicator it came from. Log only real judgments from real memos. A log entry records a judgment; it does not validate it, and no calibration is claimed until enough entries resolve.
+
+If the two contracts appear to conflict, the horizontal mode structure and shared confidence labels decide the format; this skill's stricter evidence requirements decide the substance.
+
 ## Self-check before finalizing
 
 Silently verify:
