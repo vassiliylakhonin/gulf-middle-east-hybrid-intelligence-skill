@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Re-checked four currency-watch topics against live primary sources on 2026-11-10 (OFAC Iran designations and General Licenses; Red Sea / Bab-el-Mandeb; Hormuz; dark-fleet / STS), updated their verification routing (JMIC and MSCIO advisories, OFAC Alerts), and dated them. All other topics are now explicitly marked `[unverified]`; the catalogue review date is unchanged. No incident details, designations, or numbers are recorded in the watch file.
+- Added per-archetype falsification conditions ("what would make this memo wrong") and three observable indicators with named sources to `docs/risk-archetypes.md`. Pattern-level guidance only; no claims about specific entities, vessels, or jurisdictions.
 - Added a GTTA composition rule to `SKILL.md` (aligned with the Central Asia & Caspian skill): GTTA owns memo structure and shared confidence labels, this skill owns regional mechanism and evidence rules. Added a pointer to GTTA's forecast log for dated probabilistic judgments. Reworded the README "why this exists" claim from improving reasoning quality to making reasoning checkable; no lift over a strong prompt is shown. Documentation-only; no mode, schema, eval, or benchmark change. This is not Bar 3 progress.
 - Correct current UK source routing and preserve unverified topic status.
 - Align evidence modes, calibration, and regional reference loading.

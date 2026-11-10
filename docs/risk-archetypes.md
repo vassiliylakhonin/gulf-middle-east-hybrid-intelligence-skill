@@ -2,7 +2,7 @@
 
 A reference catalogue of risk archetypes that recur in Gulf, Iran, Iraq, and maritime-chokepoint analysis. Use them as **patterns** to structure reasoning, not as factual claims about any specific entity, vessel, or jurisdiction. Operational use requires source-backed verification.
 
-For each archetype: mechanism → typical indicators → evidence needed → common false positives → watch-next triggers → role-based mitigation questions.
+For each archetype: mechanism → typical indicators → evidence needed → common false positives → watch-next triggers → role-based mitigation questions → what would make a memo wrong → observable indicators with sources.
 
 ---
 
@@ -14,6 +14,11 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 - **False positives:** coincidental name overlap, common service-provider addresses, legitimate Iranian diaspora business.
 - **Watch-next triggers:** OFAC enforcement actions naming Gulf-jurisdiction entities; new SDN List additions; FATF/MENAFATF mutual evaluation findings.
 - **Mitigation questions (role-based):** sanctions compliance — EDD on UAE/Oman/Turkey free-zone counterparties with Iran-nexus indicators; AML — corridor- and BO-level monitoring; investor — concentration of revenue or counterparties in Iran-adjacent flows.
+- **What would make this memo wrong:** the alleged ownership or control link does not hold under the applicable rule (registry data shows different beneficial owners, or the stake sits below the control threshold); the designation was removed or the activity is covered by a current General License; or US, EU, and UK scopes were treated as identical where they diverge for this counterparty.
+- **Observable indicators (with sources):**
+  1. SDN additions, removals, and Iran-related General Licenses touching the counterparty's sector - OFAC Recent Actions (https://ofac.treasury.gov/recent-actions) and SDN search (https://sanctionssearch.ofac.treasury.gov/).
+  2. Successor incorporations sharing addresses, directors, or phone numbers with a designated entity - national corporate registries (UAE, Oman, Turkey) and open corporate datasets (OpenCorporates, ICIJ Offshore Leaks).
+  3. Enforcement actions naming Gulf-jurisdiction facilitators - OFAC enforcement actions and DOJ press releases (https://www.justice.gov/news).
 
 ## 2. Dark-fleet and ship-to-ship (STS) transfers
 
@@ -23,6 +28,11 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 - **False positives:** legitimate AIS gaps in coverage areas, routine STS for blending or lightering, normal flag changes for fleet management.
 - **Watch-next triggers:** OFAC vessel designations; new G7 price-cap enforcement guidance; flag-state crackdowns; insurance-club expulsions.
 - **Mitigation questions:** energy trader — counterparty refiner due diligence and cargo provenance; shipping insurer — vessel-history screening; bank — trade-finance LC scrutiny on Gulf-origin cargoes.
+- **What would make this memo wrong:** the AIS gap or flag change has a documented innocent explanation (coverage gap, routine lightering, fleet management); cargo provenance documentation withstands scrutiny; or vessel-level claims rest on a single provider's estimate that the memo did not cross-check.
+- **Observable indicators (with sources):**
+  1. Vessel- and registry-level designations and shadow-fleet guidance - OFAC Recent Actions and Alerts (https://ofac.treasury.gov/recent-actions).
+  2. AIS gaps, re-flagging, and STS events in the named zones - licensed AIS providers (Kpler, TankerTrackers, Lloyd's List Intelligence, Windward); do not assert vessel-level facts without access.
+  3. Registration and class history for a named vessel - IMO GISIS (https://gisis.imo.org/) and flag-state registries; P&I club circulars on deflagged or expelled vessels.
 
 ## 3. GCC correspondent banking exposure
 
@@ -32,6 +42,11 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 - **False positives:** routine periodic reviews, system migrations, individual-customer issues unrelated to sanctions.
 - **Watch-next triggers:** OFAC enforcement actions against Gulf-jurisdiction banks; new circumvention guidance; FATF/MENAFATF grey-list moves; central-bank consultations on de-risking.
 - **Mitigation questions:** correspondent bank — diversification across acceptable respondents; respondent bank — enhanced sanctions-compliance demonstration to retain correspondents; corporate treasurer — payment-rail redundancy planning.
+- **What would make this memo wrong:** the observed friction is routine (periodic review, system migration, single-customer issue) rather than sanctions-driven de-risking; the named respondent's correspondent posture actually improved; or a FATF/MENAFATF status change undercuts the memo's premise.
+- **Observable indicators (with sources):**
+  1. Grey-list changes, mutual-evaluation outcomes, and follow-ups - FATF (https://www.fatf-gafi.org/) and MENAFATF (https://www.menafatf.org/).
+  2. Enforcement actions against regional banks or their correspondents - OFAC recent actions and DOJ press releases.
+  3. Shifts in cross-border claims on GCC banking systems - BIS Consolidated Banking Statistics (https://www.bis.org/statistics/consstats.htm).
 
 ## 4. Sovereign wealth deployment risk
 
@@ -41,6 +56,11 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 - **False positives:** standard institutional governance terms; sovereign-wealth investment in established asset classes with no strategic overlay.
 - **Watch-next triggers:** sponsoring-state political incidents (Khashoggi-class events, succession dynamics); fund leadership changes; mandate-redirection announcements; macro pressure on sponsoring-state oil revenues forcing repatriation.
 - **Mitigation questions:** target company — control-rights and exit clauses; co-investor — alignment of mandate; portfolio-LP — concentration limits and reputational-event handling.
+- **What would make this memo wrong:** disclosed terms show standard institutional protections (independent directors, exit rights, passive stake); the fund's own publications state a financial-return mandate for the vehicle in question; or a documented governance restructuring post-dates the memo's premise.
+- **Observable indicators (with sources):**
+  1. Mandate, leadership, and governance changes - official fund disclosures and annual reports (PIF, ADIA, Mubadala, QIA, KIA) and IFSWF Santiago Principles assessments (https://www.ifswf.org/).
+  2. Sovereign-wealth governance and fiscal-linkage findings - IMF Article IV consultations for the sponsoring state (https://www.imf.org/en/Countries).
+  3. Sponsoring-state political events that historically redirect deployment - official communiqués cross-checked against credible financial reporting.
 
 ## 5. Maritime chokepoint disruption (Hormuz, Bab-el-Mandeb)
 
@@ -50,6 +70,11 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 - **False positives:** routine fleet repositioning, weather-related reroutes, single-incident misreads as pattern.
 - **Watch-next triggers:** new named closure or seizure incident; ceasefire status changes; Houthi attack pattern shifts; US Fifth Fleet posture changes.
 - **Mitigation questions:** energy buyer — corridor-aware hedge structure rather than point hedge; shipping insurer — war-risk underwriting and exposure aggregation; refiner — alternative-corridor cargo lining; LNG buyer — Cape diversion cost modeling.
+- **What would make this memo wrong:** the incident pattern reverted to baseline (advisories downgraded, transits normalized) while the memo still prices disruption; a single incident was misread as a pattern; or the naval-mission posture changed (mandate extended, reduced, or ended), altering escort and insurance assumptions.
+- **Observable indicators (with sources):**
+  1. Incident reports and threat-level changes - UKMTO (https://www.ukmto.org/), JMIC advisory updates, and MSCIO reporting.
+  2. Transit counts through Hormuz and Bab el-Mandeb - JMIC weekly transit comparisons; licensed AIS aggregates.
+  3. War-risk listed-area changes and carrier reroute decisions - Lloyd's Joint War Committee listed areas and carrier security advisories (Maersk, MSC, CMA CGM); supply-impact framing in the IEA Oil Market Report (https://www.iea.org/reports/oil-market-report).
 
 ## 6. Sanctioned-oil flow concentration
 
@@ -59,6 +84,11 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 - **False positives:** legitimate origin-country crude flows; mislabeled but not sanctioned blends.
 - **Watch-next triggers:** OFAC enforcement against Chinese teapot facilitators; payment-rail enforcement (e.g., yuan-clearing or hawala-network actions); buyer-side capacity changes.
 - **Mitigation questions:** trader — provenance documentation depth; refiner — cargo-class compliance audit; bank — trade-finance LC scrutiny on permissive-jurisdiction cargoes.
+- **What would make this memo wrong:** buyer-side enforcement has already shifted the flows the memo treats as stable; the suspect volumes are documented legitimate-origin crude; or the payment-rail claims rest on a single unverified estimate.
+- **Observable indicators (with sources):**
+  1. Enforcement against buyer-side facilitators (refineries, traders, registries) - OFAC Recent Actions (https://ofac.treasury.gov/recent-actions).
+  2. Destination-grade anomalies (for example, "Malaysia" or "blend" grades exceeding plausible origin-country output) - China customs (GACC) data cross-checked against licensed flow providers (Kpler, Vortexa).
+  3. Sanctioned-flow volume and destination estimates - IEA Oil Market Report (https://www.iea.org/reports/oil-market-report) and provider methodologies.
 
 ## 7. Sanctioned-party post-designation reconstitution
 
@@ -68,6 +98,11 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 - **False positives:** unrelated incorporation activity, legitimate post-designation restructuring.
 - **Watch-next triggers:** OFAC successor-entity designations; corporate-registry rule changes in UAE/Lebanon/Turkey; FATF/MENAFATF guidance on post-designation reconstitution.
 - **Mitigation questions:** sanctions compliance — successor-entity screening rules; bank — periodic re-screening cadence after designations; legal counsel — 50%-rule control test review.
+- **What would make this memo wrong:** the successor entity's overlap is coincidental (registry data shows different beneficial owners and directors); a General License authorizes the wind-down activity the memo flags; or legitimate restructuring was read as evasion without network evidence.
+- **Observable indicators (with sources):**
+  1. Follow-on designations naming successor entities in the same network - OFAC Recent Actions (https://ofac.treasury.gov/recent-actions).
+  2. Incorporations within days or weeks of a designation sharing address, directors, or phone numbers - corporate registries (UAE, Lebanon, Turkey) and open corporate datasets (OpenCorporates, ICIJ Offshore Leaks).
+  3. Guidance and evaluation findings on reconstitution - FATF and MENAFATF publications (https://www.fatf-gafi.org/, https://www.menafatf.org/).
 
 ---
 
