@@ -176,9 +176,10 @@ Bar 3 tests the claim this repo is named for: that the vertical changes the *sub
 
 This repository contains an MCP transport surface, not an active screening or
 orchestration service.
-- **MCP Integration:** `src/gulf_middle_east_compliance_server/server.py` is a transport surface with one
-  implemented deterministic tool, `estimate_chokepoint_bypass`: it combines caller-supplied route figures (each with a
-  caller-stated source) into days, fuel and cost ranges and adds no data of its own. The screening tools are declared
+- **MCP Integration:** `src/gulf_middle_east_compliance_server/server.py` is a transport surface with
+  two implemented deterministic tools. `estimate_chokepoint_bypass` combines caller-supplied route figures (each with a
+  caller-stated source) into days, fuel and cost ranges. `compare_entity_records` lists field values shared by two
+  caller-supplied records (a field-overlap list, not a network or reconstitution finding). Neither adds data of its own. The screening tools are declared
   but not implemented and every call returns `status: not_implemented`; never read a response from them as a screening result.
 - **Cross-region composition:** A workflow may load the sibling regional skill,
   but no delegation or external call is implied by these repository files.

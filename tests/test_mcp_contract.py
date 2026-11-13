@@ -41,6 +41,7 @@ class PackagingInvariantTests(unittest.TestCase):
                 "analyze_graph_relationships",
                 "retrieve_memory_context",
                 "estimate_chokepoint_bypass",
+                "compare_entity_records",
             },
         )
 
@@ -116,6 +117,31 @@ class McpContractTests(unittest.TestCase):
         payload = json.loads(result.content[0].text)
         self.assertEqual(payload["status"], "invalid_input")
         self.assertTrue(payload["human_review_required"])
+
+    def test_record_match_tool_reports_overlap_and_rejects_through_the_server(self):
+        import anyio
+
+        from gulf_middle_east_compliance_server import server
+
+        a = {"label": "old", "source": "registry extract A", "phones": ["+971 4 123 4567"]}
+        b = {"label": "new", "source": "registry extract B", "phones": ["971-4-123-4567", "+971 4 999 0000"]}
+        result = anyio.run(
+            lambda: server.mcp.call_tool("compare_entity_records", {"record_a": a, "record_b": b})
+        )
+        payload = json.loads(result.content[0].text)
+        self.assertEqual(payload["status"], "match_report")
+        self.assertTrue(payload["result_is_not_a_finding"])
+        self.assertTrue(payload["human_review_required"])
+        self.assertEqual(payload["summary"]["exact_match_count"], 1)
+
+        result = anyio.run(
+            lambda: server.mcp.call_tool(
+                "compare_entity_records",
+                {"record_a": dict(a, source=""), "record_b": b},
+            )
+        )
+        payload = json.loads(result.content[0].text)
+        self.assertEqual(payload["status"], "invalid_input")
 
     def test_structured_contract_cannot_approve_or_enforce(self):
         schema = json.loads((ROOT / "schemas" / "compliance-decision.schema.json").read_text())

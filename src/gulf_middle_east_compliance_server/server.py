@@ -3,8 +3,9 @@
 The three screening tools are declared so the transport and tool surface can
 be exercised, and each one refuses instead of answering. The implemented tools
 are deterministic and data-free: `estimate_chokepoint_bypass` combines
-caller-supplied figures, each with a caller-stated source. Neither adds data or
-produces a finding.
+caller-supplied figures, each with a caller-stated source, and
+`compare_entity_records` lists field values shared by two caller-supplied
+records. Neither adds data or produces a finding.
 
 The first version of this file returned `{"status": "clear", "confidence": 0.95}`
 for any entity name it was given, and AGENTS.md points an agent at this file to
@@ -17,6 +18,7 @@ from mcp.server.mcpserver import MCPServer
 
 from .chokepoint import estimate_bypass_json
 from .contract import unimplemented_response
+from .record_match import compare_records_json
 
 mcp = MCPServer("gulf-middle-east-compliance-server", version="0.3.0")
 
@@ -83,6 +85,29 @@ def estimate_chokepoint_bypass(scenario: dict) -> str:
     is arithmetic on the caller's inputs, not a finding about any route.
     """
     return estimate_bypass_json(scenario)
+
+
+@mcp.tool()
+def compare_entity_records(record_a: dict, record_b: dict, near_match_token_overlap: float | None = None) -> str:
+    """List field values shared by two caller-supplied entity records.
+
+    Each record is a JSON object with a required ``label`` and ``source`` (and
+    optional ``as_of``) plus any of the lists ``names``, ``addresses``,
+    ``phones``, ``emails``, ``websites``, ``directors``, ``shareholders``,
+    ``signatories``, ``registered_agents`` and ``registration_numbers``. Values
+    are normalised and compared for exact equality; near matches by token
+    overlap are listed only if the caller passes ``near_match_token_overlap``
+    (0 to 1). The result is a field-overlap list, not a finding: it does not
+    say the entities are the same network, that one reconstituted the other, or
+    that either is sanctioned, and it consults no list and no source.
+    """
+    return compare_records_json(
+        {
+            "record_a": record_a,
+            "record_b": record_b,
+            "near_match_token_overlap": near_match_token_overlap,
+        }
+    )
 
 
 def main() -> None:

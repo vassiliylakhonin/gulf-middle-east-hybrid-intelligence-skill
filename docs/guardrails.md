@@ -13,3 +13,8 @@
    figures, each with a caller-stated source; it is not a finding about any
    chokepoint, route or war-risk premium, it does not rank or recommend routes,
    and the tool holds no tariff, premium, fuel or distance data.
+7. A `compare_entity_records` result lists field values that two caller-supplied
+   records share. A shared address, agent, phone or officer is common among
+   unrelated firms; the list is not a finding that two entities are the same
+   network, that one reconstituted the other, or that either is sanctioned, and
+   no match is not evidence of no link. The tool consults no sanctions list.

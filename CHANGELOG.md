@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+- Added the second implemented MCP tool, `compare_entity_records`: a field-overlap
+  list for two caller-supplied entity records (names, addresses, phones, emails,
+  websites, directors, shareholders, signatories, registered agents, registration
+  numbers). Each record needs a label and a source; values are normalised and
+  compared for exact equality, cross-field matches are checked among person-type
+  fields, and near matches by token overlap appear only if the caller supplies a
+  threshold. Output carries per-field notes on why shared addresses and agents
+  are weak, and states that a match is not a same-network, reconstitution or
+  sanctions finding and that no match is not evidence of no link. It consults no
+  list and holds no data; output is marked `result_is_not_a_finding` with
+  `human_review_required`.
 - Added the first implemented MCP tool, `estimate_chokepoint_bypass`: deterministic
   route comparison (for example a Hormuz or Bab el-Mandeb route against a bypass)
   over caller-supplied figures. Every figure enters as a low/high range with a
