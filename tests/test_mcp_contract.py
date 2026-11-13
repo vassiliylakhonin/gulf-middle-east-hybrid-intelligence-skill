@@ -40,6 +40,7 @@ class PackagingInvariantTests(unittest.TestCase):
                 "query_regional_sanctions",
                 "analyze_graph_relationships",
                 "retrieve_memory_context",
+                "estimate_chokepoint_bypass",
             },
         )
 
@@ -78,6 +79,43 @@ class McpContractTests(unittest.TestCase):
                 self.assertEqual(payload["status"], "not_implemented")
                 self.assertTrue(payload["result_is_not_a_finding"])
                 self.assertTrue(payload["human_review_required"])
+
+    def test_chokepoint_tool_estimates_and_rejects_through_the_server(self):
+        import anyio
+
+        from gulf_middle_east_compliance_server import server
+
+        def fig(low, high, source="test"):
+            return {"low": low, "high": high, "source": source}
+
+        route = {
+            "name": "direct",
+            "distance_nm": fig(1000, 1000),
+            "speed_knots": fig(10, 10),
+            "fuel_tonnes_per_sea_day": fig(30, 30),
+            "fuel_price_per_tonne": fig(500, 500),
+        }
+        result = anyio.run(
+            lambda: server.mcp.call_tool(
+                "estimate_chokepoint_bypass",
+                {"scenario": {"currency": "USD", "routes": [route]}},
+            )
+        )
+        payload = json.loads(result.content[0].text)
+        self.assertEqual(payload["status"], "estimate")
+        self.assertTrue(payload["result_is_not_a_finding"])
+        self.assertEqual(payload["routes"][0]["cost"]["total"], {"low": 62500.0, "high": 62500.0})
+
+        bad = dict(route, distance_nm={"low": 1000, "high": 1000})
+        result = anyio.run(
+            lambda: server.mcp.call_tool(
+                "estimate_chokepoint_bypass",
+                {"scenario": {"currency": "USD", "routes": [bad]}},
+            )
+        )
+        payload = json.loads(result.content[0].text)
+        self.assertEqual(payload["status"], "invalid_input")
+        self.assertTrue(payload["human_review_required"])
 
     def test_structured_contract_cannot_approve_or_enforce(self):
         schema = json.loads((ROOT / "schemas" / "compliance-decision.schema.json").read_text())

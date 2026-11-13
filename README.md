@@ -11,7 +11,7 @@ A Gulf & Middle East specialist skill for AI agents preparing evidence-aware dec
 
 Use it when a general policy memo misses the region's mechanisms: Iran/GCC and Iraq exposure, correspondent banking, ownership, sovereign capital, energy flows, and shipping chokepoints such as the Hormuz, Bab el-Mandeb, and Red Sea routes.
 
-This is a reasoning skill and a structured decision framework, not a live intelligence feed. The included experimental MCP server is a skeleton: every tool returns `not_implemented`. It does not retrieve live intelligence, screen counterparties, or issue clearances.
+This is a reasoning skill and a structured decision framework, not a live intelligence feed. The included experimental MCP server implements one deterministic tool, `estimate_chokepoint_bypass`, which only combines caller-supplied figures (each with a caller-stated source) into route days, fuel and cost ranges; its screening tools still return `not_implemented`. It does not retrieve live intelligence, screen counterparties, or issue clearances.
 
 ## Start with the skill
 
@@ -182,7 +182,7 @@ Run the repository validator before submitting changes:
 python3 scripts/validate.py
 ```
 
-The skill package and examples remain the primary interface. The Python MCP skeleton is retained for development and does not deliver analytical findings.
+The skill package and examples remain the primary interface. The Python MCP surface is retained for development; its implemented tool only rearranges caller-supplied figures and does not deliver analytical findings.
 
 ## License
 

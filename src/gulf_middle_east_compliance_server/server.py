@@ -1,7 +1,10 @@
-"""MCP server skeleton for the Gulf and Middle East skill.
+"""MCP server for the Gulf and Middle East skill.
 
-Nothing here screens anything yet. Each tool is declared so the transport and
-tool surface can be exercised, and each one refuses instead of answering.
+The three screening tools are declared so the transport and tool surface can
+be exercised, and each one refuses instead of answering. The implemented tools
+are deterministic and data-free: `estimate_chokepoint_bypass` combines
+caller-supplied figures, each with a caller-stated source. Neither adds data or
+produces a finding.
 
 The first version of this file returned `{"status": "clear", "confidence": 0.95}`
 for any entity name it was given, and AGENTS.md points an agent at this file to
@@ -12,9 +15,10 @@ backed by an actual source, it must say so.
 
 from mcp.server.mcpserver import MCPServer
 
+from .chokepoint import estimate_bypass_json
 from .contract import unimplemented_response
 
-mcp = MCPServer("gulf-middle-east-compliance-server", version="0.2.0")
+mcp = MCPServer("gulf-middle-east-compliance-server", version="0.3.0")
 
 
 def _unimplemented(tool: str, needs: str, **echo: object) -> str:
@@ -61,6 +65,24 @@ def retrieve_memory_context(client_id: str) -> str:
         "a persisted client record store",
         client=client_id,
     )
+
+
+@mcp.tool()
+def estimate_chokepoint_bypass(scenario: dict) -> str:
+    """Compare route days, fuel and cost from caller-supplied figures.
+
+    ``scenario`` is a JSON object: ``currency`` and ``routes`` (name,
+    distance_nm, speed_knots, fuel_tonnes_per_sea_day, fuel_price_per_tonne,
+    and optional waiting_days, idle_fuel_tonnes_per_day, hire_per_day,
+    war_risk of premium percent, insured value and a transit count, and
+    other_costs), plus an optional ``baseline_route`` name. Every figure is
+    ``{"low": ..., "high": ..., "source": ...}``; a figure without a source
+    is rejected, never defaulted. The tool holds no tariff, premium, fuel,
+    distance or chokepoint-status data, does not rank or recommend routes,
+    and returns low/high ranges and deltas against the baseline. The result
+    is arithmetic on the caller's inputs, not a finding about any route.
+    """
+    return estimate_bypass_json(scenario)
 
 
 def main() -> None:

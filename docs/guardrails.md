@@ -9,3 +9,7 @@
 4. A confidence or sufficiency score describes the supplied evidence only; it is
    not a probability of legality, safety, or absence from a sanctions list.
 5. MCP tools that return `not_implemented` have produced no finding.
+6. An `estimate_chokepoint_bypass` result is arithmetic on caller-supplied
+   figures, each with a caller-stated source; it is not a finding about any
+   chokepoint, route or war-risk premium, it does not rank or recommend routes,
+   and the tool holds no tariff, premium, fuel or distance data.

@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+- Added the first implemented MCP tool, `estimate_chokepoint_bypass`: deterministic
+  route comparison (for example a Hormuz or Bab el-Mandeb route against a bypass)
+  over caller-supplied figures. Every figure enters as a low/high range with a
+  required caller-stated source; source-less, blank-source, inverted, negative,
+  zero-speed or currency-less input is rejected, never defaulted. The tool returns
+  per-route days, fuel and cost (fuel, optional charter hire, war-risk premium on a
+  caller-stated insured value and transit count, other cost lines), and, when a
+  baseline is named, widest-pairing deltas with an overlap flag. It holds no
+  tariff, premium, fuel-price, distance or chokepoint-status data, does not rank or
+  recommend routes, and expresses no likelihood; output is marked
+  `result_is_not_a_finding` with `human_review_required`. The three screening tools
+  remain `not_implemented`. Package version bumped 0.2.0 -> 0.3.0.
 - Re-checked four currency-watch topics against live primary sources on 2026-11-10 (OFAC Iran designations and General Licenses; Red Sea / Bab-el-Mandeb; Hormuz; dark-fleet / STS), updated their verification routing (JMIC and MSCIO advisories, OFAC Alerts), and dated them. All other topics are now explicitly marked `[unverified]`; the catalogue review date is unchanged. No incident details, designations, or numbers are recorded in the watch file.
 - Added per-archetype falsification conditions ("what would make this memo wrong") and three observable indicators with named sources to `docs/risk-archetypes.md`. Pattern-level guidance only; no claims about specific entities, vessels, or jurisdictions.
 - Added a GTTA composition rule to `SKILL.md` (aligned with the Central Asia & Caspian skill): GTTA owns memo structure and shared confidence labels, this skill owns regional mechanism and evidence rules. Added a pointer to GTTA's forecast log for dated probabilistic judgments. Reworded the README "why this exists" claim from improving reasoning quality to making reasoning checkable; no lift over a strong prompt is shown. Documentation-only; no mode, schema, eval, or benchmark change. This is not Bar 3 progress.
