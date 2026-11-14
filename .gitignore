@@ -7,3 +7,8 @@ __pycache__/
 *.swp
 
 *.egg-info/
+
+# Local secrets
+.env
+.env.*
+!.env.example
