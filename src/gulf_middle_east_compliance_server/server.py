@@ -78,8 +78,10 @@ def estimate_chokepoint_bypass(scenario: dict) -> str:
     and optional waiting_days, idle_fuel_tonnes_per_day, hire_per_day,
     war_risk of premium percent, insured value and a transit count, and
     other_costs), plus an optional ``baseline_route`` name. Every figure is
-    ``{"low": ..., "high": ..., "source": ...}``; a figure without a source
-    is rejected, never defaulted. The tool holds no tariff, premium, fuel,
+    ``{"low": ..., "high": ..., "source": ...}``, with optional ``unit``.
+    Use finite numbers in the units named by the fields and the scenario
+    currency. An explicit incompatible unit or missing source is rejected.
+    The tool holds no tariff, premium, fuel,
     distance or chokepoint-status data, does not rank or recommend routes,
     and returns low/high ranges and deltas against the baseline. The result
     is arithmetic on the caller's inputs, not a finding about any route.
@@ -97,7 +99,9 @@ def compare_entity_records(record_a: dict, record_b: dict, near_match_token_over
     ``signatories``, ``registered_agents`` and ``registration_numbers``. Values
     are normalised and compared for exact equality; near matches by token
     overlap are listed only if the caller passes ``near_match_token_overlap``
-    (0 to 1). The result is a field-overlap list, not a finding: it does not
+    (0 to 1). Match rows expose fixed ``record_a`` and ``record_b`` fields.
+    Non-conflicting caller-label aliases are retained. The result is a
+    field-overlap list, not a finding: it does not
     say the entities are the same network, that one reconstituted the other, or
     that either is sanctioned, and it consults no list and no source.
     """

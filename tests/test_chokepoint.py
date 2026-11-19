@@ -41,6 +41,19 @@ class ArithmeticTests(unittest.TestCase):
         self.assertTrue(out["result_is_not_a_finding"])
         self.assertIsNone(out["comparison_to_baseline"])
 
+    def test_explicit_compatible_units_preserve_arithmetic(self):
+        out = run({
+            "currency": "USD",
+            "routes": [route(
+                distance_nm={**fig(1000, 1000), "unit": "nautical miles"},
+                speed_knots={**fig(10, 10), "unit": "knots"},
+                fuel_tonnes_per_sea_day={**fig(20, 20), "unit": "t/day"},
+                fuel_price_per_tonne={**fig(400, 400), "unit": "USD/t"},
+            )],
+        })
+        self.assertEqual(out["status"], "estimate")
+        self.assertEqual(out["routes"][0]["sea_days"], {"low": 4.2, "high": 4.2})
+
     def test_waiting_hire_war_risk_and_other_costs(self):
         r = run(
             {
@@ -125,6 +138,35 @@ class RefusalTests(unittest.TestCase):
     def test_missing_or_blank_source_is_rejected(self):
         self.assert_invalid({"currency": "USD", "routes": [route(distance_nm={"low": 1, "high": 2})]})
         self.assert_invalid({"currency": "USD", "routes": [route(distance_nm=fig(1, 2, "   "))]})
+
+    def test_incompatible_units_are_rejected(self):
+        samples = (
+            {"distance_nm": {**fig(1852, 1852), "unit": "km"}},
+            {"speed_knots": {**fig(10, 12), "unit": "km/h"}},
+            {"fuel_price_per_tonne": {**fig(500, 600), "unit": "EUR/t"}},
+            {"hire_per_day": {**fig(1000, 1000), "unit": "USD/hour"}},
+            {"other_costs": [{"name": "fee", "amount": {**fig(100, 100), "unit": "EUR"}}]},
+            {"war_risk": {
+                "premium_percent_of_insured_value": {**fig(1, 2), "unit": "fraction"},
+                "insured_value": {**fig(100, 100), "unit": "USD"},
+                "transits": 1,
+            }},
+        )
+        for overrides in samples:
+            with self.subTest(overrides=overrides):
+                self.assert_invalid({"currency": "USD", "routes": [route(**overrides)]})
+
+    def test_non_finite_inputs_and_calculation_overflow_are_rejected(self):
+        for invalid in (float("nan"), float("inf"), float("-inf")):
+            with self.subTest(invalid=invalid):
+                self.assert_invalid({"currency": "USD", "routes": [route(distance_nm=fig(invalid, invalid))]})
+        self.assert_invalid({
+            "currency": "USD",
+            "routes": [route(
+                distance_nm=fig(1e308, 1e308),
+                fuel_tonnes_per_sea_day=fig(1e308, 1e308),
+            )],
+        })
 
     def test_inverted_negative_and_zero_speed_are_rejected(self):
         self.assert_invalid({"currency": "USD", "routes": [route(distance_nm=fig(5, 1))]})

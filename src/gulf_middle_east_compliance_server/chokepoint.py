@@ -13,14 +13,23 @@ el-Mandeb, the Red Sea or any other route.
 from __future__ import annotations
 
 import json
+import math
 from typing import Any
 
-from pydantic import BaseModel, Field, field_validator, model_validator
+from pydantic import BaseModel, Field, FiniteFloat, field_validator, model_validator
 
 HOURS_PER_DAY = 24
 
 ESTIMATE = "estimate"
 INVALID_INPUT = "invalid_input"
+
+ROUTE_UNITS = {
+    "distance_nm": ("nm", "nmi", "nautical mile", "nautical miles"),
+    "speed_knots": ("kn", "kt", "kts", "knot", "knots"),
+    "fuel_tonnes_per_sea_day": ("t/day", "tonne/day", "tonnes/day", "t/sea day", "tonnes per sea day"),
+    "waiting_days": ("d", "day", "days"),
+    "idle_fuel_tonnes_per_day": ("t/day", "tonne/day", "tonnes/day", "tonnes per day"),
+}
 
 ARITHMETIC_ASSUMPTIONS = [
     "Sea days are distance_nm / (speed_knots * 24). Waiting or detour days "
@@ -39,7 +48,7 @@ ARITHMETIC_ASSUMPTIONS = [
     "Charter hire, when supplied, is hire_per_day times elapsed days. Other "
     "cost lines are flat per voyage and are added as supplied.",
     "All money figures must use the one currency named in the scenario; the "
-    "tool does not convert currencies or fuel units and does not discount "
+    "tool rejects incompatible supplied units and does not convert units or discount "
     "cargo time value, delay penalties or cargo insurance unless the caller "
     "enters them as other cost lines.",
     "Deltas against the baseline pair the route's low with the baseline's "
@@ -53,8 +62,8 @@ ARITHMETIC_ASSUMPTIONS = [
 class Figure(BaseModel):
     """One caller-supplied quantity as a low/high range with its source."""
 
-    low: float
-    high: float
+    low: FiniteFloat
+    high: FiniteFloat
     source: str = Field(min_length=1)
     unit: str = ""
 
@@ -72,6 +81,11 @@ class Figure(BaseModel):
         if self.high < self.low:
             raise ValueError("figure high must be greater than or equal to low")
         return self
+
+    def require_unit(self, field: str, *allowed: str) -> None:
+        supplied = " ".join(self.unit.casefold().split())
+        if supplied and supplied not in allowed:
+            raise ValueError(f"{field}: unit {self.unit!r} must be one of {', '.join(allowed)}")
 
     def echo(self) -> dict[str, Any]:
         return {"low": self.low, "high": self.high, "unit": self.unit, "source": self.source}
@@ -143,8 +157,32 @@ class ChokepointScenario(BaseModel):
             raise ValueError("baseline_route must name one of the routes")
         return self
 
+    @model_validator(mode="after")
+    def _units_match_fields(self) -> "ChokepointScenario":
+        currency = self.currency.casefold()
+        for route in self.routes:
+            for field, allowed in ROUTE_UNITS.items():
+                figure = getattr(route, field)
+                if figure is not None:
+                    figure.require_unit(field, *allowed)
+            route.fuel_price_per_tonne.require_unit(
+                "fuel_price_per_tonne", f"{currency}/t", f"{currency}/tonne", f"{currency} per tonne"
+            )
+            if route.hire_per_day is not None:
+                route.hire_per_day.require_unit("hire_per_day", f"{currency}/day", f"{currency} per day")
+            if route.war_risk is not None:
+                route.war_risk.premium_percent_of_insured_value.require_unit(
+                    "premium_percent_of_insured_value", "%", "percent", "pct"
+                )
+                route.war_risk.insured_value.require_unit("insured_value", currency)
+            for cost in route.other_costs:
+                cost.amount.require_unit("other_costs.amount", currency)
+        return self
+
 
 def _round(value: float) -> float:
+    if not math.isfinite(value):
+        raise ValueError("calculation exceeded the finite numeric range")
     return round(value, 1)
 
 
@@ -280,7 +318,8 @@ def estimate_bypass_json(arguments: dict[str, Any]) -> str:
     """Tool entry point: validate, estimate, and serialize. Never raises."""
     try:
         scenario = ChokepointScenario.model_validate(arguments)
-    except ValueError as exc:
+        return json.dumps(estimate_bypass(scenario), allow_nan=False)
+    except (ValueError, ArithmeticError) as exc:
         return json.dumps(
             {
                 "status": INVALID_INPUT,
@@ -291,4 +330,3 @@ def estimate_bypass_json(arguments: dict[str, Any]) -> str:
                 "human_review_required": True,
             }
         )
-    return json.dumps(estimate_bypass(scenario))

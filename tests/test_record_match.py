@@ -46,6 +46,27 @@ class OverlapTests(unittest.TestCase):
         self.assertTrue(out["result_is_not_a_finding"])
         self.assertTrue(out["human_review_required"])
 
+    def test_exact_match_metadata_survives_caller_labels(self):
+        out = run(
+            rec("normalised", names=["EXAMPLE COMPANY"]),
+            rec("record_a", names=["Example Company"]),
+        )
+        match = out["fields"][0]["exact_matches"][0]
+        self.assertEqual(match["normalised"], "example company")
+        self.assertEqual(match["record_a"], ["EXAMPLE COMPANY"])
+        self.assertEqual(match["record_b"], ["Example Company"])
+
+    def test_near_match_metadata_survives_caller_labels(self):
+        out = run(
+            rec("token_overlap", addresses=["Office 12 Tower"]),
+            rec("record_b", addresses=["Office 12 Tower B"]),
+            near_match_token_overlap=0.7,
+        )
+        match = out["fields"][0]["near_matches"][0]
+        self.assertEqual(match["token_overlap"], 0.75)
+        self.assertEqual(match["record_a"], ["Office 12 Tower"])
+        self.assertEqual(match["record_b"], ["Office 12 Tower B"])
+
     def test_phone_digits_match_and_short_numbers_are_unusable(self):
         out = run(
             rec("a", phones=["(971) 4-123-4567", "123"]),
@@ -71,6 +92,9 @@ class OverlapTests(unittest.TestCase):
         )
         self.assertEqual(len(out["cross_field_matches"]), 1)
         self.assertEqual(out["summary"]["cross_field_match_count"], 1)
+        match = out["cross_field_matches"][0]
+        self.assertEqual(match["record_a"], {"field": "directors", "values": ["Omar Khalid"]})
+        self.assertEqual(match["record_b"], {"field": "registered_agents", "values": ["omar khalid"]})
         # a name field is not a person field, so the entity name does not cross-match
         self.assertEqual(len(out["cross_field_matches"]), 1)
 

@@ -13,6 +13,8 @@ Use it when a general policy memo misses the region's mechanisms: Iran/GCC and I
 
 This is a reasoning skill and a structured decision framework, not a live intelligence feed. The included experimental MCP server implements two deterministic tools: `estimate_chokepoint_bypass`, which only combines caller-supplied figures (each with a caller-stated source) into route days, fuel and cost ranges, and `compare_entity_records`, which only lists field values two caller-supplied records share; its screening tools still return `not_implemented`. It does not retrieve live intelligence, screen counterparties, or issue clearances.
 
+For MCP calculations, use the units named by the input fields and the scenario currency. Optional `unit` labels are checked against those units. Record comparisons expose fixed `record_a` and `record_b` fields in match rows. Existing caller-label aliases are included when they do not collide with a fixed field.
+
 ## Start with the skill
 
 **No package installation is required.** Attach the skill file or paste it into your agent’s instruction context.
