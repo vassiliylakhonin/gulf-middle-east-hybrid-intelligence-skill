@@ -4,14 +4,16 @@ How to compose this skill with the other repos in the portfolio. These are struc
 
 ## With Global Think Tank Analyst
 
-Use Global Think Tank Analyst (GTTA) for the broader memo workflow (intake, evidence-mode declaration, scenarios, options, indicators, confidence, what-would-change-the-judgment). Use this skill to add Gulf + Middle East depth: Iran actor distinctions, GCC banking and sovereign wealth specifics, maritime chokepoint mechanics, dark-fleet patterns, OFAC/EU/UK sanctions handling.
+Use Global Think Tank Analyst (GTTA) for the broader memo workflow, including intake, evidence mode, scenarios, options, indicators, and confidence. Use the [composition rule in the canonical skill](../SKILL.md#composition-with-the-horizontal-method-gtta) to decide whether the regional method adds something that changes the decision.
+
+An LNG cargo loading inside the Gulf still depends on Hormuz to reach open sea, even if a Cape route avoids the Red Sea and Suez legs. A cargo already in the Arabian Sea may have the Cape option without that dependency. An ordinary model-release review in a Gulf office can use GTTA alone when the decision depends on generic validation and rollout controls. [U.S. EIA, World Oil Transit Chokepoints](https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/)
 
 Probabilistic judgments from Gulf memos go into GTTA's [forecast log](https://github.com/vassiliylakhonin/global-think-tank-analyst/blob/main/forecasts/README.md) (resolution date, resolution rule, indicator). This repo keeps no log of its own. Logging does not validate a forecast.
 
 Suggested composition:
 
 1. Frame the memo with GTTA's intake block (`Question / Decision / Audience / Time horizon / Evidence mode`).
-2. Apply this skill's regional logic to scope the analysis (Gulf core, conditional extension, Iran actor distinction).
+2. Identify which option, evidence request, or review trigger the regional mechanism could change. Then load the relevant Gulf logic and actor distinctions.
 3. Use GTTA's memo modes (Quick Brief, Standard, Scenario, Red-Team, Decision Pack) for output structure.
 4. Apply this skill's risk archetypes and source guide for mechanism and source discipline.
 5. Apply GTTA's self-check before finalizing.

@@ -161,6 +161,8 @@ Recommendations must be decision-relevant, proportionate to the evidence, feasib
 
 Do not stop at `monitor closely`, `engage stakeholders`, `stay agile`, or `remain flexible`. Name the source or indicator to monitor, the relevant counterparty or route, the trigger that changes posture, and the action appropriate now versus later.
 
+For disputed ownership near a legal threshold, state the entity's conditional status under the cited rule in each branch before recommending the next review action. Follow the [ownership branch checklist](docs/analysis-contract.md#disputed-ownership-branches).
+
 ## Failure handling
 
 - If the request is too broad, narrow it and state the narrower question.
@@ -168,6 +170,8 @@ Do not stop at `monitor closely`, `engage stakeholders`, `stay agile`, or `remai
 - If the user asks for a prediction, provide scenarios with triggers and indicators instead of false precision.
 
 ## Composition with the Horizontal Method (GTTA)
+
+Pair this skill with GTTA when a Gulf or Middle East mechanism can materially change a feasible option, the evidence to request, or the trigger for human review. Name the relevant mechanism and decision consequence. If geography only locates a generic decision, GTTA alone supplies the workflow.
 
 When the horizontal strategic-risk skill (`global-think-tank-analyst`, GTTA) is active together with this one:
 
