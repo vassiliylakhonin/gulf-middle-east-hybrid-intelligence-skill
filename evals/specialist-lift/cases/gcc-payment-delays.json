@@ -2,6 +2,7 @@
   "id": "gcc-payment-delays",
   "archetype": "GCC correspondent banking exposure",
   "negative_control": false,
-  "question": "A Gulf respondent reports longer USD settlement times and increased KYC requests. It claims local approval settles our exposure. How should we assess and diversify the payment channel?",
-  "decision_context": "European bank payments leadership; 6-month horizon."
+  "question": "A fictitious UK bank provides USD payment services to a Kuwaiti bank. Over two weeks, some payments took longer and the UK team sent more KYC questions. A payment gateway migration began the same week. A manager says FATF increased monitoring requires enhanced due diligence for every Kuwaiti relationship. What should the bank investigate first, and what evidence would change its posture?",
+  "decision_context": "UK correspondent banking risk and payment operations; six-month horizon. Use this dated illustrative packet. FATF's 30 October 2026 statement lists Kuwait under increased monitoring and calls for risk-based consideration of the information. HM Treasury's October 2026 advisory says inclusion alone does not trigger regulation 33(1)(b). The fictitious bank's internal policy and respondent-level payment evidence are unavailable.",
+  "judge_reference": "Award support for correct correspondent and respondent roles, a concrete way to distinguish gateway disruption from relationship-specific controls, and separate treatment of the FATF risk signal, applicable rules, and the unknown internal policy. Treat blanket EDD based on FATF inclusion alone or an assertion of a confirmed cause as material errors. The immediate review should request incident timing, affected and unaffected cohorts, and dated hold or rejection reasons. A formal applicable obligation, a documented policy trigger, or corroborated respondent-level evidence can change posture."
 }

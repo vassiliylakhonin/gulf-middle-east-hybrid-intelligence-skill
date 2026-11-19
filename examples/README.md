@@ -17,7 +17,7 @@ Worked examples produced in the Gulf + Middle East Hybrid Intelligence skill sty
 | File | Mode | Topic |
 |---|---|---|
 | [live-source-backed-ofac-iran-shipping-sanctions.md](live-source-backed-ofac-iran-shipping-sanctions.md) | `live-source-backed` | OFAC Iran shipping-sector sanctions — exposure framing for a GCC-hub commodity trader. Primary sources: E.O. 13846, E.O. 13902, OFAC SDN list, OFAC Iran program page. Retrieved 2026-05-12. |
-| [live-source-backed-gcc-correspondent-banking.md](live-source-backed-gcc-correspondent-banking.md) | `live-source-backed` | GCC correspondent banking exposure for a Western respondent bank. Primary sources: FATF UAE grey-listing/de-listing record, BIS CBS, MENAFATF assessments, CBUAE and SAMA AML frameworks. Retrieved 2026-05-12. |
+| [live-source-backed-gcc-correspondent-banking.md](live-source-backed-gcc-correspondent-banking.md) | `live-source-backed` | GCC respondent banking exposure from the perspective of a UK correspondent bank. Primary sources: FATF guidance and monitoring statement, HM Treasury advisory. Retrieved 2026-11-19. |
 | [live-source-backed-bab-el-mandeb-red-sea-shipping.md](live-source-backed-bab-el-mandeb-red-sea-shipping.md) | `live-source-backed` | Bab-el-Mandeb / Red Sea shipping disruption — pricing and routing exposure for a shipping insurer or industrial charterer. CMF/IMO retrieved 2026-05-15; LMA JWC and IEA OMR refreshed 2026-07-11; UKMTO remains `[verify]`. |
 | [iran-sanctions-routing-exposure.md](iran-sanctions-routing-exposure.md) | `reasoning-only` | Iran sanctions adjacency for a European refiner sourcing Gulf crude |
 | [hormuz-shipping-disruption.md](hormuz-shipping-disruption.md) | `illustrative source packet` | Hormuz disruption exposure framing for a shipping insurer |
