@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Prepare frozen three-condition prompts, export blind packets, and score receipts."""
 import argparse
+import math
 import random
 import shutil
 import sys
@@ -13,6 +14,18 @@ from integrity import (CONDITIONS, PROTOCOL, REFERENCES, build_report, check_pre
 SUITE = Path(__file__).resolve().parent.parent
 ROOT = SUITE.parents[1]
 RUBRIC = SUITE / 'rubric.md'
+
+
+def parse_temperature(value):
+    if value == 'provider-default':
+        return value
+    try:
+        temperature = float(value)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError('use a non-negative number or provider-default') from exc
+    if not math.isfinite(temperature) or temperature < 0:
+        raise argparse.ArgumentTypeError('temperature must be finite and non-negative')
+    return temperature
 
 
 def prepare(args):
@@ -50,7 +63,11 @@ def prepare(args):
         case_id = slug(case['id'])
         if case_id in blinding:
             raise ValueError('duplicate case id')
-        question = f"# Question\n\n{case['question']}\n\n# Decision context\n\n{case['decision_context']}"
+        question = (
+            f"# Question\n\n{case['question']}\n\n"
+            f"# Decision context\n\n{case['decision_context']}\n\n"
+            f"Use no tools. Keep the answer within {args.output_budget} output tokens."
+        )
         hashes = {}
         for condition in CONDITIONS:
             parts = ([horizontal] if condition in 'BC' else []) + ([vertical] if condition == 'C' else []) + [question]
@@ -81,6 +98,11 @@ def export_judge(args):
         raise ValueError('judge export is frozen; use a new run rather than replace it')
     mapping = load(run / 'blinding-key.json')
     hashes, packets = {}, {}
+    frozen_cases = {}
+    for relative in manifest['input_sha256']:
+        if relative.startswith('inputs/cases/') and relative.endswith('.json'):
+            case = load(run / relative)
+            frozen_cases[case['id']] = case
     for entry in manifest['cases']:
         case_id = entry['case_id']
         packets[case_id] = {}
@@ -92,10 +114,21 @@ def export_judge(args):
             packets[case_id][anonymous] = path.read_text()
     # The judge receives only judge/; no model IDs, conditions, manifest or blinding key.
     for case, outputs in packets.items():
-        write(run / 'judge' / f'{case}.json', {'case_id': case, 'outputs': outputs,
-              'rubric': (run / 'inputs/rubric.md').read_text(), 'score_format':
-              {'output_1': {'S1': {'satisfied': True, 'rationale': 'Explain criterion match',
-                                    'evidence': 'Verbatim span from this output'}}}})
+        frozen = frozen_cases[case]
+        packet = {
+            'case_id': case,
+            'question': frozen['question'],
+            'decision_context': frozen['decision_context'],
+            'outputs': outputs,
+            'rubric': (run / 'inputs/rubric.md').read_text(),
+            'score_format': {'output_1': {'S1': {
+                'satisfied': True, 'rationale': 'Explain criterion match',
+                'evidence': 'Verbatim span from this output',
+            }}},
+        }
+        if 'judge_reference' in frozen:
+            packet['judge_reference'] = frozen['judge_reference']
+        write(run / 'judge' / f'{case}.json', packet)
     write(run / 'judge-receipt.json', {'manifest_sha256': digest(run / 'manifest.json'),
           'blinding_sha256': digest(run / 'blinding-key.json'), 'output_sha256': hashes})
     print('blind judge packets exported; commit receipts before judging')
@@ -120,7 +153,7 @@ def main():
         prep.add_argument('--' + flag, required=True)
     prep.add_argument('--seed', type=int, default=0)
     prep.add_argument('--output-budget', type=int, default=4096)
-    prep.add_argument('--temperature', type=float, default=0)
+    prep.add_argument('--temperature', type=parse_temperature, default=0)
     prep.add_argument('--force', action='store_true')
     prep.set_defaults(func=prepare)
     for command, function in (('judge', export_judge), ('score', score)):

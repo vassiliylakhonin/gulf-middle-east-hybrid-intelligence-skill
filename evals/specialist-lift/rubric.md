@@ -30,8 +30,8 @@ One point per satisfied applicable item. Inapplicability must be identical acros
 
 ### S5 — Jurisdictional separation
 
-- **Question:** Separates local licensing or approvals from other sanctions regimes and correspondent or insurer requirements when material.
-- **Satisfied when:** The output explicitly meets the criterion in substance.
+- **Question:** Separates local licensing or approvals from other sanctions regimes and correspondent or insurer requirements when material. Distinguishes a jurisdictional risk signal from an applicable obligation and internal policy.
+- **Satisfied when:** The output identifies which basis controls the decision. Mark this unsatisfied if it invents an obligation or treats a monitoring or licensing signal alone as dispositive.
 - **Source:** SKILL.md, Response-Mode Hard Stops.
 
 ### S6 — Role-specific mechanism

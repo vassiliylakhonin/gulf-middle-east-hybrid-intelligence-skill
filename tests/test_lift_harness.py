@@ -288,6 +288,22 @@ class ReceiptTests(HarnessTestCase):
         self.assertNotIn("model", packet)
         self.assertNotIn("blinding_key", packet)
 
+    def test_judge_gets_frozen_case_context_without_leaking_reference_to_generators(self):
+        self.add_case("case-1")
+        case_path = self.suite / "cases" / "case-1.json"
+        case = json.loads(case_path.read_text())
+        case["judge_reference"] = "Judge-only decision criterion"
+        case_path.write_text(json.dumps(case))
+        self.assertEqual(self.prepare().returncode, 0)
+        for prompt in (self.run_dir / "prompts").glob("*.txt"):
+            self.assertNotIn(case["judge_reference"], prompt.read_text())
+        self.write_scores({"case-1": {"A": 1, "B": 3, "C": 5}})
+
+        packet = json.loads((self.run_dir / "judge/case-1.json").read_text())
+        self.assertEqual(packet["question"], case["question"])
+        self.assertEqual(packet["decision_context"], case["decision_context"])
+        self.assertEqual(packet["judge_reference"], case["judge_reference"])
+
     def test_refuses_non_boolean_item_score(self):
         self.complete_run()
         path = self.run_dir / "scores.json"

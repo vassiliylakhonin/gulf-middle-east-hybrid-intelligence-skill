@@ -40,7 +40,7 @@ For each archetype: mechanism → typical indicators → evidence needed → com
 - **Typical indicators:** rising rejection rates on USD wire transfers, increased KYC requests on Gulf-origin payments, narrowing list of acceptable Gulf respondents, sudden requests for enhanced documentation on routine trade flows.
 - **Evidence needed:** respondent-bank communications, settlement and rejection metrics, public enforcement actions, BIS consolidated banking statistics.
 - **False positives:** routine periodic reviews, system migrations, individual-customer issues unrelated to sanctions.
-- **Watch-next triggers:** OFAC enforcement actions against Gulf-jurisdiction banks; new circumvention guidance; FATF/MENAFATF grey-list moves; central-bank consultations on de-risking.
+- **Watch-next triggers:** OFAC enforcement actions involving Gulf-jurisdiction banks, new enforcement guidance, FATF/MENAFATF monitoring changes, and central-bank consultations. Treat a monitoring change as a geographic risk input. Identify any applicable obligation or bank-policy trigger separately. See the [dated GCC banking example](../examples/live-source-backed-gcc-correspondent-banking.md).
 - **Mitigation questions:** correspondent bank — diversification across acceptable respondents; respondent bank — enhanced sanctions-compliance demonstration to retain correspondents; corporate treasurer — payment-rail redundancy planning.
 - **What would make this memo wrong:** the observed friction is routine (periodic review, system migration, single-customer issue) rather than sanctions-driven de-risking; the named respondent's correspondent posture actually improved; or a FATF/MENAFATF status change undercuts the memo's premise.
 - **Observable indicators (with sources):**

@@ -25,6 +25,10 @@ python evals/specialist-lift/tools/lift_eval.py prepare NEW_RUN_ID \
   --output-budget 4096 --temperature 0 --seed 20260930
 ```
 
+Use `--temperature provider-default` when the generator's interface exposes no temperature control.
+Every prompt carries the same requested output budget. Record whether the provider
+enforces it as a hard limit and retain the observed usage.
+
 Commit `manifest.json`, `inputs/`, `prompts/`, and the separate `blinding-key.json`
 before generation. The manifest pins complete source files, cases (including
 context), rubric items and prompts. Use fresh contexts, the declared settings,
@@ -43,6 +47,11 @@ Commit the output receipts before judging. Send **only `judge/`** to the judge;
 keep the manifest, model identities, and blinding key outside its context. Text
 style may reveal an arm despite label removal; disclose that limitation. Export
 refuses missing/empty outputs and freezes their hashes.
+
+Each judge packet includes the frozen question and decision context. A case
+may also include a frozen `judge_reference` specifying material errors and
+the evidence needed to distinguish competing explanations. It is reserved
+for the judge and excluded from all three generation prompts.
 
 Write `scores.json` with every case, anonymous output and rubric item:
 
