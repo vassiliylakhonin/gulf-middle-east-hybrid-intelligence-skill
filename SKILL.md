@@ -161,7 +161,7 @@ Recommendations must be decision-relevant, proportionate to the evidence, feasib
 
 Do not stop at `monitor closely`, `engage stakeholders`, `stay agile`, or `remain flexible`. Name the source or indicator to monitor, the relevant counterparty or route, the trigger that changes posture, and the action appropriate now versus later.
 
-For disputed ownership near a legal threshold, make each conditional consequence explicit before recommending the next review action. Follow the [ownership branch checklist](docs/analysis-contract.md#disputed-ownership-branches).
+For disputed ownership near a legal threshold, state the entity's conditional status under the cited rule in each branch before recommending the next review action. Follow the [ownership branch checklist](docs/analysis-contract.md#disputed-ownership-branches).
 
 ## Failure handling
 
