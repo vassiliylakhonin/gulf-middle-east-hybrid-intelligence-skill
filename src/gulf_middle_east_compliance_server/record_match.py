@@ -159,6 +159,13 @@ def _jaccard(a: str, b: str) -> float:
     return len(ta & tb) / len(ta | tb) if ta and tb else 0.0
 
 
+def _record_values(
+    a: EntityRecord, b: EntityRecord, values_a: list[str], values_b: list[str]
+) -> dict[str, list[str]]:
+    # Keep aliases for existing clients. Fixed record fields win on collision.
+    return {a.label: values_a, b.label: values_b, "record_a": values_a, "record_b": values_b}
+
+
 def _compare_field(
     field: str, a: EntityRecord, b: EntityRecord, threshold: float | None
 ) -> dict[str, Any] | None:
@@ -167,7 +174,7 @@ def _compare_field(
     if not ia and not ib and not bad_a and not bad_b:
         return None
     exact = [
-        {"normalised": key, a.label: ia[key], b.label: ib[key]}
+        {**_record_values(a, b, ia[key], ib[key]), "normalised": key}
         for key in sorted(set(ia) & set(ib))
     ]
     entry: dict[str, Any] = {
@@ -178,7 +185,7 @@ def _compare_field(
         "note": FIELD_NOTES[field],
     }
     if bad_a or bad_b:
-        entry["unusable_values"] = {a.label: bad_a, b.label: bad_b}
+        entry["unusable_values"] = _record_values(a, b, bad_a, bad_b)
     if threshold is not None and field not in PHONE_FIELDS + EMAIL_FIELDS + WEB_FIELDS:
         near = []
         for ka in sorted(set(ia) - set(ib)):
@@ -187,9 +194,8 @@ def _compare_field(
                 if score >= threshold:
                     near.append(
                         {
+                            **_record_values(a, b, ia[ka], ib[kb]),
                             "token_overlap": round(score, 3),
-                            a.label: ia[ka],
-                            b.label: ib[kb],
                         }
                     )
         entry["near_matches"] = near
@@ -208,6 +214,8 @@ def _cross_field(a: EntityRecord, b: EntityRecord) -> list[dict[str, Any]]:
                 found.append(
                     {
                         "normalised": key,
+                        "record_a": {"field": fa, "values": ia[key]},
+                        "record_b": {"field": fb, "values": ib[key]},
                         f"{a.label}.{fa}": ia[key],
                         f"{b.label}.{fb}": ib[key],
                     }
