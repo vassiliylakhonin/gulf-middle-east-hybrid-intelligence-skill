@@ -36,3 +36,13 @@ Use four memo evidence modes: `live-source-backed`, `user-provided sources`,
 value only. When composed with GTTA, use its selected memo mode and confidence
 labels (`Low` / `Moderate` / `High`); regional instructions add mechanisms and
 evidence requirements rather than replacing the horizontal output contract.
+
+### Disputed ownership branches
+
+When credible ownership records lead to different outcomes under an applicable rule, state the current classification. For every supported branch, give the evidence basis, rule consequence, and next review action.
+
+- **Threshold met.** Name the premise to verify, relevant effective date, qualifying ownership calculation, and cited rule. State the rule's conditional consequence for the entity explicitly, then give the bounded human review action.
+- **Threshold unmet.** Explain which interests count under the cited rule and what follows within that rule's scope. Review separate designation, control, representation, and transaction questions where material.
+- **Ownership unresolved.** Keep the current status unresolved. Name the disputed fact and ask for the specific primary evidence that can establish ownership at the relevant date. Keep any human review recommendation separate from the conditional status.
+
+The applicable threshold and consequence come from the named jurisdiction and rule. A calculation or referral is one part of the analysis. A live determination also requires the relevant current facts and authoritative checks.
